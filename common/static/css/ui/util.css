@@ -1,0 +1,8 @@
+.clearfix:after{
+    content: '\020';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+}

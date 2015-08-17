@@ -22,9 +22,13 @@
     </fis:block>
 
     <fis:block name="block_head_js">
-        <script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
-        <script src="http://www.amcharts.com/lib/3/pie.js"></script>
-        <script src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+        <%--<script src="http://www.amcharts.com/lib/3/amcharts.js"></script>--%>
+        <%--<script src="http://www.amcharts.com/lib/3/pie.js"></script>--%>
+        <%--<script src="http://www.amcharts.com/lib/3/themes/light.js"></script>--%>
+
+        <script src="/static/lib/amchart/amcharts.js"></script>
+        <script src="/static/lib/amchart/pie.js"></script>
+        <script src="/static/lib/amchart/themes/light.js"></script>
 
     </fis:block>
 
@@ -144,7 +148,7 @@
         "enabled": true
         }
         });
-        
+
 
         var currentSlice;
         chart.addListener("pullOutSlice", function(e) {

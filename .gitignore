@@ -1,0 +1,27 @@
+# ignore these files
+##
+.metadata
+
+## appcompat_v7
+appcompat_v7/bin/*
+appcompat_v7/gen/*
+
+## vitamio_lib
+vitamio_lib/bin/*
+vitamio_lib/gen/*
+
+## ebooksystem_politics
+ebooksystem_politics/bin
+ebooksystem_politics/bin/*
+ebooksystem_politics/gen
+ebooksystem_politics/gen/*
+*/bin
+*/gen
+*/.classpath
+#ebooksystem/project.properties
+
+#mac file
+**/**/.DS_Store
+
+**/.idea/**
+

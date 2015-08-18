@@ -36,7 +36,7 @@
         <h1>am-chart demo</h1>
         <div id="chartdiv"></div>
         <div id="chart-2"></div>
-        <fis:widget name="demo:widget/hello/hello.jsp"></fis:widget>
+        
     </fis:block>
 
     <fis:script>

@@ -1,0 +1,8 @@
+/*全局的通用布局*/
+body{
+    background: #ededed;
+}
+.main-section{
+    width: 1180px;
+    margin: 0 auto;
+}

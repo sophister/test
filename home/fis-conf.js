@@ -1,13 +1,12 @@
 var path = require('path');
 
-var namespace = 'common';
+var namespace = 'home';
 
 fis.config.merge({
     namespace: namespace
 });
 
 fis.config.set('modules.parser.css', 'less');
-//fis.config.set('modules.parser.less', 'less');
 
 // --------------------------------
 // 支持 amd 设置
@@ -23,6 +22,7 @@ fis.config.set('modules.packager', 'depscombine');
 fis.config.set('pack', {
     
 });
+
 
 fis.config.set('roadmap.path', [
     {
@@ -40,6 +40,3 @@ fis.config.set('roadmap.path', [
 // js 模板支持
 fis.config.set('modules.parser.tmpl', 'utc');
 // fis.config.set('roadmap.ext.tmpl', 'js');
-
-
-

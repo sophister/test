@@ -1,0 +1,30 @@
+.block_allinone_css {
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	margin: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	cursor: move;
+}
+
+.dotted-box {
+	width: 98px;
+	height: 98px;
+	border: dotted 1px red;
+	position: absolute;
+}
+
+.handlebars-demo {
+	width: 400px;
+	margin: 20px auto;
+}
+
+#btn {
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	margin: 40px auto;
+	display: block;
+}

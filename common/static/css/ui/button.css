@@ -1,0 +1,10 @@
+@main-active-color : #f86030;
+
+.ui-button{
+    background-color: @main-active-color;
+    cursor: pointer;
+    /*大button图标*/
+    &.large{
+
+    }
+}

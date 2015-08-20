@@ -1,10 +1,22 @@
-@main-active-color : #f86030;
+@main-active-color : #ff8813;
+@normal-text-color:#fff;
 
-.ui-button{
+.we-btn{
     background-color: @main-active-color;
     cursor: pointer;
-    /*大button图标*/
-    &.large{
+    display: inline-block;
+    text-decoration: none;
+    color: @normal-text-color;
+    text-align: center;
 
+    /*大button图标*/
+    &.we-btn-large{
+
+    }
+    /*小button*/
+    &.we-btn-small{
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
     }
 }

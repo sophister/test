@@ -1,0 +1,42 @@
+
+{
+    "notice" : {
+        "text" : "这里是通知的内容,测试数据",
+        "url" : "http://baidu.com/",
+        "date" : "2015-08-21"
+    },
+    "newUserRecommend" : [
+        {
+            "title" : "标题111",
+            "level" : "A",
+            "rate" : "1.20%",
+            "minMoney" : "500",
+            "durationMonth" : "5",
+            "isIn" : false
+        },
+        {
+            "title" : "标题111",
+            "level" : "E",
+            "rate" : "12.00%",
+            "minMoney" : "600",
+            "durationMonth" : "2",
+            "isIn" : true
+        },
+        {
+            "title" : "标题111",
+            "level" : "B",
+            "rate" : "12.00%",
+            "minMoney" : "500",
+            "durationMonth" : "5",
+            "isIn" : false
+        },
+        {
+            "title" : "贷款的标题在这里",
+            "level" : "HR",
+            "rate" : "12.00%",
+            "minMoney" : "200",
+            "durationMonth" : "1.4",
+            "isIn" : false
+        }
+    ]
+}

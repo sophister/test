@@ -7,23 +7,23 @@
 
     </div>
     <div class="card-detail">
-        <div class="we-table">
-            <div class="we-head">
-                <span class="we-cell we-cell-title">借款标题</span>
-                <span class="we-cell we-cell-level">信用等级</span>
-                <span class="we-cell we-cell-year-rate">年利率</span>
-                <span class="we-cell we-cell-min-money">起投金额</span>
-                <span class="we-cell we-cell-duration">期限</span>
-                <span class="we-cell we-cell-select"></span>
+        <div class="index-table">
+            <div class="index-list-head">
+                <span class="index-cell w178">借款标题</span>
+                <span class="index-cell w142">信用等级</span>
+                <span class="index-cell w166">年利率</span>
+                <span class="index-cell w142">起投金额</span>
+                <span class="index-cell w118">期限</span>
+                <span class="index-cell w154"></span>
             </div>
             <c:forEach var="obj" items="${data}">
-                <div class="we-row">
-                    <span class="we-cell we-cell-title">${obj.title}</span>
-                    <span class="we-cell we-cell-level">${obj.level}</span>
-                    <span class="we-cell we-cell-year-rate">${obj.rate}</span>
-                    <span class="we-cell we-cell-min-money">${obj.minMoney}元</span>
-                    <span class="we-cell we-cell-duration">${obj.durationMonth}月</span>
-                    <span class="we-cell we-cell-select">
+                <div class="index-row">
+                    <span class="index-cell w178">${obj.title}</span>
+                    <span class="index-cell w142">${obj.level}</span>
+                    <span class="index-cell w166">${obj.rate}</span>
+                    <span class="index-cell w142">${obj.minMoney}元</span>
+                    <span class="index-cell w118">${obj.durationMonth}月</span>
+                    <span class="index-cell w154">
                         <c:choose>
                             <c:when test="${obj.isIn}">
                                 <span class="we-btn we-btn-small">已投标</span>

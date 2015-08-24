@@ -1,0 +1,326 @@
+/*
+ * List
+ * namespace .ui-list
+ */
+
+
+/* LIST */
+
+.ui-list {
+	position: relative;
+}
+
+.ui-list-item {
+  border-bottom: 1px solid #e5e4e2; /* color-platinum */
+  cursor: default;
+}
+
+.ui-list-item:hover {
+  background-color: #f9f9f9; /* rrdcolor-whitesmoke */
+}
+
+.ui-list-item.last {
+  border-bottom: none;
+}
+
+.ui-list-title {
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.ui-list-title.two-line {
+  line-height: 18px;
+}
+
+.ui-list-title-sortable {
+  cursor: pointer;
+}
+
+.ui-list-title-sortable  {
+  background-repeat: no-repeat;
+  background-position: 100% center;
+}
+.ui-list-title-sortable-1 ,
+.ui-list-title-sortable-2 ,
+.ui-list-title-sortable-3 ,
+.ui-list-title-sortable-4 {
+	  background-image: url('/static/img/order_01.png');
+}
+.ui-list-title-sortable-1:hover ,
+.ui-list-title-sortable-2:hover ,
+.ui-list-title-sortable-3:hover ,
+.ui-list-title-sortable-4:hover {
+	   background-image: url('/static/img/order_02.png');
+}
+ .ui-list-title-sortable-1{
+   background-position: 70px center;
+ }
+  .ui-list-title-sortable-2{
+   background-position: 84px center;
+ }
+  .ui-list-title-sortable-3{
+   background-position:67px center;
+ }
+  .ui-list-title-sortable-4{
+   background-position: 71px center;
+ }
+.ui-list-header .asc, .ui-list-header  .asc:hover{
+  background-image: url('/static/img/order_04.png');
+}
+.ui-list-header .desc,  .ui-list-header .desc:hover{
+  background-image: url('/static/img/order_03.png');
+}
+ 
+ .ui-list-title-refresh {
+  color:#2ea7e0;
+  background-image: url('/static/img/order_05.png');
+  background-repeat: no-repeat;
+  background-position: 3px center;
+ 
+ }
+ .ui-list-title-refresh:hover{
+  background-image: url('/static/img/order_05.png');
+ }
+ 
+
+.ui-list-title-sortable .sortable {
+  font-size: 10px;
+}
+
+.ui-list-field {
+  height: 35px;
+  line-height: 35px;
+}
+
+.ui-list-status {
+  font-size: 20px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.ui-list-more {
+  border-bottom: 1px solid #e5e4e2;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
+
+.ui-list-loading {
+	/* TODO */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url('/static/img/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+/* LIST - M */
+
+.ui-list-m {
+  min-height: 240px;
+}
+
+.ui-list-m .ui-list-field {
+  height: 56px;
+  line-height: 56px;
+}
+
+
+/* LIST - S */
+
+.ui-list-s {
+  min-height: 240px;
+}
+
+.ui-list-s .ui-list-item {
+	border-bottom: 1px solid #efefef;
+}
+
+.ui-list-s .ui-list-item.last {
+	border-bottom: none;
+}
+
+.ui-list-s .ui-list-item,
+.ui-list-s .ui-list-item:hover {
+  background: #fff; /* #f6fbfd; */
+}
+
+.ui-list-s .ui-list-item.dark,
+.ui-list-s .ui-list-item.dark:hover,
+.table-tr-color,
+table tr.odd{
+  background: #f6fbfd; /* #e8f6fa; */
+}
+
+.ui-list-s .ui-list-item.clickable {
+  cursor: pointer;
+}
+
+.ui-list-s .ui-list-item.clickable:hover,
+.ui-list-s .ui-list-item.clickable.dark:hover {
+  /* background: #d5f4ff; */
+  background: #fffbe2;
+}
+
+.ui-list-s .ui-list-field {
+  height: 35px;
+  line-height: 35px;
+}
+
+
+/* LIST - INVEST */
+
+.ui-list-invest .ui-list-item .ui-loantype {
+  float: left;
+  margin: 13px 3px 13px 8px;
+}
+
+.ui-list-invest .ui-list-item .ui-creditlevel {
+  margin: 10px auto;
+}
+
+.ui-list-invest .ui-list-item .ui-progressbar-mid {
+  margin: 6px auto;
+}
+
+.ui-list-invest .ui-list-invest-button span {
+  display: none;
+}
+
+.ui-list-invest .ui-list-invest-button-READY,
+.ui-list-invest .ui-list-invest-button-FIRST_READY,
+.ui-list-invest .ui-list-invest-button-IN_PROGRESS {
+	cursor: default;
+}
+
+.ui-list-invest .ui-list-invest-button-READY,
+.ui-list-invest .ui-list-invest-button-FIRST_READY {
+  background-color: #c7d78c; /* rrdcolor-limegreen */
+}
+
+.ui-list-invest .ui-list-invest-button-IN_PROGRESS,
+.ui-list-invest .ui-list-invest-button-CLOSED,
+.ui-list-invest .ui-list-invest-button-FIRST_APPLY,
+.ui-list-invest .ui-list-invest-button-DRAFT,
+.ui-list-invest .ui-list-invest-button-BAD_DEBT,
+.ui-list-invest .ui-list-invest-button-OVER_DUE{
+  background-color: #e5e4e2; /* color-platinum */
+}
+
+.ui-list-invest .ui-list-invest-button-READY span.READY,
+.ui-list-invest .ui-list-invest-button-FIRST_READY span.FIRST_READY,
+.ui-list-invest .ui-list-invest-button-OPEN span.OPEN,
+.ui-list-invest .ui-list-invest-button-IN_PROGRESS span.IN_PROGRESS,
+.ui-list-invest .ui-list-invest-button-CLOSED span.CLOSED,
+.ui-list-invest .ui-list-invest-button-OVER_DUE span.OVER_DUE,
+.ui-list-invest .ui-list-invest-button-BAD_DEBT span.BAD_DEBT,
+.ui-list-invest .ui-list-invest-button-FIRST_APPLY span.FIRST_APPLY,
+.ui-list-invest .ui-list-invest-button-DRAFT span.FIRST_APPLY{
+  display: inline;
+}
+
+.ui-list-invest .ui-list-item {
+  position: relative;
+}
+
+.ui-list-invest .ui-list-item .ui-poptip {
+  position: absolute;
+  top: 13px;
+  left: 44px;
+}
+
+
+/* LIST - NEWS */
+
+.ui-list-news {
+  min-height: 120px;
+}
+
+.ui-list-news .ui-list-item {
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+
+.ui-list-news .field.text {
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 790px;
+}
+
+.ui-list-news.narrow .field.text {
+	width: 590px;
+}
+
+.ui-list-news .decoration {
+  float: left;
+  display: inline;
+  margin: 14px 19px;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #0697DA;
+  border-radius: 50% 50% 50% 50%;
+}
+
+.ui-list-news .ui-list-field.text .title {
+  margin-right: 10px;
+}
+
+.ui-list-news .ui-list-field.date {
+  text-align: right;
+  width: 90px;
+}
+
+
+/* LIST - COMMENTS */
+
+.ui-list-comments .ui-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.ui-list-comments .ui-list-item:hover {
+  background: none;
+}
+
+.ui-list-comments .ui-list-item.last {
+	border-bottom: none;
+}
+
+/* Disc list */
+.ui-list-disc li span{
+  float:left;
+  display:block;
+}
+.ui-list-disc li>i{
+  float:left;
+  display:block;
+  width:4px;
+  height:4px;
+  margin:12px 6px 0 0;
+  background:#09d;
+  border-radius:50%;
+  vertical-align:middle;
+}
+
+
+/*  LIST  鈥斺�  NEWS by 2014-05-09*/
+.ui-style-decimal,
+.ui-style-decimal li{
+  list-style: decimal;
+}
+.ui-style-decimal{
+  *margin-left: 30px;
+}

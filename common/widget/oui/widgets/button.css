@@ -1,0 +1,364 @@
+/*
+ * Button, extends aliceui/button
+ * namespace .ui-button
+ */
+
+/* Button in Common */
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+.ui-button * {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-button {
+  display: inline-block;
+  *display: inline;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0 15px;
+  *zoom: 1;
+  *overflow: visible; /* for ie6/7 */
+}
+
+.ui-button .ui-button-text {
+  background: none;
+  padding: 0;
+  height: auto;
+  line-height: auto;
+}
+
+.ui-button:hover {
+  text-decoration: none;
+}
+
+input.ui-button-text,
+button.ui-button-text {
+  *vertical-align: top; /* for a ie7 */
+}
+
+
+/* Pill Button */
+
+.ui-button-small {
+	font-size: 14px;
+  line-height: 23px;
+  height: 23px;
+  min-width: 50px;
+  border-radius: 12px;
+}
+
+.ui-button-mid {
+  font-size: 16px;
+  line-height: 30px;
+  height: 30px;
+  min-width: 50px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.ui-button-large {
+  font-size: 18px;
+  line-height: 34px;
+  height: 34px;
+  min-width: 50px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Rectangle Button */
+
+.ui-button-rect-mid {
+  padding: 0 30px;
+  font-size: 18px;
+  line-height: 40px;
+  height: 40px;
+  border: none;
+  text-align: center;
+}
+
+
+/* Blue Button */
+
+.ui-button-blue {
+  border: none;
+  color: #fff;
+  background-color: #2ea7e0;
+}
+
+.ui-button-blue:hover {
+  background-color: #2ea7e0;
+}
+
+a.ui-button-blue,
+a.ui-button-blue:active,
+a.ui-button-blue:hover {
+  color: #fff;
+}
+
+/* Green Button */
+
+.ui-button-green {
+  border: none;
+  color: #fff;
+  background-color: #8ab46e;
+}
+
+.ui-button-green:hover {
+  background-color: #6e8b00;
+}
+
+a.ui-button-green,
+a.ui-button-green:active,
+a.ui-button-green:hover {
+  color: #fff;
+}
+
+.ui-button-green.disabled,
+.ui-button-green.disabled:hover {
+	background-color: #a2ab7f;
+  cursor: default;
+}
+
+
+/* Transparent Button */
+
+.ui-button-transparent {
+  border: 1px solid #c2c2c2;
+  color: #898989;
+}
+
+a.ui-button-transparent:active {
+  border: 1px solid #0697da;
+  color: #0697da;
+}
+
+a.ui-button-transparent:hover {
+  border: 1px solid #00a8e8;
+  color: #00a8e8;
+}
+
+/* Red Button */
+
+.ui-button-red {
+  border: none;
+  color: #fff;
+  background-color: #cc5400;
+}
+
+.ui-button-red:hover {
+  background-color: #b4500a;
+}
+
+a.ui-button-red,
+a.ui-button-red:active,
+a.ui-button-red:hover {
+  color: #fff;
+}
+
+/* Gray Button */
+
+.ui-button-gray {
+  border: none;
+  color: #676D70;
+  background-color: #dbdbdb;
+}
+
+.ui-button-gray:hover {
+  background-color: #d5d5d5;
+}
+
+a.ui-button-gray,
+a.ui-button-gray:active,
+a.ui-button-gray:hover {
+  color: #d5d5d5;
+}
+
+.ui-button-litgray {
+  border: none;
+  color: #fff;
+  background-color: #e7e7e7;
+}
+
+a.ui-button-litgray,
+a.ui-button-litgray:active,
+a.ui-button-litgray:hover {
+  color: #fff;
+}
+
+/** ui-button-rrd-blue**/
+a.ui-button-rrd-blue,
+.ui-button-rrd-blue{
+  height: 40px;
+  line-height: 40px;
+  background: #2ea7e0;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ui-button-rrd-blue-large {
+  width: 165px;
+  font-size: 18px;
+}
+
+.ui-button-rrd-blue-mid {
+  width: 85px;
+  font-size: 18px;
+}
+
+/* Pill Button */
+a.ui-button-blue-new,
+.ui-button-blue-new{
+  height: 40px;
+  line-height: 40px;
+  background: #51c2e8;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ui-button-blue-new-large {
+  width: 165px;
+  font-size: 18px;
+}
+.ui-button-blue-new-mid {
+  width: 85px;
+  font-size: 18px;
+}
+
+/* Disabled Button */
+  
+.ui-button-disabled {
+  border: none;
+  color: #fff;
+  cursor: default;
+  background-color: #999;
+}
+.ui-button-disabled:hover{
+  background:#999;
+}
+
+a.ui-button-disabled,
+a.ui-button-disabled:active,
+a.ui-button-disabled:hover {
+  color: #fff;
+  cursor: default;
+}
+
+a.ui-button-dark,
+.ui-button-dark{
+  background: #666;
+  color: #fff;
+  cursor: default;
+}
+
+
+
+
+/*  button
+    Time : 2014-8-15;
+ */
+
+a.button,
+.button{
+  display: inline-block;
+  padding: 0;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.button-mid{
+  min-width: 113px;
+  height: 26px;
+  line-height: 26px;
+}
+
+/* button blue */
+.button-blue{
+  border: none;
+  color: #fff;
+  background-color: #2ea7e0;
+  cursor: pointer;
+}
+
+.button-blue:hover {
+  background-color: #2ea7e0;
+}
+
+.button-blue-light{
+  border: none;
+  color: #fff;
+  background-color: #2fa8e1;
+  cursor: pointer;
+}
+
+.button-blue-light:hover {
+  background-color: #2a97ca;
+  color: #fff;
+}
+
+.button-blue-border {
+	border: solid 1px #2fa8e1;
+  color: #2fa8e1;
+  background-color: #fff;
+  cursor: pointer;
+}
+.button-blue-border .icon-arrow {
+	width: 21px;
+	height: 21px;
+	background: url("/static/img/uplan-icon.png") no-repeat 0 0px;
+}
+.button-blue-border-on:hover {
+  background-color: #2fa8e1;
+  color: #fff;
+}
+.button-blue-border-on:hover .icon-arrow {
+	background: url("/static/img/uplan-icon.png") no-repeat -30px 0px;
+}
+
+a.button-blue,
+a.button-blue:active,
+a.button-blue:hover {
+  color: #fff;
+}
+
+/* button disable */
+.button-disable{
+  border: none;
+  color: #fff;
+  background-color: #d7d7d7;
+}
+
+.button-disable:hover {
+  background-color: #d7d7d7;
+}
+
+a.button-disable,
+a.button-disable:active,
+a.button-disable:hover {
+  color: #fff;
+}
+
+
+/* button transparent */
+
+.button-transparent{
+  color: #2bb9e0;
+  background-color: #fff;
+  border: 1px solid #2bb9e0;
+  border-radius: 3px;
+}

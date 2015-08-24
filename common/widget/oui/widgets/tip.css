@@ -1,0 +1,15 @@
+/*
+	ALL tip
+*/
+.ui-tip{
+	position: relative;
+    padding: 10px 15px;
+    background-color: #FCE6BF;
+    border: 1px solid #FCDA9F;
+    border-radius: 5px;
+}
+.ui-icon-tip{
+	position: absolute;
+	bottom: -13px;
+	left: 100px;
+}

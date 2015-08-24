@@ -1,0 +1,301 @@
+/*
+ * Investment Terminal
+ * namespace .ui-term
+ */
+
+
+.ui-term {
+	width: 280px;
+}
+
+.ui-term-field {
+	position: relative;
+}
+
+.ui-term-input {
+  display: block;
+  padding: 8px 77px 8px 8px;
+  width: 193px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+  background: #fff;
+  position: relative;
+  left: 0px;  
+  top: 0px; 
+}
+
+.ui-term-field-cf .ui-term-input {
+	width: 113px;
+	margin: 0px auto;
+}
+.ui-term-field-cf .calculate {
+	display: block;
+	position: absolute;
+	top: 0px;
+	*top: 1px; 
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	background:url('/static/img/sign.png') no-repeat center 0 #30a9df;
+	border: solid 1px #30a9df;
+	cursor: pointer;
+}
+.ui-term-field-cf .minus {
+	left: 0px;
+	border-right: none;
+	border-radius: 4px 0px 0px 4px;
+	background-position: center 20px;
+}
+.ui-term-field-cf .plus {
+	right: 0px;
+	border-left: none;
+	border-radius: 0px 4px 4px 0px;
+	background-position: center -30px;
+}
+.ui-term-field-cf .cal-grey {
+	background-color: #e0e0e0;
+	border: solid 1px #e0e0e0;
+	cursor: default;
+}
+
+.ui-term-input.invalid {
+	color: #c82e25;
+  border-color: #c82e25;
+}
+
+.ui-term-placeholder,
+.ui-term-inputunit {
+	position: absolute;
+}
+
+.ui-term-placeholder {
+  top: 10px;
+  left: 11px;
+  color: #c2c2c2;
+}
+
+.ui-term-inputunit {
+  top: 10px;
+  right: 8px;
+  color: #c2c2c2;
+}
+.ui-term-field-cf .ui-term-inputunit {
+	right: 56px;
+}
+.ui-term-inputunit .share {
+  font-size: 12px;
+  color: #898989;
+}
+
+.ui-term-fee,
+.ui-term-hint,
+.ui-term-error {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.ui-term-fee,
+.ui-term-hint {
+  color: #676767;
+}
+
+.ui-term-error {
+  color: #c82e25;
+}
+
+.ui-term-button {
+  position: relative;
+  width: 280px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.ui-term-button .ui-button-text {
+  display: none;
+  margin-top: -2px;
+  padding-left: 10px;
+  letter-spacing: 10px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.ui-term-button.plan-button .ui-button-text { /* HACK */
+  display: inline;
+}
+
+.ui-term-button.disabled,
+.ui-term-button.disabled:hover {
+	cursor: default;
+  color: #fff;
+  background-color: #dbdbdb;
+}
+
+.ui-term-button.READY, .ui-term-button.READY:hover {
+	cursor: default;
+	background-color: #c7d78c;
+}
+
+.ui-term-button.FAILED, .ui-term-button.FAILED:hover,
+.ui-term-button.CANCELED, .ui-term-button.CANCELED:hover,
+.ui-term-button.APPLY, .ui-term-button.APPLY:hover,
+.ui-term-button.REPAYING, .ui-term-button.REPAYING:hover,
+.ui-term-button.OVERDUE, .ui-term-button.OVERDUE:hover,
+.ui-term-button.BADDEBT, .ui-term-button.BADDEBT:hover,
+.ui-term-button.CLOSED, .ui-term-button.CLOSED:hover,
+.ui-term-button.PRESALE, .ui-term-button.PRESALE:hover,
+.ui-term-button.UNKNOWN, .ui-term-button.UNKNOWN:hover {
+  cursor: default;
+  background-color: #e0e0e0;
+}
+
+.ui-term-button.OPEN .ui-button-text.OPEN,
+.ui-term-button.OPEN_MORE .ui-button-text.OPEN_MORE,
+.ui-term-button.CANCELED .ui-button-text.CANCELED,
+.ui-term-button.APPLY .ui-button-text.APPLY,
+.ui-term-button.READY .ui-button-text.READY,
+.ui-term-button.FAILED .ui-button-text.FAILED,
+.ui-term-button.REPAYING .ui-button-text.REPAYING,
+.ui-term-button.OVERDUE .ui-button-text.OVERDUE,
+.ui-term-button.BADDEBT .ui-button-text.BADDEBT,
+.ui-term-button.CLOSED .ui-button-text.CLOSED,
+.ui-term-button.PRESALE .ui-button-text.PRESALE,
+.ui-term-button.UNKNOWN .ui-button-text.UNKNOWN {
+  display: block;
+}
+
+.ui-term-button .ui-button-icon {
+  position: absolute; top: 11px; right: 15px;
+  display: none;
+  width: 10px;
+  height: 18px;
+  background: url('/static/img/angle-right-xlargebutton.png') no-repeat center center;
+}
+
+.ui-term-button.OPEN .ui-button-icon.OPEN,
+.ui-term-button.OPEN_MORE .ui-button-icon.OPEN_MORE {
+  display: block;
+}
+
+
+/*
+  Web revision
+  Update 20140115
+  By feijun
+*/
+
+.ui-term-box{
+  width: 280px;
+  padding: 12px 22px;
+}
+.ui-term-overage a{
+  text-align: right;
+}
+.ui-term-overage span{
+  display: block;
+}
+
+
+/****自定义下拉框****/
+.ui-selectdrop-dialog{
+	position: absolute;
+	width: 294px;
+	right: 0px;
+	top: 0px;
+}
+.ui-selectdrop .s_select_bg {
+    border: 1px solid #2ea7e0;
+    border-radius: 3px;
+    color: #6A6A6A;
+    cursor: pointer;
+    outline: 0 none;
+}
+.ui-selectdrop .s_select_bg span.txt {
+    display: inline-block;
+    float: left;
+    height: 24px;
+    padding: 8px 0 0 10px;
+    width: 230px;
+     overflow:hidden;
+}
+
+.ui-selectdrop .s_select_bg span.txt70 {
+    display: inline-block;
+    float: left;
+    height: 24px;
+    padding: 8px 0 0 10px;
+    width: 80px;
+    overflow:hidden;
+}
+
+.ui-selectdrop .s_select_bg span.arrow {
+    background-color:#2ea7e0 ;
+    display: inline-block;
+    height:100%;
+    width: 40px;
+}
+.ui-selectdrop .s_select_bg span.arrow em {
+    background: url("/static/img/input-icon/borrow-icon.gif") no-repeat ;
+    background-position: -3px -55px;
+    display: inline-block;
+    height: 10px;
+    left: 13px;
+    position: relative;
+    top: 8px;
+    *top:14px;
+    width: 16px;
+}
+.ui-selectdrop .popBox {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    cursor: default;
+    outline: 0 none;
+    z-index: 999;
+    position: absolute;
+    border: 1px solid #00a8e7;
+    margin:2px 0 0 0;
+    max-height: 164px;
+    overflow: auto;
+}
+.ui-selectdrop .popBox li {
+    padding: 7px 10px 7px 20px;
+    color: #666666;
+    cursor: pointer;
+    margin: 0px 0;
+}
+.ui-selectdrop .popBox .selected{
+    background: none repeat scroll 0 0 #00a8e7;
+    color: #FFFFFF;
+}
+
+.het35{
+    height:35px!important;
+    line-height:inherit !important;
+}
+.wid280{
+    width:280px;
+}
+.het45{
+  height:31px;
+  line-height:31px\9 !important;
+}
+.use-ucode-btn {
+	min-width: 37px;
+	position: absolute;
+	right: 224px;
+	top: 0px;
+}
+.use-coupon-warn {
+	position: absolute;
+	left: 560px;
+	top: 0px;
+	line-height: 30px;
+	display: none;
+	color: red;
+}
+.ui-confirm-form .ui-button {
+	padding: 0px 15px;
+}

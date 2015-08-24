@@ -1,0 +1,166 @@
+/*
+ * Sidebar
+ * namespace .ui-side
+ */
+
+.ui-side {
+	
+}
+
+.ui-side-item {
+  background: #ececec;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.ui-side-item.last {
+  border-bottom: none;
+  position: relative;
+}
+.ui-side-item.last .new {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 33px;
+	height: 33px;
+	background: url('/static/img/new.png') no-repeat;
+}
+
+.ui-side-item-link {
+  display: block;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  color: #545454;
+  cursor: pointer;
+}
+
+.ui-side-item-link:hover {
+  background: #f7f7f7;
+}
+
+.ui-side-withicon .ui-side-item-link {
+  padding-left: 10px;
+}
+
+.ui-side-withicon .ui-icon-mid {
+	margin-top: 15px;
+	margin-right: 8px;
+}
+
+.ui-side-item-link .ui-icon-mid.index {
+	background: url('/static/img/sidebar-icons.png') no-repeat 0 0;
+}
+
+.ui-side-item-link .ui-icon-mid.capital {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -20px;
+}
+
+.ui-side-item-link .ui-icon-mid.invest {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -40px;
+}
+
+.ui-side-item-link .ui-icon-mid.borrow {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -60px;
+}
+
+.ui-side-item-link .ui-icon-mid.account {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -80px;
+}
+
+.ui-side-item-link .ui-icon-mid.comm {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -100px;
+}
+
+.ui-side-item-link .ui-icon-mid.coupons {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -118px;
+}
+.ui-side-item-link .ui-icon-mid.friendinvite {
+  background: url('/static/img/sidebar-icons.png') no-repeat 0 -140px;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.index,
+.ui-side-item.active .ui-icon-mid.index {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px 0;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.capital,
+.ui-side-item.active .ui-icon-mid.capital {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -20px;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.invest,
+.ui-side-item.active .ui-icon-mid.invest {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -40px;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.borrow,
+.ui-side-item.active .ui-icon-mid.borrow {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -60px;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.account,
+.ui-side-item.active .ui-icon-mid.account {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -80px;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.comm,
+.ui-side-item.active .ui-icon-mid.comm {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -100px;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.coupons,
+.ui-side-item.active .ui-icon-mid.coupons {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -118px;
+}
+.ui-side-item-link:hover .ui-icon-mid.friendinvite,
+.ui-side-item.active .ui-icon-mid.friendinvite {
+  background: url('/static/img/sidebar-icons.png') no-repeat -20px -140px;
+}
+
+.ui-side-item.active .ui-side-item-link,
+.ui-side-item.active .ui-side-item-link:hover {
+  cursor: default;
+  color: #fff;
+  background: #2ea7e0;
+}
+
+.ui-side-item .ui-side-item-link:hover {
+	color: #fff;
+	background: #7fd4f3;
+}
+
+.ui-side-sub-list {
+  background: #f2f2f2;
+  display: none;
+}
+
+.ui-side-item.active .ui-side-sub-list {
+  display: block;
+}
+
+a.ui-side-sub-item-link {
+  display: block;
+  margin-left: 10px;
+  padding-left: 30px;
+  height: 36px;
+  line-height: 36px;
+  color: #909090;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+a.ui-side-sub-item-link.last {
+	border-bottom: none;
+}
+
+a.ui-side-sub-item-link:hover {
+  color: #fff;
+  background: #7fd4f3;
+}
+
+.ui-side-sub-item.active a.ui-side-sub-item-link,
+.ui-side-sub-item.active a.ui-side-sub-item-link:hover {
+  cursor: default;
+  color: #fff;
+  background: #7fd4f3;
+}

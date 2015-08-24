@@ -1,0 +1,339 @@
+/*
+ * Footer
+ * namespace .ui-footer, .ui-nav
+ */
+
+
+/* NORMAL FOOTER */
+
+.ui-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+	background: #555;
+}
+
+.ui-footer-section {
+	padding: 10px 0;
+	border-bottom: 1px solid #808080;
+}
+
+.ui-footer-section.last {
+	border-bottom: none;
+}
+
+.ui-footer-links li {
+	min-width: 75px;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 10px;
+}
+
+.ui-footer-links .icons {
+	margin-top: 10px;
+}
+
+.ui-footer-links .icons li {
+	height: 30px;
+	line-height: 30px;
+}
+
+.ui-footer-phone-number {
+	font-size: 20px;
+}
+
+.ui-footer-img-link {
+	display: block;
+	margin-right: 20px;
+  height: 30px;
+	font-size: 0;
+  line-height: 0;
+  background: url('/static/img/footer-icons.png') no-repeat 0 0;
+}
+
+.ui-footer-img-link.weibo {
+	width: 99px;
+	background-position: 0 0;
+}
+
+.ui-footer-img-link.weibo:hover {
+  background-position: 0 -30px;
+}
+
+.ui-footer-img-link.qq-weibo {
+	width: 112px;
+  background-position: -190px 0;
+}
+
+.ui-footer-img-link.qq-weibo:hover {
+  background-position: -190px -30px;
+}
+
+.ui-footer-img-link.we-chat {
+  width: 91px;
+  background-position: -99px 0;
+}
+
+.ui-footer-img-link.we-chat:hover {
+  background-position: -99px -30px;
+}
+
+.ui-footer-img-link.online-customer-service {
+	width: 117px;
+  background-position: -302px 0;
+}
+
+.ui-footer-img-link.online-customer-service:hover {
+  background-position: -302px -30px;
+}
+
+.ui-footer-contact-link {
+	display: block;
+	margin-left: 20px;
+  margin: 6px 0 0 0;
+  padding: 0 10px;
+  line-height: 16px;
+}
+
+.ui-footer-contact-link.last {
+	padding-right: 0;
+}
+
+.ui-footer-contact-link.has-separator {
+	border-left: 1px solid #808080;
+}
+
+.ui-footer-contact-link.qq {
+  background: url("/static/img/logos/weibo-qq.png") no-repeat center center;
+  height: 25px;
+  width: 25px;
+}
+
+.ui-footer-contact-link.sina {
+  background: url("/static/img/logos/weibo-sina.png") no-repeat center center;
+  height: 25px;
+  width: 25px;
+}
+
+.ui-footer-copyright {
+	margin-bottom: 10px;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  line-height: 15px;
+}
+
+.ui-footer-copyright-text {
+  display: inline-block;
+  min-height: 15px;
+  zoom: 1;
+  *display: inline;
+  _height: 15px;
+}
+
+.ui-footer-copyright .ui-footer-contact-link {
+  display: inline;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.ui-footer-verification {
+  margin: 0 auto;
+	padding-bottom: 10px;
+	width: 550px;
+}
+
+.ui-footer-verification-item {
+	display: block;
+	height: 50px;
+	margin: 0 10px;
+	background: url('/static/img/footer-icons.png') no-repeat 0 0;
+}
+
+.ui-footer-verification .internet{
+  width: 96px;
+  background-position: 0 -154px;
+}
+
+.ui-footer-verification .internet:hover{
+  width: 96px;
+  background-position: 0 -197px;
+}
+
+.ui-footer-verification .trust {
+	width: 96px;
+	background-position: 0 -60px;
+}
+
+.ui-footer-verification .trust:hover {
+  background-position: 0 -110px;
+}
+
+.ui-footer-verification .credibility {
+  width: 96px;
+  background-position: -249px -60px;
+}
+
+.ui-footer-verification .credibility:hover {
+  background-position: -249px -110px;
+}
+
+.ui-footer-verification .itrust:hover {
+  background-position: -351px -110px;
+}
+.ui-footer-verification .itrust{
+  width: 35px;
+  background-position: -351px -59px;
+}
+
+.ui-footer-verification .norton {
+	width: 65px;
+	background-position: -96px -60px;
+}
+
+.ui-footer-verification .norton:hover {
+  background-position: -96px -110px;
+}
+
+.ui-footer-verification .police {
+	width: 42px;
+  background-position: -161px -60px;
+}
+
+.ui-footer-verification .police:hover {
+  background-position: -161px -110px;
+}
+
+.ui-footer-verification .gongshang {
+	width: 28px;
+  background-position: -204px -60px;
+}
+
+.ui-footer-verification .gongshang:hover {
+  background-position: -204px -110px;
+}
+
+
+/* NARROW FOOTER */
+
+.pg-container.narrow-footer .ui-footer {
+	padding: 0;
+}
+
+.pg-container.narrow-footer .ui-footer-narrow-hide {
+	display: none;
+}
+
+.pg-container.narrow-footer .ui-footer-copyright {
+	margin-bottom: 0;
+  height: 20px;
+  line-height: 20px;
+}
+
+.fixed-onlineService {
+    height: 52px;
+    margin-top: -26px;
+    position: fixed;
+    right: 10px;
+    top: 228px;
+    width: 52px;
+    z-index: 99999;
+}
+.fixed-onlineService a {
+    background: url("/static/img/online.png") no-repeat scroll left top;
+    display: block;
+    height: 52px;
+    width: 52px;
+}
+.fixed-onlineService a:hover {
+    background: url("/static/img/online.png") no-repeat scroll left bottom;
+}
+
+.fixed-download-goBack {
+	width: 40px;
+	position: fixed;
+	bottom: 30px;
+	right: 10px;
+	z-index: 99999;
+}
+.fixed-download-goBack li {
+	width: 100%;
+	height: 44px;
+	background: #919191;
+	position: relative;
+}
+.fixed-download-goBack li a.fixed-icon {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.fixed-download-goBack li.fixed-download.hover,.fixed-download-goBack li a.fixed-icon:hover {
+	background: #2ba9e1;
+}
+.fixed-download-goBack li.fixed-download a.fixed-icon img {
+	margin-top: 10px;
+}
+.fixed-download-goBack li.fixed-goTop {
+	border-top: solid 1px #a7a7a7;
+	display: none;
+}
+.fixed-download-goBack li.fixed-goTop a.fixed-icon img {
+	margin-top: 16px;
+}
+.fixed-download-goBack li.fixed-download .download-app-wrap {
+	width: 364px;
+	height: 176px;
+	position: absolute;
+	bottom: 0px;
+	right: 48px;
+	padding: 25px;
+	display: none;
+}
+.download-app-wrap-opacity {
+	width: 364px;
+	height: 176px;
+	position: absolute;
+	bottom: 0px;
+	right: 48px;
+	padding: 25px;
+	display: none;
+	background: #000;
+	opacity: 0.4;
+	filter: alpha(opacity=40); 
+}
+.fixed-download-goBack .download-app-wrap-opacity .fixed-arrow {
+	position: absolute;
+	bottom: 16px;
+	right: -6px;
+	z-index: 999999;
+	width: 0px;
+	height: 0px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #000;
+}
+.fixed-download-goBack li.fixed-download .download-app-wrap h2 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	line-height: normal;
+	margin-bottom: 20px;
+	border: none;
+}
+.fixed-download-goBack li.fixed-download .download-app-wrap .ewm-big {
+	width: 140px;
+	height: 140px;
+	float: left;
+	margin-right: 28px;
+}
+.fixed-download-goBack .download-app-wrap .download-btns {
+	padding-top: 12px;
+}
+.fixed-download-goBack .download-app-wrap .download-btns a {
+	display: block;
+}
+.fixed-download-goBack .download-app-wrap .download-btns a.ios {
+	margin-bottom: 24px;
+}

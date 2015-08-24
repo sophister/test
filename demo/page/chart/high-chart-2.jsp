@@ -61,6 +61,14 @@
                     // conf 包含上述 data[i] 中某一项的所有数据
                     console.log( conf );
                 } );
+
+                //监听点击某个 point
+                demoChart.on('click', function(conf){
+                    console.log('click', conf);
+                } );
+
+                //根据 data[] 中的 ID 来选中某个 point
+                demoChart.selectPointById('id-2');
             } );
         </fis:script>
     </fis:block>

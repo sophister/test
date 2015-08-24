@@ -47,12 +47,16 @@ function Donut( args ){
         plotOptions: {
             pie: {
                 shadow: false,
-                allowPointSelect: true
+                allowPointSelect: false
             },
             series : {
                 animation : false,
                 point : {
                     events : {
+                        click : function(){
+                            that.trigger('click', this.options );
+                            return false;
+                        },
                         mouseOver : function(){
                             this.select(true);
                         },

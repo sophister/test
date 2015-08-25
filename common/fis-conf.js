@@ -60,6 +60,8 @@ fis.config.merge({
                     'handlebars': './widget/oui/lib/handlebars/1.0.0/handlebars.js',
                     'highcharts': './widget/oui/lib/highcharts/3.0.5/highcharts.js',
                     'jquery': './widget/oui/lib/jquery/1.9.1/jquery.js',
+                    //兼容老代码
+                    'lib/jquery/1.9.1/jquery' : './widget/oui/lib/jquery/1.9.1/jquery.js', 
                     'queue': './widget/oui/lib/plupload/1.5.7/jquery.plupload.queue',
                     'simplePagination': './widget/oui/lib/simplePagination/1.5.0/simplePagination.js',
                     'validate': './widget/oui/lib/validation/1.11.1/jquery.validate.js',

@@ -550,6 +550,9 @@ a.text {
   margin-top: 10px;
 }
 
+.mt14 {
+  margin-top: 14px;
+}
 .mt15 {
   margin-top: 15px;
 }
@@ -937,7 +940,12 @@ a.text {
 .pl100 {
   padding-left: 100px;
 }
-
+.pl120 {
+  padding-left: 120px;
+}
+.pl140 {
+  padding-left: 140px;
+}
 /* Width */
 
 .w20 {
@@ -1225,7 +1233,7 @@ width: 150px!important;
 */
 .ui-box-white-bg{
   background: #fff;
-  border: 1px solid #e0e0e0;
+ /* border: 1px solid #e0e0e0;*/
 }
 .ui-box-gray-bg{
   background: #f3f3f3;

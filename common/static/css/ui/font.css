@@ -1,0 +1,33 @@
+/* 
+ * @name: ui-iconfont
+ * @overview: REI——支付宝的iconfont
+ * @require: 无
+ */
+@font-face {
+    font-family: "rei";
+    src: url("/static/fonts/rei.eot"); /* IE9*/
+    src: url("/static/fonts/rei.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("/static/fonts/rei.woff") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+         url("/static/fonts/rei.ttf")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url("/static/fonts/rei.svg#rei") format("svg"); /*  iOS 4.1- */
+    font-weight: normal;
+    font-style: normal;
+}
+.iconfont {
+    font-family: "rei";
+    font-style: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: "HelveticaNeueLt";
+    font-style: normal;
+    font-weight: normal;
+    text-shadow:none;
+    src: url("/static/fonts/helveticaneuelt.eot?#iefix") format("embedded-opentype"), 
+    url("/static/fonts/helveticaneuelt.woff") format("woff"), 
+    url("/static/fonts/helveticaneuelt.ttf") format("truetype"), 
+    url("/static/fonts/helveticaneuelt.svg#HelveticaNeueLt") format("svg");
+}
+

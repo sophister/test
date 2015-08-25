@@ -21,6 +21,11 @@
   margin-right: auto;
   width: 960px;
 }
+.container_12_1080 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1080px;
+}
 
 /* `Grid >> Global
 ----------------------------------------------------------------------------------------------------*/

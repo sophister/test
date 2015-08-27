@@ -28,6 +28,7 @@
   vertical-align: text-bottom;
   margin: -1px 7px;
 }
+
 .ui-list i.minus{
   background: url(/static/imgs/list/minus.png?__inline);
   display: inline-block;
@@ -85,16 +86,16 @@
 	   background-image: url('/static/img/order_02.png');
 }
  .ui-list-title-sortable-1{
-   background-position: 70px center;
+   background-position: 94px center;
  }
   .ui-list-title-sortable-2{
-   background-position: 84px center;
+   background-position: 94px center;
  }
   .ui-list-title-sortable-3{
-   background-position:67px center;
+   background-position:148px center;
  }
   .ui-list-title-sortable-4{
-   background-position: 71px center;
+   background-position: 179px center;
  }
 .ui-list-header .asc, .ui-list-header  .asc:hover{
   background-image: url('/static/img/order_04.png');
@@ -107,7 +108,7 @@
   color:#2ea7e0;
   background-image: url('/static/img/order_05.png');
   background-repeat: no-repeat;
-  background-position: 3px center;
+  background-position: 78px center;
  
  }
  .ui-list-title-refresh:hover{
@@ -165,6 +166,7 @@
 .ui-list-m .ui-list-field {
   height: 56px;
   line-height: 56px;
+  vertical-align: middle;
 }
 
 
@@ -212,19 +214,42 @@ table tr.odd{
   line-height: 35px;
 }
 
-.ui-list-field.plus {
+.ui-list-field.number{
+  font-family: Helvetica;
+}
+.ui-list-field .light{
+  color:#848484;
+}
+.ui-list-field.dar{
+  color:#2b2b2b;
+}
+.ui-list-field span.plus{
   color:#ff711c;
 }
-.ui-list-field.minus {
+.ui-list-field .value-small.plus {
+  color:#ff711c;
+}
+.ui-list-field span.minus{
   color:#63b97c;
+}
+
+.ui-list-field .value-small.minus {
+  color:#63b97c;
+}
+
+.ui-list-field span.info{
+    font-size: 18px;
+    color: #e4e4e4;
+    margin-left: 20px;
+    vertical-align: text-bottom;
 }
 
 
 /* LIST - INVEST */
 
 .ui-list-invest .ui-list-item .ui-loantype {
-  float: left;
-  margin: 13px 3px 13px 8px;
+ 	float: left;
+	margin: 13px 3px 13px 0px;
 }
 
 .ui-list-invest .ui-list-item .ui-creditlevel {
@@ -247,7 +272,7 @@ table tr.odd{
 
 .ui-list-invest .ui-list-invest-button-READY,
 .ui-list-invest .ui-list-invest-button-FIRST_READY {
-  background-color: #c7d78c; /* rrdcolor-limegreen */
+  background-color: #cfcfcf; /* rrdcolor-limegreen */
 }
 
 .ui-list-invest .ui-list-invest-button-IN_PROGRESS,
@@ -365,3 +390,4 @@ table tr.odd{
 .ui-style-decimal{
   *margin-left: 30px;
 }
+

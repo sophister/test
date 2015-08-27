@@ -378,7 +378,7 @@ h6, .h6 {
 }
 
 .num em, .num-m em {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .num-l {
@@ -937,6 +937,21 @@ a.text {
 .pl80 {
   padding-left: 80px;
 }
+.pl90 {
+  padding-left: 90px;
+}
+.pl95 {
+  padding-left: 90px;
+}
+.pl00 {
+  padding-left: 100px;
+}
+.pl105 {
+  padding-left: 105px;
+}
+.pl10 {
+  padding-left: 110px;
+}
 .pl100 {
   padding-left: 100px;
 }
@@ -1051,6 +1066,9 @@ width: 150px!important;
 .w170 {
   width: 170px;
 }
+.w175 {
+  width: 175px;
+}
 
 .w180 {
   width: 180px;
@@ -1137,7 +1155,15 @@ width: 150px!important;
 .h40{
   height: 40px;
 }
-
+.h56 {
+  height: 56px;
+}
+.h60 {
+  height: 60px;
+}
+.h80 {
+  height: 80px;
+}
 .h100 {
   height: 100px;
 }
@@ -1241,7 +1267,7 @@ width: 150px!important;
 .ui-box-title{
   height: 58px;
   line-height: 58px;
-  padding: 0 20px;
+  padding: 0 25px;
   border-bottom: 1px solid #e0e0e0;
   overflow: hidden;
 }
@@ -1250,7 +1276,7 @@ width: 150px!important;
   line-height: 68px;
 }
 .ui-box-title h3{
-  color: #222;
+  color: #2b2b2b;
 }
 
 /* border */

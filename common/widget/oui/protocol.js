@@ -516,6 +516,26 @@ define(function (require, exports, module) {
   $.extend(_Translator.prototype, {
 
     /* ** Utilities ** */
+    //new getDateTime just keep hour&minute
+    _getDatehour: function (raw, type) {
+      var iso = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/i;
+      if (isNaN(Date.parse(raw)) || iso.test(raw)) {
+        if (type == 'date') {
+          return raw ? raw.substring(0, 10) : '';
+        } else {
+          return raw ? raw.substring(0, 16).replace('T', ' ') : '';
+        }
+      } else {
+        var date = new Date(raw),
+          hr = date.getHours(),
+          min = date.getMinutes();
+
+        hr = hr < 10 ? '0' + hr : hr;
+        min = min < 10 ? '0' + min : min;
+
+        return hr + ':' + min;   
+      }
+    },
 
     _getDateTime: function (raw, type) {
       var iso = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/i;
@@ -1083,7 +1103,8 @@ define(function (require, exports, module) {
         debit = '0.00';
       }
       return {
-        time: this._getDateTime(item.time, 'date'),
+        date: this._getDateTime(item.time, 'date'),
+        time: this._getDatehour(item.time, 'date'),
         type: item.operation,
         credit: credit,
         debit: debit,

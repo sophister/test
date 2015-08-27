@@ -1,5 +1,5 @@
-@header-height:60px;
-@header-bg:#1c4876;
+@header-height : 70px;
+@header-bg : #1c4876;
 
 .wdg-second-header{
   height: @header-height;
@@ -11,13 +11,14 @@
     .brand-logo{
       float: left;
       height: 100%;
-      text-decoration: none;
+      font-size: 40px;
+      color : white;
     }
 
     .site-nav{
       float: right;
       height: 100%;
-      font-size: 20px;
+      font-size: 16px;
 
       .channel-item{
         float: left;
@@ -27,7 +28,7 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         border-bottom: 5px solid @header-bg;
-        line-height: 55px;
+        line-height: 70px;
         text-align: center;
         color: #fff;
       }
@@ -38,6 +39,11 @@
 
       .user-item{
         float: right;
+        text-align: right;
+        &:hover{
+            border-bottom-color: @header-bg;
+            color: #ff8813;
+        }
       }
 
     }

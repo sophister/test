@@ -1,3 +1,7 @@
+/*
+ * @require common:widget/oui/widgets/pagination.css
+ */
+
 define(function(require, exports, module) {
 
   var $ = require('jquery');

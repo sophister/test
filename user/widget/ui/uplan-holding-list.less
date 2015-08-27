@@ -1,0 +1,55 @@
+@gray : #848484;
+.alignRight {
+	padding-right: 10px;
+	text-align: right;
+}
+#my-uplan-tab {	
+	.assets-tab-content {
+		padding: 14px 0px 0px 0px; 
+		.my-uplan-list {
+			li {
+				line-height: 50px;
+				font-size: 14px;
+				border-bottom: solid 1px #f4f4f4;
+				color: @gray;
+				&.list-title {
+					line-height: 40px;
+					border-bottom: none;
+					background: #f9f9f9;
+					color: @gray;
+				}
+				span {
+					float: left;
+					&.name {
+						width: 190px;
+						padding-left: 20px;
+					}
+					&.rate {
+						width: 90px;
+						text-align: center;
+					}
+					&.joned-amount {
+						width: 160px;
+						.alignRight;
+					}
+					&.earnings {
+						width: 146px;
+						.alignRight;
+					}
+					&.num {
+						width: 128px;
+						.alignRight;
+					}
+					&.state {
+						width: 154px;
+						padding-left: 40px;
+					}
+					&.all-products {
+						width: 120px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}

@@ -22,22 +22,22 @@
 
 .ui-icon-check-checked {
 	/* 16px * 16px */
-  background: url('/static/img/icon-checked-blue-small.png') no-repeat center center;
+  background: url('/static/img/icon-checked-blue-small.png?_inline') no-repeat center center;
 }
 
 .ui-icon-check-unchecked,.ui-icon-check-{
 	/* 16px * 16px */
-  background: url('/static/img/icon-unchecked-small.png') no-repeat center center;
+  background: url('/static/img/icon-unchecked-small.png?_inline') no-repeat center center;
 }
 
 .ui-icon-gender-male {
 	/* 20px * 20px */
-	background: url('/static/img/icon-male.png') no-repeat center center;
+	background: url('/static/img/icon-male.png?_inline') no-repeat center center;
 }
 
 .ui-icon-gender-female {
 	/* 20px * 20px */
-  background: url('/static/img/icon-female.png') no-repeat center center;
+  background: url('/static/img/icon-female.png?_inline') no-repeat center center;
 }
 
 
@@ -48,7 +48,7 @@
   width: 30px;
   height: 30px;
   line-height: 30px;
-  background: url("/static/img/loantypes.png") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
 }
 
 .ui-loantype.XYRZ {
@@ -73,7 +73,7 @@
   height: 18px;
   line-height: 18px;
   margin-right:3px;
-  background: url("/static/img/loantypes-s.png") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes-s.png?_inline") no-repeat scroll left top transparent;
   vertical-align: middle;
 }
 
@@ -182,7 +182,7 @@
   margin: 6px 12px 2px;
   width: 9px;
   height: 14px;
-  background: url('/static/img/breadcrumb-angle-right.png') no-repeat center center;
+  background: url('/static/img/breadcrumb-angle-right.png?_inline') no-repeat center center;
 }
 
 
@@ -195,7 +195,7 @@
   line-height: 44px;
   font-size: 8px;
   text-align: center;
-  background: url('/static/img/progressbar_mid.png');
+  background: url('/static/img/progressbar_mid.png?_inline');
 }
 
 .ui-progressbar-mid em {
@@ -517,7 +517,7 @@
   line-height: 34px;
   text-align: center;
   font-size: 8px;
-  background: url('/static/img/progressbar_small.png');
+  background: url('/static/img/progressbar_small?_inline.png');
 }
 
 .ui-progressbar-small em {
@@ -828,7 +828,41 @@
   background-position:-4400px 0;
 }
 
+/************
+ *<span class="ui-process-long  fn-clear">   
+	            <span class="basic-progress-bg fn-left"> 
+	            		<b class="basic-percent fn-left" style="width:{{ progress }}%"></b>
+	            </span>
+	  			<span class="basic-text fn-left text-right"><em>{{ progress }}</em>%</span>            
+	    </span>
+ * 
+ * ****************/
 
+.ui-process-long{
+	 display:block;
+	 text-align: center;
+}
+.ui-process-long .basic-progress-bg {
+	zoom: 1;
+	background: #d0e4f7;
+	height: 4px;
+	width: 50px;
+	margin-top:24px;
+	
+}
+.ui-process-long .basic-percent {
+	position: relative;
+	top:0;
+	left:0;
+	background: #8ac1f4;
+	height: 4px;
+} 
+
+.ui-process-long .basic-text{
+	zoom: 1;
+	width:30px;
+	text-align: right;
+}
 /* Large Progress Bar */
 
 .ui-progressbar-circle {
@@ -903,7 +937,7 @@ a.ui-progressbar-circle-join {
   line-height: 96px;
   text-align: center;
   font-size: 16px;
-  background: url('/static/img/progressbar_large.png');
+  background: url('/static/img/progressbar_large.png?_inline');
 }
 
 .ui-progressbar-large em {
@@ -1225,7 +1259,7 @@ a.ui-progressbar-circle-join {
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url(/static/img/icon-content.png) no-repeat;
+  background: url(/static/img/icon-content.png?_inline) no-repeat;
   vertical-align: middle;
 }
 .icon-check-checked{
@@ -1313,7 +1347,7 @@ a.ui-progressbar-circle-join {
   background-position: -31px -177px;
 }
 .icon-bill{
-  background: url(/static/img/account/bill/icon-bill.png) no-repeat
+  background: url(/static/img/account/bill/icon-bill.png?_inline) no-repeat
 }
 .icon-bill-link{
   width: 16px;
@@ -1375,7 +1409,7 @@ a.ui-progressbar-circle-join {
   display: block;
   width: 24px;
   height: 24px;
-  background:url(/static/img/icon-performace.png) no-repeat scroll 0 0;
+  background:url(/static/img/icon-performace.png?_inline) no-repeat scroll 0 0;
 }
 
 .icon-performace.sum{
@@ -1402,7 +1436,7 @@ a.ui-progressbar-circle-join {
   display: block;
   width: 29px;
   height: 24px;
-  background:url(/static/img/icon-performace-autoinvest.png) no-repeat scroll 0 0;
+  background:url(/static/img/icon-performace-autoinvest.png?_inline) no-repeat scroll 0 0;
 }
 
 .icon-performace-autoinvest.sum {
@@ -1428,7 +1462,7 @@ a.ui-progressbar-circle-join {
   display: inline-block;
   height: 28px;
   width: 25px;
-  background: url(/static/img/uplan-type.png) no-repeat;
+  background: url(/static/img/uplan-type.png?_inline) no-repeat;
   vertical-align: middle;
 }
 
@@ -1451,7 +1485,7 @@ a.ui-progressbar-circle-join {
   display: inline-block;
   width: 26px;
   height: 26px;
-  background: url("/static/img/loantypes.png") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
   vertical-align: middle;
 }
 
@@ -1477,7 +1511,7 @@ a.ui-progressbar-circle-join {
   height: 18px;
   line-height: 18px;
   margin-right:3px;
-  background: url("/static/img/loantypes-s.png") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes-s.png?_inline") no-repeat scroll left top transparent;
   vertical-align: middle;
 }
 

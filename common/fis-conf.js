@@ -20,7 +20,12 @@ fis.config.set('modules.postprocessor.jsp', 'amd');
 fis.config.set('modules.packager', 'depscombine');
 
 fis.config.set('pack', {
-    
+    'pkg/common_widget_oui.js' : [
+        /widget\/oui\/(.*?).js$/
+    ],
+    'pkg/common_widget_oui.css' : [
+        /widget\/oui\/(.*?).css$/
+    ]
 });
 
 

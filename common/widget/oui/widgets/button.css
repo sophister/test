@@ -78,10 +78,10 @@ button.ui-button-text {
 /* Rectangle Button */
 
 .ui-button-rect-mid {
-  padding: 0 30px;
-  font-size: 18px;
-  line-height: 40px;
-  height: 40px;
+  padding: 0 18px;
+  font-size: 16px;
+  line-height: 30px;
+  height: 30px;
   border: none;
   text-align: center;
 }
@@ -98,10 +98,24 @@ button.ui-button-text {
 .ui-button-blue:hover {
   background-color: #2ea7e0;
 }
-
 a.ui-button-blue,
 a.ui-button-blue:active,
 a.ui-button-blue:hover {
+  color: #fff;
+}
+.ui-button-orange {
+  border: none;
+  color: #fff;
+  background-color: #ff8813;
+}
+
+.ui-button-orange:hover {
+  background-color: #ff8813;
+}
+
+a.ui-button-orange,
+a.ui-button-orange:active,
+a.ui-button-orange:hover {
   color: #fff;
 }
 

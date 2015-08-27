@@ -12,19 +12,18 @@
 .ui-pagination li a.page-link {
 	display: block;
   padding: 0 0 1px 1px;
-	width: 21px;
-	height: 21px;
-  border-radius: 12px;
-	line-height: 22px;
-  font-size: 12px;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+  font-size: 14px;
   text-align: center;
   overflow: hidden;
+  font-family: Helvetica;
 }
 
 .ui-pagination li span {
-	color: #fff;
-	border: 1px solid #2ea7e0; /* rrdcolor-blue */
-	background: #2ea7e0;
+	color: #3a84cf;
+  border: 1px solid #3a84cf; 
 }
 
 .ui-pagination li.disabled span {
@@ -37,7 +36,8 @@
 .ui-pagination li span.next,
 .ui-pagination li a.page-link.prev,
 .ui-pagination li a.page-link.next {
-  font-size: 0;
+  /*font-size: 0;*/
+  width: 84px;
 }
 
 .ui-pagination li span.prev,
@@ -47,34 +47,34 @@
 }
 
 .ui-pagination li a.page-link.prev {
-	background-image: url('/static/img/prev-gray.png');
-  background-position: center center;
-  background-repeat: no-repeat;
+	/*background-image: url('/static/img/prev-gray.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
 }
 
 .ui-pagination li a.page-link.next {
-	background-image: url('/static/img/next-gray.png');
-  background-position: center center;
-  background-repeat: no-repeat;
+	/*background-image: url('/static/img/next-gray.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
 }
 
 .ui-pagination li span.prev,
 .ui-pagination li a.page-link.prev:hover {
-  background-image: url('/static/img/prev-white.png');
-  background-position: center center;
-  background-repeat: no-repeat;
+  /*background-image: url('/static/img/prev-white.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
 }
 
 .ui-pagination li span.next,
 .ui-pagination li a.page-link.next:hover {
-	background-image: url('/static/img/next-white.png');
-  background-position: center center;
-  background-repeat: no-repeat;
+	/*background-image: url('/static/img/next-white.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
 }
 
 .ui-pagination li a.page-link {
-  color: #808080; /* color-gray */
-  border: 1px solid #808080;
+  color: #f7f7f7; /* color-gray */
+  border: 1px solid #f7f7f7;
 }
 
 .ui-pagination li a.page-link {
@@ -82,9 +82,8 @@
 }
 
 .ui-pagination li a.page-link:hover {
-	color: #fff;
-  border: 1px solid #2ea7e0; /* rrdcolor-lightblue */
-  background: #2ea7e0;
+	color: #3a84cf;
+  border: 1px solid #3a84cf; /* rrdcolor-lightblue */
 }
 
 .ui-pagination li span {

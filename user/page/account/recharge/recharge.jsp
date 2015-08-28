@@ -15,7 +15,7 @@
         <div id="pg-account-recharge" class="pg-account fn-clear">
           <div>
               <div class="withdraw-wrap color-white-bg fn-clear">
-                  <form data-name="recharge" class="ui-form" method="post" id="regchargeForm" name="checkinForm" target="_blank"  action="/account/userCheckin.action">
+                  <form data-name="recharge"  method="post" id="regchargeForm" name="checkinForm" target="_blank"  action="/account/userCheckin.action">
                     <div class="withdraw-title fn-clear">充值</div>
                       <div class="bankList" id="bankList">
                         <dl class="clearfix">
@@ -32,7 +32,7 @@
 
                       <div class="withdrawInputs">
                         <div class="inputbox">
-                          <div class="ui-form-item">
+                          <div >
                             <div id="rechargeWay">
                               <div class="recharge-title J_recharge-title">
                                 <ul class="fn-clear">
@@ -461,17 +461,18 @@
                               </div>
                             </div>
                           </div>
-                          <div class="ui-form-item">
-                            <label class="ui-label">账户余额</label>
+                          <div>
+                            <label>账户余额</label>
                             <em class="value" id="rechargeRemain">￥<!--账户余额代码占位坑-->100</em>元
                           </div>
                             <div class="ui-form-item">
-                              <label class="ui-label mt10"><span class="ui-form-required">*</span>充值金额</label>
+                              <label class="ui-label mt10">充值金额</label>
                               <input class="ui-input" type="text" name="amount" maxlength="9" id="rechargeAmount" data-is="isAmount" value="">
                               <i class="unit">元</i>
                             </div>
-                            <div class="ui-form-item">
-                              <label class="ui-label">充值费用</label>
+                            <!--
+                            <div>
+                              <label>充值费用</label>
                               <em class="value" id="rechargePoundage">￥0.00</em>元
                               <i id="tips" class="iconfont tips">&#xF046;</i>
                               <div class="ui-poptip fn-hide" id="tipCon">
@@ -490,18 +491,19 @@
                             </div>
                           </div>
                             </div>
-                            
+                            -->
                             <!--代金卷判断代码占位坑-->
-
+                            <!--
                               <div class="ui-form-item">
                               <label class="ui-label">实际金额</label>
                               <em class="value" id="rechargePay">￥0.00</em>元
                             </div>
+                            -->
                             <input type="hidden" value="" id="payFeeType" />
                             <input type="hidden" name="bankId" id="bankId" />
                             <input type="hidden" name="paytype" id="paytype">
                             <div class="ui-form-item widthdrawBtBox">
-                              <input id="sub-recharge" type="submit" class="block-btn" value="充 值">
+                              <input id="sub-recharge" type="submit" value="充 值">
                       </div>
                            </div>
                         </div>

@@ -461,15 +461,15 @@
                               </div>
                             </div>
                           </div>
-                          <div>
+                          <div class="count-cash">
                             <label>账户余额</label>
-                            <em class="value" id="rechargeRemain">￥<!--账户余额代码占位坑-->100</em>元
+                            <em class="value" id="rechargeRemain"><!--账户余额代码占位坑-->100</em>元
                           </div>
-                            <div class="ui-form-item">
-                              <label class="ui-label mt10">充值金额</label>
-                              <input class="ui-input" type="text" name="amount" maxlength="9" id="rechargeAmount" data-is="isAmount" value="">
-                              <i class="unit">元</i>
-                            </div>
+                          <div class="ui-form-item recharge-nopadding">
+                            <label>充值金额</label>
+                            <input class="ui-input" type="text" name="amount" maxlength="9" id="rechargeAmount" data-is="isAmount" value="" placeholder="元">
+                            <i class="unit">充值免手续费</i>
+                          </div>
                             <!--
                             <div>
                               <label>充值费用</label>
@@ -502,10 +502,10 @@
                             <input type="hidden" value="" id="payFeeType" />
                             <input type="hidden" name="bankId" id="bankId" />
                             <input type="hidden" name="paytype" id="paytype">
-                            <div class="ui-form-item widthdrawBtBox">
-                              <input id="sub-recharge" type="submit" value="充 值">
-                      </div>
-                           </div>
+                            <div class="widthdrawBtBox">
+                              <input id="sub-recharge" type="submit" value="下一步">
+                            </div>
+                          </div>
                         </div>
                       <div class="worm-tips">
                         <div class="tips-title"><span class="icon"></span>温馨提示</div>
@@ -533,7 +533,7 @@
               </div>
             </div>
              <script id="rechargeBank-list-template" type="text/x-handlebars-template">
-          <ul class="fn-clear">
+          <ul class="fn-clear bank-list">
           {{#each rows}}
           <li class="{{className}}" data-value="{{code}}" data-type="{{payChannelStr}}" >
             <img alt="{{fullName}}" src="{{logo}}">

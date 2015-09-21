@@ -1,0 +1,21 @@
+{
+  "name": "huodong",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sophister/test",
+  "authors": [
+    "GuoYongfeng <guoyff@yonyou.com>"
+  ],
+  "description": "renrendai",
+  "keywords": [
+    "renrendai"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/js/lib",
+    "test",
+    "tests"
+  ]
+}

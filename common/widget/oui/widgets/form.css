@@ -79,11 +79,11 @@
 }
 
 .ui-form-item .input-bg-gray {
-  background: url("/static/img/input-icon/input-bg-all.png") 0 0 no-repeat;
+/*  background: url("/static/img/input-icon/input-bg-all.png") 0 0 no-repeat;*/
 }
 
 .ui-form-item .input-bg-red {
-  background: url("/static/img/input-icon/input-bg-all.png") 0 -94px no-repeat;
+ /* background: url("/static/img/input-icon/input-bg-all.png") 0 -94px no-repeat;*/
 }
 
 .ui-form-item .input-icon-id-gray {
@@ -151,12 +151,12 @@
 }
 
 .ui-form input.error, .ui-form textarea.error {
-  border: 1px solid #dd4a38;
+  border: 1px solid #ee7565;
 }
 
 .ui-form label.error {
   display: block;
-  color: red;
+  color: #ee7565;
 }
 
 .ui-form label.valid {
@@ -167,16 +167,19 @@
 .ui-textarea {
   padding: 4px 5px;
   line-height: 22px;
-  color: #595959;
-  font-size: 14px;
-  border-radius: 2px;
+  color: #2b2b2b;
+  font-size: 16px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   border: 1px solid #c5c5c5;
-  box-shadow: 0 1px 3px #eee inset;
+  /*box-shadow: 0 1px 3px #eee inset;*/
 }
 
 .ui-input:hover, .ui-textarea:hover, .ui-input:focus, .ui-textarea:focus, .ui-input-hover {
 /*  border: 1px solid #69bde9;*/
-  border: 1px solid #2ea7e0;
+  /*border: 1px solid #2ea7e0;*/
+  border: 1px solid #3a84cf;
 }
 
 .ui-input:focus, .ui-textarea:focus, .ui-input-focus, input:focus, select:focus, button:focus {
@@ -208,8 +211,8 @@
   margin-top: 2px;
   vertical-align: middle;
   padding-right: 5px;
-  background-image: url('/static/img/ui-select.png');
-  background-repeat: no-repeat;
+  /*background-image: url('/static/img/ui-select.png');*/
+  /*background-repeat: no-repeat;*/
 }
 .ui-select input{
   visibility: hidden;
@@ -246,5 +249,5 @@
 }
 
 .form-msg .warn {
-  color: red;
+  color: #ee7465;
 }

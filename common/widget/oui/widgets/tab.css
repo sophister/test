@@ -28,10 +28,7 @@
 }
 
 .ui-tab-item {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-	*margin-right: 4px;
+	float: left;
 }
 
 .ui-tab-item a {
@@ -40,9 +37,7 @@
 	padding: 0 10px;
 	border-bottom: none;
 	color: #4D4D4D;
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	float: left;
 	cursor: pointer;
 }
 
@@ -80,6 +75,7 @@
 /* Transparent Tab */
 .ui-tab-transparent .ui-tab-items {
 	border-bottom: 0;
+	
 }
 
 .ui-tab-transparent .ui-tab-item {
@@ -89,7 +85,6 @@
 .ui-tab-transparent .ui-tab-item a {
 	font-size: 16px;
 	border: none;
-	padding: 4px 35px 0;
 	color: #999;
 }
 
@@ -180,3 +175,60 @@
   font-weight: 700;
   display:inline;
 }
+/*******************覆盖上面的CSS********************************/
+.ui-tab {
+	position: relative;
+	color:#848484;
+    background: #f9f9f9;
+}
+.ui-tab-transparent  .loans-return-link {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+  }
+       
+ .ui-tab-transparent   .ui-tab-item  a {
+        font-weight: normal;
+        height: 50px;
+        line-height:50px;
+        color:#2b2b2b;
+   }	
+ .ui-tab-transparent  .ui-tab-item{
+        padding:0;
+        margin:0; 
+   }
+ 
+.ui-tab-transparent  .ui-tab-item-2{
+        width:50%;         
+ }
+ .ui-tab-transparent  .ui-tab-item-3{
+        width:33.33333%;           
+ }
+.ui-tab-transparent .ui-tab-item-4{
+        width:25%;                   
+  }
+.ui-tab-transparent .ui-tab-item-5{
+        width:20%;                  
+  }
+ .ui-tab-transparent  .ui-tab-item-link{
+       	width:100%;
+       	padding:0;
+       	padding-top: 4px;
+       	margin:0;
+       	text-align: center;
+    }
+.ui-tab-transparent .ui-tab-item-current, .ui-tab-transparent .ui-tab-item:hover {
+	background: #fff;
+	border-top: 4px solid #3a84cf;
+}
+.ui-tab-transparent .ui-tab-item-current a, .ui-tab-transparent .ui-tab-item:hover a {
+    padding:0;
+    margin:0;
+    text-align: center;
+           
+}
+.ui-tab-transparent .ui-tab-item-current a.ui-tab-item-link {
+	border-left: none;
+	border-right: none;
+}
+ 

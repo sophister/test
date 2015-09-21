@@ -1,35 +1,80 @@
-.ui-dialog {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    outline: none;
-    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
-    /* padding: 10px; */
-    box-shadow: 0 0 2px 1px #ccc;
-}
 
 :root .ui-dialog {
     FILTER: none\9;
 }
 
-.ui-dialog-close {
-    color: #999;
-    cursor: pointer;
-    display: block;
-    font-family: tahoma;
-    font-size: 24px;
-    font-weight: bold;
-    height: 18px;
-    line-height: 14px;
-    position: absolute;
-    right: 16px;
-    text-decoration: none;
-    top: 16px;
-    z-index: 10;
-}
+
 .ui-dialog-close:hover {
     color: #666;
     text-shadow: 0 0 2px #aaa;
 }
+
+.ui-dialog{
+    position: fixed;
+    width: 700px;
+    left: 50%;
+    top: 200px;
+    z-index: 9999;
+    padding: 0 0px 0px;
+    background: #fff;
+}
+
+.ui-dialog .title,.ui-dialog .ui-confirm-title{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 25px;
+    border-bottom: 1px solid #f4f4f4;
+    display: block;
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+.ui-dialog .ui-dialog-close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #686868;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.ui-dialog .j-dialog-footer{
+    padding: 30px 58px 0 58px;
+    margin-top: 30px;
+    border-top: 1px solid #f4f4f4;
+    font-size: 14px;
+    line-height: 24px;
+    background: #fafafa;
+    color: #848484;
+}
+
+.ui-dialog .j-dialog-footer .j-dialog-section-title{
+    margin-top: -17px;
+}
+
+.ui-dialog .tiptip{
+    margin-left: 56px;
+}
+
+
+
+.ui-confirm-loading-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    background: rgba(255, 255, 255, 0.9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF, endColorstr=#DFFFFFFF);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF, endColorstr=#DFFFFFFF)";
+    text-align: center;
+    z-index: 100;
+}   
+
 
 /* .ui-dialog-title {
     height:45px;

@@ -4,7 +4,8 @@
  */
 
 .ui-pagination li {
-	float: left;
+  display: inline-block;
+	/*float: left;*/
 	margin: 5px;
 }
 
@@ -44,6 +45,7 @@
 .ui-pagination li span.next {
 	border: 1px solid #e5e4e2; /* color-platinum */
   background-color: #e5e4e2; /* color-platinum */
+  color: #fff;
 }
 
 .ui-pagination li a.page-link.prev {
@@ -88,4 +90,15 @@
 
 .ui-pagination li span {
 	cursor: default;
+}
+
+.ui-pagination{
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0px 30px 0px;
+}
+
+.ui-pagination ul{
+  /*float:right;*/
+  text-align: center;
 }

@@ -1,22 +1,85 @@
-@main-active-color : #ff8813;
-@normal-text-color:#fff;
 
-.we-btn{
-    background-color: @main-active-color;
-    cursor: pointer;
+
+.j-btn{
     display: inline-block;
-    text-decoration: none;
-    color: @normal-text-color;
+    border: 0 none;
+    font-size: 14px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    cursor: pointer;
     text-align: center;
+    text-decoration: none;
+}
+/*橙色按钮*/
+.j-btn-orange, a.j-btn-orange{
+    background: #ff8a10;
+    color: #fff;
+    border:none;
+}
+.j-btn-orange:hover{
+    background: #e87e0f;
+    border:none;
+    color: #fff;
+}
 
-    /*大button图标*/
-    &.we-btn-large{
+/*白色按钮 橙色边框*/
+.j-btn-white{
+    background: #fff;
+    color: #ff8a10;
+    border:solid 1px #ff8a10;
+    height: 42px;
+}
 
-    }
-    /*小button*/
-    &.we-btn-small{
-        width: 100px;
-        height: 40px;
-        line-height: 40px;
-    }
+/*蓝色按钮*/
+.j-btn-blue, a.j-btn-blue{
+    color: #fff;
+    background: #3a84cf;
+    border:none;
+}
+.j-btn-blue:hover{
+    background: #3676b7;
+    color: #fff;
+    border:none;
+}
+
+/*对话框中的按钮*/
+.j-btn-big{
+    width: 220px;
+    height: 44px;
+    line-height: 44px;
+}
+.j-dialog-btn-small{
+    width: 92px;
+    height: 44px;
+    line-height: 44px;
+}
+/*取消按钮*/
+.j-btn-cancel{
+    height: 42px;
+    line-height: 42px;
+    color: #ff8a10;
+    border: 1px solid #ff8a10;
+    margin-left: 20px;
+    background: #fff;
+}
+.j-btn-cancel:hover {
+    color: #e87e0f;
+    border-color: #e87e0f;
+}
+
+/*两个对话框并排的宽度*/
+.j-btn-small{
+    width: 73px;
+    height: 35px;
+    line-height: 35px;
+}
+.j-btn-small-b{
+    width: 71px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.j-btn-block{
+    display: block;
 }

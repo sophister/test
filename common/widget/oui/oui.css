@@ -1,3 +1,5 @@
 @import url('./widgets/misc.css?__inline');
 @import url('./widgets/pagination.css?__inline');
 @import url('./widgets/button.css?__inline');
+@import url('./widgets/table.css?__inline');
+@import url('./widgets/dialog.css?__inline');

@@ -31,18 +31,61 @@
         line-height: 70px;
         text-align: center;
         color: #fff;
+        a {
+          color: #fff;
+        }
       }
       .channel-item:hover{
         border-bottom-color: #ff8813;
         color: #ff8813;
+        a {
+          color: #ff8813;
+        }
       }
 
       .user-item{
         float: right;
-        text-align: right;
-        &:hover{
-            border-bottom-color: @header-bg;
-            color: #ff8813;
+        padding-top: 17px;
+        width: 120px;
+        .user-avatar-container {
+          width: 36px;
+          height: 36px;
+          position: relative;
+          margin-right: 14px;
+          * {
+            width: 100%;
+            height: 100%;
+          }
+          .avatar-masking {
+            position: absolute;
+            background: url(assets/masking.png?__inline) no-repeat;
+            left: 0px;
+            top: 0px;
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          #header-msgcount {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            background: url(assets/msg.png?__inline) no-repeat;
+            position: absolute;
+            right: -6px;
+            top: -6px;
+            font-size: 12px;
+            display: none;
+          }
+        }
+        .user-name {          
+          line-height: 36px;
+          a {
+            color: #fff;
+          }
         }
       }
 

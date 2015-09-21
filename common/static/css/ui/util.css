@@ -66,3 +66,13 @@ body .fn-hide {
 .fn-webkit-adjust {
     -webkit-text-size-adjust: none;
 }
+
+/*数字字体*/
+.num-family{
+    font-family:HelveticaNeueLt;
+}
+
+/*普通文字链接样式*/
+a, a:link, a:visited, a:hover, a:active{
+    color: #3a84cf;
+}

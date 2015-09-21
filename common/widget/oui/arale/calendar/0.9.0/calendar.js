@@ -1,7 +1,6 @@
 define(function(require, exports, module) {
   var $ = require('jquery');
   var moment = require('moment');
-       require('./calendar.css');
 
   var BaseCalendar = require('./base-calendar');
   var DateColumn = require('./date-column');

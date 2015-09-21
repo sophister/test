@@ -78,3 +78,37 @@ a.ui-poptip-close:hover { border:1px solid #ffb24c; text-decoration:none; color:
 .ui-poptip-gray .ui-poptip-arrow-2 span, .ui-poptip-gray .ui-poptip-arrow-4 span { border-left-color:#f2f2f2 }
 .ui-poptip-gray .ui-poptip-arrow-5 span, .ui-poptip-gray .ui-poptip-arrow-7 span { border-top-color:#f2f2f2 }
 .ui-poptip-gray .ui-poptip-content{ color:#8c8c8c}
+
+.ui-poptip-new{color:#848484;}
+.ui-poptip-new .ui-poptip-shadow { background-color:rgba(0,0,0,.05); FILTER:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#0c000000, endColorstr=#0c000000)
+}
+.ui-poptip-new .ui-poptip-container { background-color:#ffffff; border:1px solid #848484;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+.ui-poptip-new .ui-poptip-arrow-10 em { border-right-color:#848484 }
+.ui-poptip-new .ui-poptip-arrow-11 em, .ui-poptip-new .ui-poptip-arrow-1 em { border-bottom-color:#848484 }
+.ui-poptip-new .ui-poptip-arrow-2 em, .ui-poptip-new .ui-poptip-arrow-4 em { border-left-color:#848484 }
+.ui-poptip-new .ui-poptip-arrow-5 em, .ui-poptip-new .ui-poptip-arrow-7 em { border-top-color:#848484 }
+.ui-poptip-new .ui-poptip-arrow-10 span {border-color: transparent #ffffff transparent transparent;}
+.ui-poptip-new .ui-poptip-arrow-11 span, .ui-poptip-new .ui-poptip-arrow-1 span { border-bottom-color:#fff }
+.ui-poptip-new .ui-poptip-arrow-2 span, .ui-poptip-new .ui-poptip-arrow-4 span { border-left-color:#848484 }
+.ui-poptip-new .ui-poptip-arrow-5 span, .ui-poptip-new .ui-poptip-arrow-7 span { border-top-color:#848484 }
+.ui-poptip-new .ui-poptip-content{ color:#848484}
+.ui-poptip-new .triangle-border-left{
+	border-width: 7px 7px 7px 0px;
+    border-color: transparent #848484 transparent transparent;
+    border-style: solid;
+    margin: -1px -2px;
+}
+
+/*ui-poptip in list*/
+.ui-list-field .ui-poptip{
+	position: absolute;
+    left: 230px;
+    white-space: nowrap;
+    top: -2px;
+}
+.ui-list-field.ui-final-amount{
+	position: relative;
+}

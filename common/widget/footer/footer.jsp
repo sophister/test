@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=utf-8" %>
-
+<%@ taglib uri="/fis" prefix="fis"%>
 <div class="wdg-footer">
     <div class="main-section">
         <div class="contact-con">
@@ -66,3 +66,21 @@
         </div>
     </div>
 </div>
+<ul class="fixed-download-goBack">
+  <li class="fixed-calculator">
+    <a class="fixed-icon" href="javascript:"></a>
+  </li>
+  <li class="fixed-service">
+    <a class="fixed-icon" href="javascript:"></a>
+  </li>
+  <li class="fixed-download">
+    <a class="fixed-icon" href="javascript:"></a>
+  </li>
+  <li class="fixed-goTop">
+    <a class="fixed-icon" href="javascript:"></a>
+  </li>
+</ul>
+
+<fis:script>
+    require(["./footer"], function(){});
+</fis:script>

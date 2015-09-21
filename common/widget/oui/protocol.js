@@ -27,6 +27,14 @@ define(function (require, exports, module) {
       _list: 'notices'
     },
 
+    /*新手的散标列表API*/
+    getNewbeeLoans : {
+      url : '/lend/loanList!newComerLoanJson.action',
+      type: 'GET',
+      dataType: 'json',
+      _list: 'loans'
+    },
+
     /* Loans */
     getLoans: {
       url: '/lend/loanList!json.action',
@@ -359,6 +367,26 @@ define(function (require, exports, module) {
       },
       _list: 'transferLogList'
     },
+    getUserTransferredInRecords: {
+      url: '/account/invest!getTranfsferInLogJson.action',
+      type: 'GET',
+      dataType: 'json',
+      params: {
+        'tranfsferId': _API_PARAM.REQ,
+        'pageIndex': _API_PARAM.OPT
+      },
+      _list: 'transferLogList'
+    },
+    getUserTransferredLogJsonRecords: {
+      url: '/account/invest!getTranfsferLogJson.action',
+      type: 'GET',
+      dataType: 'json',
+      params: {
+        'tranfsferId': _API_PARAM.REQ,
+        'pageIndex': _API_PARAM.OPT
+      },
+      _list: 'transferLogList'
+    },
     /* Account - Invest - Financial Plan */
     getUserHoldingPlans: {
       url: '/account/invest!planJson.action',
@@ -521,11 +549,12 @@ define(function (require, exports, module) {
       var iso = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/i;
       if (isNaN(Date.parse(raw)) || iso.test(raw)) {
         if (type == 'date') {
-          return raw ? raw.substring(0, 10) : '';
+          return raw ? raw.substring(11, 16) : '';
         } else {
-          return raw ? raw.substring(0, 16).replace('T', ' ') : '';
+          return "";
+          //return raw ? raw.substring(0, 16).replace('T', ' ') : '';
         }
-      } else {
+       } else {
         var date = new Date(raw),
           hr = date.getHours(),
           min = date.getMinutes();
@@ -534,9 +563,57 @@ define(function (require, exports, module) {
         min = min < 10 ? '0' + min : min;
 
         return hr + ':' + min;   
-      }
+       }
     },
 
+    _getDatemonth: function (raw, type) {
+      var iso = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/i;
+      if (isNaN(Date.parse(raw)) || iso.test(raw)) {
+        if (type == 'date') {
+          if(raw){
+            var month = Number(raw.substring(5, 7)),
+                day = Number(raw.substring(8, 10));
+                day = day < 10 ? '0' + day : day;
+                month = month < 10 ? '0' + month : month;
+                return month + '.' + day; 
+          }else{
+            return '';
+          }
+        } else {
+          return "";
+          //return raw ? raw.substring(0, 16).replace('T', ' ') : '';
+        }
+       } else {
+        var date = new Date(raw),
+          month = date.getMonth() + 1,
+          day = date.getDate();
+          day = day < 10 ? '0' + day : day;
+        month = month < 10 ? '0' + month : month;
+
+        return month + '.' + day;   
+       }
+    },
+    _getDateyear: function (raw, type) {
+      var iso = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/i;
+      if (isNaN(Date.parse(raw)) || iso.test(raw)) {
+        if (type == 'date') {
+          var month = Number(raw.substring(5, 7)),
+              year = raw.substring(0, 4);
+              month = month < 10 ? '0' + month : month;
+              return year + '年' + month + '月'; 
+          return raw ? raw.substring(11, 16) : '';
+        } else {
+          return "";
+          //return raw ? raw.substring(0, 16).replace('T', ' ') : '';
+        }
+       } else {
+        var date = new Date(raw),
+          month = date.getMonth() + 1,
+          year = date.getFullYear();
+
+        return year + '年' + month + '月';   
+       }
+    },
     _getDateTime: function (raw, type) {
       var iso = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/i;
       if (isNaN(Date.parse(raw)) || iso.test(raw)) {
@@ -750,7 +827,8 @@ define(function (require, exports, module) {
         term: item.months,
         progress: progress,
         link: this.URL.loanDetails + item.loanId,
-        status: item.status
+        status: item.status,
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       if (ret.status == 'OPEN') {
         ret.buttonLink = this.URL.loanDetails + item.loanId;
@@ -771,7 +849,8 @@ define(function (require, exports, module) {
         cost: item.minInvestShares != 1 ? this._fixedFloat2(item.minInvestShares * item.pricePerShare) : this._fixedFloat2(item.pricePerShare),
         share: item.minInvestShares != 1 ?  item.share/item.minInvestShares : item.share,
         discount: item.discountRatio <= 1 ? item.discountRatio * 100 : item.discountRatio,
-        price: item.minInvestShares != 1 ? this._fixedFloat2(item.resultPice * item.minInvestShares) : this._fixedFloat2(item.resultPice)
+        price: item.minInvestShares != 1 ? this._fixedFloat2(item.resultPice * item.minInvestShares) : this._fixedFloat2(item.resultPice),
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -793,7 +872,7 @@ define(function (require, exports, module) {
         planLink: this.URL.planDetails + item.financePlanId,
         amount: this._fixedFloat2(item.amount),
         time: this._getDateTime(item.lendTime),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 //散标债权信息
@@ -813,7 +892,7 @@ define(function (require, exports, module) {
         planLink: this.URL.planDetails + item.financePlanId,
         amount: this._fixedFloat2(item.leftAmount),
         shares: item.minInvestShares != 1 ? item.share/item.minInvestShares: item.share,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 //散标转让记录
@@ -846,7 +925,7 @@ define(function (require, exports, module) {
         toautoInvest: item.toFinanceCategory == 'AUTO_INVEST_PLAN',
 
         time: this._getDateTime(item.createTime),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -860,7 +939,7 @@ define(function (require, exports, module) {
         status: item.repayType,
         date: item.repayTime === "" ? "--" : this._getDateTime(item.repayTime, 'date'),
         actualRepaydate: this._getDateTime(item.actualRepayTime, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -870,7 +949,7 @@ define(function (require, exports, module) {
         contactShort: item.contact.length <= 6 ? item.contact : (item.contact).substring(0, 6) + '...',
         description: item.description,
         date: this._getDateTime(item.createTime, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -985,7 +1064,7 @@ define(function (require, exports, module) {
         earnInterest: this._commaFloat(this._fixedFloat2(item.earnInterest < 0 ? 0 : item.earnInterest)),
         createDate: item.createTime,
         expectedYearRate:item.expectedYearRate,
-        itemStyle: i % 2 === 0 ? 'dark' : '',
+        itemStyle: i % 2 === 0 ? '' : 'dark',
         statusinfo:statusinfo,
         status:item.status,
         alink:alink,
@@ -1019,7 +1098,7 @@ define(function (require, exports, module) {
          subpointCountActual: item.subpointCountActual,
          expectedYearRate:this._commaFloat(item.expectedYearRate),
          earnInterest: this._commaFloat(item.earnInterest),
-         itemStyle: i % 2 === 0 ? 'dark' : '',
+         itemStyle: i % 2 === 0 ? '' : 'dark',
          statusinfo:statusinfo,
          link: link
        };
@@ -1071,7 +1150,7 @@ define(function (require, exports, module) {
         amount: this._commaInteger(item.amount),
         finalAmount: this._commaInteger(item.finalAmount),
         date: this._getDateTime(item.createTime),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       }
     },
 
@@ -1112,7 +1191,7 @@ define(function (require, exports, module) {
         note: item.notes,
         loanId: item.loanId,
         loanLink: this.URL.loanDetails + item.loanId,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1330,6 +1409,45 @@ define(function (require, exports, module) {
         itemStyle: i % 2 === 0 ? 'dark' : ''
       };
     },
+//账户详情页债权持有中明细列表
+    userTransferredInRecord: function (item, i) {
+      return {
+        leftPhaseCount:item.leftPhaseCount,
+        planId: item.transferId,
+        value: this._fixedFloat2(item.pricePerShare),
+        shares: item.share,
+        fee: this._fixedFloat2(item.fee),
+        income: this._fixedFloat2(item.income),
+        pnl: this._fixedFloat2(item.profit),
+        date: this._getDateTime(item.tranfsferDate, 'date'),
+        itemStyle: i % 2 === 0 ? 'dark' : ''
+      };
+    },
+  //账户详情页债权已完成明细列表
+    userTransferredLogJsonRecord: function (item, i) {
+      return {
+        user:  item.toNickName.length >10 ? item.toNickName.substr(0,10)+'...' : item.toNickName,
+        userfullname:item.toNickName,
+        isPlan: item.lenderType == "FINANCEPLAN_BID",
+        isAutoinvest: item.lenderType =="AUTOINVESTPLAN_BID",
+        financeold:item.toFinanceCategory == 'OLD',
+        financeU:item.toFinanceCategory != 'OLD',
+        financeCategoryStr:item.toFinanceCategory,
+        planId: item.financePlanId,
+        loanTypeName: this._loanType(item.displayLoanType),
+        transferId: item.logId,
+        planLink: this.URL.planDetails + item.financePlanId,
+        userLink: this.URL.userHome + item.buyerId,
+        value: this._fixedFloat2(item.pricePerShare),
+        price: this._fixedFloat2(item.price),
+        shares: item.share,
+        fee: this._fixedFloat2(item.fee),
+        income: this._fixedFloat2(item.income),
+        pnl: this._fixedFloat2(item.profit),
+        date: this._getDateTime(item.tranfsferDate, 'date'),
+        itemStyle: i % 2 === 0 ? 'dark' : ''
+      };
+    },
     //用户持有中理财计划
     userHoldingPlan: function (item, i) {
       ret = {
@@ -1369,6 +1487,7 @@ define(function (require, exports, module) {
         remainedValue: this._fixedFloat2(item.remainingAmount),
         transferringCount: parseInt(item.transferringLoanCount, 10),
         disabledCount: parseInt(item.disabledLoanCount, 10),
+        quitBeforeAmount : this._fixedFloat2((this._fixedFloat2(item.redProgress)*100 + this._fixedFloat2(item.availablePrice)*100)/100),
         itemStyle: i % 2 === 0 ? 'dark' : ''
       };
       return ret;
@@ -1424,7 +1543,7 @@ define(function (require, exports, module) {
         status: this._loanStatus(item.statusOrdinal),
         hasContract: true,
         date: this._getDateTime(item.lendTime, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       if (ret.status == '招标中' || ret.status == '已满标' || ret.status == '已流标') {
         ret.hasContract = false;
@@ -1446,6 +1565,7 @@ define(function (require, exports, module) {
         loanType: item.productType,
         loanTypeName: this._loanType(item.displayLoanType),
         amount: this._fixedFloat2(item.share * item.amountPershare),
+        indirect: item.indirect,
         shares: item.minInvestShares != 1 ? item.share/item.minInvestShares: item.share,
         termsLeft: item.leftPhases,
         termsInTotal: item.mouths,
@@ -1457,7 +1577,7 @@ define(function (require, exports, module) {
         nextDueDate: item.nextRepayDate ? this._getDateTime(item.nextRepayDate, 'date') : '-',
         toRepayPrincipal: this._fixedFloat2(item.recoveryPrincipal),
         toRepayInterest: this._fixedFloat2(item.recoveryInterest),
-
+        holdAmount : item.share,
         lenderId: item.loanLenderId,
         availableShares: item.minInvestShares != 1 ? item.share / item.minInvestShares: item.share,
         interestGained: this._fixedFloat2(item.recoveryAmount),
@@ -1478,6 +1598,8 @@ define(function (require, exports, module) {
       if (ret.status == '逾期') {
         ret.statusStyle = 'rrdcolor-red-text';
       }
+      ret.overdue = ret.status == '逾期' ? true : false;
+      ret.isCheckbox = item.isTransferable == '0' ? true : false;
       return ret;
     },
 
@@ -1501,6 +1623,7 @@ define(function (require, exports, module) {
         profit: item.earnMoney,
         clearDate: this._getDateTime(item.finishDate, 'date'),
         clearType: clearType,
+        isTransfer : item.finishType == 'transfer' ? true : false,
         itemStyle: i % 2 === 0 ? 'dark' : ''
       };
     },
@@ -1526,16 +1649,20 @@ define(function (require, exports, module) {
     userLoansReturnRecord: function (item, i) {
       return {
         loanId: item.loanId,
-        loanType: item.displayLoanType,
-        loanTypeName: this._loanType(item.displayLoanType),
+        loanType: item.type,
         loanLink: this.URL.loanDetails + item.loanId,
-        date: item.repaidTime == 'null' ? '--' : this._getDateTime(item.repaidTime, 'date'),
-        amount: this._fixedFloat2(item.amount),
-        borrower: item.nickName,
-        borrowerLink: this.URL.userHome + item.userId,
-        returnType: item.backTypeName || '--',
-        status: this._returnStatus(item.stauts),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        //loanTypeName: this._loanType(item.displayLoanType),
+        //loanLink: this.URL.loanDetails + item.loanId,
+        date: item.date == 'null' ? '--' : this._getDatemonth(item.date, 'date'),
+        note:item.note,
+        isFirst:item.first,
+        month:item.date == 'null' ? '--' : this._getDateyear(item.date, 'date'),
+        //amount: this._fixedFloat2(item.amount),
+        //borrower: item.nickName,
+        //borrowerLink: this.URL.userHome + item.userId,
+        //returnType: item.backTypeName || '--',
+        //status: this._returnStatus(item.stauts),
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1583,7 +1710,7 @@ define(function (require, exports, module) {
             usedurl : function(){
               return "/account/coupon!useUcodeReserve.action?fromMyCoupons=fromCoupon&couponId="+item.couponId;
             },
-            itemStyle: i % 3 === 2 ? 'last' : '',
+            itemStyle: i % 4 === 3 ? 'last' : '',
             expireRemind : item.expireRemind == '' ? '': item.expireRemind,
             bookmarkClass: item.expireRemind == '' ? 'fn-hide' : ''
         };
@@ -1611,7 +1738,7 @@ define(function (require, exports, module) {
             },
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : '',
+            itemStyle: i % 4 === 3 ? 'last' : '',
             expireRemind : item.expireRemind == '' ? '': item.expireRemind,
             bookmarkClass: item.expireRemind == '' ? 'fn-hide' : ''
         };
@@ -1639,7 +1766,7 @@ define(function (require, exports, module) {
             },
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : '',
+            itemStyle: i % 4 === 3 ? 'last' : '',
             expireRemind : item.expireRemind == '' ? '': item.expireRemind,
             bookmarkClass: item.expireRemind == '' ? 'fn-hide' : ''
         }
@@ -1651,11 +1778,18 @@ define(function (require, exports, module) {
             couponId : item.couponId,
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : '',
+            itemStyle: i % 4 === 3 ? 'last' : '',
             expireRemind : item.expireRemind == '' ? '': item.expireRemind,
             bookmarkClass: item.expireRemind == '' ? 'fn-hide' : ''
         };
       }
+
+      var totalRow =  Math.ceil(item.__listLength / 4) ;
+      var currentRow = Math.ceil( (i + 1 ) / 4 );
+      if( currentRow === totalRow ){
+        ret.className += ' coupon-row-last';
+      }
+
       return ret;
     },
     usedCoupon : function (item,i) {
@@ -1667,7 +1801,7 @@ define(function (require, exports, module) {
             investAmount : item.investAmount,
             consumeMemo: item.consumeMemo,
             consumeTime : this._getDateTime(item.consumeTime, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }else if (item.couponTypeEng=="VOUCHER"){
         ret = {//现金券
@@ -1678,7 +1812,7 @@ define(function (require, exports, module) {
             investAmount : item.investAmount,
             consumeMemo: item.consumeMemo,
             consumeTime : this._getDateTime(item.consumeTime, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }else if (item.couponTypeEng=="DISCOUNT"){
         ret = {//红包
@@ -1689,7 +1823,7 @@ define(function (require, exports, module) {
             investAmount : item.investAmount,
             consumeMemo: item.consumeMemo,
             consumeTime : this._getDateTime(item.consumeTime, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }
       else {
@@ -1699,9 +1833,16 @@ define(function (require, exports, module) {
             couponId : item.couponId,
             investAmount : item.investAmount,
             consumeTime : this._getDateTime(item.consumeTime, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }
+
+      var totalRow =  Math.ceil(item.__listLength / 4) ;
+      var currentRow = Math.ceil( (i + 1 ) / 4 );
+      if( currentRow === totalRow ){
+        ret.className += ' coupon-row-last';
+      }
+
       return ret;
     },
     expiredCoupon : function (item,i) {
@@ -1728,7 +1869,7 @@ define(function (require, exports, module) {
             },
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }else if (item.couponTypeEng=="VOUCHER"){
         ret = {//现金券
@@ -1754,7 +1895,7 @@ define(function (require, exports, module) {
             },
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }else if (item.couponTypeEng=="DISCOUNT"){
         ret = { //红包
@@ -1780,7 +1921,7 @@ define(function (require, exports, module) {
             },
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : '',
+            itemStyle: i % 4 === 3 ? 'last' : '',
             expireRemind : item.expireRemind == '' ? '': item.expireRemind,
             bookmarkClass: item.expireRemind == '' ? 'fn-hide' : ''
         }
@@ -1792,9 +1933,16 @@ define(function (require, exports, module) {
             couponId : item.couponId,
             validDateFrom : this._getDateTime(item.validDateFrom, 'date').replace(/-/g,"/"),
             validDateEnd : this._getDateTime(item.validDateEnd, 'date').replace(/-/g,"/"),
-            itemStyle: i % 3 === 2 ? 'last' : ''
+            itemStyle: i % 4 === 3 ? 'last' : ''
         };
       }
+
+      var totalRow =  Math.ceil(item.__listLength / 4) ;
+      var currentRow = Math.ceil( (i + 1 ) / 4 );
+      if( currentRow === totalRow ){
+        ret.className += ' coupon-row-last';
+      }
+
       return ret;
     },
     /* ** Translation ** */
@@ -1839,7 +1987,9 @@ define(function (require, exports, module) {
       handlerName = handlerName || this._itemName(api);
 
       if (items) {
+        var len = items.length;
         for (var i = 0; i < items.length; i++) {
+          items[i].__listLength = len;
           var item = this[handlerName](items[i], i);
           item.itemLast = i == items.length - 1 ? 'last' : '';
           list.push(item);
@@ -2037,6 +2187,9 @@ define(function (require, exports, module) {
       }
     }
   });
+
+
+  _Translator.prototype.newbeeLoan = _Translator.prototype.loan;
 
 
   /* Protocol */

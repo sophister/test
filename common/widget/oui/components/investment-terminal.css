@@ -5,7 +5,7 @@
 
 
 .ui-term {
-	width: 280px;
+	width: 270px;
 }
 
 .ui-term-field {
@@ -15,7 +15,7 @@
 .ui-term-input {
   display: block;
   padding: 8px 77px 8px 8px;
-  width: 193px;
+  width: 183px;
   height: 24px;
   line-height: 24px;
   font-size: 18px;
@@ -93,7 +93,7 @@
 .ui-term-fee,
 .ui-term-hint,
 .ui-term-error {
-  padding: 4px 8px;
+  padding: 4px 8px 4px 0px;
   font-size: 12px;
 }
 
@@ -107,18 +107,20 @@
 }
 
 .ui-term-button {
-  position: relative;
-  width: 280px;
-  line-height: 36px;
-  text-align: center;
+position: relative;
+width: 270px;
+line-height: 44px;
+height: 44px;
+text-align: center;
+font-size: 16px;
 }
 
 .ui-term-button .ui-button-text {
   display: none;
   margin-top: -2px;
   padding-left: 10px;
-  letter-spacing: 10px;
-  line-height: 36px;
+/*  letter-spacing: 10px;*/
+  line-height: 44px;
   color: #fff;
 }
 
@@ -187,8 +189,8 @@
 */
 
 .ui-term-box{
-  width: 280px;
-  padding: 12px 22px;
+  width: 270px;
+  padding: 12px 22px 10px 22px;
 }
 .ui-term-overage a{
   text-align: right;
@@ -198,25 +200,21 @@
 }
 
 
-/****自定义下拉框****/
+/****鑷畾涔変笅鎷夋****/
 .ui-selectdrop-dialog{
 	position: absolute;
-	width: 294px;
+	width: 250px;
 	right: 0px;
 	top: 0px;
 }
 .ui-selectdrop .s_select_bg {
-    border: 1px solid #2ea7e0;
-    border-radius: 3px;
-    color: #6A6A6A;
-    cursor: pointer;
-    outline: 0 none;
+
 }
 .ui-selectdrop .s_select_bg span.txt {
     display: inline-block;
     float: left;
     height: 24px;
-    padding: 8px 0 0 10px;
+    padding: 0px 0 0 10px;
     width: 230px;
      overflow:hidden;
 }
@@ -231,44 +229,44 @@
 }
 
 .ui-selectdrop .s_select_bg span.arrow {
-    background-color:#2ea7e0 ;
-    display: inline-block;
-    height:100%;
-    width: 40px;
+
 }
 .ui-selectdrop .s_select_bg span.arrow em {
-    background: url("/static/img/input-icon/borrow-icon.gif") no-repeat ;
-    background-position: -3px -55px;
-    display: inline-block;
-    height: 10px;
-    left: 13px;
-    position: relative;
-    top: 8px;
-    *top:14px;
-    width: 16px;
+    /*background: url("/static/img/input-icon/borrow-icon.gif") no-repeat ;*/
+    /*background-position: -3px -55px;*/
+    /*display: inline-block;*/
+    /*height: 10px;*/
+    /*left: 13px;*/
+    /*position: relative;*/
+    /*top: 8px;*/
+    /**top:14px;*/
+    /*width: 16px;*/
 }
 .ui-selectdrop .popBox {
+    padding: 8px 0;
     background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 0px;
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);*/
     cursor: default;
     outline: 0 none;
     z-index: 999;
     position: absolute;
-    border: 1px solid #00a8e7;
+    border: 1px solid #dddddd;
     margin:2px 0 0 0;
     max-height: 164px;
     overflow: auto;
 }
 .ui-selectdrop .popBox li {
-    padding: 7px 10px 7px 20px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 0 0 20px;
     color: #666666;
     cursor: pointer;
-    margin: 0px 0;
+    margin: 0;
 }
 .ui-selectdrop .popBox .selected{
-    background: none repeat scroll 0 0 #00a8e7;
-    color: #FFFFFF;
+    color: #3a84cf;
+    background: #fff;
 }
 
 .het35{
@@ -277,6 +275,9 @@
 }
 .wid280{
     width:280px;
+}
+.wid270{
+    width:270px;
 }
 .het45{
   height:31px;
@@ -297,5 +298,5 @@
 	color: red;
 }
 .ui-confirm-form .ui-button {
-	padding: 0px 15px;
+	padding: 0px;
 }

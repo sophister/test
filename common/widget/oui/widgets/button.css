@@ -20,7 +20,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .ui-button {
   display: inline-block;
   *display: inline;
-  border-radius: 2px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -62,7 +62,7 @@ button.ui-button-text {
   line-height: 30px;
   height: 30px;
   min-width: 50px;
-  border-radius: 15px;
+  /*border-radius: 15px;*/
   text-align: center;
 }
 
@@ -291,7 +291,7 @@ a.button,
 .button{
   display: inline-block;
   padding: 0;
-  border-radius: 2px;
+  border-radius: 6px;
   text-align: center;
 }
 

@@ -9,8 +9,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <%-- 360 浏览器就会在读取到这个标签后，立即切换对应的极速核 --%>
         <meta name="renderer" content="webkit">
+        <meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>${title}</title>
+        <fis:block name="block_head_content">
+            <meta name="keywords" content="人人贷 理财 P2P">
+            <meta name="description" content="人人贷 理财 P2P">    
+            <title>人人贷理财</title>
+        </fis:block>
         <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
 
         <link rel="stylesheet" type="text/css" href="/static/css/base.css">
@@ -22,8 +28,6 @@
         <script src="/static/js/html5.js"></script>
         <![endif]-->
 
-        <script type="text/javascript" src="/static/js/jquery/jquery.js"></script>
-        
         <!--header中的js-->
         <fis:block name="block_head_js"></fis:block>
 
@@ -47,19 +51,26 @@
             <fis:widget name="common:widget/top-header/top-header.jsp"/>
             <fis:widget name="common:widget/second-header/second-header.jsp"/>
         </fis:block>
-
+        <div id="pg-server-message" data-status="${ status }" data-message="${ message }" data-ispop="${ ispop }" style="display: none;"></div>
         <fis:block name="block_body">
             
         </fis:block>
-
+        <div class="pg-container-content"></div>
         <fis:block name="block_footer">
             <fis:widget name="common:widget/footer/footer.jsp"/>
+            <fis:widget name="common:widget/common-dialog/common-dialog.jsp"/> 
         </fis:block>
 
         <!--body里面的js-->
         <fis:block name="block_body_js">
             
-        </fis:block>        
+        </fis:block>
+
+        <fis:script>
+            require(['common:widget/ui/messageModule/messageModule.js'], function(shit){
+                shit.init();
+            });
+        </fis:script>
 
         <!--livereload-->
         <!--todo : 添加百度统计-->

@@ -33,11 +33,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:url('/static/fonts/icomoon.eot?kda7yk');
-    src:url('/static/fonts/icomoon.eot?#iefixkda7yk') format('embedded-opentype'),
-        url('/static/fonts/icomoon.ttf?kda7yk') format('truetype'),
-        url('/static/fonts/icomoon.woff?kda7yk') format('woff'),
-        url('/static/fonts/icomoon.svg?kda7yk#icomoon') format('svg');
+    src:url('/static/fonts/icomoon.eot?lgz9a9');
+    src:url('/static/fonts/icomoon.eot?#iefixlgz9a9') format('embedded-opentype'),
+    url('/static/fonts/icomoon.ttf?lgz9a9') format('truetype'),
+    url('/static/fonts/icomoon.woff?lgz9a9') format('woff'),
+    url('/static/fonts/icomoon.svg?lgz9a9#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -56,6 +56,22 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-info:before {
+    content: "\e617";
+    font-size : 15px;
+}
+.icon-info:hover{
+    color : #3a84cf;
+}
+.icon-info-hover .path1:before {
+    content: "\e604";
+    color: rgb(58, 132, 207);
+}
+.icon-info-hover .path2:before {
+    content: "\e611";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
 .icon-mobile3:before {
     content: "\e60e";
 }
@@ -181,7 +197,4 @@
 }
 .icon-minus:before {
     content: "\e603";
-}
-.icon-info:before {
-    content: "\e604";
 }

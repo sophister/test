@@ -279,7 +279,7 @@ define(function (require) {
       dl.element.remove();
     }).show();
     Form.ui.init();
-    if(data.initCouponValue){;
+    if(data.initCouponValue){
       if(couponIntData.payable<0){
         couponIntData.payable = 0;
       }

@@ -57,8 +57,8 @@
 
 .ui-confirm-label,
 .ui-confirm-value {
-  height: 30px;
-  line-height: 30px;
+  /*height: 30px;*/
+  /*line-height: 30px;*/
 }
 
 .ui-confirm-label {
@@ -66,8 +66,8 @@
   width: 100px;
 }
 .ui-confirm-label-short {
-  font-size: 12px;
-  width: 80px;
+  /*font-size: 12px;*/
+  /*width: 80px;*/
 }
 
 .ui-confirm-label.big {
@@ -93,30 +93,31 @@
 }
 
 .ui-confirm-item-note {
-  padding-left: 100px;
+  /*padding-left: 100px;*/
 }
 .ui-confirm-item-note-loan {
-	padding-right : 20px;
+    padding: 0 56px;
 }
 .ui-confirm-submit-box {
 	margin: 0 auto;
-	height:80px;
+	/*height:80px;*/
+    text-align: center;
 }
 
 .ui-confirm-cancel-link {
-	padding: 0 15px;
-	line-height: 30px;
-	height: 30px;
-	color: #808080;
+	/*padding: 0 15px;*/
+	/*line-height: 30px;*/
+	/*height: 30px;*/
+	/*color: #808080;*/
 	cursor: pointer;
 }
 
 .ui-confirm-cancel-link:hover {
-	color: #0697da;
+	/*color: #0697da;*/
 }
 
 .ui-confirm-cancel-link.disabled:hover {
-	color: #808080;
+	/*color: #808080;*/
 }
 
 .ui-confirm-loading {
@@ -217,7 +218,7 @@
 }
 
 .conform_pay_div {
-    width: 580px;
+    /*width: 580px;*/
     overflow: hidden;
     padding:0!important;
     
@@ -232,49 +233,56 @@
     width: 100%;
 }
 .conform_pay_div ul{
-    margin: 10px 0 0 30px;
+    /*margin: 10px 0 0 30px;*/
 }
 .conform_pay_div ul li{
-    line-height: 30px;
-    color:#000;
+    /*line-height: 30px;*/
+    /*color:#000;*/
 }
 .conform_pay_div .ui-selectdrop-dialog ul li {
-	line-height: 21px;
+	/*line-height: 21px;*/
 }
 .conform_pay_div ul li span{
-    color:#666;
-    margin-right: 20px;
+    /*color:#666;*/
+    /*margin-right: 20px;*/
 }
 .conform_pay_div ul li.selected span{
-	color: #fff;
+	/*color: #fff;*/
 }
 .conform_pay_div p{
-    margin: 0px 0 0 30px;
-    line-height: 30px;
+    /*margin: 0px 0 0 30px;*/
+    /*line-height: 30px;*/
 }
 .conform_pay_div .money-div{
-    border: 1px dashed #E0E0E0;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    /*border: 1px dashed #E0E0E0;*/
+    /*margin-bottom: 20px;*/
+    /*margin-top: 20px;*/
     padding: 10px 0;
 }
 .conform_pay_div p span{
-    margin-right: 20px;
+    /*margin-right: 20px;*/
 }
 .conform_pay_div p em{
-    color: #F58708;
+    /*color: #F58708;*/
     font-size: 24px;
 }
 .conform_pay_div .money-div .ui-form-item {
-	margin-bottom: 10px;
-	padding: 0px 5px 0px 128px;
+    padding-left: 210px;
+    margin-bottom: 10px;
 	display: none;
 }
 .conform_pay_div .money-div .pr {
-	padding-left : 166px;
+	padding-left : 176px;
+}
+.conform_pay_div .money-div .pr2 {
+    padding-left : 210px;
+    margin-bottom: 10px;
 }
 .conform_pay_div .money-div .ui-form-item .ui-input {
-	width: 270px;
+    padding: 0 0 0 10px;
+    width: 238px;
+    height: 34px;
+    line-height: 34px;
 }
 .conform_pay_div .money-div .ui-form-item .use-ucode-btn {
 	position: static;
@@ -283,16 +291,24 @@
 .conform_pay_div .addCoupon {
 	line-height: normal;
 	position: relative;
-	padding-left : 30px;
-	margin: 10px 0px;
+	/*padding-left : 30px;*/
+	margin: 0 0 10px 0px;
 	*z-index: 999;
 }
 .conform_pay_div .addCoupon .txt-name{
-    margin: 8px 20px 0px 0px;
+    /*margin: 8px 20px 0px 0px;*/
 }
 .conform_pay_div .addCoupon .use-psw {
-	margin-top: 8px;
-	margin-left: 0px;
+	margin-top: 0px;
+	margin-left: 10px;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+}
+.conform_pay_div .addCoupon .use-psw:hover{
+    background: #3676b7;
+    color: #fff;
 }
 .conform_pay_div .addCoupon .ui-select {
 	float: left;
@@ -329,11 +345,11 @@
 
 }
 .conform_pay_div .btn-savecon{
-  border-radius: 10px;
-  height: 40px;
-  margin: 15px 25px 0;
-  width: 100px;
-  cursor:pointer;
+  /*border-radius: 10px;*/
+  /*height: 40px;*/
+  /*margin: 15px 25px 0;*/
+  /*width: 100px;*/
+  /*cursor:pointer;*/
 }
 
 .conform_pay_div .tips-yd .icon-excla{
@@ -374,3 +390,18 @@
   margin:20px 0 20px 0;
 }
 
+
+/**覆盖原有样式**/
+.conform_pay_div .money-div .pr .ui-input{
+    padding: 0 0 0 10px;
+    width: 238px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.conform_pay_div .no-coupon-list  .addCoupon .use-psw{
+    margin-left: 0;
+}
+.conform_pay_div .money-div .no-coupon-list .ui-form-item{
+    padding-left: 176px;
+}

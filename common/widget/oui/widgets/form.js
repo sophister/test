@@ -5,6 +5,7 @@
 define(function (require, exports, module) {
   var $ = require("jquery");
   require("validate");
+  var jQuery = $;
   // require("ui-poptip");
   var form = {};
   form.err = {
@@ -629,6 +630,27 @@ define(function (require, exports, module) {
           isEducationCode: true
         }
       },
+       notLoginFindPsw: {
+        mobileOrEmail: {
+          required: true,
+          isMobileOrEmail: true
+        },
+        code: {
+          required: true,
+          minlength: 4,
+          maxlength: 4,
+          remote: {
+            url: "/account/checkCode.action",
+            dataFilter: function (data) {
+              var json = jQuery.parseJSON(data);
+              if (json.result == "true") {
+                return true;
+              }
+              return false;
+            }
+          }
+        }
+      },
       notLoginFindPswByEmail: {
         email: {
           required: true,
@@ -1227,6 +1249,18 @@ define(function (require, exports, module) {
         validCode: {
           required: form.err.required,
           isEducationCode: form.err.isEducationCode
+        }
+      },
+      notLoginFindPsw: {
+        mobileOrEmail: {
+          required: form.err.required,
+          isMobileOrEmail: form.err.isMobileOrEmail
+        },
+        code: {
+          required: form.err.required,
+          minlength: form.err.codeLength,
+          maxlength: form.err.codeLength,
+          remote: form.err.remoteCode
         }
       },
       notLoginFindPswByEmail: {
@@ -2137,7 +2171,7 @@ define(function (require, exports, module) {
       $poptip.show();
       return;
     }
-    $('<div class="ui-poptip ui-poptip-orange" style="z-index: 99; position: absolute; left: ' + left + 'px; top:' + top + 'px;"><div class="ui-poptip-container"><div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div><div data-role="content" class="ui-poptip-content" style="width: auto; height: auto;"></div></div></div>').appendTo(element.parent("div")).find(".ui-poptip-content").html(tipmsg);
+    $('<div class="ui-poptip ui-poptip-orange ui-poptip-new" style="z-index: 99; position: absolute; left: ' + left + 'px; top:' + top + 'px;"><div class="ui-poptip-container"><div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div><div data-role="content" class="ui-poptip-content" style="width: auto; height: auto;"></div></div></div>').appendTo(element.parent("div")).find(".ui-poptip-content").html(tipmsg);
   };
 
   form.tipblur = function (element) {
@@ -2296,7 +2330,7 @@ define(function (require, exports, module) {
         return origValidateFn.apply(this, args);
       };
     }
-  }(window.jQuery));
+  }(jQuery));
 
   //新版登录注册input样式
   var inputTheme = {
@@ -2360,19 +2394,22 @@ define(function (require, exports, module) {
       $("input[type='checkbox']").each(function(){
         var me = $(this);
         var isChecked = me.prop('checked');
-        $wrap = $( "<span class='ui-select'></span>").on("click",function(e){
+        $wrap = $( "<span class='ui-select j-checkbox'></span>").on("click",function(e){
           if(e.target.nodeName == "SPAN"){
             if(me.prop('checked')){
-              $(this).css("backgroundPosition","0 0");
+              //$(this).css("backgroundPosition","0 0");
+              $(this).removeClass('j-checked');
             }else{
-              $(this).css("backgroundPosition","0 -33px");
+              //$(this).css("backgroundPosition","0 -33px");
+              $(this).addClass('j-checked');
             }
             me.trigger('click');
           }
 
         });
         if(isChecked){
-          $wrap.css("background-position","0 -33px");
+          //$wrap.css("background-position","0 -33px");
+          $wrap.addClass('j-checked');
         }
         me.wrap($wrap);
       });
@@ -2382,19 +2419,22 @@ define(function (require, exports, module) {
       $("input[type='checkbox']",obj).each(function(){
         var me = $(this);
         var isChecked = me.prop('checked');
-        $wrap = $( "<span class='ui-select'></span>").on("click",function(e){
+        $wrap = $( "<span class='ui-select j-checkbox'></span>").on("click",function(e){
           if(e.target.nodeName == "SPAN"){
             if(me.prop('checked')){
-              $(this).css("backgroundPosition","0 0");
+              //$(this).css("backgroundPosition","0 0");
+              $(this).removeClass('j-checked');
             }else{
-              $(this).css("backgroundPosition","0 -33px");
+              //$(this).css("backgroundPosition","0 -33px");
+              $(this).addClass('j-checked');
             }
             me.trigger('click');
           }
 
         });
         if(isChecked){
-          $wrap.css("background-position","0 -33px");
+          //$wrap.css("background-position","0 -33px");
+          $wrap.addClass('j-checked');
         }
         me.wrap($wrap);
       });

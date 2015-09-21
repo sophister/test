@@ -45,54 +45,53 @@
 
 .ui-loantype {
   display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
   background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
 }
 
 .ui-loantype.XYRZ {
-  background-position: 0 0;
+  background-position: -58px 0;
 }
 
 .ui-loantype.SDRZ {
-  background-position: -30px 0px;
+  background-position: -0 0px;
 }
 
 .ui-loantype.JGDB {
-  background-position: -60px 0px;
+  background-position: -29px 0px;
 }
 
 .ui-loantype.ZNLC {
-  background-position: -90px 0px;
+  background-position: -87px 0px;
 }
 
 .ui-loantype-s {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
   margin-right:3px;
-  background: url("/static/img/loantypes-s.png?_inline") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
   vertical-align: middle;
 }
 
 .ui-loantype-s.XYRZ {
-  background-position: 0 0;
+  background-position: -58px 0;
 }
 
 .ui-loantype-s.SDRZ {
-  background-position: -32px 0px;
+  background-position: -0 0px;
 }
 
 .ui-loantype-s.JGDB {
-  background-position: -64px 0px;
+  background-position: -29px 0px;
 }
 
 .ui-loantype-s.ZNLC {
-  background-position: -96px 0px;
+  background-position: -87px 0px;
 }
-
 /* Credit Level */
 
 .ui-creditlevel {
@@ -860,7 +859,7 @@
 
 .ui-process-long .basic-text{
 	zoom: 1;
-	width:30px;
+	width:40px;
 	text-align: right;
 }
 /* Large Progress Bar */
@@ -1268,9 +1267,13 @@ a.ui-progressbar-circle-join {
 .icon-check-unchecked{
   background-position: 0 0;
 }
+/******updated by 2015-9-8*****************/
 .icon-circle-checked{
-  height: 20px;
-  background-position: 0 -21px;
+  display:inline-block;
+  height: 22px;
+  width:22px;
+  background: url("/static/imgs/icon/checked-green.jpg?_inline") 0 0 no-repeat;
+  vertical-align:middle;
 }
 .icon-info{
 	width: 21px;
@@ -1482,27 +1485,28 @@ a.ui-progressbar-circle-join {
 
 /* Loan Type */
 .icon-loantype {
+  position: relative;
+  top:3px;
   display: inline-block;
-  width: 26px;
-  height: 26px;
+  width: 19px;
+  height: 19px;
   background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
-  vertical-align: middle;
 }
 
 .icon-loantype.XYRZ {
-  background-position: -2px -2px;
+  background-position: -58px 0;
 }
 
 .icon-loantype.SDRZ {
-  background-position: -32px -2px;
+  background-position: -0 0px;
 }
 
 .icon-loantype.JGDB {
-  background-position: -62px -2px;
+  background-position: -29px 0px;
 }
 
 .icon-loantype.ZNLC {
-  background-position: -92px -2px;
+  background-position: -87px 0px;
 }
 
 .icon-loantype-s {
@@ -1534,55 +1538,39 @@ a.ui-progressbar-circle-join {
 
 /* Credit Level */
 
-.icon-creditlevel {
+.icon-creditlevel,.icon-creditlevel-s {
   display: inline-block;
-  border-radius: 18px;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 16px;
-  font-style:normal;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  vertical-align: middle;
 }
 
-.icon-creditlevel-s {
-  display: inline-block;
-  border-radius: 18px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-}
 
 .icon-creditlevel.AA {
-  background: #1bb8e2;
+	background:url("/static/imgs/icon/aa.png?_inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.A {
-  background: #bfdb39;
+ background:url("/static/imgs/icon/a.png?_inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.B {
-  background: #ede71f;
+  background:url("/static/imgs/icon/b.png?_inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.C {
-  background: #ffc400;
+  background:url("/static/imgs/icon/c.png?_inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.D {
-  background: #fb5a00;
+ background:url("/static/imgs/icon/d.png?_inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.E {
-  background: #e52012;
+  background:url("/static/imgs/icon/e.png?_inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.HR {
-  background: #f01f5a;
+  background:url("/static/imgs/icon/hr.png?_inline") no-repeat scroll left top  ;
 }

@@ -74,14 +74,36 @@
     </fis:block>
 
     <fis:script>
-      require(["huodong:widget/card/card.js"], function( turn ){
-      
-        // 水平翻转参数
-        var verticalOpts = [{'width':0},{'width':'210px'}];
+      require(["huodong:widget/card/card.js"], function( card ){
+        var turn = card.turn;
+        var initModal = card.initModal;
+        
+        
+        
+        /**
+         * 卡牌点击弹框部分
+         * @type {[type]}
+         */
+        var cardWrap = $('#vertical'),
+            modal,
+            show = initModal();
 
-        turn($('#vertical'),100,verticalOpts);
+        cardWrap.on('click', 'span', function(){
 
+          /**
+           * 卡牌水平翻转
+           * @type {Array}
+           */
+          var verticalOpts = [{'width':0},{'width':'210px'}];
+          turn($('#vertical'),100,verticalOpts);
+
+          modal = show();
+          return false;
+
+
+        });
       });
+
     </fis:script>
     
     <fis:require name="./index-web.jsp" />

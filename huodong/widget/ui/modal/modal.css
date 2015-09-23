@@ -1,0 +1,171 @@
+/* modal */
+.ui-modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ui-modal .main {
+  margin: 4% 0;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+.ui-modal .main .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.16rem;
+  color: #fff;
+  background-color: #55d368;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border-radius: 0.05rem 0.05rem 0 0;
+}
+.ui-modal .main .content {
+  display: inline-block;
+  position: relative;
+  background-color: #4bb8e5;
+  border-radius: 12px;
+  text-align: center;
+}
+.ui-modal .main .content h3 {
+  font-size: 28px;
+  color: #fff;
+  margin-top: -70px;
+}
+.ui-modal .main .content .word_wrap {
+  display: inline-block;
+  position: relative;
+  width: 254px;
+  height: 314px;
+  background-color: #0089c2;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.ui-modal .gift_wrap {
+  display: inline-block;
+  position: relative;
+  width: 420px;
+  height: 150px;
+  background: url(./assets/gift_bg.png) no-repeat;
+  background-size: 100%;
+} 
+.ui-modal .gift_wrap h3 {
+  font-size: 28px;
+  color: #fff;
+  margin-top: -70px;
+  position: absolute;
+  top: 104px;
+  width: 137px;
+}
+.ui-modal .gift_wrap .ptag_wrap {
+  position: absolute;
+  top: 39px;
+  left: 150px;
+  text-align: left;
+}
+.ui-modal .gift_wrap .ptag_wrap span {
+  color: #aacde4;
+  font-size: 15px;
+  line-height: 36px;
+}
+.ui-modal .gift_wrap .ptag_wrap span strong {
+  color: #fff;
+}
+.ui-modal .word_wrap span{
+  display: inline-block;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  font-size: 60px;
+  text-align: center;
+  position: absolute;
+  top: 85px;
+  left: 58px;
+  background-color: #1a95c8;
+}
+.ui-modal .word_wrap i {
+  font-style: normal;
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
+}
+.ui-modal .verify_wrap {
+  display: inline-block;
+}
+.ui-modal .verify_wrap a {
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 50px;
+  top: 170px;
+  position: absolute;
+  left: 170px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #5dbfe8;
+  border-radius: 5px;
+}
+.ui-modal .login_wrap .button_wrap {
+  margin-top: 70px;
+}
+.ui-modal .login_wrap a{
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 50px;
+  margin: 20px;
+  font-size: 16px;
+  background-color: #5dbfe8;
+  border-radius: 5px;
+}
+.suc_wrap {
+  overflow: scroll;
+  height: 300px;
+  width: 475px;
+  text-align: center;
+  display: inline-block;
+  overflow-x: hidden;
+}
+.ui-modal .main .content p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: -60px;
+}
+.ui-modal .content .modal_header {
+  width: 500px;
+  height: 124px;
+  background: url(./assets/modal_header.png) no-repeat;
+  background-size: 100%;
+}
+.ui-modal .content .modal_footer {
+  width: 500px;
+  height: 133px;
+  background: url(./assets/modal_footer.png) no-repeat;
+  background-size: 100%;
+}
+.ui-modal .main .content .btn-close-pos {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 77px;
+  height: 74px;
+}
+.ui-modal .main .content .btn-close-pos:hover {
+  cursor: pointer;
+}
+.ui-modal .main .control {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+}
+.ui-modal .main .control button {
+  font-size: 0.16rem;
+  color: #ff8903;
+  border: none;
+  color: #ff9012;
+  background-color: #fff;
+  letter-spacing: 0.1rem;
+}

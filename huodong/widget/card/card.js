@@ -24,19 +24,24 @@ function turn(target, time, opts){
   });
 };
 
-function initModal () {
+function initModal (txt) {
   var modal;
 
-  return function (url, txt){
+  return function (txt){
     if( modal ){
-      modal.show();
+      modal.show(txt);
     }else{
       modal = new Modal({
-        // title : "温馨提示",
-        content : "恭喜您注册成功",
-        // confirmText : "返回"
+        content : txt,
       });
-      modal.show();
+      modal._create();
+      //原生show方法会引起定位问题，重写
+      modal.hide = function() {
+        modal.dom.instance.css({'display':'none'});
+      };
+      modal.show = function(){
+        modal.dom.instance.css({'display':'block'});
+      };
     }
 
     return modal;

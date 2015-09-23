@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%/*这是PC首页的tpl*/%>
 <fis:extends name="common:page/layout/base.jsp">
-
     <fis:block name="block_body">
       <div class="index-web">
         <div class="section_common section_01">
@@ -71,40 +70,12 @@
           </div>
         </div>
       </div>
+
     </fis:block>
-
     <fis:script>
-      require(["huodong:widget/card/card.js"], function( card ){
-        var turn = card.turn;
-        var initModal = card.initModal;
-        
-        
-        
-        /**
-         * 卡牌点击弹框部分
-         * @type {[type]}
-         */
-        var cardWrap = $('#vertical'),
-            modal,
-            show = initModal();
-
-        cardWrap.on('click', 'span', function(){
-
-          /**
-           * 卡牌水平翻转
-           * @type {Array}
-           */
-          var verticalOpts = [{'width':0},{'width':'210px'}];
-          turn($('#vertical'),100,verticalOpts);
-
-          modal = show();
-          return false;
-
-
-        });
+      require(['./index-web.js'], function (index) {
+        index.init();
       });
-
     </fis:script>
-    
     <fis:require name="./index-web.jsp" />
 </fis:extends>

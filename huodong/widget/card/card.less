@@ -18,14 +18,14 @@
       height: 260px;
       text-align: center;
       position: relative;
-
       -webkit-box-shadow: 4px 6px 3px #999;
+      -o-box-shadow: 4px 6px 3px #999;
+      -moz-box-shadow: 4px 6px 3px #999;
     }
     .brand .front{
       width: 210px;
       height: 260px;
       background: url(./assets/icon-pai.png) center center no-repeat;
-      // border-radius: 5px;
       position: relative;
       p {
         position: absolute;
@@ -37,10 +37,32 @@
     }
     .brand .info{
       display: none;
-      background-color: #333;
-      color: #369242;
-      line-height:260px;
+      width: 210px;
+      height: 260px;
+      background-color: #188ac0;
+      color: #fff;
       border-radius: 5px;
+      h3 {
+        font-size: 38px;
+        padding: 50px 20px;
+      }
+      .word {
+        font-size: 38px;
+        width: 142px;
+        padding: 0;
+        height: 142px;
+        border-radius: 50%;
+        background-color: #2896c7;
+        position: absolute;
+        top: 64px;
+        left: 36px;
+      }
+      i {
+        font-style: normal;
+        text-align: center;
+        line-height: 2;
+        font-size: 66px;
+      }
     }
   }
   #bgcolor_01 {

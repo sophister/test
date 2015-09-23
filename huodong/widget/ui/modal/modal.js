@@ -6,7 +6,7 @@ var Modal = function(opt){
 	this.conf = {
 		title: '',
 		content: '',
-		confirmText: '确认',
+		confirmText: '',
 		confirmFn: function(){}
 	};
 	this.status = {
@@ -16,7 +16,8 @@ var Modal = function(opt){
 		container: null,
 		buddy: null,
 		instance: null,
-		main: null
+		main: null,
+		wrap: null
 	};
 
 	this.init(opt);
@@ -37,7 +38,12 @@ Modal.prototype = {
 				html.push('</div>');
 			}
 			html.push('<div class="content">');
-				html.push(this.conf.content);
+				html.push('<div class="modal_header"></div>');
+        html.push('<span class="btn-close btn-close-pos"></span>');
+        html.push('<div id="content">');
+        html.push(this.conf.content);
+        html.push('</div>');
+        html.push('<div class="modal_footer"></div>');
 			html.push('</div>');
 
 			if(this.conf.confirmText){
@@ -49,17 +55,18 @@ Modal.prototype = {
 		html.push("</div>");
 		this.dom.instance.html(html.join(''));
 		this.dom.container = $('body');
+		this.dom.wrap = $('#content');
 
-		this.dom.instance.css({
-			height: Math.max(this.dom.container.height(), $('html').height())
-		});
+		// this.dom.instance.css({
+		// 	height: Math.max(this.dom.container.height(), $('html').height())
+		// });
 
 		this.dom.main = this.dom.instance.find('.main');
-		var h = ($(window).height() - this.dom.main.height())/20;
-		this.dom.main.css({
-			'position': 'fixed',
-			'top':  h + 'px'
-		});
+		// var h = ($(window).height() - this.dom.main.height())/20;
+		// this.dom.main.css({
+		// 	'position': 'fixed',
+		// 	'top':  h + 'px'
+		// });
 
 		//添加到dom tree		
 		this.dom.container.append(this.dom.instance);
@@ -72,11 +79,17 @@ Modal.prototype = {
 				_this.conf.confirmFn();
 			}
 		});
+
 	},
-	show: function(){
+	show: function(txt){
+		var _this = this;
+
 		if(this.status.has_instance){
+			modal.conf.content = txt;
+			this.dom.wrap.html(txt);
 			this.dom.instance.show();
 		}else{
+
 			this._create();
 		}
 	},
@@ -85,4 +98,4 @@ Modal.prototype = {
 	}
 };
 
-// module.exports = Modal;
+module.exports = Modal;

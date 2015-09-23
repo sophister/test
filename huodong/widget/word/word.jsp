@@ -36,7 +36,7 @@
     <li>
       <div class="line1"></div>
       <div class="line2"></div>
-      <span class="word">W</span>
+      <span class="word">未</span>
     </li>
     <li>
       <div class="line1"></div>

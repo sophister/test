@@ -1,0 +1,104 @@
+/*
+ * Pagination
+ * namespace .ui-pagination
+ */
+
+.ui-pagination li {
+  display: inline-block;
+	/*float: left;*/
+	margin: 5px;
+}
+
+.ui-pagination li span,
+.ui-pagination li a.page-link {
+	display: block;
+  padding: 0 0 1px 1px;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  font-family: Helvetica;
+}
+
+.ui-pagination li span {
+	color: #3a84cf;
+  border: 1px solid #3a84cf; 
+}
+
+.ui-pagination li.disabled span {
+  color: #808080; /* color-gray */
+  border: 1px solid #fff; /* color-gray */
+  background: #fff;
+}
+
+.ui-pagination li span.prev,
+.ui-pagination li span.next,
+.ui-pagination li a.page-link.prev,
+.ui-pagination li a.page-link.next {
+  /*font-size: 0;*/
+  width: 84px;
+}
+
+.ui-pagination li span.prev,
+.ui-pagination li span.next {
+	border: 1px solid #e5e4e2; /* color-platinum */
+  background-color: #e5e4e2; /* color-platinum */
+  color: #fff;
+}
+
+.ui-pagination li a.page-link.prev {
+	/*background-image: url('/static/img/prev-gray.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
+}
+
+.ui-pagination li a.page-link.next {
+	/*background-image: url('/static/img/next-gray.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
+}
+
+.ui-pagination li span.prev,
+.ui-pagination li a.page-link.prev:hover {
+  /*background-image: url('/static/img/prev-white.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
+}
+
+.ui-pagination li span.next,
+.ui-pagination li a.page-link.next:hover {
+	/*background-image: url('/static/img/next-white.png');*/
+  /*background-position: center center;
+  background-repeat: no-repeat;*/
+}
+
+.ui-pagination li a.page-link {
+  color: #f7f7f7; /* color-gray */
+  border: 1px solid #f7f7f7;
+}
+
+.ui-pagination li a.page-link {
+  color: #808080; /* color-gray */
+}
+
+.ui-pagination li a.page-link:hover {
+	color: #3a84cf;
+  border: 1px solid #3a84cf; /* rrdcolor-lightblue */
+}
+
+.ui-pagination li span {
+	cursor: default;
+}
+
+.ui-pagination{
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0px 30px 0px;
+}
+
+.ui-pagination ul{
+  /*float:right;*/
+  text-align: center;
+}

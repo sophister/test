@@ -1272,7 +1272,7 @@ a.ui-progressbar-circle-join {
   display:inline-block;
   height: 22px;
   width:22px;
-  background: url("/static/imgs/icon/checked-green.jpg?_inline") 0 0 no-repeat;
+  background: url("/static/imgs/icon/checked-green.jpg?__inline") 0 0 no-repeat;
   vertical-align:middle;
 }
 .icon-info{
@@ -1548,29 +1548,29 @@ a.ui-progressbar-circle-join {
 
 
 .icon-creditlevel.AA {
-	background:url("/static/imgs/icon/aa.png?_inline") no-repeat scroll left top  ;
+	background:url("/static/imgs/icon/aa.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.A {
- background:url("/static/imgs/icon/a.png?_inline") no-repeat scroll left top  ;
+ background:url("/static/imgs/icon/a.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.B {
-  background:url("/static/imgs/icon/b.png?_inline") no-repeat scroll left top  ;
+  background:url("/static/imgs/icon/b.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.C {
-  background:url("/static/imgs/icon/c.png?_inline") no-repeat scroll left top  ;
+  background:url("/static/imgs/icon/c.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.D {
- background:url("/static/imgs/icon/d.png?_inline") no-repeat scroll left top  ;
+ background:url("/static/imgs/icon/d.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.E {
-  background:url("/static/imgs/icon/e.png?_inline") no-repeat scroll left top  ;
+  background:url("/static/imgs/icon/e.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.HR {
-  background:url("/static/imgs/icon/hr.png?_inline") no-repeat scroll left top  ;
+  background:url("/static/imgs/icon/hr.png?__inline") no-repeat scroll left top  ;
 }

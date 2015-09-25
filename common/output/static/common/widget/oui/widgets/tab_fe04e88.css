@@ -1,0 +1,234 @@
+/*
+ * Tab, extends aliceui/tab
+ * namespace .ui-tab
+ */
+
+/* Tab in Common */
+.ui-tab {
+	margin: 0;
+	padding: 0;
+}
+
+.ui-tab ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ui-tab li {
+	list-style: none;
+	vertical-align: top;
+	position: relative;
+	top: 1px;
+}
+
+.ui-tab-items {
+	border-bottom: 1px solid #E5E5E5;
+	font-size: 14px;
+}
+
+.ui-tab-item {
+	float: left;
+}
+
+.ui-tab-item a {
+	line-height: 32px;
+	height: 32px;
+	padding: 0 10px;
+	border-bottom: none;
+	color: #4D4D4D;
+	float: left;
+	cursor: pointer;
+}
+
+.ui-tab-item a,.ui-tab-item a:hover,
+.ui-tab-item a:active {
+	color: #4D4D4D;
+}
+
+.ui-tab-item-current a {
+	font-weight: bold;
+	height: 33px;
+}
+
+.ui-tab-item a:hover {
+	background: #f6f6f6;
+	text-decoration: none;
+}
+
+.ui-tab-item-current a:hover {
+	background: #fff;
+}
+
+.ui-tab-content {
+	display: none;
+	vertical-align: middle;
+}
+.ui-tab-align{
+	vertical-align: middle;
+}
+
+.ui-tab-content-current {
+	display: block;
+}
+
+/* Transparent Tab */
+.ui-tab-transparent .ui-tab-items {
+	border-bottom: 0;
+	
+}
+
+.ui-tab-transparent .ui-tab-item {
+	position: relative;
+}
+
+.ui-tab-transparent .ui-tab-item a {
+	font-size: 16px;
+	border: none;
+	color: #999;
+}
+
+.ui-tab-transparent .ui-tab-item a,
+.ui-tab-transparent .ui-tab-item a:hover,
+.ui-tab-transparent .ui-tab-item a:active {
+	font-weight: normal;
+}
+
+.ui-tab-transparent .ui-tab-item-current,
+.ui-tab-transparent .ui-tab-item:hover {
+  background: #fff;
+	border-top: 4px solid #00a8e8;
+}
+
+.ui-tab-transparent .ui-tab-item-current a,
+.ui-tab-transparent .ui-tab-item:hover a {
+	padding-top: 0;
+	padding: 0 35px;
+	border-top: none;
+	color: #474747;
+}
+
+.ui-tab-transparent .ui-tab-item-current a.ui-tab-item-link {
+  border-left: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+
+
+
+/*
+  Web revision
+  Update 20140115
+  By feijun
+*/
+.ui-tab-blue{
+	padding-bottom: 1px;
+	border-bottom: 3px solid #39a4d3;
+}
+.ui-tab-blue ul{
+	width: 1000px;
+}
+.ui-tab-blue li{
+	float: left;
+	width: 188px;
+	height: 60px;
+	margin-right: 5px;
+	background: #e1e4e9;
+	font-size: 18px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+.ui-tab-blue li a{
+	color: #222;
+	padding: 0;
+}
+.ui-tab-blue li.ui-tab-item-current,
+.ui-tab-blue li:hover{
+	background: #3bafda;
+}
+.ui-tab-blue li.ui-tab-item-current a,
+.ui-tab-blue li:hover a{
+	color: #fff;
+  font-weight: normal;
+	background: #38acdb;
+}
+.ui-tab-blue a{
+  display: block;
+  height: 56px;
+  line-height: 56px;
+	margin-top: 4px;
+}
+.ui-tab-blue .ui-tab-item-current a.ui-tab-item-link {
+	background: #38acdb;
+}
+.ui-tab-blue li.ui-tab-item-current a, .ui-tab-blue li:hover a {
+  color: #fff;
+  font-weight: normal;
+}
+
+.ui-tab-item-link .block {
+  background: none repeat scroll 0 0 #00a8e8;
+  color: #fff;
+  margin-left: 10px;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  display:inline;
+}
+/*******************覆盖上面的CSS********************************/
+.ui-tab {
+	position: relative;
+	color:#848484;
+    background: #f9f9f9;
+}
+.ui-tab-transparent  .loans-return-link {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+  }
+       
+ .ui-tab-transparent   .ui-tab-item  a {
+        font-weight: normal;
+        height: 50px;
+        line-height:50px;
+        color:#2b2b2b;
+   }	
+ .ui-tab-transparent  .ui-tab-item{
+        padding:0;
+        margin:0; 
+   }
+ 
+.ui-tab-transparent  .ui-tab-item-2{
+        width:50%;         
+ }
+ .ui-tab-transparent  .ui-tab-item-3{
+        width:33.33333%;           
+ }
+.ui-tab-transparent .ui-tab-item-4{
+        width:25%;                   
+  }
+.ui-tab-transparent .ui-tab-item-5{
+        width:20%;                  
+  }
+ .ui-tab-transparent  .ui-tab-item-link{
+       	width:100%;
+       	padding:0;
+       	padding-top: 4px;
+       	margin:0;
+       	text-align: center;
+    }
+.ui-tab-transparent .ui-tab-item-current, .ui-tab-transparent .ui-tab-item:hover {
+	background: #fff;
+	border-top: 4px solid #3a84cf;
+}
+.ui-tab-transparent .ui-tab-item-current a, .ui-tab-transparent .ui-tab-item:hover a {
+    padding:0;
+    margin:0;
+    text-align: center;
+           
+}
+.ui-tab-transparent .ui-tab-item-current a.ui-tab-item-link {
+	border-left: none;
+	border-right: none;
+}
+ 

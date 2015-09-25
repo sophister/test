@@ -1,0 +1,169 @@
+.slides {
+	position: relative;
+	background: url("/static/img/loading.gif") no-repeat center;
+}
+
+.ui-slides {
+	height: 376px;
+	margin: 0px auto;
+	width: 100%;
+	position: relative;
+}
+
+.ui-slides .ui-slide01 {
+	color: #FFFFFF;
+	height: 356px;
+	position: absolute;
+	width: 100%;
+	left:0;
+	top:0;
+	margin: 0 auto;
+}
+
+.ui-slides .ui-slide01 a {
+	display: block;
+	height: 356px;
+}
+
+.ui-slides .ui-slide01-title {
+	float: left;
+	height: 137px;
+	left: 190px;
+	position: relative;
+	top: 90px;
+	width: 320px;
+}
+
+.ui-slides .ui-slide01-title-big {
+	font-family: "黑体";
+	font-size: 42px;
+	font-weight: bold;
+	text-shadow: 2px 2px 5px #333333;
+	line-height: 50px;
+}
+
+.ui-slides .ui-slide01-title-small {
+	font-family: "黑体";
+	font-size: 21px;
+	height: 26px;
+	margin-top: 8px;
+}
+
+.ui-slides .ui-slide01-icons {
+	display: block;
+	height: 10px;
+	left: 545px;
+	position: absolute;
+	top: 90px;
+	width: 420px;
+}
+
+.ui-slides .ui-slide01-icons li img {
+	display: block;
+}
+
+.ui-slides .ui-slide01-icons-item {
+	display: block;
+	float: left;
+	font-family: "黑体";
+	margin-right: 20px;
+	text-align: center;
+	width: 115px;
+}
+
+.ui-slides .ui-slide01-icons-item-img01 {
+	width: 110px;
+	height: 81px;
+	background: url(/static/img/slide-intro/slide01-icons-item-img01.png);
+	_background: url(/static/img/slide-intro/slide01-icons-item-img01.gif);
+}
+
+.ui-slides .ui-slide01-icons-item-img02 {
+	width: 110px;
+	height: 81px;
+	background: url(/static/img/slide-intro/slide01-icons-item-img02.png);
+	_background: url(/static/img/slide-intro/slide01-icons-item-img02.gif);
+}
+
+.ui-slides .ui-slide01-icons-item-img03 {
+	width: 110px;
+	height: 81px;
+	background: url(/static/img/slide-intro/slide01-icons-item-img03.png);
+	_background: url(/static/img/slide-intro/slide01-icons-item-img03.gif);
+}
+
+.ui-slides .ui-slide01-icons-item-b {
+	height: 30px;
+	line-height: 30px;
+}
+
+.ui-slides .ui-slide01-icons-item-b b {
+	font-size: 36px;
+	margin-right: 5px;
+}
+
+.ui-slides .ui-slide01-button {
+	background: url("/static/img/slide-intro/ui-slide01-button.png") no-repeat
+		scroll 111px 3px #83A700;
+	border-radius: 20px 20px 20px 20px;
+	border: medium none;
+	color: #FFFFFF;
+	display: block;
+	font-family: "黑体";
+	font-size: 21px;
+	height: 40px;
+	left: 190px;
+	padding: 0px 30px 1px 0px;
+	position: absolute;
+	top: 256px;
+	width: 150px;
+	cursor: pointer;
+}
+
+#slider_nav {
+	left: 50%;
+	position: absolute;
+	top: 330px;
+	z-index: 99999;
+	margin-left: -30px;
+}
+
+.slider-nav-box li {
+	float: left;
+	padding: 5px 10px;
+	background: #000000;
+	text-align: center;
+	margin-left: 10px;
+	filter: alpha(opacity =   50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.slider-nav-box li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.slider-nav-pointer li {
+	border: 1px solid #aaa;
+	background:#aaa;
+	border-radius: 10px;
+	float: left;
+	height: 10px;
+	margin-left: 10px;
+	overflow: hidden;
+	text-align: center;
+	width: 10px;
+}
+
+.slider-nav-pointer li.active {
+	border:1px solid #2ea7e0;
+	background: #2ea7e0;
+}
+
+.slider-nav-pointer li a {
+	color: #000;
+	text-decoration: none;
+	padding-left: 20px;
+}

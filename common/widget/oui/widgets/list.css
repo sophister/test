@@ -171,8 +171,8 @@
   width: 200px;
   height: 200px;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.7);
-  background-image: url('/static/img/loading.gif');
+  /*background-color: rgba(255, 255, 255, 0.7);*/
+  background-image: url('/static/img/loading-icon.gif');
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 5px;

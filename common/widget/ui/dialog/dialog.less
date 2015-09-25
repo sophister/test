@@ -1,0 +1,72 @@
+
+.j-dialog{
+
+    display: none;
+    position: absolute;
+    width: 700px;
+    left: 50%;
+    top: 200px;
+    z-index: 9999;
+    padding: 0 0px 0px;
+    background: #fff;
+
+    .j-dialog-title-con{
+        @height:50px;
+
+        position: relative;
+        height: @height;
+        line-height: @height;
+        margin: 0 25px;
+        border-bottom: 1px solid #f4f4f4;
+
+        .j-dialog-title{
+            font-size: 16px;
+            color: #2b2b2b;
+        }
+
+        .j-dialog-close-btn{
+            position: absolute;
+            right: 0px;
+            top: (@height - 20) / 2;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: #686868;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+    }
+
+    /*主体内容区域*/
+    .j-dialog-content{
+        /*老的对话框中的标题,隐藏掉,用JS来读取这个HTML值作为title*/
+        .data-dialog-title{
+            display: none;
+        }
+    }
+
+    .j-dialog-btn-con{
+        text-align: center;
+        padding: 26px 0 0;
+        margin-bottom: 30px;
+    }
+    .ui-confirm-yue {
+        margin: 0px 0 0 76px;
+        line-height: 30px;  
+    }
+
+    .j-dialog-footer{
+        padding: 30px 58px 0 58px;
+        margin-top: 30px;
+        border-top: 1px solid #f4f4f4;
+        font-size: 14px;
+        line-height: 24px;
+        background: #fafafa;
+        color: #848484;
+
+        .j-dialog-section-title{
+            margin-top: -17px;
+        }
+    }
+}

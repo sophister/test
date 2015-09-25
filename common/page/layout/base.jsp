@@ -17,7 +17,7 @@
             <meta name="description" content="人人贷 理财 P2P">    
             <title>人人贷理财</title>
         </fis:block>
-        <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/static/common/img/favicon.ico" />
 
         <link rel="stylesheet" type="text/css" href="/static/css/base.css">
 

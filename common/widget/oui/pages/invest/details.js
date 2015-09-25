@@ -48,7 +48,7 @@ define(function (require) {
         trueTime = fullTimeData.split("天")[1];
       }
       trueTime = trueTime.replace(/(\d)+/g,function($1){
-      	 return "<i class='num-family font-40px'>"+$1+"</i>" ;
+      	 return "<i class='num-family font-30px'>"+$1+"</i>" ;
       });
       $fullTime.html(trueTime);
     }
@@ -684,7 +684,7 @@ define(function (require) {
 	   }
    }
     result = trueTime.replace(/(\d)+/g,function($1){
-      	 return "<i class='num-family font-40px'>"+$1+"</i>" ;
+      	 return "<i class='num-family font-30px'>"+$1+"</i>" ;
     })
    $(divid).html(result);
    if($("#J_WAIT_BUTTON_TEXT")) $("#J_WAIT_BUTTON_TEXT").html(text);

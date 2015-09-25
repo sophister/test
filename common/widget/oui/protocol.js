@@ -34,6 +34,13 @@ define(function (require, exports, module) {
       dataType: 'json',
       _list: 'loans'
     },
+    /*首页的 新手散标列表API*/
+    getIndexNewbeeLoans : {
+      url : '/lend/loanList!newComerLoanJson.action',
+      type: 'GET',
+      dataType: 'json',
+      _list: 'newComerLoans'
+    },
 
     /* Loans */
     getLoans: {
@@ -823,7 +830,7 @@ define(function (require, exports, module) {
         creditLevel: item.borrowerLevel,
         investor: item.nickName,
         interest: this._fixedFloat2(item.interest),
-        amount: this._commaInteger(item.amount),
+        amount: this._commaFloat(item.amount),
         term: item.months,
         progress: progress,
         link: this.URL.loanDetails + item.loanId,
@@ -1211,7 +1218,7 @@ define(function (require, exports, module) {
         toRepayAmount: this._fixedFloat2(item.repaid),
         status: item.status,
         notOutsourceClose: item.status!="已结标",
-        itemStyle: i % 2 === 0 ? 'dark' : '',
+        itemStyle: i % 2 === 0 ? '' : 'dark',
         /* repay all section */
         toRepayPrincipal: this._fixedFloat2(item.principal),
         interestForTerm: this._fixedFloat2(item.interest),
@@ -1239,7 +1246,7 @@ define(function (require, exports, module) {
         termsInTotal: item.months,
         repaidInTotal: this._fixedFloat2(item.total),
         endDate: item.enddate,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1273,7 +1280,7 @@ define(function (require, exports, module) {
         status: statusText,
         shouldRepay: item.status != 'REPAID',
         termId: i + 1,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1286,7 +1293,7 @@ define(function (require, exports, module) {
         interest: this._fixedFloat2(item.interest),
         termsInTotal: item.months,
         status: item.status,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       if (ret.status == '首次申请' || ret.status == '草稿') {
         ret.status = '申请中';
@@ -1318,7 +1325,7 @@ define(function (require, exports, module) {
         investShares: item.initialShare,
         fee: this._fixedFloat2(item.loanTranfsferVo.fee || 0),
         income: this._fixedFloat2(item.loanTranfsferVo.income || 0),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1344,7 +1351,7 @@ define(function (require, exports, module) {
         interestPerShare: item.minInvestShares!=1 ? this._fixedFloat2(item.loanVo.pricePerShare *item.minInvestShares) :this._fixedFloat2(item.loanVo.pricePerShare), // FIX~ME
         principalPerShare: this._fixedFloat2(item.loanVo.principalPerShareNow), // FIX~ME
         fee: item.fee,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1363,7 +1370,7 @@ define(function (require, exports, module) {
         amount: item.minInvestShares!=1 ? this._fixedFloat2(item.income  * item.minInvestShares):this._fixedFloat2(item.income),
         pnl:    item.minInvestShares!=1 ? this._fixedFloat2(item.profit  * item.minInvestShares):this._fixedFloat2(item.profit),
         date: this._getDateTime(item.createTime, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : '',
+        itemStyle: i % 2 === 0 ? '' : 'dark',
         loantransferlogId: item.loantransferlogId
       };
     },
@@ -1381,7 +1388,7 @@ define(function (require, exports, module) {
         fee: this._fixedFloat2(item.fee),
         income: this._fixedFloat2(item.income),
         pnl: this._fixedFloat2(item.profit),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 //账户详情页转让明细列表
@@ -1406,21 +1413,21 @@ define(function (require, exports, module) {
         income: this._fixedFloat2(item.income),
         pnl: this._fixedFloat2(item.profit),
         date: this._getDateTime(item.tranfsferDate, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 //账户详情页债权持有中明细列表
     userTransferredInRecord: function (item, i) {
       return {
         leftPhaseCount:item.leftPhaseCount,
-        planId: item.transferId,
+        planId: item.logId,
         value: this._fixedFloat2(item.pricePerShare),
         shares: item.share,
         fee: this._fixedFloat2(item.fee),
         income: this._fixedFloat2(item.income),
         pnl: this._fixedFloat2(item.profit),
         date: this._getDateTime(item.tranfsferDate, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
   //账户详情页债权已完成明细列表
@@ -1445,24 +1452,25 @@ define(function (require, exports, module) {
         income: this._fixedFloat2(item.income),
         pnl: this._fixedFloat2(item.profit),
         date: this._getDateTime(item.tranfsferDate, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
     //用户持有中理财计划
     userHoldingPlan: function (item, i) {
       ret = {
-        name: item.name,
-        link: this.URL.userPlan + item.id + '&subPointId=' + item.financeSubPointId,
-        subPointId: item.financeSubPointId,
-        amount: this._fixedFloat2(item.finalAmount),
-        profit: this._fixedFloat2(item.earnAmount),
-        interest: this._fixedFloat2(item.aveLoanRate),
-        loans: item.loanBidCount,
-        available: this._fixedFloat2(item.availablePrice),
-        fee: this._fixedFloat2(item.serviceFee),
-        joinFee: this._fixedFloat2(item.joinFee),
-        status: this._planStatus(item.isPurcharge,item.category,item.status,item.endLockingTime,item.canRollOver),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+          name: item.name,
+          link: this.URL.userPlan + item.id + '&subPointId=' + item.financeSubPointId,
+          subPointId: item.financeSubPointId,
+          amount: this._fixedFloat2(item.finalAmount),
+          formatAmount: this._commaFloat(this._fixedFloat2(item.finalAmount)),
+          profit: this._commaFloat(this._fixedFloat2(item.earnAmount)),
+          interest: this._fixedFloat2(item.aveLoanRate),
+          loans: item.loanBidCount,
+          available: this._fixedFloat2(item.availablePrice),
+          fee: this._fixedFloat2(item.serviceFee),
+          joinFee: this._fixedFloat2(item.joinFee),
+          status: this._planStatus(item.isPurcharge,item.category,item.status,item.endLockingTime,item.canRollOver),
+          itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       if (item.status == 'PURCHASE_END') {
         ret.leftLockingDays = item.endLockingTime;
@@ -1473,59 +1481,66 @@ define(function (require, exports, module) {
       if (item.canRollOver == 'true') {
         ret.hasRollOverButton = true;
       }
+      if(item.rollOverAlready =='true' ){
+        ret.rollOverAlready = true;
+      }
+      if(item.status != 'REDEMPTION_PERIOD' && item.canRollOver != 'true' && item.rollOverAlready !='true') {
+        ret.forbidRollOverButton = true;
+      }
       return ret;
     },
 
     userExitingPlan: function (item, i) {
       ret = {
-        name: item.name,
-        link: this.URL.userPlan + item.id + '&subPointId=' + item.financeSubPointId,
-        amount: this._fixedFloat2(item.finalAmount),
-        withdrawnInterest: this._fixedFloat2(item.totalCashDrawInterest),
-        transferredAmount: this._fixedFloat2(item.redProgress),
-        availableAmount: this._fixedFloat2(item.availablePrice),
-        remainedValue: this._fixedFloat2(item.remainingAmount),
-        transferringCount: parseInt(item.transferringLoanCount, 10),
-        disabledCount: parseInt(item.disabledLoanCount, 10),
-        quitBeforeAmount : this._fixedFloat2((this._fixedFloat2(item.redProgress)*100 + this._fixedFloat2(item.availablePrice)*100)/100),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+          name: item.name,
+          link: this.URL.userPlan + item.id + '&subPointId=' + item.financeSubPointId,
+          amount: this._commaFloat(item.finalAmount),
+          withdrawnInterest: this._commaFloat(item.totalCashDrawInterest),
+          transferredAmount: this._commaFloat(item.redProgress),
+          availableAmount: this._commaFloat(item.availablePrice),
+          remainedValue: this._fixedFloat2(item.remainingAmount),
+          transferringCount: parseInt(item.transferringLoanCount, 10),
+          disabledCount: parseInt(item.disabledLoanCount, 10),
+          quitBeforeAmount : this._commaFloat(this._fixedFloat2((this._fixedFloat2(item.redProgress)*100 + this._fixedFloat2(item.availablePrice)*100)/100)),
+          toBeTransferredAmount : this._commaFloat((this._fixedFloat2(item.remainingAmount)*100 + parseInt(item.disabledLoanCount, 10)*100)/100),
+          itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       return ret;
     },
 
     userExitedPlan: function (item, i) {
       ret = {
-        name: item.name,
-        link: this.URL.userPlan + item.id + '&subPointId=' + item.financeSubPointId,
-        amount: this._fixedFloat2(item.finalAmount),
-        profit: this._fixedFloat2(item.earnAmount),
-        interest: this._fixedFloat2(item.aveLoanRate),
-        loans: item.loanBidCount,
-        fee: this._fixedFloat2(item.serviceFee),
-        joinFee: this._fixedFloat2(item.joinFee),
-        quitFee: this._fixedFloat2(item.quitFee),
-        exitWay:item.exitWay,
-        actualIncome: this._fixedFloat2(
-          parseFloat(item.redProgress) + parseFloat(item.totalCashDrawInterest)
-        ),
-        finishedDate: this._getDateTime(item.redFinishTime, 'date'),
-        itemStyle: i % 2 === 0 ? 'dark' : ''
-      };
-      ret.interest = this._fixedFloat2(100 * (ret.profit / ret.amount));
-      return ret;
+          name: item.name,
+          link: this.URL.userPlan + item.id + '&subPointId=' + item.financeSubPointId,
+          amount: this._commaFloat(item.finalAmount),
+          profit: this._commaFloat(item.earnAmount),
+          interest: this._fixedFloat2(item.aveLoanRate),
+          loans: item.loanBidCount,
+          fee: this._fixedFloat2(item.serviceFee),
+          joinFee: this._fixedFloat2(item.joinFee),
+          quitFee: this._fixedFloat2(item.quitFee),
+          exitWay:item.exitWay,
+          actualIncome: this._fixedFloat2(
+            parseFloat(item.redProgress) + parseFloat(item.totalCashDrawInterest)
+          ),
+          finishedDate: this._getDateTime(item.redFinishTime, 'date'),
+          itemStyle: i % 2 === 0 ? '' : 'dark'
+        };
+        ret.interest = this._fixedFloat2(100 * (this._fixedFloat2(item.earnAmount) / this._fixedFloat2(item.finalAmount)));
+        return ret;
     },
 
     userReservePlan: function (item, i) {
       ret = {
         planId: item.id,
         name: item.name,
-        amount: this._fixedFloat2(item.planAmount),
-        depositAmount: this._fixedFloat2(item.depositAmount),
-        unRepayAmount:this._fixedFloat2(item.unRepayAmount),
+        amount: this._commaFloat(item.planAmount),
+        depositAmount: this._commaFloat(item.depositAmount),
+        unRepayAmount:this._commaFloat(item.unRepayAmount),
         endPayMentTime: this._getDateTime(item.endPayMentTime),
         rsvStatus:item.rsvStatus == "UNPAID" ? "等待支付":"支付超时",
         isNotOverDue:item.rsvStatus == "OVERDUE" ? false:true,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       return ret;
     },
@@ -1588,7 +1603,7 @@ define(function (require, exports, module) {
         fee: item.fee || 0.01,
         //坏账或者预期显示借款人信息
         showlender: (item.status==='OVER_DUE' || item.status==='BAD_DEBT')?true:false,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
       ret.status = item.transferShare > 0 ? '转让中' : ret.status;
       ret.operationType = 'TRANSFER_DISABLED';
@@ -1624,7 +1639,7 @@ define(function (require, exports, module) {
         clearDate: this._getDateTime(item.finishDate, 'date'),
         clearType: clearType,
         isTransfer : item.finishType == 'transfer' ? true : false,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -1642,7 +1657,7 @@ define(function (require, exports, module) {
         creditLevel: item.creditLevel,
         timeLeft: progress == 100 ? '--' : item.remainderTime,
         progress: progress,
-        itemStyle: i % 2 === 0 ? 'dark' : ''
+        itemStyle: i % 2 === 0 ? '' : 'dark'
       };
     },
 
@@ -2190,6 +2205,7 @@ define(function (require, exports, module) {
 
 
   _Translator.prototype.newbeeLoan = _Translator.prototype.loan;
+  _Translator.prototype.indexNewbeeLoan = _Translator.prototype.loan;
 
 
   /* Protocol */

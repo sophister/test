@@ -1,0 +1,289 @@
+/*
+	ALL table
+*/
+.ui-table{
+	width: 100%;
+	border-collapse:collapse;
+	border-spacing:0;
+	border-radius: 5px;
+}
+
+.ui-table td{
+	line-height: 26px;
+	color: #2b2b2b;
+}
+.ui-table td.color-gray-text{
+	color: #848484;
+}
+
+/*
+ * Table
+ * namespace .ui-table
+ */
+.ui-table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing: 0;
+}
+.ui-table caption{
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 500;
+}
+.ui-table thead th{
+	height: 36px;
+	line-height: 36px;
+	color: gray;
+}
+.ui-table tbody td{
+	height: 56px;
+	line-height: 56px;
+	border-bottom: 1px solid #e5e4e2;
+}
+.ui-table tbody a{
+}
+.ui-table tbody .last td{
+	border-bottom: none;
+}
+.ui-table .pagination-box{
+	padding-top: 20px;
+}
+
+.ui-table td .ui-list-title{
+	*margin-top: -12px;
+	height: auto;
+	line-height: 56px;
+}
+.ui-table td .ui-list-title a{
+	width: 140px;
+	text-align: left;
+}
+.ui-table td .ui-loantype{
+	float: left;
+	margin: 13px 3px 13px 8px;
+}
+
+/*  bule table  */
+
+.ui-table-blue{
+	border-radius: 5px 5px 0 0;
+}
+.ui-table-blue thead th{
+	height: 38px;
+	line-height: 38px;
+	padding-bottom: 2px;
+	color: #fff;
+	font-size: 16px;
+}
+.ui-table-blue thead th span{
+	display: block;
+	height: 38px;
+	background: #3bafda;
+}
+.ui-table-blue thead th,
+.ui-table-blue tbody td{
+	border: 2px solid #fff;
+	border-top: none;
+	border-bottom: none;
+}
+.ui-table-blue tbody tr:hover{
+	background: none;
+}
+.ui-table-blue tbody td{
+	height: 34px;
+	line-height: 34px;
+}
+.ui-table-blue td .ui-td-bg{
+	height: 34px;
+	background: #fafbfc;
+}
+.ui-table-blue tbody tr.dark .ui-td-bg{
+	background: #e1e4e9;
+}
+.ui-table-blue thead th:first-child span{
+	border-radius: 5px 0 0 0;
+}
+.ui-table-blue thead th:last-child span{
+	border-radius: 0 5px 0 0;
+}
+.ui-table-blue tbody .last td:first-child .ui-td-bg,
+.ui-table-blue tbody tr:last-child td:first-child .ui-td-bg{
+	border-radius: 0 0 0 5px;
+}
+.ui-table-blue tbody .last td:last-child .ui-td-bg,
+.ui-table tbody tr:last-child td:last-child .ui-td-bg{
+	border-radius: 0 0 5px 0;
+}
+
+.ui-table-blue-noborder thead th,
+.ui-table-blue-noborder tbody td{
+	border: none;
+}
+/***light-blue***/
+.ui-table-light-blue tbody th{
+	text-align: right;
+	border:2px solid #fff;
+}
+
+.ui-table-light-blue tbody th,
+.ui-table-light-blue tbody td{
+	font-size:14px;
+	padding: 12px 30px 12px 20px;
+	line-height: 26px;
+	border-top: none;
+	border-bottom: none;
+	color: #848484;
+}
+.ui-table-light-blue tbody td{
+	height: auto;
+	color:#2B2B2B;
+}
+.ui-table-light-blue tr{
+	background: #fffff;
+}
+
+.ui-table-light-blue tr.dark{
+	background: #f9fcff;
+}
+
+/* GRAY */
+.ui-table-gray tbody th{
+	text-align: right;
+}
+.ui-table-gray tbody td{
+	height: auto;
+}
+.ui-table-gray tbody th,
+.ui-table-gray tbody td{
+	padding: 0 32px;
+	line-height: 34px;
+	border: 2px solid #fff;
+	border-top: none;
+	border-bottom: none;
+	color: #222;
+}
+.ui-table-gray tr{
+	background: #fafbfc;
+}
+
+.ui-table-gray tr.dark{
+	background: #e1e4e9;
+}
+
+.ui-table-gray tr:first-child th{
+	border-radius: 5px 0 0 0;
+}
+
+.ui-table-gray tr:first-child td{
+	border-radius: 0 5px 0 0;
+}
+
+.ui-table-gray tr:last-child th{
+	border-radius: 0 0 0 5px;
+}
+
+.ui-table-gray tr:last-child td{
+	border-radius: 0 0 5px 0;
+}
+
+
+/* CENTER */
+.ui-table-center th,
+.ui-table-center td{
+	text-align: center;
+}
+.ui-table-center th.text-right,
+.ui-table-center td.text-right{
+	text-align: right;
+}
+.ui-table-center th.text-left,
+.ui-table-center td.text-left{
+	text-align: left;
+}
+
+/*  light color  */
+.ui-table-light {
+	
+}
+.ui-table-light tr {
+	border-bottom: 1px solid #e3e3e3;
+	border-left: 1px solid #e3e3e3;
+}
+.ui-table-light thead th{
+	height: 40px;
+	line-height: 40px;
+	color: #535353;
+	font-size: 16px;
+}
+.ui-table-light thead tr {
+	border-top: 1px solid #e3e3e3;
+	border-radius: 5px 5px 0px 0px;
+}
+.ui-table-light thead th {
+	background: #f0f0f0;
+}
+.ui-table-light thead th span{
+	display: block;
+}
+.ui-table-light thead th,
+.ui-table-light tbody td{
+	border-right: 1px solid #e3e3e3;
+	border-bottom: none;
+}
+.ui-table-light tbody tr:hover{
+	background: none;
+}
+.ui-table-light tbody tr td {
+	height: auto;
+	line-height: normal;
+	vertical-align: top;
+}
+.ui-table-light-double-line tbody td div{
+	line-height: 34px;
+}
+.ui-table-light-single-line tbody td div{
+	line-height: 40px;
+}
+.ui-table-light td .ui-td-bg{
+	background: #fff;
+}
+.ui-table-light tbody tr.dark {
+	background: #f7f7f7;
+}
+.ui-table-light thead th:first-child span{
+	border-radius: 5px 0 0 0;
+}
+.ui-table-light thead th:last-child span{
+	border-radius: 0 5px 0 0;
+}
+.ui-table-light tbody .last td:first-child .ui-td-bg,
+.ui-table-light tbody tr:last-child td:first-child .ui-td-bg{
+	border-radius: 0 0 0 5px;
+}
+.ui-table-light tbody .last td:last-child .ui-td-bg,
+.ui-table tbody tr:last-child td:last-child .ui-td-bg{
+	border-radius: 0 0 5px 0;
+}
+
+.ui-table-light-noborder thead th,
+.ui-table-light-noborder tbody td{
+	border: none;
+}
+
+/*  Inbox  */
+.ui-table-inbox td{
+	padding: 0 10px;
+}
+
+.ui-table-inbox thead{
+	color: #222;
+}
+
+.ui-table-inbox tbody td{
+	height: 36px;
+	line-height: 36px;
+	color: inherit;
+}
+.ui-table-inbox tbody tr.dark{
+	background: #f6fbfd
+}

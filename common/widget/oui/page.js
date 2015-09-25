@@ -17,7 +17,7 @@ define(function(require) {
         if (status === 0 || status === '0') {
           data.success = true;
           if(isPop+""=="true"){
-            data.link = "http://www.renrendai.com/event/catchnew_registerIndex.action";
+            data.link = "http://www.we.com/event/catchnew_registerIndex.action";
             data.linkText = "邀请好友投资即得50元红包，多邀多得，快快";
             data.linkTextEnd = "邀请壕友";
           }

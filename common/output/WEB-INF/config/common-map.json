@@ -1,0 +1,2759 @@
+{
+    "res": {
+        "common:page/layout/base-lg.jsp": {
+            "uri": "/common/page/layout/base-lg.jsp",
+            "type": "jsp",
+            "extras": {
+                "isPage": true,
+                "paths": {
+                    "common:widget/ui/messageModule/messageModule": "common:widget/ui/messageModule/messageModule.js"
+                }
+            },
+            "deps": [
+                "common:widget/ui/messageModule/messageModule.js"
+            ]
+        },
+        "common:page/layout/base.jsp": {
+            "uri": "/common/page/layout/base.jsp",
+            "type": "jsp",
+            "extras": {
+                "isPage": true,
+                "paths": {
+                    "common:widget/ui/messageModule/messageModule": "common:widget/ui/messageModule/messageModule.js"
+                }
+            },
+            "deps": [
+                "common:widget/ui/messageModule/messageModule.js"
+            ]
+        },
+        "common:static/css/base.css": {
+            "uri": "/static/common/css/base_3d64263.css",
+            "type": "css"
+        },
+        "common:static/css/layout.less": {
+            "uri": "/static/common/css/layout_82acf8e.css",
+            "type": "css"
+        },
+        "common:static/css/lib/960.css": {
+            "uri": "/static/common/css/lib/960_a69099e.css",
+            "type": "css"
+        },
+        "common:static/css/lib/normalize.css": {
+            "uri": "/static/common/css/lib/normalize_4555077.css",
+            "type": "css"
+        },
+        "common:static/css/old/default.css": {
+            "uri": "/static/common/css/old/default_1cff45c.css",
+            "type": "css"
+        },
+        "common:static/css/reset.css": {
+            "uri": "/static/common/css/reset_52a430c.css",
+            "type": "css"
+        },
+        "common:static/css/ui.css": {
+            "uri": "/static/common/css/ui_abef5f6.css",
+            "type": "css"
+        },
+        "common:static/css/ui/banks.css": {
+            "uri": "/static/common/css/ui/banks_7f7ec37.css",
+            "type": "css"
+        },
+        "common:static/css/ui/button.css": {
+            "uri": "/static/common/css/ui/button_f9b1c2f.css",
+            "type": "css"
+        },
+        "common:static/css/ui/font.css": {
+            "uri": "/static/common/css/ui/font_47eaa03.css",
+            "type": "css"
+        },
+        "common:static/css/ui/util.css": {
+            "uri": "/static/common/css/ui/util_c0cada7.css",
+            "type": "css"
+        },
+        "common:static/js/html5.js": {
+            "uri": "/static/common/js/html5_0ce8f35.js",
+            "type": "js"
+        },
+        "common:static/js/require.js": {
+            "uri": "/static/common/js/require_def23df.js",
+            "type": "js"
+        },
+        "common:widget/common-dialog/common-dialog.jsp": {
+            "uri": "/common/widget/common-dialog/common-dialog.jsp",
+            "type": "jsp"
+        },
+        "common:widget/footer/footer.js": {
+            "uri": "/static/common/widget/footer/footer_83047dc.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/footer/footer"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/footer/footer.less"
+            ]
+        },
+        "common:widget/footer/footer.jsp": {
+            "uri": "/common/widget/footer/footer.jsp",
+            "type": "jsp",
+            "deps": [
+                "common:widget/footer/footer.js",
+                "common:widget/footer/footer.less"
+            ]
+        },
+        "common:widget/footer/footer.less": {
+            "uri": "/static/common/widget/footer/footer_200819e.css",
+            "type": "css"
+        },
+        "common:widget/oui/alice/poptip/1.1.1/poptip.css": {
+            "uri": "/static/common/widget/oui/alice/poptip/1.1.1/poptip_4252cba.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/base/1.1.1/aspect.js": {
+            "uri": "/static/common/widget/oui/arale/base/1.1.1/aspect_a07238a.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/base/1.1.1/aspect"
+            }
+        },
+        "common:widget/oui/arale/base/1.1.1/attribute.js": {
+            "uri": "/static/common/widget/oui/arale/base/1.1.1/attribute_034cfff.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/base/1.1.1/attribute"
+            }
+        },
+        "common:widget/oui/arale/base/1.1.1/base.js": {
+            "uri": "/static/common/widget/oui/arale/base/1.1.1/base_5191eac.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/arale/class/1.1.0/class": "common:widget/oui/arale/class/1.1.0/class.js",
+                    "common:widget/oui/arale/events/1.1.0/events": "common:widget/oui/arale/events/1.1.0/events.js",
+                    "common:widget/oui/arale/base/1.1.1/aspect": "common:widget/oui/arale/base/1.1.1/aspect.js",
+                    "common:widget/oui/arale/base/1.1.1/attribute": "common:widget/oui/arale/base/1.1.1/attribute.js"
+                },
+                "moduleId": "common:widget/oui/arale/base/1.1.1/base"
+            },
+            "deps": [
+                "common:widget/oui/arale/class/1.1.0/class.js",
+                "common:widget/oui/arale/events/1.1.0/events.js",
+                "common:widget/oui/arale/base/1.1.1/aspect.js",
+                "common:widget/oui/arale/base/1.1.1/attribute.js"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/base-calendar.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/base-calendar_ba9553e.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/position/1.0.1/position": "common:widget/oui/arale/position/1.0.1/position.js",
+                    "common:widget/oui/arale/moment/2.1.0/moment": "common:widget/oui/arale/moment/2.1.0/moment.js",
+                    "common:widget/oui/arale/widget/1.1.1/widget": "common:widget/oui/arale/widget/1.1.1/widget.js",
+                    "common:widget/oui/arale/shim/1.0.2/iframe-shim": "common:widget/oui/arale/shim/1.0.2/iframe-shim.js",
+                    "common:widget/oui/arale/calendar/0.9.0/i18n/zh-cn": "common:widget/oui/arale/calendar/0.9.0/i18n/zh-cn.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/base-calendar"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/position/1.0.1/position.js",
+                "common:widget/oui/arale/moment/2.1.0/moment.js",
+                "common:widget/oui/arale/widget/1.1.1/widget.js",
+                "common:widget/oui/arale/shim/1.0.2/iframe-shim.js",
+                "common:widget/oui/arale/calendar/0.9.0/i18n/zh-cn.js"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/base-column.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/base-column_194192b.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/moment/2.1.0/moment": "common:widget/oui/arale/moment/2.1.0/moment.js",
+                    "common:widget/oui/arale/widget/1.1.1/widget": "common:widget/oui/arale/widget/1.1.1/widget.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/base-column"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/moment/2.1.0/moment.js",
+                "common:widget/oui/arale/widget/1.1.1/widget.js"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/calendar.css": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/calendar_0ee88cc.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/calendar/0.9.0/calendar.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/calendar_5809352.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/moment/2.1.0/moment": "common:widget/oui/arale/moment/2.1.0/moment.js",
+                    "common:widget/oui/arale/calendar/0.9.0/base-calendar": "common:widget/oui/arale/calendar/0.9.0/base-calendar.js",
+                    "common:widget/oui/arale/calendar/0.9.0/date-column": "common:widget/oui/arale/calendar/0.9.0/date-column.js",
+                    "common:widget/oui/arale/calendar/0.9.0/month-column": "common:widget/oui/arale/calendar/0.9.0/month-column.js",
+                    "common:widget/oui/arale/calendar/0.9.0/year-column": "common:widget/oui/arale/calendar/0.9.0/year-column.js",
+                    "common:widget/oui/arale/calendar/0.9.0/base-column": "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/calendar"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/moment/2.1.0/moment.js",
+                "common:widget/oui/arale/calendar/0.9.0/base-calendar.js",
+                "common:widget/oui/arale/calendar/0.9.0/date-column.js",
+                "common:widget/oui/arale/calendar/0.9.0/month-column.js",
+                "common:widget/oui/arale/calendar/0.9.0/year-column.js",
+                "common:widget/oui/arale/calendar/0.9.0/base-column.js",
+                "common:widget/oui/arale/calendar/0.9.0/calendar.css"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/css/date.css": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/css/date_45609fe.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/calendar/0.9.0/css/month.css": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/css/month_63341e9.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/calendar/0.9.0/css/year.css": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/css/year_fd118c0.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/calendar/0.9.0/date-column.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/date-column_e49b4ee.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/moment/2.1.0/moment": "common:widget/oui/arale/moment/2.1.0/moment.js",
+                    "common:widget/oui/arale/calendar/0.9.0/base-column": "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/date-column"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/moment/2.1.0/moment.js",
+                "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/double-calendar.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/double-calendar_6c2a333.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/moment/2.1.0/moment": "common:widget/oui/arale/moment/2.1.0/moment.js",
+                    "common:widget/oui/arale/calendar/0.9.0/base-calendar": "common:widget/oui/arale/calendar/0.9.0/base-calendar.js",
+                    "common:widget/oui/arale/calendar/0.9.0/date-column": "common:widget/oui/arale/calendar/0.9.0/date-column.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/double-calendar"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/moment/2.1.0/moment.js",
+                "common:widget/oui/arale/calendar/0.9.0/base-calendar.js",
+                "common:widget/oui/arale/calendar/0.9.0/date-column.js"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/i18n/en.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/i18n/en_521e7f9.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/i18n/en"
+            }
+        },
+        "common:widget/oui/arale/calendar/0.9.0/i18n/fr.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/i18n/fr_9dc91da.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/i18n/fr"
+            }
+        },
+        "common:widget/oui/arale/calendar/0.9.0/i18n/ja.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/i18n/ja_a0766b1.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/i18n/ja"
+            }
+        },
+        "common:widget/oui/arale/calendar/0.9.0/i18n/zh-cn.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/i18n/zh-cn_53ec490.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/i18n/zh-cn"
+            }
+        },
+        "common:widget/oui/arale/calendar/0.9.0/i18n/zh-tw.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/i18n/zh-tw_49c9481.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/i18n/zh-tw"
+            }
+        },
+        "common:widget/oui/arale/calendar/0.9.0/month-column.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/month-column_c715c72.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/moment/2.1.0/moment": "common:widget/oui/arale/moment/2.1.0/moment.js",
+                    "common:widget/oui/arale/calendar/0.9.0/base-column": "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/month-column"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/moment/2.1.0/moment.js",
+                "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+            ]
+        },
+        "common:widget/oui/arale/calendar/0.9.0/year-column.js": {
+            "uri": "/static/common/widget/oui/arale/calendar/0.9.0/year-column_2fcef38.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/calendar/0.9.0/base-column": "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+                },
+                "moduleId": "common:widget/oui/arale/calendar/0.9.0/year-column"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/calendar/0.9.0/base-column.js"
+            ]
+        },
+        "common:widget/oui/arale/class/1.1.0/class.js": {
+            "uri": "/static/common/widget/oui/arale/class/1.1.0/class_9d75f8a.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/class/1.1.0/class"
+            }
+        },
+        "common:widget/oui/arale/dialog/1.3.3/confirmbox.js": {
+            "uri": "/static/common/widget/oui/arale/dialog/1.3.3/confirmbox_02b3a55.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/arale/dialog/1.3.3/confirmbox"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/arale/dialog/1.3.3/dialog-1.3.3.css": {
+            "uri": "/static/common/widget/oui/arale/dialog/1.3.3/dialog-1.3.3_ab8eceb.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/dialog/1.3.3/dialog-1.3.3.js": {
+            "uri": "/static/common/widget/oui/arale/dialog/1.3.3/dialog-1.3.3_abbc6e0.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/overlay/1.1.2/overlay": "common:widget/oui/arale/overlay/1.1.2/overlay.js",
+                    "common:widget/oui/arale/overlay/1.1.2/mask": "common:widget/oui/arale/overlay/1.1.2/mask.js",
+                    "common:widget/oui/arale/events/1.1.0/events": "common:widget/oui/arale/events/1.1.0/events.js",
+                    "common:widget/oui/arale/templatable/0.9.1/templatable": "common:widget/oui/arale/templatable/0.9.1/templatable.js"
+                },
+                "moduleId": "common:widget/oui/arale/dialog/1.3.3/dialog-1.3.3"
+            },
+            "deps": [
+                "common:widget/oui/arale/dialog/1.3.3/dialog.css",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/overlay/1.1.2/overlay.js",
+                "common:widget/oui/arale/overlay/1.1.2/mask.js",
+                "common:widget/oui/arale/events/1.1.0/events.js",
+                "common:widget/oui/arale/templatable/0.9.1/templatable.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog-1.3.3.css"
+            ]
+        },
+        "common:widget/oui/arale/dialog/1.3.3/dialog.css": {
+            "uri": "/static/common/widget/oui/arale/dialog/1.3.3/dialog_bb2a545.css",
+            "type": "css"
+        },
+        "common:widget/oui/arale/dialog/1.3.3/dialog.js": {
+            "uri": "/static/common/widget/oui/arale/dialog/1.3.3/dialog_6276ef9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/overlay/1.1.2/overlay": "common:widget/oui/arale/overlay/1.1.2/overlay.js",
+                    "common:widget/oui/arale/overlay/1.1.2/mask": "common:widget/oui/arale/overlay/1.1.2/mask.js",
+                    "common:widget/oui/arale/events/1.1.0/events": "common:widget/oui/arale/events/1.1.0/events.js",
+                    "common:widget/oui/arale/templatable/0.9.1/templatable": "common:widget/oui/arale/templatable/0.9.1/templatable.js"
+                },
+                "moduleId": "common:widget/oui/arale/dialog/1.3.3/dialog"
+            },
+            "deps": [
+                "common:widget/oui/arale/dialog/1.3.3/dialog.css",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/overlay/1.1.2/overlay.js",
+                "common:widget/oui/arale/overlay/1.1.2/mask.js",
+                "common:widget/oui/arale/events/1.1.0/events.js",
+                "common:widget/oui/arale/templatable/0.9.1/templatable.js"
+            ]
+        },
+        "common:widget/oui/arale/events/1.1.0/events.js": {
+            "uri": "/static/common/widget/oui/arale/events/1.1.0/events_fa26fac.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/events/1.1.0/events"
+            }
+        },
+        "common:widget/oui/arale/moment/2.1.0/moment.js": {
+            "uri": "/static/common/widget/oui/arale/moment/2.1.0/moment_98d18e1.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/arale/moment/2.1.0/moment"
+            }
+        },
+        "common:widget/oui/arale/overlay/1.1.2/mask.js": {
+            "uri": "/static/common/widget/oui/arale/overlay/1.1.2/mask_a7eb1e8.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/overlay/1.1.2/overlay": "common:widget/oui/arale/overlay/1.1.2/overlay.js"
+                },
+                "moduleId": "common:widget/oui/arale/overlay/1.1.2/mask"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/overlay/1.1.2/overlay.js"
+            ]
+        },
+        "common:widget/oui/arale/overlay/1.1.2/overlay.js": {
+            "uri": "/static/common/widget/oui/arale/overlay/1.1.2/overlay_8de42a5.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/position/1.0.1/position": "common:widget/oui/arale/position/1.0.1/position.js",
+                    "common:widget/oui/arale/shim/1.0.2/iframe-shim": "common:widget/oui/arale/shim/1.0.2/iframe-shim.js",
+                    "common:widget/oui/arale/widget/1.1.1/widget": "common:widget/oui/arale/widget/1.1.1/widget.js"
+                },
+                "moduleId": "common:widget/oui/arale/overlay/1.1.2/overlay"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/position/1.0.1/position.js",
+                "common:widget/oui/arale/shim/1.0.2/iframe-shim.js",
+                "common:widget/oui/arale/widget/1.1.1/widget.js"
+            ]
+        },
+        "common:widget/oui/arale/popup/1.1.2/popup.js": {
+            "uri": "/static/common/widget/oui/arale/popup/1.1.2/popup_13023c7.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/overlay/1.1.2/overlay": "common:widget/oui/arale/overlay/1.1.2/overlay.js"
+                },
+                "moduleId": "common:widget/oui/arale/popup/1.1.2/popup"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/overlay/1.1.2/overlay.js"
+            ]
+        },
+        "common:widget/oui/arale/position/1.0.1/position.js": {
+            "uri": "/static/common/widget/oui/arale/position/1.0.1/position_d1cfbb9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/arale/position/1.0.1/position"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/arale/shim/1.0.2/iframe-shim.js": {
+            "uri": "/static/common/widget/oui/arale/shim/1.0.2/iframe-shim_39379c7.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/position/1.0.1/position": "common:widget/oui/arale/position/1.0.1/position.js"
+                },
+                "moduleId": "common:widget/oui/arale/shim/1.0.2/iframe-shim"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/position/1.0.1/position.js"
+            ]
+        },
+        "common:widget/oui/arale/sticky/1.2.1/sticky.js": {
+            "uri": "/static/common/widget/oui/arale/sticky/1.2.1/sticky_5326271.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/arale/sticky/1.2.1/sticky"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/arale/templatable/0.9.1/templatable.js": {
+            "uri": "/static/common/widget/oui/arale/templatable/0.9.1/templatable_4601361.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/arale/templatable/0.9.1/templatable"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/arale/tip/1.1.4/atip.js": {
+            "uri": "/static/common/widget/oui/arale/tip/1.1.4/atip_7a68fb7.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js"
+                },
+                "moduleId": "common:widget/oui/arale/tip/1.1.4/atip"
+            },
+            "deps": [
+                "common:widget/oui/alice/poptip/1.1.1/poptip.css",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js"
+            ]
+        },
+        "common:widget/oui/arale/tip/1.1.4/tip.js": {
+            "uri": "/static/common/widget/oui/arale/tip/1.1.4/tip_1c2c2d6.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/arale/popup/1.1.2/popup": "common:widget/oui/arale/popup/1.1.2/popup.js"
+                },
+                "moduleId": "common:widget/oui/arale/tip/1.1.4/tip"
+            },
+            "deps": [
+                "common:widget/oui/arale/popup/1.1.2/popup.js"
+            ]
+        },
+        "common:widget/oui/arale/widget/1.1.1/auto-render.js": {
+            "uri": "/static/common/widget/oui/arale/widget/1.1.1/auto-render_bdea5e6.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/arale/widget/1.1.1/auto-render"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/arale/widget/1.1.1/daparser.js": {
+            "uri": "/static/common/widget/oui/arale/widget/1.1.1/daparser_35838ce.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/arale/widget/1.1.1/daparser"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/arale/widget/1.1.1/widget.js": {
+            "uri": "/static/common/widget/oui/arale/widget/1.1.1/widget_b938c65.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/arale/base/1.1.1/base": "common:widget/oui/arale/base/1.1.1/base.js",
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/widget/1.1.1/daparser": "common:widget/oui/arale/widget/1.1.1/daparser.js",
+                    "common:widget/oui/arale/widget/1.1.1/auto-render": "common:widget/oui/arale/widget/1.1.1/auto-render.js"
+                },
+                "moduleId": "common:widget/oui/arale/widget/1.1.1/widget"
+            },
+            "deps": [
+                "common:widget/oui/arale/base/1.1.1/base.js",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/widget/1.1.1/daparser.js",
+                "common:widget/oui/arale/widget/1.1.1/auto-render.js"
+            ]
+        },
+        "common:widget/oui/common.js": {
+            "uri": "/static/common/widget/oui/common_dda4d68.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/common"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/components/calculator.js": {
+            "uri": "/static/common/widget/oui/components/calculator_87e0b7d.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js"
+                },
+                "moduleId": "common:widget/oui/components/calculator"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js"
+            ]
+        },
+        "common:widget/oui/components/components.js": {
+            "uri": "/static/common/widget/oui/components/components_582ccc9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/components/calculator": "common:widget/oui/components/calculator.js",
+                    "common:widget/oui/components/latest-financial-plan": "common:widget/oui/components/latest-financial-plan.js",
+                    "common:widget/oui/components/plan-performance": "common:widget/oui/components/plan-performance.js",
+                    "common:widget/oui/components/plan-quit-handler": "common:widget/oui/components/plan-quit-handler.js",
+                    "common:widget/oui/components/list-factory": "common:widget/oui/components/list-factory.js",
+                    "common:widget/oui/components/investment-terminal": "common:widget/oui/components/investment-terminal.js",
+                    "common:widget/oui/components/transfer-confirmation": "common:widget/oui/components/transfer-confirmation.js"
+                },
+                "moduleId": "common:widget/oui/components/components"
+            },
+            "deps": [
+                "common:widget/oui/components/calculator.js",
+                "common:widget/oui/components/latest-financial-plan.js",
+                "common:widget/oui/components/plan-performance.js",
+                "common:widget/oui/components/plan-quit-handler.js",
+                "common:widget/oui/components/list-factory.js",
+                "common:widget/oui/components/investment-terminal.js",
+                "common:widget/oui/components/transfer-confirmation.js"
+            ]
+        },
+        "common:widget/oui/components/footer.css": {
+            "uri": "/static/common/widget/oui/components/footer_b9d0d66.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/footer.js": {
+            "uri": "/static/common/widget/oui/components/footer_bc1e49c.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/components/footer"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/components/footer.css"
+            ]
+        },
+        "common:widget/oui/components/header.css": {
+            "uri": "/static/common/widget/oui/components/header_257e739.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/header.js": {
+            "uri": "/static/common/widget/oui/components/header_5031206.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js"
+                },
+                "moduleId": "common:widget/oui/components/header"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/components/header.css"
+            ]
+        },
+        "common:widget/oui/components/investment-terminal.css": {
+            "uri": "/static/common/widget/oui/components/investment-terminal_c9fcc51.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/investment-terminal.js": {
+            "uri": "/static/common/widget/oui/components/investment-terminal_fb80d2a.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/ui/dialog/dialog": "common:widget/ui/dialog/dialog.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/components/investment-terminal"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/ui/dialog/dialog.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/components/investment-terminal.css"
+            ]
+        },
+        "common:widget/oui/components/latest-financial-plan.css": {
+            "uri": "/static/common/widget/oui/components/latest-financial-plan_2f3a3e5.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/latest-financial-plan.js": {
+            "uri": "/static/common/widget/oui/components/latest-financial-plan_1b78db0.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/components/latest-financial-plan"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/latest-financial-plan.css"
+            ]
+        },
+        "common:widget/oui/components/list-factory.js": {
+            "uri": "/static/common/widget/oui/components/list-factory_8927ba4.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/components/list-factory"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/components/plan-performance.js": {
+            "uri": "/static/common/widget/oui/components/plan-performance_9fabeb1.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/lib/highcharts/3.0.5/highcharts": "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+                },
+                "moduleId": "common:widget/oui/components/plan-performance"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+            ]
+        },
+        "common:widget/oui/components/plan-quit-handler.css": {
+            "uri": "/static/common/widget/oui/components/plan-quit-handler_13f48ec.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/plan-quit-handler.js": {
+            "uri": "/static/common/widget/oui/components/plan-quit-handler_1ff0489.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js"
+                },
+                "moduleId": "common:widget/oui/components/plan-quit-handler"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/components/plan-quit-handler.css"
+            ]
+        },
+        "common:widget/oui/components/plan-statistics.css": {
+            "uri": "/static/common/widget/oui/components/plan-statistics_7112d59.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/sidebar.css": {
+            "uri": "/static/common/widget/oui/components/sidebar_95c3e0a.css",
+            "type": "css"
+        },
+        "common:widget/oui/components/sidebar.js": {
+            "uri": "/static/common/widget/oui/components/sidebar_917a5e8.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/components/sidebar"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/components/sidebar.css"
+            ]
+        },
+        "common:widget/oui/components/transfer-confirmation.js": {
+            "uri": "/static/common/widget/oui/components/transfer-confirmation_b78bcd0.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/components/transfer-confirmation"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/config.js": {
+            "uri": "/static/common/widget/oui/config_0166076.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/config"
+            }
+        },
+        "common:widget/oui/lib/asyncSlider/1.0.0/asyncSlider.js": {
+            "uri": "/static/common/widget/oui/lib/asyncSlider/1.0.0/asyncSlider_408f9c8.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "lib/easing/1.3.0/easing": "common:widget/oui/lib/easing/1.3.0/easing.js"
+                },
+                "moduleId": "common:widget/oui/lib/asyncSlider/1.0.0/asyncSlider"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/easing/1.3.0/easing.js"
+            ]
+        },
+        "common:widget/oui/lib/city/1.0.0/city.js": {
+            "uri": "/static/common/widget/oui/lib/city/1.0.0/city_5dc481b.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/lib/city/1.0.0/city"
+            }
+        },
+        "common:widget/oui/lib/city/1.0.1/new-city.js": {
+            "uri": "/static/common/widget/oui/lib/city/1.0.1/new-city_24684fc.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/city/1.0.1/new-city"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/counter/0.0.1/jquery.counter-analog.css": {
+            "uri": "/static/common/widget/oui/lib/counter/0.0.1/jquery.counter-analog_9d83154.css",
+            "type": "css"
+        },
+        "common:widget/oui/lib/counter/0.0.1/jquery.counter.js": {
+            "uri": "/static/common/widget/oui/lib/counter/0.0.1/jquery.counter_311989f.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "lib/counter/0.0.1/jquery.counter"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/easing/1.3.0/easing.js": {
+            "uri": "/static/common/widget/oui/lib/easing/1.3.0/easing_17a7560.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "lib/easing/1.3.0/easing"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/flash/1.0.1/jquery.flash.js": {
+            "uri": "/static/common/widget/oui/lib/flash/1.0.1/jquery.flash_0d07e41.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/flash/1.0.1/jquery.flash"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/handlebars/1.0.0/handlebars.js": {
+            "uri": "/static/common/widget/oui/lib/handlebars/1.0.0/handlebars_982512c.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/lib/handlebars/1.0.0/handlebars"
+            }
+        },
+        "common:widget/oui/lib/highcharts/3.0.5/highcharts.js": {
+            "uri": "/static/common/widget/oui/lib/highcharts/3.0.5/highcharts_c514a05.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/highcharts/3.0.5/highcharts"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/jcrop/0.9.12/css/jquery.Jcrop.css": {
+            "uri": "/static/common/widget/oui/lib/jcrop/0.9.12/css/jquery.Jcrop_115f55c.css",
+            "type": "css"
+        },
+        "common:widget/oui/lib/jcrop/0.9.12/css/jquery.Jcrop.min.css": {
+            "uri": "/static/common/widget/oui/lib/jcrop/0.9.12/css/jquery.Jcrop.min_5b3fd21.css",
+            "type": "css"
+        },
+        "common:widget/oui/lib/jcrop/0.9.12/jquery.Jcrop.js": {
+            "uri": "/static/common/widget/oui/lib/jcrop/0.9.12/jquery.Jcrop_e23da4a.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/jcrop/0.9.12/jquery.Jcrop"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/jcrop/0.9.8/css/jquery.Jcrop.css": {
+            "uri": "/static/common/widget/oui/lib/jcrop/0.9.8/css/jquery.Jcrop_7a4227e.css",
+            "type": "css"
+        },
+        "common:widget/oui/lib/jcrop/0.9.8/css/jquery.Jcrop.min.css": {
+            "uri": "/static/common/widget/oui/lib/jcrop/0.9.8/css/jquery.Jcrop.min_a19a2a5.css",
+            "type": "css"
+        },
+        "common:widget/oui/lib/jcrop/0.9.8/jquery.Jcrop.js": {
+            "uri": "/static/common/widget/oui/lib/jcrop/0.9.8/jquery.Jcrop_2847d48.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/jcrop/0.9.8/jquery.Jcrop"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/jquery/1.9.1/jquery.js": {
+            "uri": "/static/common/widget/oui/lib/jquery/1.9.1/jquery_5743ca5.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/lib/jquery/1.9.1/jquery"
+            }
+        },
+        "common:widget/oui/lib/mailSuggest/0.0.1/mailSuggest.js": {
+            "uri": "/static/common/widget/oui/lib/mailSuggest/0.0.1/mailSuggest_2b0d645.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/mailSuggest/0.0.1/mailSuggest"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/plupload/1.5.7/css/jquery.plupload.queue.css": {
+            "uri": "/static/common/widget/oui/lib/plupload/1.5.7/css/jquery.plupload.queue_882ff2a.css",
+            "type": "css"
+        },
+        "common:widget/oui/lib/plupload/1.5.7/jquery.plupload.queue.js": {
+            "uri": "/static/common/widget/oui/lib/plupload/1.5.7/jquery.plupload.queue_678b66f.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/plupload/1.5.7/css/jquery.plupload.queue.css": "common:widget/oui/lib/plupload/1.5.7/css/jquery.plupload.queue.css",
+                    "common:widget/oui/lib/plupload/1.5.7/plupload.full": "common:widget/oui/lib/plupload/1.5.7/plupload.full.js",
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/plupload/1.5.7/jquery.plupload.queue"
+            },
+            "deps": [
+                "common:widget/oui/lib/plupload/1.5.7/css/jquery.plupload.queue.css",
+                "common:widget/oui/lib/plupload/1.5.7/plupload.full.js",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/plupload/1.5.7/plupload.full.js": {
+            "uri": "/static/common/widget/oui/lib/plupload/1.5.7/plupload.full_e2ab754.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/lib/plupload/1.5.7/plupload.full"
+            }
+        },
+        "common:widget/oui/lib/simplePagination/1.5.0/simplePagination.js": {
+            "uri": "/static/common/widget/oui/lib/simplePagination/1.5.0/simplePagination_6590b4b.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/lib/simplePagination/1.5.0/simplePagination"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/simplePagination/1.5.0/simplePagination.nocmd.js": {
+            "uri": "/static/common/widget/oui/lib/simplePagination/1.5.0/simplePagination.nocmd_3044895.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/lib/simplePagination/1.5.0/simplePagination.nocmd"
+            }
+        },
+        "common:widget/oui/lib/validation/1.11.1/jquery.validate.js": {
+            "uri": "/static/common/widget/oui/lib/validation/1.11.1/jquery.validate_0bb1e82.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "lib/validation/1.11.1/jquery.validate"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/lib/validation/1.11.1/jquery.validate.min.js": {
+            "uri": "/static/common/widget/oui/lib/validation/1.11.1/jquery.validate.min_ce6a0f4.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/lib/validation/1.11.1/jquery.validate.min"
+            }
+        },
+        "common:widget/oui/oui.css": {
+            "uri": "/static/common/widget/oui/oui_1379437.css",
+            "type": "css"
+        },
+        "common:widget/oui/page.js": {
+            "uri": "/static/common/widget/oui/page_b98f9f4.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js"
+                },
+                "moduleId": "common:widget/oui/page"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js"
+            ]
+        },
+        "common:widget/oui/pages/about.js": {
+            "uri": "/static/common/widget/oui/pages/about_ac0864b.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/about"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/account/addcard.js": {
+            "uri": "/static/common/widget/oui/pages/account/account/addcard_8064a62.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/account/addcard"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/pages/account/account/security.js": {
+            "uri": "/static/common/widget/oui/pages/account/account/security_8dc51b4.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/account/security"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/account/userbank.js": {
+            "uri": "/static/common/widget/oui/pages/account/account/userbank_cd4b06e.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/pages/account/account/addcard": "common:widget/oui/pages/account/account/addcard.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/account/userbank"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/pages/account/account/addcard.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/account/account/userbasic.js": {
+            "uri": "/static/common/widget/oui/pages/account/account/userbasic_3768440.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/account/userbasic"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/account/bill.js": {
+            "uri": "/static/common/widget/oui/pages/account/bill_ab4d2a1.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/bill"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/pages/account/borrow/applications.js": {
+            "uri": "/static/common/widget/oui/pages/account/borrow/applications_cfafb54.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/borrow/applications"
+            },
+            "deps": [
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/borrow/repayments.js": {
+            "uri": "/static/common/widget/oui/pages/account/borrow/repayments_05585e2.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/borrow/repayments"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/borrow/statistics.js": {
+            "uri": "/static/common/widget/oui/pages/account/borrow/statistics_e2f0817.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/lib/highcharts/3.0.5/highcharts": "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/borrow/statistics"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+            ]
+        },
+        "common:widget/oui/pages/account/capital/recharge.js": {
+            "uri": "/static/common/widget/oui/pages/account/capital/recharge_9b50fdc.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/capital/recharge"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/account/capital/transactions.js": {
+            "uri": "/static/common/widget/oui/pages/account/capital/transactions_bc495c5.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/capital/transactions"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/capital/withdraw.js": {
+            "uri": "/static/common/widget/oui/pages/account/capital/withdraw_f678d1c.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/capital/withdraw"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/coupons/bindcoupon.js": {
+            "uri": "/static/common/widget/oui/pages/account/coupons/bindcoupon_3861c0b.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/coupons/bindcoupon"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/account/coupons/mycoupon.js": {
+            "uri": "/static/common/widget/oui/pages/account/coupons/mycoupon_0d6bb21.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/coupons/mycoupon"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/protocol.js"
+            ]
+        },
+        "common:widget/oui/pages/account/coupons/ucode.js": {
+            "uri": "/static/common/widget/oui/pages/account/coupons/ucode_a128767.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/coupons/ucode"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/account/index.js": {
+            "uri": "/static/common/widget/oui/pages/account/index_b5c8d63.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/arale/overlay/1.1.2/mask": "common:widget/oui/arale/overlay/1.1.2/mask.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/index"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/arale/overlay/1.1.2/mask.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js",
+                "common:widget/oui/rsa/index.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/auto.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/auto_7830e0e.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/auto"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/autoinvestplan.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/autoinvestplan_49dc2a1.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/autoinvestplan"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/components/components.jscomponents.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/loans.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/loans_c21630a.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/loans"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/plan.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/plan_15accbb.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/plan"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js",
+                "common:widget/oui/components/components.jscomponents.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/plans.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/plans_3fc6f3d.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/plans"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/returns.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/returns_21302bb.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/calendar/0.9.0/calendar": "common:widget/oui/arale/calendar/0.9.0/calendar.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/returns"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/calendar/0.9.0/calendar.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/statistics.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/statistics_0466d81.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/lib/highcharts/3.0.5/highcharts": "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/statistics"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+            ]
+        },
+        "common:widget/oui/pages/account/invest/transfer.js": {
+            "uri": "/static/common/widget/oui/pages/account/invest/transfer_6a65135.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/invest/transfer"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js"
+            ]
+        },
+        "common:widget/oui/pages/account/profile.js": {
+            "uri": "/static/common/widget/oui/pages/account/profile_8c84cbf.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/profile"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js"
+            ]
+        },
+        "common:widget/oui/pages/account/userInfo.js": {
+            "uri": "/static/common/widget/oui/pages/account/userInfo_a4895f1.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js"
+                },
+                "moduleId": "common:widget/oui/pages/account/userInfo"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js"
+            ]
+        },
+        "common:widget/oui/pages/auth/loan-list.js": {
+            "uri": "/static/common/widget/oui/pages/auth/loan-list_2897e24.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/auth/loan-list"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/auth/login.js": {
+            "uri": "/static/common/widget/oui/pages/auth/login_205b2fa.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/lib/mailSuggest/0.0.1/mailSuggest": "common:widget/oui/lib/mailSuggest/0.0.1/mailSuggest.js"
+                },
+                "moduleId": "common:widget/oui/pages/auth/login"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/lib/mailSuggest/0.0.1/mailSuggest.js"
+            ]
+        },
+        "common:widget/oui/pages/auth/reg.js": {
+            "uri": "/static/common/widget/oui/pages/auth/reg_e272ac8.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js"
+                },
+                "moduleId": "common:widget/oui/pages/auth/reg"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js"
+            ]
+        },
+        "common:widget/oui/pages/auth/register-old.js": {
+            "uri": "/static/common/widget/oui/pages/auth/register-old_a0720bd.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/auth/register-old"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/auth/register.js": {
+            "uri": "/static/common/widget/oui/pages/auth/register_713a025.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/rsa/index": "common:widget/oui/rsa/index.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/auth/register"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/rsa/index.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/borrowercalculator.coffee": {
+            "uri": "/static/common/widget/oui/pages/borrow/borrowercalculator_b7989c1.coffee",
+            "type": "coffee",
+            "deps": [
+                "jquery",
+                "widgets/widgets",
+                "handlebars",
+                "components/components"
+            ]
+        },
+        "common:widget/oui/pages/borrow/borrowercalculator.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/borrowercalculator_72f6c1e.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/borrowercalculator"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/components/components.jscomponents.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/borrowerinfo.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/borrowerinfo_556fb01.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/lib/city/1.0.1/new-city": "common:widget/oui/lib/city/1.0.1/new-city.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/arale/sticky/1.2.1/sticky": "common:widget/oui/arale/sticky/1.2.1/sticky.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/borrowerinfo"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/city/1.0.1/new-city.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/arale/sticky/1.2.1/sticky.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/calculator.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/calculator_0ef9335.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/calculator"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/credit.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/credit_6ea8bc9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/credit"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/focusimg.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/focusimg_719e385.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/focusimg"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/index.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/index_c88e86b.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/lib/city/1.0.1/new-city": "common:widget/oui/lib/city/1.0.1/new-city.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                    "common:widget/oui/arale/sticky/1.2.1/sticky": "common:widget/oui/arale/sticky/1.2.1/sticky.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/index"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/city/1.0.1/new-city.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js",
+                "common:widget/oui/arale/sticky/1.2.1/sticky.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/components/components.jscomponents.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/loaninfo.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/loaninfo_3a31536.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/loaninfo"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/preview.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/preview_82fca96.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/preview"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/product.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/product_4aebf97.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/product"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/uploads.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/uploads_466fc96.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/lib/plupload/1.5.7/jquery.plupload.queue": "common:widget/oui/lib/plupload/1.5.7/jquery.plupload.queue"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/uploads"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/plupload/1.5.7/jquery.plupload.queue"
+            ]
+        },
+        "common:widget/oui/pages/borrow/verify.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/verify_eab2aea.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/verify"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/borrow/zh-cn.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/zh-cn_9d01a1d.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/pages/borrow/zh-cn"
+            }
+        },
+        "common:widget/oui/pages/borrow/zion_index.coffee": {
+            "uri": "/static/common/widget/oui/pages/borrow/zion_index_f1445f5.coffee",
+            "type": "coffee",
+            "deps": [
+                "jquery",
+                "handlebars"
+            ]
+        },
+        "common:widget/oui/pages/borrow/zion_index.js": {
+            "uri": "/static/common/widget/oui/pages/borrow/zion_index_8bd83c6.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/borrow/zion_index"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/help.js": {
+            "uri": "/static/common/widget/oui/pages/help_aec57a1.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/pages/help"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/pages/index.js": {
+            "uri": "/static/common/widget/oui/pages/index_1d090f9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/index"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/invest/autoinvestdetails.js": {
+            "uri": "/static/common/widget/oui/pages/invest/autoinvestdetails_36b77c8.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/invest/autoinvestdetails"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/invest/autoinvestlist.js": {
+            "uri": "/static/common/widget/oui/pages/invest/autoinvestlist_f20fd08.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/invest/autoinvestlist"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/invest/details.js": {
+            "uri": "/static/common/widget/oui/pages/invest/details_fb09915.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/tip/1.1.4/tip": "common:widget/oui/arale/tip/1.1.4/tip.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js",
+                    "common:widget/oui/components/components.jscomponents": "common:widget/oui/components/components.jscomponents.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                    "common:widget/oui/lib/handlebars/1.0.0/handlebars": "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+                },
+                "moduleId": "common:widget/oui/pages/invest/details"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/tip/1.1.4/tip.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js",
+                "common:widget/oui/components/components.jscomponents.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js",
+                "common:widget/oui/lib/handlebars/1.0.0/handlebars.js"
+            ]
+        },
+        "common:widget/oui/pages/invest/investlist.js": {
+            "uri": "/static/common/widget/oui/pages/invest/investlist_d5b6169.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/arale/dialog/1.3.3/dialog": "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+                },
+                "moduleId": "common:widget/oui/pages/invest/investlist"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/arale/dialog/1.3.3/dialog.js"
+            ]
+        },
+        "common:widget/oui/pages/invest/list.js": {
+            "uri": "/static/common/widget/oui/pages/invest/list_2e4bf1c.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/invest/list"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/pages/invest/ulist.js": {
+            "uri": "/static/common/widget/oui/pages/invest/ulist_71efb21.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/widgets/widgets": "common:widget/oui/widgets/widgets.js"
+                },
+                "moduleId": "common:widget/oui/pages/invest/ulist"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/widgets/widgets.js"
+            ]
+        },
+        "common:widget/oui/protocol.js": {
+            "uri": "/static/common/widget/oui/protocol_9cbb8e6.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/protocol"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/rsa/RSAencript.js": {
+            "uri": "/static/common/widget/oui/rsa/RSAencript_e4e1d2e.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/RSAencript"
+            }
+        },
+        "common:widget/oui/rsa/asn1.js": {
+            "uri": "/static/common/widget/oui/rsa/asn1_b2a88a7.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/asn1"
+            }
+        },
+        "common:widget/oui/rsa/index.js": {
+            "uri": "/static/common/widget/oui/rsa/index_38b3433.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/rsa/rsa.config": "common:widget/oui/rsa/rsa.config.js"
+                },
+                "moduleId": "common:widget/oui/rsa/index"
+            },
+            "deps": [
+                "common:widget/oui/rsa/rsa.config.js"
+            ]
+        },
+        "common:widget/oui/rsa/jsbn.js": {
+            "uri": "/static/common/widget/oui/rsa/jsbn_f0bcece.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/jsbn"
+            }
+        },
+        "common:widget/oui/rsa/pidcrypt.js": {
+            "uri": "/static/common/widget/oui/rsa/pidcrypt_25ecd8a.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/pidcrypt"
+            }
+        },
+        "common:widget/oui/rsa/pidcrypt_util.js": {
+            "uri": "/static/common/widget/oui/rsa/pidcrypt_util_a300b33.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/pidcrypt_util"
+            }
+        },
+        "common:widget/oui/rsa/prng4.js": {
+            "uri": "/static/common/widget/oui/rsa/prng4_3b43f40.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/prng4"
+            }
+        },
+        "common:widget/oui/rsa/rng.js": {
+            "uri": "/static/common/widget/oui/rsa/rng_9c65d72.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/rng"
+            }
+        },
+        "common:widget/oui/rsa/rsa.config.js": {
+            "uri": "/static/common/widget/oui/rsa/rsa.config_20982a1.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/rsa.config"
+            }
+        },
+        "common:widget/oui/rsa/rsa.js": {
+            "uri": "/static/common/widget/oui/rsa/rsa_7d2cbe2.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/rsa/rsa"
+            }
+        },
+        "common:widget/oui/seajs/2.0.0/plugin-nocache.js": {
+            "uri": "/static/common/widget/oui/seajs/2.0.0/plugin-nocache_bac5e60.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/seajs/2.0.0/plugin-nocache"
+            }
+        },
+        "common:widget/oui/seajs/2.0.0/plugin-shim.js": {
+            "uri": "/static/common/widget/oui/seajs/2.0.0/plugin-shim_27c600e.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/seajs/2.0.0/plugin-shim"
+            }
+        },
+        "common:widget/oui/seajs/2.0.0/sea.js": {
+            "uri": "/static/common/widget/oui/seajs/2.0.0/sea_bab4e93.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/seajs/2.0.0/sea"
+            }
+        },
+        "common:widget/oui/seajs/2.1.0/sea-debug.js": {
+            "uri": "/static/common/widget/oui/seajs/2.1.0/sea-debug_6853ec2.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/seajs/2.1.0/sea-debug"
+            }
+        },
+        "common:widget/oui/seajs/2.1.0/sea.js": {
+            "uri": "/static/common/widget/oui/seajs/2.1.0/sea_25faad8.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/seajs/2.1.0/sea"
+            }
+        },
+        "common:widget/oui/seajs/2.1.0/seajs-text.js": {
+            "uri": "/static/common/widget/oui/seajs/2.1.0/seajs-text_0b1ea63.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "seajs/seajs-text/1.0.2/seajs-text"
+            }
+        },
+        "common:widget/oui/widgets/button.css": {
+            "uri": "/static/common/widget/oui/widgets/button_7c33e2b.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/captcha.js": {
+            "uri": "/static/common/widget/oui/widgets/captcha_946adb9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/widgets/captcha"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/widgets/comment.css": {
+            "uri": "/static/common/widget/oui/widgets/comment_233f0de.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/counter.js": {
+            "uri": "/static/common/widget/oui/widgets/counter_f823ed2.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "lib/counter/0.0.1/jquery.counter": "common:widget/oui/lib/counter/0.0.1/jquery.counter.js"
+                },
+                "moduleId": "common:widget/oui/widgets/counter"
+            },
+            "deps": [
+                "common:widget/oui/lib/counter/0.0.1/jquery.counter-analog.css",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/counter/0.0.1/jquery.counter.js"
+            ]
+        },
+        "common:widget/oui/widgets/dialog.css": {
+            "uri": "/static/common/widget/oui/widgets/dialog_d3cfb86.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/filter.css": {
+            "uri": "/static/common/widget/oui/widgets/filter_50fe9cc.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/form.css": {
+            "uri": "/static/common/widget/oui/widgets/form_1b5ba59.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/form.js": {
+            "uri": "/static/common/widget/oui/widgets/form_ff680ee.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "lib/validation/1.11.1/jquery.validate": "common:widget/oui/lib/validation/1.11.1/jquery.validate.js"
+                },
+                "moduleId": "common:widget/oui/widgets/form"
+            },
+            "deps": [
+                "common:widget/oui/alice/poptip/1.1.1/poptip.css",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/lib/validation/1.11.1/jquery.validate.js",
+                "common:widget/oui/widgets/form.css"
+            ]
+        },
+        "common:widget/oui/widgets/goTop.js": {
+            "uri": "/static/common/widget/oui/widgets/goTop_2f79ba0.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/widgets/goTop"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/widgets/iconfont.css": {
+            "uri": "/static/common/widget/oui/widgets/iconfont_70b028e.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/list.css": {
+            "uri": "/static/common/widget/oui/widgets/list_d9476cd.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/list.js": {
+            "uri": "/static/common/widget/oui/widgets/list_f52fa64.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js",
+                    "common:widget/oui/lib/simplePagination/1.5.0/simplePagination": "common:widget/oui/lib/simplePagination/1.5.0/simplePagination.js"
+                },
+                "moduleId": "common:widget/oui/widgets/list"
+            },
+            "deps": [
+                "common:widget/oui/widgets/pagination.css",
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/oui/lib/simplePagination/1.5.0/simplePagination.js",
+                "common:widget/oui/widgets/list.css"
+            ]
+        },
+        "common:widget/oui/widgets/misc.css": {
+            "uri": "/static/common/widget/oui/widgets/misc_a5c46ea.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/pagination.css": {
+            "uri": "/static/common/widget/oui/widgets/pagination_2ca6f63.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/pswLevel.js": {
+            "uri": "/static/common/widget/oui/widgets/pswLevel_05efbaf.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/oui/widgets/pswLevel"
+            }
+        },
+        "common:widget/oui/widgets/slide.css": {
+            "uri": "/static/common/widget/oui/widgets/slide_9e340f7.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/slider.js": {
+            "uri": "/static/common/widget/oui/widgets/slider_27ce014.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/widgets/slider"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+            ]
+        },
+        "common:widget/oui/widgets/tab.css": {
+            "uri": "/static/common/widget/oui/widgets/tab_fe04e88.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/tab.js": {
+            "uri": "/static/common/widget/oui/widgets/tab_7505aa5.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js"
+                },
+                "moduleId": "common:widget/oui/widgets/tab"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/widgets/tab.css"
+            ]
+        },
+        "common:widget/oui/widgets/table.css": {
+            "uri": "/static/common/widget/oui/widgets/table_b73ceb8.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/tip.css": {
+            "uri": "/static/common/widget/oui/widgets/tip_9b0571e.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/tiptext.css": {
+            "uri": "/static/common/widget/oui/widgets/tiptext_1ecc516.css",
+            "type": "css"
+        },
+        "common:widget/oui/widgets/widgets.js": {
+            "uri": "/static/common/widget/oui/widgets/widgets_66d6ef0.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/widgets/captcha": "common:widget/oui/widgets/captcha.js",
+                    "common:widget/oui/widgets/counter": "common:widget/oui/widgets/counter.js",
+                    "common:widget/oui/widgets/form": "common:widget/oui/widgets/form.js",
+                    "common:widget/oui/widgets/list": "common:widget/oui/widgets/list.js",
+                    "common:widget/oui/widgets/tab": "common:widget/oui/widgets/tab.js",
+                    "common:widget/oui/widgets/slider": "common:widget/oui/widgets/slider.js",
+                    "common:widget/oui/widgets/goTop": "common:widget/oui/widgets/goTop.js",
+                    "common:widget/oui/widgets/pswLevel": "common:widget/oui/widgets/pswLevel.js"
+                },
+                "moduleId": "common:widget/oui/widgets/widgets"
+            },
+            "deps": [
+                "common:widget/oui/widgets/captcha.js",
+                "common:widget/oui/widgets/counter.js",
+                "common:widget/oui/widgets/form.js",
+                "common:widget/oui/widgets/list.js",
+                "common:widget/oui/widgets/tab.js",
+                "common:widget/oui/widgets/slider.js",
+                "common:widget/oui/widgets/goTop.js",
+                "common:widget/oui/widgets/pswLevel.js"
+            ]
+        },
+        "common:widget/second-header-lg/second-header-lg.jsp": {
+            "uri": "/common/widget/second-header-lg/second-header-lg.jsp",
+            "type": "jsp",
+            "deps": [
+                "common:widget/second-header-lg/second-header-lg.less"
+            ]
+        },
+        "common:widget/second-header-lg/second-header-lg.less": {
+            "uri": "/static/common/widget/second-header-lg/second-header-lg_80af39a.css",
+            "type": "css"
+        },
+        "common:widget/second-header/second-header.js": {
+            "uri": "/static/common/widget/second-header/second-header_dc177e9.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/protocol": "common:widget/oui/protocol.js"
+                },
+                "moduleId": "common:widget/second-header/second-header"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/protocol.js",
+                "common:widget/second-header/second-header.less"
+            ]
+        },
+        "common:widget/second-header/second-header.jsp": {
+            "uri": "/common/widget/second-header/second-header.jsp",
+            "type": "jsp",
+            "deps": [
+                "common:widget/second-header/second-header.js",
+                "common:widget/second-header/second-header.less"
+            ]
+        },
+        "common:widget/second-header/second-header.less": {
+            "uri": "/static/common/widget/second-header/second-header_b630ae8.css",
+            "type": "css"
+        },
+        "common:widget/slideBar/slideBar.css": {
+            "uri": "/static/common/widget/slideBar/slideBar_0e0b4af.css",
+            "type": "css"
+        },
+        "common:widget/slideBar/slideBar.jsp": {
+            "uri": "/common/widget/slideBar/slideBar.jsp",
+            "type": "jsp",
+            "deps": [
+                "common:widget/slideBar/slideBar.css"
+            ]
+        },
+        "common:widget/top-header/top-header.jsp": {
+            "uri": "/common/widget/top-header/top-header.jsp",
+            "type": "jsp",
+            "deps": [
+                "common:widget/top-header/top-header.less"
+            ]
+        },
+        "common:widget/top-header/top-header.less": {
+            "uri": "/static/common/widget/top-header/top-header_7260862.css",
+            "type": "css"
+        },
+        "common:widget/ui/dialog/dialog.js": {
+            "uri": "/static/common/widget/ui/dialog/dialog_92d812c.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/ui/lib/eventEmitter": "common:widget/ui/lib/eventEmitter.js",
+                    "common:widget/ui/mask/mask": "common:widget/ui/mask/mask.js"
+                },
+                "moduleId": "common:widget/ui/dialog/dialog"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/ui/lib/eventEmitter.js",
+                "common:widget/ui/mask/mask.js",
+                "common:widget/ui/dialog/dialog.less"
+            ]
+        },
+        "common:widget/ui/dialog/dialog.less": {
+            "uri": "/static/common/widget/ui/dialog/dialog_fe1e48d.css",
+            "type": "css"
+        },
+        "common:widget/ui/donut/donut.js": {
+            "uri": "/static/common/widget/ui/donut/donut_1ceb8ce.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/ui/lib/eventEmitter": "common:widget/ui/lib/eventEmitter.js",
+                    "common:widget/oui/lib/highcharts/3.0.5/highcharts": "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+                },
+                "moduleId": "common:widget/ui/donut/donut"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/ui/lib/eventEmitter.js",
+                "common:widget/oui/lib/highcharts/3.0.5/highcharts.js"
+            ]
+        },
+        "common:widget/ui/lib/echart/echarts.source.js": {
+            "uri": "/static/common/widget/ui/lib/echart/echarts.source_e7c586f.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/ui/lib/echart/echarts.source"
+            },
+            "deps": [
+                "./base",
+                "zrender/shape/Text",
+                "zrender/shape/Rectangle",
+                "../util/shape/HandlePolygon",
+                "../config",
+                "zrender/tool/util",
+                "zrender/tool/event",
+                "zrender/tool/area",
+                "zrender/tool/color",
+                "../component",
+                "../util/ecData",
+                "../util/ecQuery",
+                "../util/number",
+                "zrender/tool/env",
+                "../tool/area",
+                "./Base",
+                "../tool/util",
+                "zrender/shape/Ring",
+                "zrender/shape/Circle",
+                "zrender/shape/Sector",
+                "zrender/shape/Polyline",
+                "zrender/tool/math",
+                "../chart",
+                "./config",
+                "zrender",
+                "zrender/config",
+                "./chart/island",
+                "./component/toolbox",
+                "./component",
+                "./component/title",
+                "./component/tooltip",
+                "./component/legend",
+                "./util/ecData",
+                "./chart",
+                "./component/timeline",
+                "zrender/shape/Image",
+                "zrender/loadingEffect/Bar",
+                "zrender/loadingEffect/Bubble",
+                "zrender/loadingEffect/DynamicLine",
+                "zrender/loadingEffect/Ring",
+                "zrender/loadingEffect/Spin",
+                "zrender/loadingEffect/Whirling",
+                "./theme/macarons",
+                "./theme/infographic",
+                "zrender/shape/Base",
+                "zrender/shape/Polygon",
+                "../dep/excanvas",
+                "../mixin/Eventful",
+                "./util",
+                "./curve",
+                "../tool/math",
+                "../tool/computeBoundingBox",
+                "../tool/vector",
+                "./util/smoothSpline",
+                "./util/smoothBezier",
+                "./util/dashedLineTo",
+                "./Polygon",
+                "./dep/excanvas",
+                "./tool/util",
+                "./tool/log",
+                "./tool/guid",
+                "./Handler",
+                "./Painter",
+                "./Storage",
+                "./animation/Animation",
+                "./tool/env",
+                "../util/shape/Icon",
+                "../util/shape/MarkLine",
+                "../util/shape/Symbol",
+                "zrender/shape/ShapeBundle",
+                "../util/ecAnimation",
+                "../util/ecEffect",
+                "../util/accMath",
+                "../component/base",
+                "../layout/EdgeBundling",
+                "zrender/shape/Line",
+                "./dataView",
+                "../util/shape/Candle",
+                "../tool/color",
+                "../shape/Circle",
+                "../util/shape/Chain",
+                "../util/shape/Cross",
+                "../shape/Rectangle",
+                "../shape/Line",
+                "../shape/Ring",
+                "../shape/Droplet",
+                "../shape/Sector",
+                "./normalIsCover",
+                "zrender/shape/Star",
+                "zrender/shape/Heart",
+                "zrender/shape/Droplet",
+                "./Icon",
+                "zrender/shape/BezierCurve",
+                "zrender/shape/util/dashedLineTo",
+                "zrender/tool/curve",
+                "zrender/tool/vector",
+                "../data/KDTree",
+                "../tool/matrix",
+                "../tool/guid",
+                "../tool/log",
+                "../mixin/Transformable",
+                "./tool/event",
+                "./tool/vector",
+                "./tool/matrix",
+                "./mixin/Eventful",
+                "./vector",
+                "./loadingEffect/Base",
+                "./Layer",
+                "./shape/Image",
+                "./Clip",
+                "../tool/event",
+                "./Group",
+                "./util/PathProxy",
+                "../../tool/vector",
+                "../shape/Text",
+                "./mixin/Transformable",
+                "./quickSelect",
+                "./easing",
+                "zrender/tool/matrix",
+                "zrender/animation/Animation",
+                "zrender/animation/Clip",
+                "zrender/animation/easing",
+                "echarts",
+                "echarts/config",
+                "echarts/chart/pie"
+            ]
+        },
+        "common:widget/ui/lib/eventEmitter.js": {
+            "uri": "/static/common/widget/ui/lib/eventEmitter_36b9d9f.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/ui/lib/eventEmitter"
+            }
+        },
+        "common:widget/ui/lib/handlebars.js": {
+            "uri": "/static/common/widget/ui/lib/handlebars_6e45ffc.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/ui/lib/handlebars"
+            },
+            "deps": [
+                "source-map"
+            ]
+        },
+        "common:widget/ui/lib/highcharts.src.js": {
+            "uri": "/static/common/widget/ui/lib/highcharts.src_e9b9bdb.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/ui/lib/highcharts.src"
+            }
+        },
+        "common:widget/ui/mask/mask.js": {
+            "uri": "/static/common/widget/ui/mask/mask_ae7418c.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/ui/lib/eventEmitter": "common:widget/ui/lib/eventEmitter.js"
+                },
+                "moduleId": "common:widget/ui/mask/mask"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/ui/lib/eventEmitter.js",
+                "common:widget/ui/mask/mask.less"
+            ]
+        },
+        "common:widget/ui/mask/mask.less": {
+            "uri": "/static/common/widget/ui/mask/mask_6d558fc.css",
+            "type": "css"
+        },
+        "common:widget/ui/messageModule/messageModule.js": {
+            "uri": "/static/common/widget/ui/messageModule/messageModule_3141305.js",
+            "type": "js",
+            "extras": {
+                "paths": {
+                    "common:widget/oui/lib/jquery/1.9.1/jquery": "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                    "common:widget/oui/common": "common:widget/oui/common.js"
+                },
+                "moduleId": "common:widget/ui/messageModule/messageModule"
+            },
+            "deps": [
+                "common:widget/oui/lib/jquery/1.9.1/jquery.js",
+                "common:widget/oui/common.js"
+            ]
+        },
+        "common:widget/ui/zeroClipboard/zeroClipboard.js": {
+            "uri": "/static/common/widget/ui/zeroClipboard/zeroClipboard_c37b140.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "common:widget/ui/zeroClipboard/zeroClipboard"
+            }
+        }
+    },
+    "pkg": {}
+}

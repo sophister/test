@@ -1,0 +1,407 @@
+/*
+ * Dialog, extends aliceui/dialog, partially depends on aliceui/dialog
+ * namespace .ui-message .ui-confirm
+ */
+
+/* MESSAGE DIALOG */
+
+.ui-message-content {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.ui-message-icon {
+  margin-right: 14px;
+  width: 36px;
+  height: 36px;
+}
+
+.ui-message-icon .iconfont {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+.ui-message-icon .iconfont.info {
+  color: #68b5e2; 
+}
+
+.ui-message-icon .iconfont.success {
+  color: #b5de70; 
+}
+
+.ui-message-icon .iconfont.warning {
+  color: #f96; 
+}
+
+.ui-message-icon .iconfont.error {
+  color: #f17975; 
+}
+
+.ui-message-text {
+  width: 360px;
+}
+
+.ui-message-text em {
+	color: #c82e25; 
+}
+
+
+/* CONFIRMATION DIALOG */
+
+.ui-confirm {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.ui-confirm-label,
+.ui-confirm-value {
+  /*height: 30px;*/
+  /*line-height: 30px;*/
+}
+
+.ui-confirm-label {
+  font-size: 12px;
+  width: 100px;
+}
+.ui-confirm-label-short {
+  /*font-size: 12px;*/
+  /*width: 80px;*/
+}
+
+.ui-confirm-label.big {
+	font-size: 16px;
+}
+
+.ui-confirm-value {
+  width: 360px;
+}
+
+.ui-confirm-value.two-column {
+  width: 130px;
+}
+
+.ui-confirm-form .ui-form-item {
+  margin-bottom: 0;
+}
+
+.ui-confirm-form .ui-button {
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: none;
+}
+
+.ui-confirm-item-note {
+  /*padding-left: 100px;*/
+}
+.ui-confirm-item-note-loan {
+    padding: 0 56px;
+}
+.ui-confirm-submit-box {
+	margin: 0 auto;
+	/*height:80px;*/
+    text-align: center;
+}
+
+.ui-confirm-cancel-link {
+	/*padding: 0 15px;*/
+	/*line-height: 30px;*/
+	/*height: 30px;*/
+	/*color: #808080;*/
+	cursor: pointer;
+}
+
+.ui-confirm-cancel-link:hover {
+	/*color: #0697da;*/
+}
+
+.ui-confirm-cancel-link.disabled:hover {
+	/*color: #808080;*/
+}
+
+.ui-confirm-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url('/static/img/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ui-confirm-loading-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  background: rgba(255, 255, 255, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF, endColorstr=#DFFFFFFF);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF, endColorstr=#DFFFFFFF)";
+  text-align: center;
+  z-index: 100;
+}
+
+.ui-confirm-loading-text p.hint {
+	margin-top: 100px;
+}
+
+.ui-confirm-loading-text p.loading {
+	height: 50px;
+  background: url('/static/img/loading.gif') no-repeat center center;
+}
+
+
+
+/*Ԥ��ȷ�ϵ����Ի���*/
+/*Ԥ�����б�css�͵�����css*/
+
+.w80{
+    width:80px;
+}
+.w120{
+    width:120px;
+}
+.w100{
+    width:100px;
+}
+.w140{
+    width:140px;
+}
+.text-left-imp{
+    text-align:left!important;
+}
+.list-ul-name {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100px;
+}
+.list-u-code {
+    background: url("/static/img/ucode.gif") no-repeat;
+    display: inline-block;
+    height: 28px;
+    height: 25px \9;
+    width: 25px;
+}
+.list-a-pay{
+    margin-left: 15px;
+}
+.color-red{
+    color:#ff0000;
+}
+.worm-tips {
+    background-color: #FCE6BF;
+    border: 1px solid #FCDA9F;
+    border-radius: 10px;
+    height: 45px;
+    margin: 25px 0;
+    width: 778px;
+}
+.worm-tips .icon {
+    background: url("/static/img/input-icon/borrow-icon.gif") no-repeat;
+    background-position: -3px -75px;
+    display: inline-block;
+    height: 20px;
+    margin-left: 35px;
+    width: 20px;
+}
+.worm-tips .txt {
+    line-height: 45px;
+}
+
+.conform_pay_div {
+    /*width: 580px;*/
+    overflow: hidden;
+    padding:0!important;
+    
+}
+
+.conform_pay_div .title {
+    background-color: #F3F3F3;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+}
+.conform_pay_div ul{
+    /*margin: 10px 0 0 30px;*/
+}
+.conform_pay_div ul li{
+    /*line-height: 30px;*/
+    /*color:#000;*/
+}
+.conform_pay_div .ui-selectdrop-dialog ul li {
+	/*line-height: 21px;*/
+}
+.conform_pay_div ul li span{
+    /*color:#666;*/
+    /*margin-right: 20px;*/
+}
+.conform_pay_div ul li.selected span{
+	/*color: #fff;*/
+}
+.conform_pay_div p{
+    /*margin: 0px 0 0 30px;*/
+    /*line-height: 30px;*/
+}
+.conform_pay_div .money-div{
+    /*border: 1px dashed #E0E0E0;*/
+    /*margin-bottom: 20px;*/
+    /*margin-top: 20px;*/
+    padding: 10px 0;
+}
+.conform_pay_div p span{
+    /*margin-right: 20px;*/
+}
+.conform_pay_div p em{
+    /*color: #F58708;*/
+    font-size: 24px;
+}
+.conform_pay_div .money-div .ui-form-item {
+    padding-left: 210px;
+    margin-bottom: 10px;
+	display: none;
+}
+.conform_pay_div .money-div .pr {
+	padding-left : 176px;
+}
+.conform_pay_div .money-div .pr2 {
+    padding-left : 210px;
+    margin-bottom: 10px;
+}
+.conform_pay_div .money-div .ui-form-item .ui-input {
+    padding: 0 0 0 10px;
+    width: 238px;
+    height: 34px;
+    line-height: 34px;
+}
+.conform_pay_div .money-div .ui-form-item .use-ucode-btn {
+	position: static;
+	margin-left: 10px;
+}
+.conform_pay_div .addCoupon {
+	line-height: normal;
+	position: relative;
+	/*padding-left : 30px;*/
+	margin: 0 0 10px 0px;
+	*z-index: 999;
+}
+.conform_pay_div .addCoupon .txt-name{
+    /*margin: 8px 20px 0px 0px;*/
+}
+.conform_pay_div .addCoupon .use-psw {
+	margin-top: 0px;
+	margin-left: 10px;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+}
+.conform_pay_div .addCoupon .use-psw:hover{
+    background: #3676b7;
+    color: #fff;
+}
+.conform_pay_div .addCoupon .ui-select {
+	float: left;
+	margin: 8px 14px 0px 0px;
+}
+.conform_pay_div .money-div a{
+    margin-left: 20px;
+}
+.conform_pay_div .addCoupon .ui-selectdrop-dialog {
+	position: static;
+}
+.conform_pay_div p label{
+    margin-right: 10px;
+}
+
+.conform_pay_div .worm-tips {
+    height: 145px;
+    margin: 10px 0 0 10px;
+    width: 560px;
+}
+.conform_pay_div .worm-tips p{
+    margin-left: 10px;
+}
+.conform_pay_div .worm-tips .icon{
+    margin-left: 10px;
+}
+.conform_pay_div .submit-button{
+    margin: 0 0 20px;
+    text-align: center;
+}
+.conform_pay_div .submit-button input{
+    width: 80px !important;
+    margin-right: 20px;
+
+}
+.conform_pay_div .btn-savecon{
+  /*border-radius: 10px;*/
+  /*height: 40px;*/
+  /*margin: 15px 25px 0;*/
+  /*width: 100px;*/
+  /*cursor:pointer;*/
+}
+
+.conform_pay_div .tips-yd .icon-excla{
+    left: 37px;
+}
+.conform_pay_div .tips-yd .txtspan{
+   width:425px;
+    color:#666;
+}
+.conform_pay_div .tips-yd .txtspan em{
+  color:#E4873A;
+}
+
+.conform_pay_div .tips-yd {
+    border-bottom: 1px dashed #E0E0E0;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+/*�Զ���Ԥ���ɹ���ʾ��*/
+
+.ui-message-content-new h3 {
+  line-height: 45px;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.ui-message-content-new  .text-p {
+  font-size: 16px;
+  padding: 20px 10px 0 25px;
+}
+
+.ui-message-content-new  .text-p em{
+  color:#fb741a;
+}
+
+.ui-message-content-new .ui-message-button{
+  margin:20px 0 20px 0;
+}
+
+
+/**覆盖原有样式**/
+.conform_pay_div .money-div .pr .ui-input{
+    padding: 0 0 0 10px;
+    width: 238px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.conform_pay_div .no-coupon-list  .addCoupon .use-psw{
+    margin-left: 0;
+}
+.conform_pay_div .money-div .no-coupon-list .ui-form-item{
+    padding-left: 176px;
+}

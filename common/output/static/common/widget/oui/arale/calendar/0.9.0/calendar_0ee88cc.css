@@ -1,0 +1,53 @@
+@import url('/static/common/widget/oui/arale/calendar/0.9.0/css/date_45609fe.css');
+@import url('/static/common/widget/oui/arale/calendar/0.9.0/css/month_63341e9.css');
+@import url('/static/common/widget/oui/arale/calendar/0.9.0/css/year_fd118c0.css');
+
+.ui-calendar {
+  position: absolute;
+  font: 16px/20px 'Xin Gothic', 'PT Sans', 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #f9f9f9;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #dadada;
+  box-shadow: 1px 1px 9px #ccc;
+  text-align: center;
+  width: 238px;
+  z-index: 10;
+}
+.ui-calendar .ui-calendar-date,
+.ui-calendar .ui-calendar-month,
+.ui-calendar .ui-calendar-year
+{
+  border: none;
+  box-shadow: none;
+}
+.ui-calendar .ui-calendar-pannel {
+  width: 238px;
+  border-bottom: 1px solid #dadada;
+  zoom: 1;
+}
+.ui-calendar .ui-calendar-pannel:after,
+.ui-calendar .ui-calendar-pannel:before {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.ui-calendar .ui-calendar-pannel:after {
+  clear: both;
+}
+.ui-calendar .ui-calendar-control {
+  display: inline;
+  display: inline-block;
+  float: left;
+  width: 12.5%;
+  *width: 29px;
+  padding: 2px 0;
+  cursor: pointer;
+}
+.ui-calendar .ui-calendar-control:hover {
+  background-color: #efefee;
+}
+.ui-calendar .ui-calendar-pannel .month,
+.ui-calendar .ui-calendar-pannel .year {
+  width: 25%;
+}

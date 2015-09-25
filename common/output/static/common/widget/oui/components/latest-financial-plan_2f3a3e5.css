@@ -1,0 +1,78 @@
+/*
+ * Latest Finance Plan
+ * namespace .ui-plan-latest
+ * TODO: the css is not pretty and redundant, naming is not good also
+ */
+
+.ui-plan-latest {
+  padding:5px 10px;
+}
+
+.ui-plan-latest-item{
+  padding: 10px 10px 0;
+  width: 210px;
+  margin: 0 10px 0 54px;
+  color: #2fa8e1;
+}
+
+.ui-plan-latest-item .button{
+  display: block;
+  width: 136px;
+  height: 37px;
+  line-height: 37px;
+  margin-left: -54px;
+}
+
+.ui-plan-latest-item h4{
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.ui-plan-latest-item h4 span{
+  position: absolute;
+  left: -54px;
+  top: -20px;
+  font-size: 64px;
+}
+
+.ui-plan-latest-title p{
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.ui-plan-latest-title span{
+  color: #2fa8e1;
+}
+
+.ui-plan-latest-amount p{
+  position: relative;
+  top: 15px;
+  *top: 25px;
+}
+
+.ui-plan-latest-amount strong{
+  position: absolute;
+  left: -82px;
+  top: -67px;
+  font-size: 145px;
+  letter-spacing: -22px;
+}
+
+.ui-plan-latest-amount span{
+  line-height: 10px;
+  *line-height: 26px;
+  font-size: 40px;
+}
+
+.ui-plan-latest-amount strong,
+.ui-plan-latest-amount span{
+  font-family: Arial;
+  font-weight: 100;
+}
+
+.ui-plan-latest-item-C .ui-plan-latest-amount p{
+  right: -48px;
+}
+.ui-plan-latest-item-C .ui-plan-latest-amount strong{
+  left: -134px;
+}

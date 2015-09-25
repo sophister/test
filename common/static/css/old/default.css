@@ -1460,7 +1460,9 @@ width: 150px!important;
     em.PLAN{
       background:url('/static/imgs/stamp/PLAN.png?_inline') 0 0 no-repeat;
     }     
-
+    em.WAIT{
+      background:url('/static/imgs/stamp/WAIT.png?_inline') 0 0 no-repeat;
+    }     
 /*progressbar*/
 span.progressdot{
   background:url('/static/imgs/icon/progressdot.png?_inline') 0 0 no-repeat;

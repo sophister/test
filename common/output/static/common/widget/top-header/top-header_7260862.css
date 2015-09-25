@@ -1,0 +1,35 @@
+.wdg-top-header {
+  height: 30px;
+  line-height: 30px;
+  background: #062e58;
+  font-size: 14px;
+}
+.wdg-top-header .main-section {
+  height: 100%;
+  color: #8b919c;
+}
+.wdg-top-header .main-section i {
+  margin-right: 5px;
+}
+.wdg-top-header .main-section .tel-phone {
+  float: left;
+  height: 100%;
+}
+.wdg-top-header .main-section .site-nav {
+  float: right;
+}
+.wdg-top-header .main-section .site-nav .nav-item {
+  float: left;
+  height: 30px;
+  text-align: center;
+}
+.wdg-top-header .main-section .site-nav .nav-item a {
+  color: #8b919c;
+}
+.wdg-top-header .main-section .site-nav .nav-item-split {
+  float: left;
+  width: 1px;
+  height: 14px;
+  background: #3e465c;
+  margin: 11px 30px 0px 30px;
+}

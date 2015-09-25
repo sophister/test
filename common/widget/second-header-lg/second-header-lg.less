@@ -1,0 +1,38 @@
+@header-height : 70px;
+@header-bg : #1c4876;
+
+.wdg-second-header{
+  height: @header-height;
+  background: @header-bg;
+
+  .main-section{
+    height: 50px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    .brand-logo{
+      float: left;
+      height: 38px;
+      width : 178px;
+      background: url("./assets/welogo.png?__inline");
+    }
+
+    .site-nav{
+      float: left;
+      height: 100%;
+      font-size: 20px;
+      .channel-item{
+            float: left;
+            padding-left:20px;
+            height: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-left: 1px solid #fff;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+      }
+ 
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.wdg-slideBar {
+	width: 300px;
+	position: fixed;
+	left: 0px;
+	top: 30px;
+}
+.wdg-slideBar .menu {
+	line-height: 30px;
+	border: solid 1px #666;
+	overflow: hidden;
+	padding: 0px;
+}
+.wdg-slideBar .menu li {
+	padding-left: 10px;
+	font: 14px/30px '宋体';
+	border-top: solid 1px #666;
+	margin-top: -1px;
+	list-style: none;
+}
+.wdg-slideBar .menu li:hover {
+	background: #cc3229;
+}

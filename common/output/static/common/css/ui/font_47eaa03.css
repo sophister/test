@@ -1,0 +1,200 @@
+/* 
+ * @name: ui-iconfont
+ * @overview: REI——支付宝的iconfont
+ * @require: 无
+ */
+@font-face {
+    font-family: "rei";
+    src: url("/static/common/fonts/rei_c9f1701.eot"); /* IE9*/
+    src: url("/static/common/fonts/rei_c9f1701.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("/static/common/fonts/rei_2030da4.woff") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+         url("/static/common/fonts/rei_4926078.ttf")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url("/static/common/fonts/rei_3ddf008.svg#rei") format("svg"); /*  iOS 4.1- */
+    font-weight: normal;
+    font-style: normal;
+}
+.iconfont {
+    font-family: "rei";
+    font-style: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: "HelveticaNeueLt";
+    font-style: normal;
+    font-weight: normal;
+    text-shadow:none;
+    src: url("/static/common/fonts/helveticaneuelt_0204619.eot?#iefix") format("embedded-opentype"), 
+    url("/static/common/fonts/helveticaneuelt_19059dc.woff") format("woff"), 
+    url("/static/common/fonts/helveticaneuelt_8bc66c5.ttf") format("truetype"), 
+    url("/static/fonts/helveticaneuelt.svg#HelveticaNeueLt") format("svg");
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('/static/common/fonts/icomoon_3185891.eot?lgz9a9');
+    src:url('/static/common/fonts/icomoon_3185891.eot?#iefixlgz9a9') format('embedded-opentype'),
+    url('/static/common/fonts/icomoon_b8f3270.ttf?lgz9a9') format('truetype'),
+    url('/static/common/fonts/icomoon_e28df62.woff?lgz9a9') format('woff'),
+    url('/static/common/fonts/icomoon_c127998.svg?lgz9a9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+    content: "\e617";
+    font-size : 15px;
+}
+.icon-info:hover{
+    color : #3a84cf;
+}
+.icon-info-hover .path1:before {
+    content: "\e604";
+    color: rgb(58, 132, 207);
+}
+.icon-info-hover .path2:before {
+    content: "\e611";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-mobile3:before {
+    content: "\e60e";
+}
+.icon-lock:before {
+    content: "\e60f";
+}
+.icon-mail:before {
+    content: "\e610";
+}
+.icon-calendar .path1:before {
+    content: "\e612";
+    color: rgb(57, 124, 192);
+}
+.icon-calendar .path2:before {
+    content: "\e613";
+    margin-left: -1em;
+    color: rgb(76, 152, 205);
+}
+.icon-time .path1:before {
+    content: "\e614";
+    color: rgb(57, 124, 192);
+}
+.icon-time .path2:before {
+    content: "\e615";
+    margin-left: -1em;
+    color: rgb(76, 152, 205);
+}
+.icon-time .path3:before {
+    content: "\e616";
+    margin-left: -1em;
+    color: rgb(76, 152, 205);
+}
+.icon-logo:before {
+    content: "\e605";
+}
+.icon-cal .path1:before {
+    content: "\e606";
+    color: rgb(58, 132, 207);
+}
+.icon-cal .path2:before {
+    content: "\e607";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path3:before {
+    content: "\e608";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path4:before {
+    content: "\e609";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path5:before {
+    content: "\e60a";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path6:before {
+    content: "\e60b";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path7:before {
+    content: "\e60c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-service:before {
+    content: "\e60d";
+}
+.icon-qrcode:before {
+    content: "\f029";
+}
+.icon-phone:before {
+    content: "\f095";
+}
+.icon-down1:before {
+    content: "\f0d7";
+}
+.icon-up1:before {
+    content: "\f0d8";
+}
+.icon-twoway:before {
+    content: "\f0dc";
+}
+.icon-down2:before {
+    content: "\f0dd";
+}
+.icon-up2:before {
+    content: "\f0de";
+}
+.icon-reload:before {
+    content: "\f0e2";
+}
+.icon-left:before {
+    content: "\f104";
+}
+.icon-right:before {
+    content: "\f105";
+}
+.icon-up3:before {
+    content: "\f106";
+}
+.icon-down3:before {
+    content: "\f107";
+}
+.icon-mobile1:before {
+    content: "\f10b";
+}
+.icon-mobile2:before {
+    content: "\e61a";
+}
+.icon-notification:before {
+    content: "\e600";
+}
+.icon-question:before {
+    content: "\e601";
+}
+.icon-plus:before {
+    content: "\e602";
+}
+.icon-minus:before {
+    content: "\e603";
+}

@@ -1,0 +1,278 @@
+#pg-account-recharge .title{
+  font-size: 22px;
+  height: 30px;
+  line-height: 30px;
+}
+
+#pg-account-recharge .bankList dl dd{
+  float:left;
+  width:142px;
+  height:40px;
+  line-height:40px;
+  border:1px solid #ddd;
+  margin:0 20px;
+  margin-bottom:20px;
+  position:relative;
+  display:inline;
+  text-align:center;
+}
+#pg-account-recharge .bankList dl dd:hover,#pg-account-recharge .bankList dl dd.current{
+    border:1px solid #55A500;
+}
+
+#pg-account-recharge .bankList dt{
+    margin-bottom:5px;
+}
+
+#pg-account-recharge .bankList dl dd label{
+  display:block;
+  width:142px;
+  height:40px;
+  overflow:hidden;
+}
+
+#pg-account-recharge .bankList dl dd img{
+  width:142px;
+  height:40px;
+  margin:0;
+}
+
+#pg-account-recharge .bankList dl dd input{
+  position:absolute;
+  left:-20px;
+  top:13px;
+}
+
+#pg-account-recharge .inputbox .wrap{
+  padding-left:110px;
+}
+
+#pg-account-recharge .inputbox .value{
+  font-size:18px;
+  height:24px;
+  line-height:24px;
+}
+
+#pg-account-recharge .errorforbank{
+  margin-left:30px;     
+}
+
+#afterSub{
+  padding:20px; 
+}
+#afterSub a{
+  margin-top:20px;  
+}
+
+#pg-account-recharge  .ui-poptip-content ol li{
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 18px;
+}
+#pg-account-recharge .notice {
+    margin-left: 80px;
+    padding-right: 50px;
+}
+#pg-account-recharge .notice .title {
+    font-size: 14px;
+    padding-left: 0;
+}
+#pg-account-recharge .notice ol li{
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 18px;
+}
+#pg-account-recharge .foldbox{
+    padding-right:23px;
+    text-align:center;
+}
+#pg-account-recharge .foldbox a {
+    cursor:pointer;
+}
+.ui-input-checkbox {
+    height: 14px;
+    width: 14px;
+}
+#rechargeWay {
+  margin: 0 -20px;
+}
+#rechargeWay .recharge-title {
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+#rechargeWay .recharge-title ul {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  text-align: center;
+  width: 100%;
+  li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    color: #838383;
+    background-color: #f4f4f4;
+    width: 50%;
+    font-size: 16px;
+  }
+  
+  .active {
+    cursor: default;
+    color: #2b2b2b;
+    border-top: 3px solid #3a84cf;
+    background-color: #fff;
+  }
+}
+
+#rechargeWay .recharge-banks {
+    border-bottom: solid 1px #f4f4f4;
+    border-radius: 0px 4px 4px 4px;
+}
+.recharge-banks li {
+    width: 240px;
+    height: 74px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    margin: 2px 3px;
+    border: 1px solid white;
+}
+.recharge-banks li a.mark-blue {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+.recharge-banks li.active {
+  border: solid 1px  #41addd ;
+  a {
+    background: url(./assets/hover.png);
+  }
+}
+.recharge-banks li.J_show_more_banks {
+    width: 240px;
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 100px;
+      font-size: 16px;
+      color: #3a84cf;
+      line-height: 68px;
+      background: url(./assets/more-banks.png) no-repeat 86px center;
+    }
+}
+.recharge-banks li i.rt {
+    display: none;
+}
+.recharge-banks li.active i.rt {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    top: 0px;
+    background: url(./assets/right-top.png) no-repeat;
+    z-index: 3;
+    display: block;
+}
+.recharge-banks li img {
+    display: block;
+    margin: 1px auto;
+}
+
+.recharge-banks .banks-limit-table {
+    margin: 20px auto 0px auto; 
+}
+.recharge-banks .banks-limit-table table {
+  background: #fff;
+  border-collapse: inherit;
+  display: none;
+  th {
+    line-height: 40px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  td {
+    text-align: center;
+  }
+  tbody p {
+    line-height: 50px;
+  }
+  p.last {
+    border-bottom: solid 1px #f9f9f9;
+  }
+}
+.withdraw-wrap {
+  padding: 0 20px 40px;
+  .withdraw-title {
+    height: 50px;
+    line-height: 50px;
+    color: #2b2b2b;
+    font-size: 16px;
+  }
+  .worm-tips {
+    color: #aeaeae;
+
+  }
+  .tips-title {
+    float: left;
+    height: 110px;
+    color: #aeaeae;
+    margin-right: 40px;
+    font-size: 16px;
+  }
+  ol {
+    color: #aeaeae;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  i {
+    font-style: normal;
+  }
+  .count-cash {
+    height: 36px;
+    line-height: 36px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    color: #ff8813;
+    font-size: 16px;
+  }
+  label {
+    color: #434343;
+    font-size: 16px;
+    float: left;
+    width: 105px;
+  }
+  .recharge-nopadding {
+    padding: 0;
+    margin-bottom: 20px;
+    height: 36px;
+    line-height: 36px;
+  }
+  #sub-recharge {
+    border: none;
+    background: none;
+    background-color: #ff8a10;
+    width: 170px;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    font-size: 16px;
+  }
+  .bank-list {
+    margin: 0 20px;
+  }
+  .widthdrawBtBox {
+    margin-bottom: 40px;
+    margin-left: 105px;
+  }
+  
+}
+#rechargeRemain {
+
+}

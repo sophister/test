@@ -128,7 +128,11 @@ define(function(require, exports, module) {
     //热门城市列表
     function hotCitiesList(){
       $.each(hotCities,function(k,v){
-        var $cityspan = $("<a href='javascript:' class='citydiv' data-city='"+v.city+"' data-value='"+v.id+"'>"+v.city+"</a>");
+          var cssClass = 'citydiv';
+          if( v % 5 === 4 ){
+              cssClass += ' city-item-col-5';
+          }
+        var $cityspan = $("<a href='javascript:' class='" + cssClass + "' data-city='"+v.city+"' data-value='"+v.id+"'>"+v.city+"</a>");
         $hotCitiesBox.append($cityspan);
       });
       $hotCitiesBox.undelegate("click").delegate("a","click",function(){

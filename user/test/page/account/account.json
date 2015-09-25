@@ -1,0 +1,5 @@
+{
+	"pointLogs":{
+		"status":0,"data":{"totalPage":1,"pageIndex":1,"pointLogs":[{"time":"2015-08-12 14:36:44","operation":"回收本息","income":1686.0,"banlance":15054.8,"notes":"正常还款收到回款本金:1657.0, 利息:29.0","loanId":490011},{"time":"2015-08-03 06:19:47","operation":"U计划回款","income":42.32,"banlance":97.58,"notes":"U计划回款（29:优选理财计划0029期）"},{"time":"2015-08-03 06:19:09","operation":"U计划回款","income":1.53,"banlance":55.26,"notes":"U计划回款（17:优选理财计划0017期）"},{"time":"2015-08-03 06:17:52","operation":"U计划回款","income":16.77,"banlance":53.73,"notes":"U计划回款（1:优选理财计划0001期）"}]}
+	}
+}

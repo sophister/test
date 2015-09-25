@@ -1,0 +1,92 @@
+/*
+ * Filter
+ * namespace .ui-filter
+ */
+
+
+.ui-filter {
+  
+}
+
+.ui-filter-header {
+  line-height: 30px;
+}
+
+.ui-filter-category li {
+  height: 24px;
+  line-height: 24x;
+}
+
+.ui-filter-title {
+	float: left;
+  width: 80px;
+}
+
+.ui-filter-tag {
+	display: block;
+  float: left;
+  font-size: 14px;
+  padding: 0 15px;
+  margin: 0 5px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ui-filter-tag:hover {
+  background: #f3f3f3;
+}
+
+.ui-filter-tag:active {
+  background: #0697da; /* rrdcolor-blue */
+  color: #fff;
+}
+
+.ui-filter-tag.active {
+  background: #2ea7e0; /* rrdcolor-lightblue */
+  color: #fff;
+}
+
+.ui-filter-tag input {
+	display: none;
+}
+
+.ui-filter-tag span {
+	display: block;
+	line-height: 23px;
+}
+
+.ui-filter-switcher {
+  margin: 5px 0 0 10px;
+	padding: 1px 12px;
+	line-height: 21px;
+	border-radius: 4px;
+	
+  background: #dfdfdf;
+  
+  color: #999;
+  cursor: pointer;
+}
+
+.ui-filter-switcher:hover {
+	background: #83a700; /* rrdcolor-green */
+	color: #f8f7e0; /* rrdcolor-lightgreen */
+	
+  -moz-box-shadow: 0 1px 2px #999;
+  -webkit-box-shadow: 0 1px 2px #999;
+  box-shadow: 0 1px 2px #999;
+}
+
+.ui-filter-switcher:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.ui-filter-switcher.active {
+	color: #f8f7e0;
+	background: #83a700;
+	
+  -moz-box-shadow: inset 0 0 5px #666;
+  -webkit-box-shadow: inset 0 0 5px #666;
+  box-shadow: inset 0 0 5px #666;
+}

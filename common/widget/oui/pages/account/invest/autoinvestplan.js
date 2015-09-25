@@ -428,10 +428,12 @@ define(function(require) {
     $('.J_coupon_wrap',oParent).html(myTemplate(myData));
     Form.ui.init();
     if(couponJson.status===1){
+      $('.J_coupon_wrap', oParent).addClass('no-coupon-list');
       $(".J_addCoupon .ui-select",oParent).hide();
       $(".J_addCoupon .ui-selectdrop",oParent).hide();
     }else{
       if(myData.initCouponValue){
+        $('.J_coupon_wrap', oParent).removeClass('no-coupon-list');
         couponIntData = {
             id : myData.initCouponValue.couponId,
             payable : parseFloat(myData.unRepayAmountNotComma) - parseFloat(myData.initCouponValue.couponValue)
@@ -444,6 +446,7 @@ define(function(require) {
           $(".J_red_packet_tips",oParent).removeClass("fn-hide");
         }
       }else{
+        $('.J_coupon_wrap', oParent).addClass('no-coupon-list');
         $(".J_addCoupon .ui-select",oParent).hide();
         $(".J_addCoupon .ui-selectdrop",oParent).hide();
       }

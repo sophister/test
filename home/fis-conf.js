@@ -6,7 +6,7 @@ fis.config.merge({
     namespace: namespace
 });
 
-fis.config.set('modules.parser.css', 'less');
+fis.config.set('modules.parser.less', 'less');
 
 // --------------------------------
 // 支持 amd 设置
@@ -20,7 +20,13 @@ fis.config.set('modules.postprocessor.jsp', 'amd');
 fis.config.set('modules.packager', 'depscombine');
 
 fis.config.set('pack', {
-    
+    'pkg/home_widget.js' : [
+        /widget\/(.*?).js$/
+    ],
+    'pkg/home_widget.css' : [
+        /widget\/(.*?).css$/,
+        /widget\/(.*?).less$/
+    ]
 });
 
 
@@ -28,11 +34,6 @@ fis.config.set('roadmap.path', [
     {
         reg: 'doc/**.md',
         release: false
-    },
-    {
-        reg: /^\/static\/libs\/(.*\.js)$/i,
-        isMod: true,
-        release: '${statics}/${namespace}/libs/$1'
     }
 ].concat(fis.config.get('roadmap.path', [])));
 
@@ -40,3 +41,18 @@ fis.config.set('roadmap.path', [
 // js 模板支持
 fis.config.set('modules.parser.tmpl', 'utc');
 // fis.config.set('roadmap.ext.tmpl', 'js');
+
+fis.config.merge({
+    deploy : {
+        local : [
+            {
+                from : '/static',
+                to : '../../'
+            },
+            {
+                form : '/WEB-INF',
+                to : '../../'
+            }
+        ]
+    }
+});

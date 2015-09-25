@@ -22,22 +22,22 @@
 
 .ui-icon-check-checked {
 	/* 16px * 16px */
-  background: url('/static/img/icon-checked-blue-small.png') no-repeat center center;
+  background: url('/static/img/icon-checked-blue-small.png?_inline') no-repeat center center;
 }
 
 .ui-icon-check-unchecked,.ui-icon-check-{
 	/* 16px * 16px */
-  background: url('/static/img/icon-unchecked-small.png') no-repeat center center;
+  background: url('/static/img/icon-unchecked-small.png?_inline') no-repeat center center;
 }
 
 .ui-icon-gender-male {
 	/* 20px * 20px */
-	background: url('/static/img/icon-male.png') no-repeat center center;
+	background: url('/static/img/icon-male.png?_inline') no-repeat center center;
 }
 
 .ui-icon-gender-female {
 	/* 20px * 20px */
-  background: url('/static/img/icon-female.png') no-repeat center center;
+  background: url('/static/img/icon-female.png?_inline') no-repeat center center;
 }
 
 
@@ -45,54 +45,53 @@
 
 .ui-loantype {
   display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background: url("/static/img/loantypes.png") no-repeat scroll left top transparent;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+  background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
 }
 
 .ui-loantype.XYRZ {
-  background-position: 0 0;
+  background-position: -58px 0;
 }
 
 .ui-loantype.SDRZ {
-  background-position: -30px 0px;
+  background-position: -0 0px;
 }
 
 .ui-loantype.JGDB {
-  background-position: -60px 0px;
+  background-position: -29px 0px;
 }
 
 .ui-loantype.ZNLC {
-  background-position: -90px 0px;
+  background-position: -87px 0px;
 }
 
 .ui-loantype-s {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
   margin-right:3px;
-  background: url("/static/img/loantypes-s.png") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
   vertical-align: middle;
 }
 
 .ui-loantype-s.XYRZ {
-  background-position: 0 0;
+  background-position: -58px 0;
 }
 
 .ui-loantype-s.SDRZ {
-  background-position: -32px 0px;
+  background-position: -0 0px;
 }
 
 .ui-loantype-s.JGDB {
-  background-position: -64px 0px;
+  background-position: -29px 0px;
 }
 
 .ui-loantype-s.ZNLC {
-  background-position: -96px 0px;
+  background-position: -87px 0px;
 }
-
 /* Credit Level */
 
 .ui-creditlevel {
@@ -182,7 +181,7 @@
   margin: 6px 12px 2px;
   width: 9px;
   height: 14px;
-  background: url('/static/img/breadcrumb-angle-right.png') no-repeat center center;
+  background: url('/static/img/breadcrumb-angle-right.png?_inline') no-repeat center center;
 }
 
 
@@ -195,7 +194,7 @@
   line-height: 44px;
   font-size: 8px;
   text-align: center;
-  background: url('/static/img/progressbar_mid.png');
+  background: url('/static/img/progressbar_mid.png?_inline');
 }
 
 .ui-progressbar-mid em {
@@ -517,7 +516,7 @@
   line-height: 34px;
   text-align: center;
   font-size: 8px;
-  background: url('/static/img/progressbar_small.png');
+  background: url('/static/img/progressbar_small?_inline.png');
 }
 
 .ui-progressbar-small em {
@@ -828,7 +827,41 @@
   background-position:-4400px 0;
 }
 
+/************
+ *<span class="ui-process-long  fn-clear">   
+	            <span class="basic-progress-bg fn-left"> 
+	            		<b class="basic-percent fn-left" style="width:{{ progress }}%"></b>
+	            </span>
+	  			<span class="basic-text fn-left text-right"><em>{{ progress }}</em>%</span>            
+	    </span>
+ * 
+ * ****************/
 
+.ui-process-long{
+	 display:block;
+	 text-align: center;
+}
+.ui-process-long .basic-progress-bg {
+	zoom: 1;
+	background: #d0e4f7;
+	height: 4px;
+	width: 50px;
+	margin-top:24px;
+	
+}
+.ui-process-long .basic-percent {
+	position: relative;
+	top:0;
+	left:0;
+	background: #8ac1f4;
+	height: 4px;
+} 
+
+.ui-process-long .basic-text{
+	zoom: 1;
+	width:40px;
+	text-align: right;
+}
 /* Large Progress Bar */
 
 .ui-progressbar-circle {
@@ -903,7 +936,7 @@ a.ui-progressbar-circle-join {
   line-height: 96px;
   text-align: center;
   font-size: 16px;
-  background: url('/static/img/progressbar_large.png');
+  background: url('/static/img/progressbar_large.png?_inline');
 }
 
 .ui-progressbar-large em {
@@ -1225,7 +1258,7 @@ a.ui-progressbar-circle-join {
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url(/static/img/icon-content.png) no-repeat;
+  background: url(/static/img/icon-content.png?_inline) no-repeat;
   vertical-align: middle;
 }
 .icon-check-checked{
@@ -1234,9 +1267,13 @@ a.ui-progressbar-circle-join {
 .icon-check-unchecked{
   background-position: 0 0;
 }
+/******updated by 2015-9-8*****************/
 .icon-circle-checked{
-  height: 20px;
-  background-position: 0 -21px;
+  display:inline-block;
+  height: 22px;
+  width:22px;
+  background: url("/static/imgs/icon/checked-green.jpg?__inline") 0 0 no-repeat;
+  vertical-align:middle;
 }
 .icon-info{
 	width: 21px;
@@ -1313,7 +1350,7 @@ a.ui-progressbar-circle-join {
   background-position: -31px -177px;
 }
 .icon-bill{
-  background: url(/static/img/account/bill/icon-bill.png) no-repeat
+  background: url(/static/img/account/bill/icon-bill.png?_inline) no-repeat
 }
 .icon-bill-link{
   width: 16px;
@@ -1375,7 +1412,7 @@ a.ui-progressbar-circle-join {
   display: block;
   width: 24px;
   height: 24px;
-  background:url(/static/img/icon-performace.png) no-repeat scroll 0 0;
+  background:url(/static/img/icon-performace.png?_inline) no-repeat scroll 0 0;
 }
 
 .icon-performace.sum{
@@ -1402,7 +1439,7 @@ a.ui-progressbar-circle-join {
   display: block;
   width: 29px;
   height: 24px;
-  background:url(/static/img/icon-performace-autoinvest.png) no-repeat scroll 0 0;
+  background:url(/static/img/icon-performace-autoinvest.png?_inline) no-repeat scroll 0 0;
 }
 
 .icon-performace-autoinvest.sum {
@@ -1428,7 +1465,7 @@ a.ui-progressbar-circle-join {
   display: inline-block;
   height: 28px;
   width: 25px;
-  background: url(/static/img/uplan-type.png) no-repeat;
+  background: url(/static/img/uplan-type.png?_inline) no-repeat;
   vertical-align: middle;
 }
 
@@ -1448,27 +1485,28 @@ a.ui-progressbar-circle-join {
 
 /* Loan Type */
 .icon-loantype {
+  position: relative;
+  top:3px;
   display: inline-block;
-  width: 26px;
-  height: 26px;
-  background: url("/static/img/loantypes.png") no-repeat scroll left top transparent;
-  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+  background: url("/static/img/loantypes.png?_inline") no-repeat scroll left top transparent;
 }
 
 .icon-loantype.XYRZ {
-  background-position: -2px -2px;
+  background-position: -58px 0;
 }
 
 .icon-loantype.SDRZ {
-  background-position: -32px -2px;
+  background-position: -0 0px;
 }
 
 .icon-loantype.JGDB {
-  background-position: -62px -2px;
+  background-position: -29px 0px;
 }
 
 .icon-loantype.ZNLC {
-  background-position: -92px -2px;
+  background-position: -87px 0px;
 }
 
 .icon-loantype-s {
@@ -1477,7 +1515,7 @@ a.ui-progressbar-circle-join {
   height: 18px;
   line-height: 18px;
   margin-right:3px;
-  background: url("/static/img/loantypes-s.png") no-repeat scroll left top transparent;
+  background: url("/static/img/loantypes-s.png?_inline") no-repeat scroll left top transparent;
   vertical-align: middle;
 }
 
@@ -1500,55 +1538,39 @@ a.ui-progressbar-circle-join {
 
 /* Credit Level */
 
-.icon-creditlevel {
+.icon-creditlevel,.icon-creditlevel-s {
   display: inline-block;
-  border-radius: 18px;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 16px;
-  font-style:normal;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  vertical-align: middle;
 }
 
-.icon-creditlevel-s {
-  display: inline-block;
-  border-radius: 18px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-}
 
 .icon-creditlevel.AA {
-  background: #1bb8e2;
+	background:url("/static/imgs/icon/aa.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.A {
-  background: #bfdb39;
+ background:url("/static/imgs/icon/a.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.B {
-  background: #ede71f;
+  background:url("/static/imgs/icon/b.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.C {
-  background: #ffc400;
+  background:url("/static/imgs/icon/c.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.D {
-  background: #fb5a00;
+ background:url("/static/imgs/icon/d.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.E {
-  background: #e52012;
+  background:url("/static/imgs/icon/e.png?__inline") no-repeat scroll left top  ;
 }
 
 .icon-creditlevel.HR {
-  background: #f01f5a;
+  background:url("/static/imgs/icon/hr.png?__inline") no-repeat scroll left top  ;
 }

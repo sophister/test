@@ -1,6 +1,5 @@
 define(function (require, exports, module) {
-  var public_key_1024 = require('rsa/rsa.config');
-
+  var public_key_1024 = require('rsaConfig');
   function pidCrypt() {
     function a(a) {
       a || (a = 8);

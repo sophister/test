@@ -38,5 +38,18 @@ fis.config.set('roadmap.path', [
 fis.config.set('modules.parser.tmpl', 'utc');
 // fis.config.set('roadmap.ext.tmpl', 'js');
 
-
+fis.config.merge({
+    deploy : {
+        local : [
+            {
+                from : '/static',
+                to : '../../'
+            },
+            {
+                form : '/WEB-INF',
+                to : '../../'
+            }
+        ]
+    }
+});
 

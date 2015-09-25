@@ -20,7 +20,15 @@ fis.config.set('modules.postprocessor.jsp', 'amd');
 fis.config.set('modules.packager', 'depscombine');
 
 fis.config.set('pack', {
-    
+    'pkg/common_widget.js' : [
+        /widget\/oui\/(.*?).js$/,
+        /widget\/(.*?).js$/
+    ],
+    'pkg/common_widget.css' : [
+        /static\/(.*?).(css|less)$/,
+        /widget\/oui\/(.*?).(css|less)$/,
+        /widget\/(.*?).(css|less)$/
+    ]
 });
 
 
@@ -59,18 +67,20 @@ fis.config.merge({
                     'flash': './widget/oui/lib/flash/1.0.1/jquery.flash.js',
                     'handlebars': './widget/oui/lib/handlebars/1.0.0/handlebars.js',
                     'highcharts': './widget/oui/lib/highcharts/3.0.5/highcharts.js',
-                    'jquery': './widget/oui/lib/jquery/1.9.1/jquery.js',
+                    'jquery': 'common:widget/oui/lib/jquery/1.9.1/jquery.js',
                     //兼容老代码
                     'lib/jquery/1.9.1/jquery' : './widget/oui/lib/jquery/1.9.1/jquery.js', 
-                    'queue': './widget/oui/lib/plupload/1.5.7/jquery.plupload.queue',
+                    'queue': 'common:widget/oui/lib/plupload/1.5.7/jquery.plupload.queue',
                     'simplePagination': './widget/oui/lib/simplePagination/1.5.0/simplePagination.js',
                     'validate': './widget/oui/lib/validation/1.11.1/jquery.validate.js',
                     'mailSuggest':'./widget/oui/lib/mailSuggest/0.0.1/mailSuggest.js',
                     'rsa': './widget/oui/rsa/index.js',
+                    'rsaConfig':'common:widget/oui/rsa/rsa.config.js',                    
                     'base': './widget/oui/arale/base/1.1.1/base.js',
                     'class': './widget/oui/arale/class/1.1.0/class.js',
                     'events': './widget/oui/arale/events/1.1.0/events',
                     'widget': './widget/oui/arale/widget/1.1.1/widget.js',
+                    'protocol':'/widget/oui/protocol.js',
                     'popup': './widget/oui/arale/popup/1.1.2/popup.js',
                     'tip': './widget/oui/arale/tip/1.1.4/tip.js',
                     'overlay': './widget/oui/arale/overlay/1.1.2/overlay.js',
@@ -79,14 +89,23 @@ fis.config.merge({
                     'position': './widget/oui/arale/position/1.0.1/position.js',
                     'dialog': './widget/oui/arale/dialog/1.3.3/dialog.js',
                     'confirmbox': './widget/oui/arale/dialog/1.3.3/confirmbox.js',
-                    'templatable': './widget/oui/arale/templatable/0.9.1/templatable.js',
-                    'calendar': './widget/oui/arale/calendar/0.9.0/calendar.js',
-                    'moment': './widget/oui/arale/moment/2.1.0/moment.js',
+                    'templatable': 'common:widget/oui/arale/templatable/0.9.1/templatable.js',
+                    'calendar': 'common:widget/oui/arale/calendar/0.9.0/calendar.js',
+                    'moment': 'common:widget/oui/arale/moment/2.1.0/moment.js',
                     'sticky':'./widget/oui/arale/sticky/1.2.1/sticky.js',
                     'ui-counter': './widget/oui/lib/counter/0.0.1/jquery.counter-analog.css',
-                    'ui-poptip': './widget/oui/alice/poptip/1.1.1/poptip.css'
+                    'ui-poptip': './widget/oui/alice/poptip/1.1.1/poptip.css',
+                    'common': 'common:widget/oui/common.js',
+                    'components': 'common:widget/oui/components/components.js'
                 }
             }
         }
     }
 });
+
+fis.config.set('roadmap.path', [
+        {
+            reg: /^\/output\//i,
+            release: false
+        }
+    ].concat(fis.config.get('roadmap.path', [])));

@@ -1,7 +1,8 @@
 define(function (require, exports, module) {
 
   var $ = require('jquery'),
-    Dialog = require('dialog'),
+   // Dialog = require('dialog'),
+   Dialog = require('common:widget/ui/dialog/dialog.js'),
     Common = require('common'),
     Protocol = require('protocol'),
     Widgets = require('widgets/widgets');
@@ -244,7 +245,7 @@ define(function (require, exports, module) {
       var me = this,
         ui = this.ui;
       var couponIntData = {}
-      ui.pseudoForm.submit(function () {;
+      ui.pseudoForm.submit(function () {
         if (ui.pseudoForm.find('button[type="submit"]').hasClass('disabled')) {
           return false;
         }
@@ -288,19 +289,26 @@ define(function (require, exports, module) {
               var businessPayAmount = me.getData().amount;;
               if($("#hasSameDate").val()!=0){
                 $(".autoinvest-tip_div").show();
-                new Dialog({
-                  width: '580px',
-                  content: $('.autoinvest-tip_div')
-                }).after('show',function(){
+ 			         Dialog.modalDialog({
+					            content : $('.autoinvest-tip_div'),
+					            cssClass : 'exchange-dialog',
+					            maskConfig : {
+					               cssClass : 'exchange-mask'
+					            },
+											title:"提示"
+					     }).after('show',function(){
                   var _dialog = this;
                   $('#gooninvest').on( "click", function() {
                     _dialog.hide();
                     getCouponFn(businessPayAmount,businessCategory);
                     
-                    new Dialog({
-                      content: html,
-                      width: "580"
-                    }).after('show', function () {
+					        Dialog.modalDialog({
+					            content : html,
+					            cssClass : 'exchange-dialog',
+					            maskConfig : {
+					               cssClass : 'exchange-mask'
+					            }
+					        }).after('show', function () {
                       var dialog = this;
                       $('.ui-confirm-cancel-link').click(function () {
                         dialog.hide();
@@ -329,11 +337,14 @@ define(function (require, exports, module) {
                 getCouponFn(businessPayAmount,businessCategory);
               }
             }
-
-            new Dialog({
-              content: html,
-              width: "580"
-            }).after('show', function () {
+ 
+        Dialog.modalDialog({
+            content : html,
+            cssClass : 'exchange-dialog',
+            maskConfig : {
+               cssClass : 'exchange-mask'
+            }
+        }).after('show', function () {
               var dialog = this;
               $('.ui-confirm-cancel-link').click(function () {
                 dialog.hide();
@@ -374,10 +385,12 @@ define(function (require, exports, module) {
             $('.J_coupon_wrap').html(myTemplate(myData));
             Form.ui.init();
             if(data.status===1){
+              $('.J_coupon_wrap').addClass('no-coupon-list');
               $(".ui-select",".J_addCoupon").hide();
               $(".ui-selectdrop",".J_addCoupon").hide();
             }else{
               if(myData.initCouponValue){
+                $('.J_coupon_wrap').removeClass('no-coupon-list');
                 couponIntData = {
                     id : myData.initCouponValue.couponId,
                     payable : parseFloat(myData.unRepayAmountNotComma) - parseFloat(myData.initCouponValue.couponValue)
@@ -392,6 +405,7 @@ define(function (require, exports, module) {
                 }
                 
               }else{
+                $('.J_coupon_wrap').addClass('no-coupon-list');
                 $(".ui-select",".J_addCoupon").hide();
                 $(".ui-selectdrop",".J_addCoupon").hide();
               }

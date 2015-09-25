@@ -1,5 +1,5 @@
-@header-height:60px;
-@header-bg:#1c4876;
+@header-height : 70px;
+@header-bg : #1c4876;
 
 .wdg-second-header{
   height: @header-height;
@@ -10,14 +10,16 @@
 
     .brand-logo{
       float: left;
-      height: 100%;
-      text-decoration: none;
+      height: 38px;
+      width : 178px;
+      background: url("./assets/welogo.png?__inline");
     }
+
 
     .site-nav{
       float: right;
       height: 100%;
-      font-size: 20px;
+      font-size: 16px;
 
       .channel-item{
         float: left;
@@ -27,17 +29,70 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         border-bottom: 5px solid @header-bg;
-        line-height: 55px;
+        line-height: 70px;
         text-align: center;
         color: #fff;
+        a {
+          color: #fff;
+        }
       }
       .channel-item:hover{
         border-bottom-color: #ff8813;
         color: #ff8813;
+        a {
+          color: #ff8813;
+        }
       }
 
       .user-item{
         float: right;
+        padding-top: 17px;
+        width: 120px;
+        .user-avatar-container {
+          width: 36px;
+          height: 36px;
+          position: relative;
+          margin-right: 14px;
+          * {
+            width: 100%;
+            height: 100%;
+          }
+          .avatar-masking {
+            position: absolute;
+            background: url(assets/masking.png?__inline) no-repeat;
+            left: 0px;
+            top: 0px;
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          #header-msgcount {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            position: absolute;
+            right: -6px;
+            top: -6px;
+            font-size: 12px;
+            display: none;
+          }
+          .msgcount-icon {
+            background: url(assets/msg.png?__inline) no-repeat;
+          }
+          .msgcountmore-icon {
+            background: url(assets/msg-more.png?__inline) no-repeat;
+          }
+        }
+        .user-name {          
+          line-height: 36px;
+          a {
+            color: #fff;
+          }
+        }
       }
 
     }

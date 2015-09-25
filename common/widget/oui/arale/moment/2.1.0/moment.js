@@ -1654,11 +1654,11 @@ define(function(require, exports, module) {
         this['moment'] = moment;
     }
     /*global define:false */
-    if (typeof define === "function" && define.amd) {
-        define("moment", [], function () {
-            return moment;
-        });
-    }
+    // if (typeof define === "function" && define.amd) {
+    //     define("moment", [], function () {
+    //         return moment;
+    //     });
+    // }
 }).call(this);
 
 });

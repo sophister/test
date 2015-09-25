@@ -1,0 +1,378 @@
+/*
+ * Header
+ * namespace .ui-header, .ui-nav
+ */
+
+
+/* HEADER TOP */
+
+.ui-header {
+  position:relative;
+  z-index:99999;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.ui-header-top {
+  background: #555;
+  color: #ccc;
+}
+
+.ui-header-top .ui-nav-item {
+  padding: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.ui-header-top .ui-nav-item.reg-link{
+  color: #29aadf;
+}
+
+.ui-header-top .ui-nav-item.login-link{
+  color: #92c12f;
+}
+
+.ui-header-top .ui-nav-item.ui-nav-username{
+  color: #fff;
+}
+
+.ui-header-top .ui-nav-item:hover {
+	color: #fff;
+}
+
+.ui-header-top .arrow-down{
+  position: relative;
+  top: 12px;
+  border-top-color: #fff;
+}
+
+.ui-header-top .ui-nav-item-x {
+  display: inline-block;
+  position: relative;
+  z-index: 999999; /* FIXME: ui-slide */
+}
+
+.ui-header-top .ui-nav-item-x:hover{
+  background: #fff;
+}
+
+.ui-header-top .ui-nav-item-x .arrow-down-new {
+	position: absolute;
+	width: 11px;
+	height: 6px;
+	right: 10px;
+	top: 50%;
+	margin-top: -3px;
+	background-image: url('/static/img/account/arrow-new.png');
+	background-repeat: no-repeat;
+}
+.ui-header-top .ui-nav-item-x:hover .arrow-down-new {
+	background-position: left bottom;
+}
+
+
+.ui-header-top .ui-nav-item-x:hover .ui-nav-username{
+  color: #333;
+}
+
+.ui-header-top .ui-nav-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  z-index: 99999; /* FIXME: ui-slide */
+  width: 320px;
+  background: #fff;
+  border:1px solid #e0e0e0;
+  border-top: none;
+  display: none;
+}
+.ui-header-top .ui-nav-dropdown .loadfail {
+	width: 320px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+.ui-header-top .ui-nav-dropdown .loadfail img {
+	vertical-align: middle;
+}
+
+.ui-header-top .user-avatar-container{
+  width: 78px;
+  height: 78px;
+  margin: 10px 10px 0px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.ui-header-top .user-info-container dd {
+	display: none;
+}
+.ui-header-top .user-info-container dd.mb10 {
+	line-height: 22px;
+}
+.ui-header-top .user-info-container dd.user-info-container-tips {
+	width: 200px;
+	height: 44px;
+	background: url('/static/img/account/tips-bg.png') no-repeat;
+	padding:2px 4px 6px 6px;
+	line-height: 20px;
+	color: #333;
+}
+
+.ui-header-top .safe-progressbar {
+  display: inline-block;
+  width: 102px;
+  height: 10px;
+  border: 1px solid #c5c4c4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ui-header-top .safe-progressbar .bar {
+  display: block;
+  background: #ffaa00;
+  width: 0;
+  height: 8px;
+  margin: 1px;
+  border-radius: 4px;
+}
+
+.ui-header-top .icon-box {
+  margin-right: 14px;
+  border-radius: 4px;
+}
+
+.ui-header-top .safe-rank {
+  background: url("/static/img/account/security-icons.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  _display: inline;
+  zoom: 1;
+}
+
+.ui-header-top .icons .man {
+  background-position: 0 0;
+}
+
+.ui-header-top .icons .man.light {
+  background-position: 0 -30px;
+}
+
+.ui-header-top .icons .cellphone {
+  background-position: -30px 0;
+}
+
+.ui-header-top .icons .cellphone.light {
+  background-position: -30px -30px;
+}
+
+.ui-header-top .icons .mail {
+  background-position: -60px 0;
+}
+
+.ui-header-top .icons .mail.light {
+  background-position: -60px -30px;
+}
+
+.ui-header-top .icons .lock {
+  background-position: -90px 0;
+}
+
+.ui-header-top .icons .lock.light {
+  background-position: -90px -30px;
+}
+
+.ui-header-top .ui-nav-dropdown-bottom {
+	height: 50px;
+	background: #f8f8f8;
+	line-height: 50px;
+	font-size: 15px;
+	color: #2fa8e1;
+	text-align: center;
+	margin-top: 10px;
+	display: none;
+}
+
+.ui-header-top .ui-nav-dropdown-bottom a {
+	color: #2fa8e1;
+}
+
+.ui-header-top .ui-nav-dropdown-bottom .ui-button {
+	color: #fff;
+	font-size: 15px;
+}
+
+/* HEADER MAIN */
+
+.ui-header-main {
+  background: #fff;
+}
+
+.ui-header-logo {
+  display: block;
+  height: 72px;
+  width: 140px;
+  background: url('/static/img/logo.png') no-repeat 0 center;
+}
+.ui-header-newyear-logo {
+	display: block;
+	width: 195px;
+	height: 72px;
+    background: url('/static/img/newyear-logo.png') no-repeat 0 center;
+    position: absolute;
+    left: -42px;
+    top: 0px;
+}
+.ui-header-logo-grid {
+  width: 140px;
+  height: 72px;
+}
+.ui-header-newyear-grid {
+	position: relative;
+}
+.ui-header-slogan-grid {
+  width: 193px;
+  height: 72px;
+}
+
+.ui-header-slogan {
+  display: block;
+  height: 72px;
+  width: 193px;
+  background: url('/static/img/slogan.png') no-repeat 0 center;
+}
+.ui-header-grid{
+  height: 72px;
+}
+
+.ui-header-main .ui-nav-item {
+	float: left;
+  	font-size: 18px;
+}
+.ui-header-top  .ui-nav-item .icon-msg{
+  width: 17px;
+  height: 20px;
+  background-position: -27px -177px;
+}
+.ui-header-top  .ui-nav-item .icon-msg-new {
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	line-height: 14px;
+    padding-bottom:2px;
+	text-align: center;
+	background: url('/static/img/account/msg-new2.png') -10px -1px no-repeat;
+	color: #fff;
+	font-style: normal;
+	letter-spacing: -0.1em;
+	 
+	
+}
+.ui-header-top  .ui-nav-item .icon-task-new {
+	display: inline-block;
+	width: 8px;
+	height: 14px;
+	background: url('/static/img/account/msg-new2.png') -1px -1px no-repeat;		
+}
+.ui-header-main .ui-nav-item-link {
+  display: block;
+  padding: 0 20px;
+  height: 72px;
+  line-height: 72px;
+}
+
+.ui-header-main .ui-nav-item-x .ui-nav-item-link {
+  padding-right: 30px;
+}
+
+.ui-header-main .ui-nav-item-link .arrow-down {
+  position: absolute;
+  top: 36px;
+  right: 17px;
+  z-index: 1;
+}
+
+.ui-header-main .ui-nav-item-link:hover .arrow-down {
+  border-top: 4px solid #00a8e8;
+}
+
+.ui-header-main .ui-nav-item-x {
+  position: relative;
+  z-index: 9999; /* FIXME: ui-slide */
+}
+
+.ui-header-main .ui-nav-dropdown {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 9999; /* FIXME: ui-slide */
+  padding: 5px 0;
+  background: #fff;
+  border:1px solid #e0e0e0;
+  
+  -webkit-box-shadow: 0 0 3px -1px #ccc;
+  -moz-box-shadow: 0 0 3px -1px #ccc;
+  box-shadow: 0 0 3px -1px #ccc;
+}
+
+.ui-header-main .ui-nav-dropdown-account {
+	right: 10px;
+}
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-angle {
+	position: absolute;
+	top: -5px;
+	left: 46px;
+}
+
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-angle span {
+	display: block;
+	width: 9px;
+	height: 5px;
+	background: url('/static/img/nav-angle-up.png') no-repeat center center;
+}
+
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-separator {
+  height: 0;
+	margin: 5px 10px;
+	border-bottom: 1px solid #f2f2f2;
+  font-size:0;
+}
+
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item {
+  font-size: 14px;
+  margin: 2px 10px;
+  padding: 2px 10px;
+  min-width: 74px;
+  cursor: pointer;
+}
+
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item a {
+  display:block;
+}
+
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover {
+  background: #2ea7e0;
+}
+
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover a,
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover a:hover,
+.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover a:active {
+  color: #fff;
+}
+
+.ui-header-main .ui-nav-dropdown-invest .ui-nav-dropdown-item {
+  width: 84px;
+}
+
+.ui-header .ui-header-main .no-nav-text{
+  line-height: 40px;
+  height: 40px;
+  font-size: 25px;
+  border-left: 1px solid #CCC;
+  padding-left: 20px;
+  margin-top: 17px;
+  color: #aaa;
+}
+

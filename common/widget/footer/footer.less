@@ -1,5 +1,7 @@
 .wdg-footer{
     background: #dcdcdc;
+    clear: both;
+    margin-top: 32px;
 
     .main-section{
 
@@ -82,13 +84,16 @@
 
                 a{
                     display: inline-block;
+                    width: 78px;
+                    height: 28px;
                     text-decoration: none;
                     margin-right: 6px;
+                    background: url(./assets/footer-service.png) scroll no-repeat 0 0;
 
-                    img{
-                        width: 78px;
-                        height: 28px;
-                    }
+                }
+
+                .service-sina{
+                    background-position: -1px -1px;
                 }
             }
         }
@@ -103,6 +108,66 @@
             span{
                 margin-right: 20px;
                 color: #a1a1a1;
+            }
+        }
+    }
+}
+
+
+.fixed-download-goBack {
+    width: 50px;
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    z-index: 99999;
+    li {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border-bottom: 1px solid #efefef;
+        a.fixed-icon {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: #fff;
+            background-image: url('./assets/icon.png?__inline');
+            background-repeat: no-repeat;
+            &:hover {
+                background-color:  #3a84cf;
+            }
+        }
+        &.fixed-calculator {
+            .fixed-icon {
+                background-position: 0px 0px;
+                &:hover {
+                    background-position: right 0px;
+                }
+            }
+        }
+        &.fixed-service {
+            .fixed-icon {
+                background-position: 0px -50px;
+                &:hover {
+                    background-position: right -50px;
+                }
+            }
+        }
+        &.fixed-download {
+            .fixed-icon {
+                background-position: 0px -100px;
+                &:hover {
+                    background-position: right -100px;
+                }
+            }
+        }
+        &.fixed-goTop {
+            display: none;
+            .fixed-icon {
+                background-position: 0px -150px;
+                &:hover {
+                    background-position: right -150px;
+                }
             }
         }
     }

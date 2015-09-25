@@ -29,41 +29,50 @@ EventEmitter.prototype.on = function( eventName, fn, context){
             context : context ? context : null
         });
     }
-    return canBind;
+    return this;
 };
 
 EventEmitter.prototype.off = function( eventName, fn){
     if( ! this._listeners ){
-        return false;
+        return this;
+    }
+    if( ! eventName ){
+        this._listeners = null;
+        return this;
     }
     var fnArray = this._listeners[eventName];
     if( ! fnArray || fnArray.length < 1 ){
-        return false;
+        return this;
     }
+
     for( var i = 0, len = fnArray.length; i < len; i++ ){
         var fnObj = fnArray[i];
         if( fnObj.fn === fn){
             fnArray.splice( i, 1);
-            return true;
+            return this;
         }
     }
-    return false;
+    return this;
 };
 
 EventEmitter.prototype.trigger = function( eventName, args ){
     if( ! this._listeners ){
-        return ;
+        return this;
     }
     var fnArray = this._listeners[eventName];
     if( ! fnArray || fnArray.length < 1 ){
-        return;
+        return this;
     }
+    //防止在 下面的回调执行过程中,前面的 回调函数,修改了原始 fnArray 的大小,导致后面的数组越界
+    fnArray = fnArray.slice();
     for( var i = 0, len = fnArray.length; i < len; i++ ){
         var fnObj = fnArray[i];
         if( typeof fnObj.fn === 'function'){
             fnObj.fn.call( fnObj.context, args);
         }
     }
+
+    return this;
 };
 
 //全局事件中心

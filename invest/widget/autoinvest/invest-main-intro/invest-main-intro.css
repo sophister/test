@@ -1,0 +1,74 @@
+.intro-list {
+	padding-top: 10px;
+}
+.intro-list li {
+	height: 180px;
+	padding-top: 30px;
+}
+.intro-list li.odd {
+	background: #f6fbfd;
+}
+.intro-list li dl {
+	position: relative;
+	color: #000;
+}
+.intro-list li dl dt {
+	font-size: 30px;
+	line-height: 50px;
+	color: #475058;
+}
+.intro-list li dl dd {
+	line-height: 34px;
+	font-size: 18px;
+}
+.intro-list li dl dd i {
+	background: #000;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    height: 4px;
+    width: 4px;
+    margin: 15px 16px 0 0;
+    vertical-align: middle;
+}
+.intro-list li dl dd span {
+	width: 320px;
+	float: left;
+}
+.intro-list li dl .autoinvest-intro-icon {
+	position: absolute;
+	background-image: url(/static/img/autoinvest-intro.png);
+	background-repeat: no-repeat;
+	top: 26px;
+}
+.intro-list li dl .autoinvest-intro-icon-1 {
+	width: 135px;
+	height: 97px;
+	background-position: 0 0;
+	right: 180px;
+}
+.intro-list li dl .autoinvest-intro-icon-2 {
+	width: 178px;
+	height: 100px;
+	background-position: 0 -130px;
+	left: 180px;
+}
+.intro-list li dl .autoinvest-intro-icon-3 {
+	width: 125px;
+	height: 100px;
+	background-position: 0 -260px;
+	right: 192px;
+}
+.intro-list li dl .autoinvest-intro-icon-4 {
+	width: 110px;
+	height: 100px;
+	background-position: 0 -390px;
+	left: 207px;
+}
+.intro-list li dl .autoinvest-intro-icon-5 {
+	width: 144px;
+	height: 100px;
+	background-position: 0 -520px;
+	right: 186px;
+	top: 10px;
+}

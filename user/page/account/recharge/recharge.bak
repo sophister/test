@@ -1,0 +1,34 @@
+账户余额 ： <s:property value="%{getText('renrendai.currency.format',{point.availablePoints +point.frozenPoints })}" />
+
+代金卷内容 ： 
+
+<s:if test="coupons.size()>0">
+      <div class="ui-form-item">
+        <input class="ui-input-checkbox" type="checkbox" name="free" id="rechargeFree">
+        <span>使用最近到期的一张充值免费券（共 <s:property value="coupons.size"/>张）</span>
+        <i id="tips2" class="iconfont tips">&#xF046;</i>
+        <div class="ui-poptip fn-hide" id="tipCon2">
+  <div class="ui-poptip-shadow">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10">
+        <em></em>
+        <span></span>
+      </div>
+      <div class="ui-poptip-content" data-role="content">
+        <p>到期时间：</p>
+        <ol>
+          <s:iterator value="coupons" var="coupon">
+        <li><s:date name="#coupon.expireTime" format="yyyy-MM-dd" /></li>
+          </s:iterator>
+        </ol>
+      </div>
+    </div>
+  </div>
+  </div>
+      </div>
+</s:if>
+
+
+模板数据内容 ： 
+
+${rechargeStr}

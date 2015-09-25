@@ -1,0 +1,370 @@
+
+
+/* 清理浮动 */
+.fn-clear:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+.fn-clear {
+    zoom:1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+    display:none;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left,.fn-right {
+    display:inline;
+}
+.fn-left {
+    float:left;
+}
+.fn-right {
+    float:right;
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.fn-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 简单的渐变 */
+.fn-linear {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
+    background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
+    background:-o-linear-gradient(top, #fcfcfc, #f1f1f1);
+    background: linear-gradient(top, #fcfcfc, #f1f1f1);
+}
+
+/* 浅色的渐变 */
+.fn-linear-light {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9));
+    background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
+    background:-o-linear-gradient(top, #fcfcfc, #f9f9f9);
+    background: linear-gradient(top, #fcfcfc, #f9f9f9);
+}
+
+/* 人民币符号 */
+.fn-rmb {
+    font-family: arial;
+    font-style: normal;
+    padding-right: 4px;
+}
+
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust {
+    -webkit-text-size-adjust: none;
+}
+
+/*数字字体*/
+.num-family{
+    font-family:HelveticaNeueLt;
+}
+
+/*普通文字链接样式*/
+a, a:link, a:visited, a:hover, a:active{
+    color: #3a84cf;
+}
+
+
+.j-btn{
+    display: inline-block;
+    border: 0 none;
+    font-size: 14px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+/*橙色按钮*/
+.j-btn-orange, a.j-btn-orange{
+    background: #ff8a10;
+    color: #fff;
+    border:none;
+}
+.j-btn-orange:hover{
+    background: #e87e0f;
+    border:none;
+    color: #fff;
+}
+
+/*白色按钮 橙色边框*/
+.j-btn-white{
+    background: #fff;
+    color: #ff8a10;
+    border:solid 1px #ff8a10;
+    height: 42px;
+}
+
+/*蓝色按钮*/
+.j-btn-blue, a.j-btn-blue{
+    color: #fff;
+    background: #3a84cf;
+    border:none;
+}
+.j-btn-blue:hover{
+    background: #3676b7;
+    color: #fff;
+    border:none;
+}
+
+/*对话框中的按钮*/
+.j-btn-big{
+    width: 220px;
+    height: 44px;
+    line-height: 44px;
+}
+.j-dialog-btn-small{
+    width: 92px;
+    height: 44px;
+    line-height: 44px;
+}
+/*取消按钮*/
+.j-btn-cancel{
+    height: 42px;
+    line-height: 42px;
+    color: #ff8a10;
+    border: 1px solid #ff8a10;
+    margin-left: 20px;
+    background: #fff;
+}
+.j-btn-cancel:hover {
+    color: #e87e0f;
+    border-color: #e87e0f;
+}
+
+/*两个对话框并排的宽度*/
+.j-btn-small{
+    width: 73px;
+    height: 35px;
+    line-height: 35px;
+}
+.j-btn-small-b{
+    width: 71px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.j-btn-block{
+    display: block;
+}
+
+/*禁用按钮的样式*/
+.ui-button-disabled, a.ui-button-disabled, .ui-button-disabled:hover{
+    color: #fff;
+    background: #cfcfcf;
+    cursor: default;
+}
+/* 
+ * @name: ui-iconfont
+ * @overview: REI——支付宝的iconfont
+ * @require: 无
+ */
+@font-face {
+    font-family: "rei";
+    src: url("/static/common/fonts/rei_c9f1701.eot"); /* IE9*/
+    src: url("/static/common/fonts/rei_c9f1701.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("/static/common/fonts/rei_2030da4.woff") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+         url("/static/common/fonts/rei_4926078.ttf")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url("/static/common/fonts/rei_3ddf008.svg#rei") format("svg"); /*  iOS 4.1- */
+    font-weight: normal;
+    font-style: normal;
+}
+.iconfont {
+    font-family: "rei";
+    font-style: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: "HelveticaNeueLt";
+    font-style: normal;
+    font-weight: normal;
+    text-shadow:none;
+    src: url("/static/common/fonts/helveticaneuelt_0204619.eot?#iefix") format("embedded-opentype"), 
+    url("/static/common/fonts/helveticaneuelt_19059dc.woff") format("woff"), 
+    url("/static/common/fonts/helveticaneuelt_8bc66c5.ttf") format("truetype"), 
+    url("/static/fonts/helveticaneuelt.svg#HelveticaNeueLt") format("svg");
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('/static/common/fonts/icomoon_3185891.eot?lgz9a9');
+    src:url('/static/common/fonts/icomoon_3185891.eot?#iefixlgz9a9') format('embedded-opentype'),
+    url('/static/common/fonts/icomoon_b8f3270.ttf?lgz9a9') format('truetype'),
+    url('/static/common/fonts/icomoon_e28df62.woff?lgz9a9') format('woff'),
+    url('/static/common/fonts/icomoon_c127998.svg?lgz9a9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+    content: "\e617";
+    font-size : 15px;
+}
+.icon-info:hover{
+    color : #3a84cf;
+}
+.icon-info-hover .path1:before {
+    content: "\e604";
+    color: rgb(58, 132, 207);
+}
+.icon-info-hover .path2:before {
+    content: "\e611";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-mobile3:before {
+    content: "\e60e";
+}
+.icon-lock:before {
+    content: "\e60f";
+}
+.icon-mail:before {
+    content: "\e610";
+}
+.icon-calendar .path1:before {
+    content: "\e612";
+    color: rgb(57, 124, 192);
+}
+.icon-calendar .path2:before {
+    content: "\e613";
+    margin-left: -1em;
+    color: rgb(76, 152, 205);
+}
+.icon-time .path1:before {
+    content: "\e614";
+    color: rgb(57, 124, 192);
+}
+.icon-time .path2:before {
+    content: "\e615";
+    margin-left: -1em;
+    color: rgb(76, 152, 205);
+}
+.icon-time .path3:before {
+    content: "\e616";
+    margin-left: -1em;
+    color: rgb(76, 152, 205);
+}
+.icon-logo:before {
+    content: "\e605";
+}
+.icon-cal .path1:before {
+    content: "\e606";
+    color: rgb(58, 132, 207);
+}
+.icon-cal .path2:before {
+    content: "\e607";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path3:before {
+    content: "\e608";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path4:before {
+    content: "\e609";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path5:before {
+    content: "\e60a";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path6:before {
+    content: "\e60b";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-cal .path7:before {
+    content: "\e60c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-service:before {
+    content: "\e60d";
+}
+.icon-qrcode:before {
+    content: "\f029";
+}
+.icon-phone:before {
+    content: "\f095";
+}
+.icon-down1:before {
+    content: "\f0d7";
+}
+.icon-up1:before {
+    content: "\f0d8";
+}
+.icon-twoway:before {
+    content: "\f0dc";
+}
+.icon-down2:before {
+    content: "\f0dd";
+}
+.icon-up2:before {
+    content: "\f0de";
+}
+.icon-reload:before {
+    content: "\f0e2";
+}
+.icon-left:before {
+    content: "\f104";
+}
+.icon-right:before {
+    content: "\f105";
+}
+.icon-up3:before {
+    content: "\f106";
+}
+.icon-down3:before {
+    content: "\f107";
+}
+.icon-mobile1:before {
+    content: "\f10b";
+}
+.icon-mobile2:before {
+    content: "\e61a";
+}
+.icon-notification:before {
+    content: "\e600";
+}
+.icon-question:before {
+    content: "\e601";
+}
+.icon-plus:before {
+    content: "\e602";
+}
+.icon-minus:before {
+    content: "\e603";
+}

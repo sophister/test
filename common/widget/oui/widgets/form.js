@@ -5,17 +5,18 @@
 define(function (require, exports, module) {
   var $ = require("jquery");
   require("validate");
+  var jQuery = $;
   // require("ui-poptip");
   var form = {};
   form.err = {
     required: "不能为空",
     remoteCode: "验证码输入错误",
     isEmail: "请输入有效的邮箱地址",
-    equalPsw: "您输入的密码不一致",
+    equalPsw: "两次密码输入不一致",
     length: "字数超过限制",
-    minPswLength: "长度为6-16个字符之间",
-    maxPswLength: "长度为6-16个字符之间",
-    isMobile: "请正确输入手机号码",
+    minPswLength: "长度应为6-16个字符",
+    maxPswLength: "长度应为6-16个字符",
+    isMobile: "请输入正确手机号",
     isMobileOrEmail: "请输入正确的邮箱地址或手机号码",
     isNickName: "昵称只能由中文、英文字母、数字、下划线组成",
     isRealName:"包含非法字符",
@@ -23,11 +24,11 @@ define(function (require, exports, module) {
     isNickNameLength: "长度为4-16个字符之间",
     isHasYX: "前缀请不要使用“YX_”,且后缀请不要使用“_yx”",
     nickNameRemote: "昵称已存在",
-    userNameRemote: "该手机号已经存在",
+    userNameRemote: "手机号已经存在",
     isPassWord: "包含非法字符",
     isPassNotAllNum:"密码不能全为数字",
     isPassNotRepeat:"密码不能为同一个字符",
-    equalTo: "您输入的密码不一致",
+    equalTo: "两次密码输入不一致",
     agree: "请同意我们的条款",
     contractPay: "支付前请阅读并同意协议",
     maxLoanTitle: "借款标题不能超过14字",
@@ -451,6 +452,8 @@ define(function (require, exports, module) {
         newPassword: {
           required: true,
           isPassWord: true,
+          isPassNotAllNum:true,
+          isPassNotRepeat:true,
           minlength: 6,
           maxlength: 16
         },
@@ -629,6 +632,27 @@ define(function (require, exports, module) {
           isEducationCode: true
         }
       },
+       notLoginFindPsw: {
+        mobileOrEmail: {
+          required: true,
+          isMobileOrEmail: true
+        },
+        code: {
+          required: true,
+          minlength: 4,
+          maxlength: 4,
+          remote: {
+            url: "/account/checkCode.action",
+            dataFilter: function (data) {
+              var json = jQuery.parseJSON(data);
+              if (json.result == "true") {
+                return true;
+              }
+              return false;
+            }
+          }
+        }
+      },
       notLoginFindPswByEmail: {
         email: {
           required: true,
@@ -685,6 +709,8 @@ define(function (require, exports, module) {
         password: {
           required: true,
           isPassWord: true,
+          isPassNotAllNum:true,
+          isPassNotRepeat:true,
           minlength: 6,
           maxlength: 16
         },
@@ -1060,6 +1086,8 @@ define(function (require, exports, module) {
         newPassword: {
           required: form.err.required,
           isPassWord: form.err.isPassWord,
+          isPassNotAllNum:form.err.isPassNotAllNum,
+          isPassNotRepeat:form.err.isPassNotRepeat,
           minlength: form.err.minPswLength,
           maxlength: form.err.maxPswLength
         },
@@ -1229,6 +1257,18 @@ define(function (require, exports, module) {
           isEducationCode: form.err.isEducationCode
         }
       },
+      notLoginFindPsw: {
+        mobileOrEmail: {
+          required: form.err.required,
+          isMobileOrEmail: form.err.isMobileOrEmail
+        },
+        code: {
+          required: form.err.required,
+          minlength: form.err.codeLength,
+          maxlength: form.err.codeLength,
+          remote: form.err.remoteCode
+        }
+      },
       notLoginFindPswByEmail: {
         email: {
           required: form.err.required,
@@ -1267,6 +1307,8 @@ define(function (require, exports, module) {
         password: {
           required: form.err.required,
           isPassWord: form.err.isPassWord,
+          isPassNotAllNum:form.err.isPassNotAllNum,
+          isPassNotRepeat:form.err.isPassNotRepeat,
           minlength: form.err.minPswLength,
           maxlength: form.err.maxPswLength
         },
@@ -2137,7 +2179,7 @@ define(function (require, exports, module) {
       $poptip.show();
       return;
     }
-    $('<div class="ui-poptip ui-poptip-orange" style="z-index: 99; position: absolute; left: ' + left + 'px; top:' + top + 'px;"><div class="ui-poptip-container"><div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div><div data-role="content" class="ui-poptip-content" style="width: auto; height: auto;"></div></div></div>').appendTo(element.parent("div")).find(".ui-poptip-content").html(tipmsg);
+    $('<div class="ui-poptip ui-poptip-orange ui-poptip-new" style="z-index: 99; position: absolute; left: ' + left + 'px; top:' + top + 'px;"><div class="ui-poptip-container"><div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div><div data-role="content" class="ui-poptip-content" style="width: auto; height: auto;"></div></div></div>').appendTo(element.parent("div")).find(".ui-poptip-content").html(tipmsg);
   };
 
   form.tipblur = function (element) {
@@ -2211,7 +2253,7 @@ define(function (require, exports, module) {
           i = timeout;
           if (opt && opt.onClear && $.isFunction(opt.onClear)) opt.onClear();
         } else {
-          $bt.html(i + "秒重新获取");
+          $bt.html(i + "秒后重新获取");
           i--;
         }
       }, 1000);
@@ -2296,7 +2338,7 @@ define(function (require, exports, module) {
         return origValidateFn.apply(this, args);
       };
     }
-  }(window.jQuery));
+  }(jQuery));
 
   //新版登录注册input样式
   var inputTheme = {
@@ -2360,19 +2402,22 @@ define(function (require, exports, module) {
       $("input[type='checkbox']").each(function(){
         var me = $(this);
         var isChecked = me.prop('checked');
-        $wrap = $( "<span class='ui-select'></span>").on("click",function(e){
+        $wrap = $( "<span class='ui-select j-checkbox'></span>").on("click",function(e){
           if(e.target.nodeName == "SPAN"){
             if(me.prop('checked')){
-              $(this).css("backgroundPosition","0 0");
+              //$(this).css("backgroundPosition","0 0");
+              $(this).removeClass('j-checked');
             }else{
-              $(this).css("backgroundPosition","0 -33px");
+              //$(this).css("backgroundPosition","0 -33px");
+              $(this).addClass('j-checked');
             }
             me.trigger('click');
           }
 
         });
         if(isChecked){
-          $wrap.css("background-position","0 -33px");
+          //$wrap.css("background-position","0 -33px");
+          $wrap.addClass('j-checked');
         }
         me.wrap($wrap);
       });
@@ -2382,19 +2427,22 @@ define(function (require, exports, module) {
       $("input[type='checkbox']",obj).each(function(){
         var me = $(this);
         var isChecked = me.prop('checked');
-        $wrap = $( "<span class='ui-select'></span>").on("click",function(e){
+        $wrap = $( "<span class='ui-select j-checkbox'></span>").on("click",function(e){
           if(e.target.nodeName == "SPAN"){
             if(me.prop('checked')){
-              $(this).css("backgroundPosition","0 0");
+              //$(this).css("backgroundPosition","0 0");
+              $(this).removeClass('j-checked');
             }else{
-              $(this).css("backgroundPosition","0 -33px");
+              //$(this).css("backgroundPosition","0 -33px");
+              $(this).addClass('j-checked');
             }
             me.trigger('click');
           }
 
         });
         if(isChecked){
-          $wrap.css("background-position","0 -33px");
+          //$wrap.css("background-position","0 -33px");
+          $wrap.addClass('j-checked');
         }
         me.wrap($wrap);
       });

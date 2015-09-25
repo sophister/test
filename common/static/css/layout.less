@@ -1,0 +1,253 @@
+
+@text-color:#2b2b2b;
+
+/*全局的通用布局*/
+body{
+    background: #ededed;
+}
+.main-section{
+    width: 1080px;
+    margin: 0 auto;
+}
+.j-card{
+    background: #fff;
+}
+.pd-horizon{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.pd-bottom{
+    padding-bottom: 25px;
+}
+.page-section{
+    margin-top: 15px;
+}
+.section-title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #2b2b2b;
+}
+.section-border-bottom{
+    border-bottom: 1px solid #efefef;
+}
+
+
+/*form表单中的输入框样式*/
+@form-item-width:180px;
+@form-item-height:36px;
+
+@big-form-item-width:280px;
+
+@form-input-width:178px;
+@form-input-height:34px;
+@form-input-padding-left:9px;
+@form-input-padding-right:25px;
+
+/*浮层对话框中的form表单样式*/
+@dialog-label-margin-left:56px;
+.j-dialog-label{
+    float: left;
+    padding-left: @dialog-label-margin-left;
+    width: 120px;
+    text-align: left;
+    height: @form-item-height;
+    line-height: @form-item-height;
+    font-size: 16px;
+    color: #848484;
+}
+.j-dialog-value{
+    float: left;
+    height: @form-item-height;
+    line-height: @form-item-height;
+    font-size: 16px;
+    color: @text-color;
+}
+.j-dialog-section-title{
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    color: @text-color;
+    margin-top: 10px;
+}
+.j-dialog-margin-left{
+    margin-left: @dialog-label-margin-left;
+}
+.j-dialog-value-left{
+    margin-left: 176px;
+}
+
+/*普通输入框*/
+.j-form-item{
+
+    position: relative;
+    width: @form-item-width;
+    height: @form-input-height;
+    line-height:@form-input-height;
+    
+    .j-input{
+        width:@form-input-width - @form-input-padding-left - @form-input-padding-right;
+        height: @form-input-height;
+        padding: 0 @form-input-padding-right 0 @form-input-padding-left;
+        border: 1px solid #c5c5c5;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .j-input-unit{
+        position: absolute;
+        right: 10px;
+        top: 0;
+        color: #c3c3c3;
+    }
+
+}
+.j-form-item-big{
+
+    width: @big-form-item-width;
+
+    .j-input{
+        width: @big-form-item-width - @form-input-padding-left - @form-input-padding-right;
+    }
+}
+
+
+/**覆盖原有的 下拉框 样式**/
+.ui-selectdrop{
+
+    .s_select_bg{
+        position: relative;
+        border: 1px solid #c5c5c5;
+        color: #2b2b2b;
+        cursor: pointer;
+        outline: 0 none;
+        height: 34px;
+        line-height: 34px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+
+        .arrow{
+            height: 100%;
+            width: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding-right: 10px;
+            text-align: right;
+            background-color: transparent;
+            color: #acacac;
+
+            i{
+                font-size: 16px;
+                line-height: 34px;
+            }
+        }
+
+        &:hover{
+            border-color: #3a84cf;
+
+            .arrow{
+                color: #3a84cf;
+            }
+        }
+
+    }
+}
+
+.j-big-input-item{
+    width: 250px;
+}
+.j-big-input{
+    width: 248px;
+}
+.j-text-input{
+    padding: 0 0 0 10px !important;
+    height: 34px;
+    line-height: 34px;
+}
+
+
+/*checkbox 输入框*/
+.j-checkbox{
+    background: url(./assets/uncheck-box.png?__inline) scroll no-repeat 0 1px;
+
+    &.j-checked{
+        background: url(./assets/checkbox.png?__inline) scroll no-repeat 0 0px;
+    }
+}
+
+.orange-highlight{
+    color: #ff711c;
+}
+
+
+.captcha-img{
+    height: 36px;
+}
+
+.j-block-center{
+    margin: 0 auto;
+}
+
+/****全站通用的对话框内提示icon****/
+.h50{
+    height: 50px;
+}
+.ui-dialog, .ui-message-content{
+    outline: none;
+}
+.j-dialog-result-icon{
+    display: block;
+    height: 74px;
+    margin-bottom: 12px;
+}
+.j-dialog-icon-error{
+    background: url(./assets/error-icon.png?__inline) scroll no-repeat center top;
+}
+.j-dialog-icon-info{
+    background: url(./assets/info-icon.png?__inline) scroll no-repeat center top;
+}
+.j-dialog-icon-success{
+    background: url(./assets/success-icon.png?__inline) scroll no-repeat center top;
+}
+.j-dialog-icon-warn{
+    background: url(./assets/warn-icon.png?__inline) scroll no-repeat center top;
+}
+
+.j-result-dialog{
+
+    .j-dialog-message{
+
+        .j-result-text{
+            padding: 0 40px;
+            line-height: 30px;
+            font-size: 16px;
+            color: #2b2b2b;
+            text-align: center;
+        }
+
+    }
+
+    .ui-message-operation{
+        margin: 23px auto 0;
+        padding-bottom: 40px;
+
+        .j-btn{
+            width: 220px;
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+}
+
+/*提示对话框内的文字*/
+.j-confirm-con{
+    font-size: 16px;
+    color: #2b2b2b;
+    text-align: center;
+}

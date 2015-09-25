@@ -1,15 +1,19 @@
-@top-height:36px;
+@top-height:30px;
 
 .wdg-top-header{
     height: @top-height;
     line-height: @top-height;
     background: #062e58;
-    font-size: 16px;
+    font-size: 14px;
 
     .main-section{
 
         height: 100%;
         color: #8b919c;
+
+        i{
+            margin-right: 5px;
+        }
 
         .tel-phone{
             float: left;
@@ -21,16 +25,18 @@
 
             .nav-item{
                 float: left;
-                width: 100px;
                 height: @top-height;
                 text-align: center;
+                a {
+                    color: #8b919c;
+                }
             }
             .nav-item-split{
                 float: left;
                 width: 1px;
                 height: 14px;
                 background: #3e465c;
-                margin: 11px 0 0;
+                margin: 11px 30px 0px 30px;
             }
         }
 

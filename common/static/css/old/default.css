@@ -10,8 +10,7 @@ html {
 }
 
 html, body {
-    height: 100%;
-  background: #f2f2f2;
+    min-height: 100%;
 }
 
 .pg-container {
@@ -22,6 +21,7 @@ html, body {
 
 .pg-container-content {
     padding-bottom: 344px;
+    display: none;
 }
 
 .pg-container.narrow-footer .pg-container-content {
@@ -73,15 +73,22 @@ html, body {
 
 
 /* Colors */
-
-.color-dark-text{
-  color: #222;
+.text-black-color,.color-dark-text{
+    color:#2b2b2b;
 }
-
-.color-lightdark-text{
-  color: #999;
+.text-orange-color{
+	color:#ff721f;
 }
-
+.text-lightblue-color{
+	color:#4c98cd;
+}
+.text-lightblack-color,.color-lightdark-text{
+	color:#848484;
+}
+.color-lightgray-text {
+  color: #757575;
+}
+ 
 
 .color-red-font {
     color: red;
@@ -95,9 +102,7 @@ html, body {
 .color-blue-text {
   color: #2ea7e0;
 }
-.color-lightgray-text {
-  color: #757575;
-}
+
 
 .color-warnorange-text{
   color: #ea6f1f;
@@ -120,7 +125,7 @@ html, body {
 }
 
 .color-orange-text {
-  color: #f58708;
+  color: #ff721f;
 }
 
 .color-weightorange-text{
@@ -352,7 +357,7 @@ h6, .h6 {
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .text-center {
@@ -366,11 +371,11 @@ h6, .h6 {
 /* Numbers */
 
 .num-s {
-    font-size: 10px;
+    /*font-size: 10px;*/
 }
 
 .num-s em {
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 
 .num, .num-m {
@@ -378,7 +383,7 @@ h6, .h6 {
 }
 
 .num em, .num-m em {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .num-l {
@@ -465,7 +470,6 @@ h6, .h6 {
 /* Links */
 
 a {
-  color: #2ea7e0; /* rrdcolor-lightblue */
   text-decoration: none;
 }
 
@@ -486,7 +490,6 @@ a.darkgray, a.darkgray:link {
 }
 
 a:hover, a.gray:hover, a.darkgray:hover, a.rrd-dimgray:hover, a.black:hover {
-  color: #2ea7e0; /* rrdcolor-blue */
   text-decoration: none;
 }
 
@@ -601,6 +604,10 @@ a.text {
   margin-left:20px;
 }
 
+.ml25 {
+  margin-left:25px;
+}
+
 .ml30 {
   margin-left:30px;
 }
@@ -678,11 +685,18 @@ a.text {
 .mb4 {
     margin-bottom: 4px;
 }
-
+.mb6 {
+  margin-bottom: 6px;
+}
+.mb8 {
+  margin-bottom: 8px;
+}
 .mb5{
   margin-bottom: 5px;
 }
-
+.mb7{
+  margin-bottom: 7px;
+}
 .mb8 {
   margin-bottom: 8px;
 }
@@ -725,7 +739,9 @@ a.text {
 .p20 {
   padding: 20px;
 }
-
+.p25 {
+  padding: 25px;
+}
 .p30 {
   padding: 30px;
 }
@@ -849,6 +865,9 @@ a.text {
 .pr60 {
   padding-right: 60px;
 }
+.pr65 {
+  padding-right: 65px;
+}
 .pr70 {
   padding-right: 70px;
 }
@@ -858,12 +877,43 @@ a.text {
 .pr90 {
   padding-right: 90px;
 }
-
+.pr100 {
+  padding-right: 100px;
+}
+.pr140 {
+  padding-right: 140px;
+}
+.plr60 {
+  padding-right: 60px;
+  padding-left:60px;
+}
+.plr35 {
+  padding-right: 35px;
+  padding-left:35px;
+}
 .pr145 {
   padding-right: 145px;
 }
+.pd1 {
+  padding-bottom: 1px;
+}
+.pd2 {
+  padding-bottom: 2px;
+}
+.pd3 {
+  padding-bottom: 3px;
+}
+.pd4 {
+  padding-bottom: 4px;
+}
 .pd5 {
   padding-bottom: 5px;
+}
+.pd6 {
+  padding-bottom: 6px;
+}
+.pd8 {
+  padding-bottom: 8px;
 }
 .pd10 {
   padding-bottom: 10px;
@@ -884,10 +934,13 @@ a.text {
 }
 
 .pl10 {
-  padding-left: 15px;
+  padding-left: 10px;
+}
+.pl14 {
+  padding-left: 14px;
 }
 .pl15 {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .pl20 {
@@ -937,11 +990,26 @@ a.text {
 .pl80 {
   padding-left: 80px;
 }
+.pl90 {
+  padding-left: 90px;
+}
+.pl95 {
+  padding-left: 95px;
+}
 .pl100 {
   padding-left: 100px;
 }
+.pl105 {
+  padding-left: 105px;
+}
+.pl110 {
+  padding-left: 110px;
+}
 .pl120 {
   padding-left: 120px;
+}
+.pl130 {
+  padding-left: 130px;
 }
 .pl140 {
   padding-left: 140px;
@@ -1051,6 +1119,9 @@ width: 150px!important;
 .w170 {
   width: 170px;
 }
+.w175 {
+  width: 175px;
+}
 
 .w180 {
   width: 180px;
@@ -1107,6 +1178,12 @@ width: 150px!important;
 .w300 {
   width: 300px;
 }
+.w320 {
+  width: 320px;
+}
+.w400 {
+  width: 400px;
+}
 
 .w570 {
   width: 570px;
@@ -1137,7 +1214,15 @@ width: 150px!important;
 .h40{
   height: 40px;
 }
-
+.h56 {
+  height: 56px;
+}
+.h60 {
+  height: 60px;
+}
+.h80 {
+  height: 80px;
+}
 .h100 {
   height: 100px;
 }
@@ -1239,18 +1324,20 @@ width: 150px!important;
   background: #f3f3f3;
 }
 .ui-box-title{
-  height: 58px;
-  line-height: 58px;
-  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 25px;
   border-bottom: 1px solid #e0e0e0;
   overflow: hidden;
 }
-.ui-box-title .ui-box-username,
+.ui-box-title .ui-box-username{
+	line-height:50px;
+}
 .ui-box-title .ui-box-text{
-  line-height: 68px;
+  line-height: 50px;
 }
 .ui-box-title h3{
-  color: #222;
+  color: #2b2b2b;
 }
 
 /* border */
@@ -1318,4 +1405,65 @@ width: 150px!important;
 }
 .icon-arrow-right{
   background-position: 0 0;
+}
+	/***********收益中*************/
+  .stamp em{
+    width:100%;
+    height: 100%;
+    display: block;
+  }
+  .stamp{
+    position: absolute;
+    z-index: 99;
+    width: 118px;
+    height: 105px;
+  }
+	em.INCOME{
+	    background: url(/static/imgs/stamp/INCOME.png?__inline) 0 0 no-repeat;
+	}
+    em.APPLY{
+      background: url('/static/imgs/stamp/APPLY.png') 0 0 no-repeat;
+    }
+    em.BADDEBT{
+      background: url('/static/imgs/stamp/BADDEBT.png?_inline') 0 0 no-repeat;
+    }
+    em.OPEN{
+      background: url('/static/imgs/stamp/OPEN.png?_inline') 0 0 no-repeat;
+    }
+    em.CLOSED{
+      background: url('/static/imgs/stamp/CLOSED.png?_inline') 0 0 no-repeat;
+    }
+    em.QUIT{
+      background: url('/static/imgs/stamp/QUIT.png?_inline') 0 0 no-repeat;
+    }
+     em.READY{
+      background: url('/static/imgs/stamp/READY.png?_inline') 0 0 no-repeat;
+    }
+     em.REPAYING{
+      background: url('/static/imgs/stamp/REPAYING.png?_inline') 0 0 no-repeat;
+    }
+    em.OVERDUE{
+      background: url('/static/imgs/stamp/OVERDUE.png?_inline') 0 0 no-repeat;
+    } 
+    em.FAILED{
+      background:  url('/static/imgs/stamp/FAILED.png?_inline') 0 0 no-repeat;
+    }  
+    em.UNKNOWN{
+      background:  url('/static/imgs/stamp/UNKNOWN.png?_inline') 0 0 no-repeat;
+    }   
+    em.REPEAl{
+      background:url('/static/imgs/stamp/REPEAl.png?_inline') 0 0 no-repeat;
+    } 
+    em.FINISHED{
+      background:url('/static/imgs/stamp/FINISHED.png?_inline') 0 0 no-repeat;
+    } 
+    em.PLAN{
+      background:url('/static/imgs/stamp/PLAN.png?_inline') 0 0 no-repeat;
+    }     
+    em.WAIT{
+      background:url('/static/imgs/stamp/WAIT.png?_inline') 0 0 no-repeat;
+    }     
+/*progressbar*/
+span.progressdot{
+  background:url('/static/imgs/icon/progressdot.png?_inline') 0 0 no-repeat;
 }

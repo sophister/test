@@ -61,7 +61,7 @@ define(function(require, exports, module) {
             closeTpl: '×',
 
             // 默认宽度
-            width: 500,
+            width: 700,
 
             // 默认高度
             height: null,
@@ -225,8 +225,8 @@ define(function(require, exports, module) {
             var oldZIndex;
             var that = this;
 
-            mask.set('opacity', .85);
-            mask.set('backgroundColor', '#fff');
+            mask.set('opacity', .2);
+            mask.set('backgroundColor', '#000');
             
             this.before('show', function() {
                 if (hasMask) {

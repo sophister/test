@@ -1,0 +1,152 @@
+
+/*银行 logo 的样式*/
+
+.small-bank-icon{
+    padding-left: 25px;
+    background: url(/static/common/css/ui/bank-small-icon/105_4d4e40b.png) scroll no-repeat 0 center;
+}
+
+/*建设银行*/
+.small-bank-105{
+    background-image: url(/static/common/css/ui/bank-small-icon/105_4d4e40b.png);
+}
+/*工商银行*/
+.small-bank-102{
+    background-image: url(/static/common/css/ui/bank-small-icon/102_4f4c545.png);
+}
+/*农业银行*/
+.small-bank-103{
+    background-image: url(/static/common/css/ui/bank-small-icon/103_e278549.png);
+}
+/*招商银行*/
+.small-bank-308{
+    background-image: url(/static/common/css/ui/bank-small-icon/308_2e2a51b.png);
+}
+/*中国银行*/
+.small-bank-104{
+    background-image: url(/static/common/css/ui/bank-small-icon/104_75742d2.png);
+}
+/*交通银行*/
+.small-bank-301{
+    background-image: url(/static/common/css/ui/bank-small-icon/301_f47a67b.png);
+}
+/*邮政储蓄银行*/
+.small-bank-403{
+    background-image: url(/static/common/css/ui/bank-small-icon/403_142463d.png);
+}
+/*光大银行*/
+.small-bank-303{
+    background-image: url(/static/common/css/ui/bank-small-icon/303_5378256.png);
+}
+/*民生银行*/
+.small-bank-305{
+    background-image: url(/static/common/css/ui/bank-small-icon/305_a5acb4b.png);
+}
+/*兴业银行*/
+.small-bank-309{
+    background-image: url(/static/common/css/ui/bank-small-icon/309_69ea3b6.png);
+}
+/*中信银行*/
+.small-bank-302{
+    background-image: url(/static/common/css/ui/bank-small-icon/302_2ecdd7a.png);
+}
+/*浦发银行*/
+.small-bank-310{
+    background-image: url(/static/common/css/ui/bank-small-icon/310_1e9ef86.png);
+}
+/*平安银行*/
+.small-bank-307{
+    background-image: url(/static/common/css/ui/bank-small-icon/307_c36b25b.png);
+}
+/*广发银行*/
+.small-bank-306{
+    background-image: url(/static/common/css/ui/bank-small-icon/306_60862c6.png);
+}
+/*华夏银行*/
+.small-bank-304{
+    background-image: url(/static/common/css/ui/bank-small-icon/304_8f4cc94.png);
+}
+/*农村信用社*/
+.small-bank-20{
+    background-image: url(/static/common/css/ui/bank-small-icon/20_b4ba67a.png);
+}
+/*苏格兰皇家银行*/
+.small-bank-36, .small-bank-672{
+    background-image: url(/static/common/css/ui/bank-small-icon/36_4177575.png);
+}
+/*农村商业银行*/
+.small-bank-19{
+    background-image: url(./bank-small-icon/19.png);;
+}
+/*城市商业银行*/
+.small-bank-21{
+    background-image: url(./bank-small-icon/21.png);
+}
+/*中国农业发展银行*/
+.small-bank-18{
+    background-image: url(/static/common/css/ui/bank-small-icon/18_ffd76c8.png);
+}
+/*徽商银行*/
+.small-bank-29{
+    background-image: url(/static/common/css/ui/bank-small-icon/29_8c66b70.png);
+}
+/*农村合作银行*/
+.small-bank-22{
+    background-image: url(/static/common/css/ui/bank-small-icon/22_b2b3b8d.png);
+}
+/*上海农商银行*/
+.small-bank-24{
+    background-image: url(/static/common/css/ui/bank-small-icon/24_6dce40f.png);
+}
+/*渤海银行*/
+.small-bank-26{
+    background-image: url(/static/common/css/ui/bank-small-icon/26_695212d.png);
+}
+/*城市信用社*/
+.small-bank-13{
+    background-image: url(./bank-small-icon/13.png);
+}
+/*村镇银行*/
+.small-bank-28{
+    background-image: url(./bank-small-icon/28.png);
+}
+/*浙商银行*/
+.small-bank-23{
+    background-image: url(/static/common/css/ui/bank-small-icon/23_d88f588.png);
+}
+/*渣打银行*/
+.small-bank-33{
+    background-image: url(/static/common/css/ui/bank-small-icon/33_235cb7d.png);
+}
+/*东亚银行*/
+.small-bank-35{
+    background-image: url(/static/common/css/ui/bank-small-icon/35_525e760.png);
+}
+/*花旗银行*/
+.small-bank-32{
+    background-image: url(/static/common/css/ui/bank-small-icon/32_6f1d9b2.png);
+}
+/*恒丰银行*/
+.small-bank-14{
+    background-image: url(/static/common/css/ui/bank-small-icon/14_25ca964.png);
+}
+/*国家开发银行*/
+.small-bank-27{
+    background-image: url(./bank-small-icon/27.png);
+}
+/*韩亚银行*/
+.small-bank-31{
+    background-image: url(/static/common/css/ui/bank-small-icon/31_14d9d85.png);
+}
+/*南洋商业银行*/
+.small-bank-30{
+    background-image: url(/static/common/css/ui/bank-small-icon/30_8b7eff8.png);
+}
+/*华一银行*/
+.small-bank-34{
+    background-image: url(/static/common/css/ui/bank-small-icon/34_dbad4d7.png);
+}
+/*中国进出口银行*/
+.small-bank-25{
+    background-image: url(/static/common/css/ui/bank-small-icon/25_6074b80.png);
+}

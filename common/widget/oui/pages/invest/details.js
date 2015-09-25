@@ -41,11 +41,16 @@ define(function (require) {
       var fullTimeData = $fullTime.data('time');
       var day = fullTimeData.match(/(\d+)天/);
       day = day !== null ? Number(day[1]) : day;
+      var trueTime = fullTimeData;
       if (day > 0) {
-        $fullTime.html(fullTimeData.split("分")[0] + "分");
+      	trueTime = fullTimeData.split("分")[0] + "分";    
       } else {
-        $fullTime.html(fullTimeData.split("天")[1]);
+        trueTime = fullTimeData.split("天")[1];
       }
+      trueTime = trueTime.replace(/(\d)+/g,function($1){
+      	 return "<i class='num-family font-30px'>"+$1+"</i>" ;
+      });
+      $fullTime.html(trueTime);
     }
     if ($university.length) {
       var universityData = $university.data('data');
@@ -643,7 +648,7 @@ define(function (require) {
     theTime2 = parseInt(theTime2%24,10);
   }
    }
-   var result = "";
+   var result = "",text="";
 
    if(theTime3 > 0) {
     result = ""+parseInt(theTime3,10)+"天"+parseInt(theTime2,10)+"时";
@@ -655,6 +660,7 @@ define(function (require) {
 
    if(divid=='#J_WAIT_BUTTON'){
     result = "";
+    
     if(theTime3 > 0) {
      result = ""+parseInt(theTime3,10)+"天"+parseInt(theTime2,10)+"时" +parseInt(theTime1,10)+"分";
     }else{
@@ -663,48 +669,26 @@ define(function (require) {
 
     $(divid).css('letter-spacing','0');
     if(sta === "0"){
-
-     result=result+"后开始预定";
+     text="后开始预定";
     }
     if(sta === "3"){
-     result=result+"开始加入";
+     text="开始加入";     
     }
    }else{
 
-   if(sta === "0"){
-    result=result+"后预定";
+	   if(sta === "0"){
+	   		text="后开始预定";
+	   }
+	   if(sta === "3"){
+	    	text="开始加入";     
+	   }
    }
-   if(sta === "3"){
-    result=result+"开始加入";
-   }}
-
+    result = trueTime.replace(/(\d)+/g,function($1){
+      	 return "<i class='num-family font-30px'>"+$1+"</i>" ;
+    })
    $(divid).html(result);
+   if($("#J_WAIT_BUTTON_TEXT")) $("#J_WAIT_BUTTON_TEXT").html(text);
    }
-
-
-  function ticksownTime(id){
-
-  if($(id).length <=0 ||  ($(id).attr("data2")!== "3" && $(id).attr("data2")!== "0") || $(id).attr("data1") === "-1"){
-   return false;
-  }
-  var totaltime = $(id).attr("data1") ;
-     var timeid= setInterval(
-     function(){
-      totaltime = totaltime-1;
-      formatSeconds(totaltime,id,$(id).attr("data2"));
-      if(totaltime<=0){
-       clearInterval(timeid);
-       location.reload();
-      }
-     },
-     1000);
-  }
-
-ticksownTime("#J_count_time_a");
-ticksownTime("#J_count_time_b");
-ticksownTime("#J_count_time_c");
-
-
 
 function ticksownTimeBtn(){
  var id ='#J_WAIT_BUTTON';

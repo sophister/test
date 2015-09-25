@@ -1,0 +1,324 @@
+@black : #2b2b2b;
+@gray : #848484;
+@blue : #3a84cf;
+.user-info-box {
+	background: #fff;
+	padding: 15px 0px 15px 25px;
+	margin-bottom: 14px;
+	.user-avatar-container {
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		float: left;
+		position: relative;
+		* {
+			width: 100%;
+			height: 100%;
+		}
+		.avatar-masking {
+			position: absolute;
+			background: url(assets/masking.png?__inline) no-repeat;
+			left: 0px;
+			top: 0px;
+		}
+	}
+	.user-security-container {
+		width: 500px;	
+		float: left;
+		margin-left: 25px;
+		.user-login-info {
+			height: 24px;
+			line-height: 24px;
+			font-size: 24px;
+			color: @black;	
+			margin-bottom: 16px;
+			span {
+				font-size: 14px;
+				color: @gray;
+				.num {
+					font-size: 16px;
+					font-style: normal;
+				}
+			}
+		}
+		.user-security-box {
+			height: 30px;
+			.user-security-level {
+				float: left;
+				width: 104px;
+				height: 28px;
+				border: solid 1px #f9aa10;
+				font-size: 16px;
+				line-height: 28px;
+				text-align: center;
+				border-radius: 2px;
+				color: #f9aa10;
+				margin-right: 30px;
+			}
+			.safe-rank {
+				float: left;
+				margin:3px 30px 0px 0px;
+				height: 26px;
+				background-image: url(assets/security-icon.png?__inline);
+				background-repeat: no-repeat;
+			}
+			.cellphone {
+				width: 18px;
+				background-position: right 0px;
+				&.light {
+				background-position: 0px 0px;
+				}
+			}
+			.man {
+				width: 22px;
+				background-position: right -30px;
+				&.light {
+				background-position: 0px -30px;
+				}
+			}
+			.lock {
+				width: 22px;
+				background-position: right -60px;
+				&.light {
+				background-position: 0px -60px;
+				}
+			}
+			.mail {
+				width: 26px;
+				background-position: right -86px;
+				&.light {
+				background-position: 0px -86px;
+				}
+			}
+		}
+	}
+	.user-coupon-container {
+		width: 180px;
+		height: 80px;
+		float: right;
+		border-left: solid 1px #f4f4f4;
+		dl {
+			padding-left: 34px;
+			dt {
+				line-height: 42px;
+				font-size: 14px;
+				color: @gray;
+				margin-bottom: 10px;
+			}
+			dd {
+				padding-left: 42px;
+				height: 22px;
+				line-height: 22px;
+				font-size: 18px;
+				color: #ff8813;
+				background: url(assets/coupon-icon.png?__inline) no-repeat 0px 0px;
+				i {
+					font-size: 20px;
+					font-style: normal;
+				}
+			}
+		}
+	}
+}
+.user-assets-box {
+	margin-bottom: 14px;
+	position: relative;
+	.account-tab {
+		width: 100%;
+		height: 80px;
+		background: #f6f6f6;
+		li {
+			width: 240px;
+			height: 75px;
+			border-top:solid 5px #f6f6f6;
+			background: #f6f6f6;
+			color: @black;
+			cursor: pointer;
+			float: left;
+			text-align: center;
+			a {
+				font-size: 14px;
+				line-height: 32px;
+				color: @black;
+				display: block;
+			}
+			span {
+				font-size: 26px;
+			}
+			&.active,&.acc-tab-li:hover {
+				border-top: solid 5px @blue;
+				background: #fff;
+				a {
+					color: @blue;
+				}
+			}
+			&.sign {
+				width: 66px;
+				line-height: 75px;
+				text-align: center;
+				font-size: 26px;
+				padding-left: 0px;
+				cursor: default;
+			} 
+		}
+	}
+	.account-tab-content {
+		background: #fff;
+		display: none;
+		padding: 30px 0px 30px 90px;
+		#pie {
+			width: 220px;
+			height: 220px;
+			float: left;
+		}
+		.assers-detail {
+			width: 760px;
+			float: left;
+			.my-assers-list {
+				padding: 20px 0px 0px 50px;
+				width: 330px;
+				float: left;
+				li {
+					padding-left: 34px;
+					line-height: 56px;
+					position: relative;
+					font-size: 16px;
+					color: @gray;
+					cursor: pointer;
+					span {
+						position: absolute;
+						width: 14px;
+						height: 14px;
+						background: url(/static/img/point-icon.png?__inline) no-repeat;
+						left: 0px;
+						top: 22px;
+					}
+					&.pie-u span {
+						background-position: 0 0px;
+					}
+					&.pie-x span {
+						background-position: 0 -20px;
+					}
+					&.pie-s span {
+						background-position: 0 -40px;
+					}
+					&.pie-d span {
+						background-position: 0 -60px;
+					}
+					&.pie-k span {
+						background-position: 0 -80px;
+					}
+					&.active {
+						font-size: 18px;
+						&.pie-u {
+							color: #154d85;
+						}
+						&.pie-x {
+							color: #ee7565;
+						}
+						&.pie-s {
+							color: #e4cd85;
+						}
+						&.pie-d {
+							color: #4fa4a6;
+						}
+						&.pie-k {
+							color: #6acea5;
+						}
+					}
+				}
+			}
+		}
+	}
+	.recharge-wrap {
+		position: absolute;
+		right: 20px;
+		top: 24px;
+		li {
+			float: left;
+			margin-left: 8px;
+			a {
+				display: block;
+				width: 84px;
+				height: 34px;
+				text-align: center;
+				line-height: 34px;
+				font-size: 16px;
+				color: #fff;
+				&.orange {
+					background: #ff8a10;
+				}
+				&.blue {
+					background: @blue;
+				}
+			}
+		}
+	}
+	.inquire-wrap {
+		width: 100%;
+		height: 70px;
+		padding-top: 10px;
+		border-top: solid 1px #f4f4f4;
+		background: #fff;
+		.inquire,.statistics {
+			margin-left: 149px;
+			float: left;
+			width: 326px;
+			height: 52px;
+			padding-top: 8px;
+			line-height: 22px;
+			padding-left: 64px;
+			font-size: 16px;
+			color: @black;
+			a {
+				color: @black;
+				display: block;
+			}
+			span {
+				font-size: 14px;
+				color: #848484;
+				display: block;
+				i {
+					font-size: 16px;
+					font-style: normal;
+				}
+			}
+		}
+		.inquire {
+			border-right: solid 1px #f4f4f4;
+			background: url(assets/security-icon.png?__inline) no-repeat 0px -122px;
+		}
+		.statistics {
+			background: url(assets/security-icon.png?__inline) no-repeat 0px -192px;			
+		}
+	}
+}
+.user-trading-box {
+	margin-bottom: 40px;
+	background: #fff;
+	.trading-title {
+		line-height: 50px;
+		padding-left: 25px;
+		font-size: 16px;
+		color: @black;
+		position: relative;
+		background: #fff;
+		ul {
+			height: 20px;
+			line-height: 20px;
+			position: absolute;
+			right: 0px;
+			top: 15px;
+			li {
+				padding: 0px 25px;
+				float: left;
+				a {
+					color: #3a84cf;
+				}
+				&.bl {
+					border-left: solid 1px #e9e9e9;
+				}
+			}
+		}
+	}
+}

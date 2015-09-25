@@ -1,0 +1,33 @@
+{
+  "result": {
+    "errorCode": 0,
+    "msg": "成功",
+    "data": [
+      {
+        "position": 1,
+        "lotteryId": 31,
+        "lotteryName": "心"
+      },
+      {
+        "position": 2,
+        "lotteryId": 33,
+        "lotteryName": "始"
+      },
+      {
+        "position": 3,
+        "lotteryId": 37,
+        "lotteryName": "来"
+      },
+      {
+        "position": 4,
+        "lotteryId": 36,
+        "lotteryName": "WE"
+      },
+      {
+        "position": 5,
+        "lotteryId": 37,
+        "lotteryName": "来"
+      }
+    ]
+  }
+}

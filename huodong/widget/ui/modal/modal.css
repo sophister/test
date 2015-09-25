@@ -52,8 +52,8 @@
   background: url(./assets/gift_bg.png) no-repeat;
   background-size: 100%;
 } 
-.ui-modal .gift_wrap h3 {
-  font-size: 28px;
+.ui-modal .main .gift_wrap h3 {
+  font-size: 20px;
   color: #fff;
   margin-top: -70px;
   position: absolute;
@@ -119,13 +119,36 @@
   background-color: #5dbfe8;
   border-radius: 5px;
 }
-.suc_wrap {
+.ui-modal .suc_wrap {
   overflow: scroll;
   height: 300px;
   width: 475px;
   text-align: center;
   display: inline-block;
   overflow-x: hidden;
+}
+.ui-modal .raffle_wrap {
+  width: 500px;
+  height: 318px;
+  background: url(./assets/bx_dialog_bg.png) no-repeat;
+  background-size: 100%;
+  margin-top: 70px;
+}
+.ui-modal .main .raffle_wrap h3{
+  padding: 100px 0 50px;
+}
+.ui-modal .raffle_wrap a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 50px;
+  margin: 44px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.ui-modal .raffle_wrap h4 {
+  /*margin-top: 70px;*/
+  color: #fff;
+  font-size: 26px;
 }
 .ui-modal .main .content p {
   font-size: 16px;
@@ -150,6 +173,8 @@
   top: 0px;
   width: 77px;
   height: 74px;
+  /* 用于调试的背景色 */
+  /*background-color: red;*/
 }
 .ui-modal .main .content .btn-close-pos:hover {
   cursor: pointer;

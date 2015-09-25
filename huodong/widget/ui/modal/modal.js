@@ -38,12 +38,12 @@ Modal.prototype = {
 				html.push('</div>');
 			}
 			html.push('<div class="content">');
-				html.push('<div class="modal_header"></div>');
-        html.push('<span class="btn-close btn-close-pos"></span>');
-        html.push('<div id="content">');
+				// html.push('<div class="modal_header"></div>');
+    //     html.push('<span class="btn-close btn-close-pos"></span>');
+        // html.push('<div id="content">');
         html.push(this.conf.content);
-        html.push('</div>');
-        html.push('<div class="modal_footer"></div>');
+        // html.push('</div>');
+        // html.push('<div class="modal_footer"></div>');
 			html.push('</div>');
 
 			if(this.conf.confirmText){
@@ -55,7 +55,7 @@ Modal.prototype = {
 		html.push("</div>");
 		this.dom.instance.html(html.join(''));
 		this.dom.container = $('body');
-		this.dom.wrap = $('#content');
+		// this.dom.wrap = $('#content');
 
 		// this.dom.instance.css({
 		// 	height: Math.max(this.dom.container.height(), $('html').height())
@@ -85,8 +85,8 @@ Modal.prototype = {
 		var _this = this;
 
 		if(this.status.has_instance){
-			modal.conf.content = txt;
-			this.dom.wrap.html(txt);
+			// modal.conf.content = txt;
+			// this.dom.wrap.html(txt);
 			this.dom.instance.show();
 		}else{
 

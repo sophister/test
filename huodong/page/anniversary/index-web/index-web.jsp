@@ -2,7 +2,7 @@
 <%@ taglib uri="/fis" prefix="fis"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%/*这是PC首页的tpl*/%>
-<fis:extends name="common:page/layout/base.jsp">
+<fis:extends name="common:page/layout/huodong-base.jsp">
     <fis:require id="/static/ui/scrollbar/scrollbar.css" />
     <fis:block name="block_body">
       <div class="index-web">

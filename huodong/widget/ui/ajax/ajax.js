@@ -41,8 +41,9 @@ module.exports = {
       type : 'GET',
       success: function ( res ){
         var data = {};
+        
         try{
-          res = JSON.parse(res);
+
           // if( res.status ){
           //   var status = res.status;
           //   if( status.code === 0){
@@ -55,11 +56,11 @@ module.exports = {
           // }
 
         }catch(e){
-          console.log('系统错误');
+          console.log('111系统错误');
         }
       },
       error : function ( data ){
-        console.log('系统错误');
+        console.log('222系统错误');
       }
     });
   }

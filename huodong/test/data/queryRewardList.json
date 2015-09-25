@@ -1,26 +1,24 @@
 {
-  "resultMap": {
-    "errorCode": 0,
-    "msg": "成功",
-    "data": {
-      "myrank": "10",
-      "rankList": [
-        {
-          "rank": 1,
-          "nickName": "丹妮",
-          "amount": "10000"
-        },
-        {
-          "rank": 2,
-          "nickName": "小企鹅",
-          "amount": "5000"
-        },
-        {
-          "rank": 3,
-          "nickName": "企鹅",
-          "amount": "3000"
-        }
-      ]
-    }
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "myrank": "10",
+    "rankList": [
+      {
+        "rank": 1,
+        "nickName": "丹妮",
+        "amount": "10000"
+      },
+      {
+        "rank": 2,
+        "nickName": "小企鹅",
+        "amount": "5000"
+      },
+      {
+        "rank": 3,
+        "nickName": "企鹅",
+        "amount": "3000"
+      }
+    ]
   }
 }

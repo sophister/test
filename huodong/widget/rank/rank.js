@@ -14,6 +14,7 @@ var $left = $('#left');
 var $right = $('#right');
 
 ajax.get('/event/eventLottery', {}, function(res){
+  
   console.log(res);
 
   // if( res && res.resultMap.errorCode == 0) {

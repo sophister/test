@@ -1,9 +1,10 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ taglib uri="/fis" prefix="fis"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%/*这是PC首页的tpl*/%>
+
 <fis:extends name="common:page/layout/huodong-base.jsp">
-    <fis:require id="/static/ui/scrollbar/scrollbar.css" />
+    <fis:require id="/widget/ui/scrollbar/scrollbar.js" />
+    <fis:require id="/widget/ui/font_scroll/font_scroll.js" />
+    <fis:require id="/widget/ui/scrollbar/jquery.mousewheel.js" />
     <fis:block name="block_body">
       <div class="index-web">
         <div class="section_common section_01">
@@ -11,7 +12,7 @@
         </div>
         <div class="section_common section_02">
           <div class="main">
-            <fis:widget name="huodong:widget/card/card.jsp" data="${data['info_list']}" />
+            <fis:widget name="huodong:widget/card/card.jsp" />
           </div>
         </div>
         <div class="section_common section_03">
@@ -23,7 +24,7 @@
               <fis:widget name="huodong:widget/word/word.jsp"/>
             </div>
             <div class="award_wrap">
-              <fis:widget name="huodong:widget/award/award.jsp"/>
+              <fis:widget name="huodong:widget/award-card/award-card.jsp" />
             </div>
             <div class="huodong_info_wrap">
               <fis:widget name="huodong:widget/info/info.jsp"/>
@@ -49,7 +50,7 @@
               <fis:widget name="huodong:widget/level/level.jsp"/>
             </div>
             <div class="award_wrap">
-              <fis:widget name="huodong:widget/award/award.jsp"/>
+              <fis:widget name="huodong:widget/award-box/award-box.jsp"/>
             </div>
             <div class="huodong_info_wrap">
               <fis:widget name="huodong:widget/info/info.jsp"/>
@@ -71,14 +72,5 @@
 
     </fis:block>
 
-    <fis:block name="block_body_js">
-        <script src="/static/ui/scrollbar/scrollbar.js"></script>
-    </fis:block>
-
-    <fis:script>
-      require(['./index-web.js'], function (index) {
-        index.init();
-      });
-    </fis:script>
     <fis:require name="./index-web.jsp" />
 </fis:extends>

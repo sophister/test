@@ -12,18 +12,7 @@ module.exports = {
         var data = {};
         
         try{
-          res = JSON.parse(res);
-          // if( res.status ){
-          //   var status = res.status;
-          //   if( status.code === 0){
-              fn(res.data);
-            // }else{
-            //   console.log(res.message);
-            // }
-          // }else{
-          //   console.log('系统错误');
-          // }
-
+          fn(res);
         }catch(e){
           console.log('系统错误: ' + e.message);
         }
@@ -43,24 +32,13 @@ module.exports = {
         var data = {};
         
         try{
-
-          // if( res.status ){
-          //   var status = res.status;
-          //   if( status.code === 0){
-              fn(res.data);
-          //   }else{
-          //     console.log(status.message);
-          //   }
-          // }else{
-          //   console.log('系统错误');
-          // }
-
+          fn(res);
         }catch(e){
-          console.log('111系统错误');
+          console.log('系统错误');
         }
       },
       error : function ( data ){
-        console.log('222系统错误');
+        console.log('系统错误');
       }
     });
   }

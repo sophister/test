@@ -1,13 +1,11 @@
 {
-  "resultMap": {
-    "errorCode": 0,
-    "msg": "成功",
-    "data": {
-      "lotteryId": 37,
-      "lotteryIndex": 2,
-      "lotteryResult": "WIN",
-      "boxCode": "silverbox",
-      "lotteryName": "银宝箱"
-    }
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "lotteryId": 37,
+    "lotteryIndex": 2,
+    "lotteryResult": 3,
+    "boxCode": "silverbox",
+    "lotteryName": "银宝箱"
   }
 }

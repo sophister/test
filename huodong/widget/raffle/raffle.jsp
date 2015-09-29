@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=utf-8" %>
+<%@ taglib uri="/fis" prefix="fis"%>
 
 <div class="widget-raffle">
   <div class="open-has">
-    <h4 class="title-close">金宝箱</h4>
+    <h4 class="title-close"></h4>
     <!-- <h4 class="title-open">恭喜您</h4> -->
     <div class="mod-chest">
       <!-- 宝箱容器 -->
@@ -13,3 +14,9 @@
     </div>
   </div>
 </div>
+
+<fis:script>
+  require(['./raffle'], function( raffle ){
+    raffle.init();
+  });
+</fis:script>

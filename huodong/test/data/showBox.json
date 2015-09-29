@@ -1,10 +1,8 @@
 {
-  "result": {
-    "errorCode": 0,
-    "msg": "成功",
-    "data": {
-      "amount": "30000",
-      "box": "silverbox"
-    }
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "amount": "30000",
+    "boxCode": "diamondbox"
   }
 }

@@ -9,9 +9,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <%-- 360 浏览器就会在读取到这个标签后，立即切换对应的极速核 --%>
         <meta name="renderer" content="webkit">
+        <meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>${title}</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+        <fis:block name="block_head_content">
+            <meta name="keywords" content="人人贷 理财 P2P">
+            <meta name="description" content="人人贷 理财 P2P">    
+            <title>人人贷理财</title>
+        </fis:block>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/common/img/favicon.ico" />
 
         <link rel="stylesheet" type="text/css" href="/static/css/base.css">
 
@@ -22,8 +28,6 @@
         <script src="/static/js/html5.js"></script>
         <![endif]-->
 
-        <script type="text/javascript" src="/static/js/jquery/jquery.js"></script>
-        
         <!--header中的js-->
         <fis:block name="block_head_js"></fis:block>
 
@@ -44,27 +48,23 @@
         <![endif]-->
 
         <fis:block name="block_header">
-            <fis:widget name="common:widget/top-header/top-header.jsp"/>
-            <fis:widget name="common:widget/second-header/second-header.jsp"/>
+            这里是公共头部
         </fis:block>
-
+     
         <fis:block name="block_body">
             
         </fis:block>
-
         <fis:block name="block_footer">
-            <fis:widget name="common:widget/footer/footer.jsp"/>
+            这里是公共底部
         </fis:block>
 
         <!--body里面的js-->
         <fis:block name="block_body_js">
             
-        </fis:block>        
+        </fis:block>
 
-        <!--livereload-->
         <!--todo : 添加百度统计-->
     </fis:body>
-
-    <fis:require name="./base.jsp" />
+    <fis:require name="./huodong-base.jsp" />
     <!-- THX FOR FIS -->
 </fis:html>

@@ -6,10 +6,10 @@ module.exports = function (){
   var tpls = [
     '<div class="modal_header"></div>',
     '<span class="btn-close btn-close-pos"></span>',
+    '<h3>恭喜您！<br>抽中<%= lotteryName %></h3>',
     '<div class="gift_wrap">',
         '<h3><%= lotteryName %></h3>',
-        '<div class="ptag_wrap"><span>兑换码：<strong><%= ticketCode  %></strong></span><br>',
-        // '<span>使用地址：<%=  %></span></div>',
+        '<div class="ptag_wrap"><span>兑换码：<strong><%= ticketCode  %></strong></span><br></div>',
     '</div>',
     '<div class="modal_footer"></div>'
   ];

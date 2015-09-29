@@ -1,7 +1,5 @@
 {
-  "resultMap": {
-    "errorCode": 0,
-    "msg": "成功",
-    "data": ""
-  }
+  "errorCode": 0,
+  "msg": "成功",
+  "data": ""
 }

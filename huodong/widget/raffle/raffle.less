@@ -1,43 +1,48 @@
-// 
 .open-has{
   position: relative;z-index: 2;
   height:450px;
   width: 320px;
   margin: -52px auto;
+  h4{
+    color: #fff;
+    font-size: 46px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .title-close{
+    opacity: 1;
+    -webkit-transition:all .5s;
+    width: 100%;
+    text-align: center;
+  }
+  .title-open{
+    opacity: 0;
+    -webkit-transition:all .5s;
+    position: absolute;
+    top: -36px;
+    left:0px;
+    text-align: center;
+    width: 100%;
+  }
 }
-.open-has .title-close{
+
+.mod-chest .chest-close.shake .gift{
+  -webkit-animation:shake 1.2s linear;
+  -webkit-animation-fill-mode:forwards;
+}
+
+.open-has.opened .title-open{
   opacity: 1;
-  -webkit-transition:all .5s;
-  width: 100%;
-  text-align: center;
 }
-.open-has .title-open{
+.open-has.opened .title-close{
   opacity: 0;
-  -webkit-transition:all .5s;
-  position: absolute;
-  top: -36px;
-  left:0px;
-  text-align: center;
-  width: 100%;
 }
-.open-has h4{
-  color: #fff;
-  font-size: 46px;
-  text-align: center;
-  padding-top: 100px;
+.open-has.opened .mod-chest .chest-open{
+  -webkit-transform:translate(0px,150px);
 }
-
-.mod-chest .chest-close.shake .gift{-webkit-animation:shake 1.2s linear;-webkit-animation-fill-mode:forwards;}
-
-.open-has.opened .title-open{opacity: 1;}
-.open-has.opened .title-close{opacity: 0;}
-.open-has.opened .mod-chest .chest-open{-webkit-transform:translate(0px,150px);}
-
-// .open-has .mod-chest-cont .gift{color:#ff6000;font-size: 24px;line-height: 30px;padding-bottom:30px;}
 .open-none .mod-chest{
   height:150px;
 }
-
 .mod-chest{
   position: relative;
   width: 100%;
@@ -45,7 +50,6 @@
     width: 320px;
     height:135px;
     opacity: 0;
-    // position: relative;
     z-index: 1;
     position: absolute;
     left:50%;
@@ -70,25 +74,8 @@
 .mod-chest .chest-close .gift{
   width: 270px;
   height: 250px;
-  background:url(./assets/baoxiang_01.png) no-repeat 0px 0px;
-  background-size: 100%;
-  position: absolute;
-  left: 26px;
-  top: 36px;
-}
-.mod-chest .chest-close .baoxiang_golder{
-  width: 270px;
-  height: 250px;
-  background:url(./assets/baoxiang_03.png) no-repeat 0px 0px;
-  background-size: 100%;
-  position: absolute;
-  left: 26px;
-  top: 36px;
-}
-.mod-chest .chest-close .baoxiang_diamond{
-  width: 270px;
-  height: 250px;
-  background:url(./assets/baoxiang_05.png) no-repeat 0px 0px;
+  background-repeat: no-repeat;
+  // background:url(./assets/baoxiang_01.png) no-repeat 0px 0px;
   background-size: 100%;
   position: absolute;
   left: 26px;

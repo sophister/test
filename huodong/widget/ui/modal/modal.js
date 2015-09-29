@@ -22,6 +22,7 @@ var Modal = function(opt){
 
 	this.init(opt);
 };
+
 Modal.prototype = {
 
 	init: function(opt){

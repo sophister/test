@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var template = require('huodong:widget/ui/template/template.js');
 var ajax = require('huodong:widget/ui/ajax/ajax.js');
 
@@ -6,37 +7,42 @@ var tpls = '<% for (var i = 0; i < data.length; i++) { %>' +
     '<span class="rank_0<%= data[i].rank %>">NO.<%= data[i].rank %></span>' + 
     '<i><%= data[i].nickName %></i>' + 
     '<strong><%= data[i].amount %>元</strong>' + 
-  '</li>'
+  '</li>' +
 '<% } %>';
 
 var $myrank = $('#myrank');
 var $left = $('#left');
 var $right = $('#right');
 
-ajax.get('/event/eventLottery', {}, function(res){
+ajax.get('/event/eventLottery!queryRewardList.action', {}, function(res){
   
-  console.log(res);
+  var data = res.data;
 
-  // if( res && res.resultMap.errorCode == 0) {
-  //   var data = res.resultMap.data;
-  //   var myrank = data.myrank;
-  //   var rankList = data.rankList;
+  var myrank = data.myrank;
+  var rankList = data.rankList;
 
-  //   $myrank.text(myrank);
-  //   var len = rankList.length;
+  $myrank.html(myrank);
+  var len = rankList.length;
 
-  //   if(len > 5) {
-  //     var leftData = [];
+  if(len > 5) {
+    var leftData = [];
+    var rightData = [];
 
-  //     for (var i = 0; i < 5; i++) {
-  //       leftData.push(rankList.splice(i, 1));
-  //     };
+    for (var i = 0; i < 5; i++) {
+      var tmp = rankList[i];
+      leftData.push(tmp);
+    };
 
-  //     $left.append(template( tpls)({"data": leftData}) );
-  //     $right.append(template( tpls)({"data": rankList}) );
-  //   } else {
-  //     $left.append(template( tpls)({"data": rankList}) );
-  //   }
-  // }
+    for (var j = 5; j < len; j++) {
+      var tmpR = rankList[j];
+      rightData.push(tmpR);
+    };
+    
+    $left.append(template( tpls)({"data": leftData}) );
+    $right.append(template( tpls)({"data": rightData}) );
+  } else {
+    $left.append(template( tpls)({"data": rankList}) );
+  }
+  
 });
 

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=utf-8" %>
+<%@ taglib uri="/fis" prefix="fis"%>
 
 <div class="widget-info">
   <h5 class="huodong_info">查看活动说明</h5>
@@ -14,4 +15,7 @@
   </div>
 </div>
 
+<fis:script>
+  require(['./info']);
+</fis:script>
 

@@ -11,7 +11,6 @@ module.exports = function (){
       '<div class="gift_wrap">'+
       '<h3><%= data[i].ticketName || "" %></h3>'+
       '<div class="ptag_wrap"><span>兑换码：<strong><%= data[i].ticketCode || "" %></strong></span>'+
-      // '<span>使用地址：' + 'giftAddr' + '</span>'+
       '</div></div>'+
     '<% } %>'+
     '</div>'+

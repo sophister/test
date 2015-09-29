@@ -19,7 +19,7 @@
           
         </div>
         <div class="section_common section_04">
-          <div class="main">
+          <div class="main word_box_position">
             <div class="word_wrap">
               <fis:widget name="huodong:widget/word/word.jsp"/>
             </div>

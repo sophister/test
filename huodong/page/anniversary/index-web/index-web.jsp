@@ -52,12 +52,15 @@
             <div class="award_wrap">
               <fis:widget name="huodong:widget/award-box/award-box.jsp"/>
             </div>
-            <div class="huodong_info_wrap">
-              <fis:widget name="huodong:widget/info/info.jsp"/>
-            </div>
+            
           </div>
         </div>
-        <div class="section_common section_08">
+        <div class="section_08">
+          <div class="main huodong_info_wrap">
+              <fis:widget name="huodong:widget/info/info.jsp"/>
+            </div>
+        </div>
+        <div class="section_09">
           
         </div>
         <div class="rank_info">

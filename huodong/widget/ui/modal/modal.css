@@ -135,6 +135,78 @@
   background-size: 100%;
   margin-top: 70px;
 }
+.ui-modal .raffle_big_wrap {
+  width: 500px;
+  height: 538px;
+  background: url(./assets/bx_dialog_bg_big.png) no-repeat;
+  background-size: 100%;
+  margin-top: 70px;
+}
+.ui-modal .main .raffle_big_wrap h3 {
+  line-height: 5;
+  font-size: 26px;
+}
+.ui-modal .main .raffle_big_wrap h4 {
+  color: #fff;
+  margin: 20px;
+}
+.ui-modal .main .raffle_big_wrap span {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 9px 44px;
+  cursor: pointer;
+}
+.ui-modal .raffle_big_wrap form {
+
+}
+.ui-modal .raffle_big_wrap input {
+  width: 75%;
+  background-color: rgba(255,255,255,.1);
+  color: #fff;
+  margin: 5px 0;
+  border: none;
+  border: 1px solid #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+}
+.ui-modal .raffle_big_wrap h6 {
+  color: #fff;
+  font-size: 18px;
+  margin-top: -56px;
+  margin-bottom: 20px;
+}
+.ui-modal .raffle_big_wrap .province,.ui-modal .raffle_big_wrap .city {
+  width: 33%;
+  display: inline-block;
+  color: #fff;
+  margin: 5px 10px;
+}
+.ui-modal .raffle_big_wrap .submit {
+  margin-top: 20px;
+  background-color: #f9cd8b;
+  width: 80%;
+}
+.ui-modal .raffle_big_wrap .detailedAddress {
+  height: 40px;
+  line-height: 40px;
+}
+.ui-modal .raffle_big_wrap img {
+  width: 280px;
+}
 .ui-modal .main .raffle_wrap h3{
   padding: 100px 0 50px;
 }

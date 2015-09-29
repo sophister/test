@@ -2,7 +2,7 @@
 <%@ taglib uri="/fis" prefix="fis"%>
 
 <div class="widget-award-box">
-  <h3>『&nbsp;获奖名单&nbsp;』<a href="#" id="goAward">查看我的奖品</a></h3>
+  <h3>『&nbsp;获奖名单&nbsp;』<span id="myGift">查看我的奖品</span></h3>
   
   <div id="boxScroll">
     <ul class="award_box_list"></ul>
@@ -11,9 +11,9 @@
 
 <fis:script>
 
-  require(['./award-box'], function ( award ){
+  require(['./award-box'], function ( box ){
 
-    award.init();
+    box.init();
 
   });
 </fis:script>

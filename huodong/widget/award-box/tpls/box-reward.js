@@ -10,7 +10,7 @@ module.exports = function (){
         '<h3>我的奖品</h3>',
         '<img src="<%= data.src %>" alt="" />',
         '<h4><%= data.name %></h4>',
-        '<span id="writeAddr">填写收货地址</span>',
+        '<span id="writeAddr">修改收货地址</span>',
       '</div>',
     '</div>'
   ];

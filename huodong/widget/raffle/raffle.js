@@ -9,10 +9,9 @@ var ajax = require('huodong:widget/ui/ajax/ajax.js');
 var show = initModal();
 var modal;
 
-// 宝箱部分的弹框：六种情况
+// 宝箱部分的弹框：10种情况
 var tpl_raffle_login = require('./tpls/raffle-login.js')();
 var tpl_raffle_verify= require('./tpls/raffle-verify.js')();
-var tpl_raffle_reward = require('./tpls/raffle-reward.js')();
 var tpl_raffle_reward_info = require('./tpls/raffle-reward-info.js')();
 var tpl_raffle_tips = require('./tpls/raffle-tips.js')();
 
@@ -44,6 +43,7 @@ var raffle = {
     this.DOMRender();
     this.eventHandle();
   },
+
   DOMRender: function(){
     ajax.get('/event/eventLottery!showBox.action', {}, function(res){
       // boxCode字段含义：
@@ -66,9 +66,11 @@ var raffle = {
       }
     });
   },
+
   eventHandle: function (){
     this.clickBaoxiang();
   },
+
   /**
    * 点击开宝箱
    * @return {[type]} [description]
@@ -80,16 +82,13 @@ var raffle = {
     // 点击宝箱容器
     $(".chest-close").click(function(){
       var el = $(this);
-
       ajax.get('/event/eventLottery!openBoxLottery.action', {}, function(res){
         var code = res.errorCode;
-
         // 未登录
         if(code == 9999) {
           modal = show( template(tpl_raffle_login)() );
         }
-        // 未认证
-        else if(code == 3000){
+        else if(3000 == code ){
           modal = show( template(tpl_raffle_verify)() );
         }
         // 返回成功后，继续判断lotteryResult字段情况
@@ -98,88 +97,94 @@ var raffle = {
           // 1:投资额不足; 2:未中奖; 3:中奖; 4:今天抽过奖;
           // 5:已经中过奖; 6:可以抽奖; 7:抽奖时间已过期; 8:未到抽奖时间
           var lotteryResult = res.data.lotteryResult;
-          var boxCode = res.data.boxCode;
-          var giftName = '';
-          // 不同宝箱对应的奖品名称
-          if(boxCode == "silverbox") {
-            giftName = '高级定制礼盒一套';
-          } else if(boxCode == "goldbox"){
-            giftName = '金宝箱奖品';
-          } else if(boxCode == "diamondbox"){
-            giftName = '钻石宝箱奖品';
+          var lotteryName = res.data.lotteryName;
+
+          switch ( lotteryResult ) {
+            case 1:
+              modal = show( template(tpl_raffle_tips)({"tip": "非常抱歉<br>您还没达到开宝箱条件"}) );
+              break;
+            case 2:
+              _this.shake.call(el, function (e){
+                modal = show( template(tpl_raffle_tips)({"tip": "差一点点，奖品与你擦肩而过~<br>明天再来试试吧"}) );
+              });
+              break;
+            case 3:
+              _this.shake.call(el, function (e){
+                // 点击宝箱后弹出的中奖信息弹框
+                modal = show( template(tpl_raffle_reward_info)({"data": {"lotteryDetail": lotteryName}}));
+
+                $('#submit').on('click', function(e){
+                  var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+
+                  if($('.userName').val() == ""  ){
+                    alert("收货人姓名不能为空");
+                    return false;
+                   }
+                   if( !reg.test($('.mobile').val()) ){
+                    alert("收货人电话格式不正确");
+                    return false;
+                   }
+                   if( $('.province').val() == "" || $('.city').val() == "" || $('.detailedAddress').val() == "" ){
+                    alert("请完善收货地址信息");
+                    return false;
+                   }
+
+                   // 表单提交
+                   ajax.post('/event/eventLottery!addUserAddress.action', {
+                    "userName": $("#addr .userName").val(),
+                    "mobile": $("#addr .mobile").val(),
+                    "province": $("#addr .province").val(),
+                    "city": $("#addr .city").val(),
+                    "detailedAddress": $("#addr .detailedAddress").val()
+                   }, function(res){
+                     alert('提交成功');
+                     modal.hide();
+                     return false;
+                   });
+                });
+              });
+              break;
+            case 4:
+              modal = show( template(tpl_raffle_tips)({"tip": "您今天打开过宝箱~<br>明天再来吧"}) );
+              break;
+            case 5:
+              modal = show( template(tpl_raffle_tips)({"tip": "您今天已经中过大奖啦~<br>把机会留给其他朋友吧"}) );
+              break;
+            case 6:
+              modal = show( template(tpl_raffle_tips)({"tip": "可以抽奖"}) );
+              break;
+            case 7:
+              modal = show( template(tpl_raffle_tips)({"tip": "活动时间结束~<br>感谢您的关注"}) );
+              break;
+            case 8:
+              modal = show( template(tpl_raffle_tips)({"tip": "还未到活动时间~<br>明等等吧"}) );
+              break;
+            default:
+              break;
           }
-
-          console.log(giftName);
-
-          // switch ( lotteryResult ) {
-          //   case 1:
-          //     modal = show( template(tpl_raffle_tips)({"tip": "非常抱歉<br>您还没达到开宝箱条件"}) );
-          //     break;
-          //   case 2:
-          //     _this.shake.call(this, function(){
-          //         modal = show( template(tpl_raffle_tips)({"tip": "差一点点，奖品与你擦肩而过~<br>明天再来试试吧"}) );
-          //     });
-          //     break;
-          //   case 3:
-          //     _this.shake.call(el);
-          //     console.log(giftName)
-          //     modal = show( template(tpl_raffle_reward)({
-          //       "data": {
-          //         "name": giftName,
-          //         "src": "/static/huodong/widget/raffle/assets/baoxiang_02.png"
-          //       }
-          //     }));
-          //     break;
-          //   case 4:
-          //     modal = show( template(tpl_raffle_tips)({"tip": "您今天打开过宝箱~<br>明天再来哦"}) );
-          //     break;
-          //   case 5:
-          //     modal = show( template(tpl_raffle_tips)({"tip": "您今天已经中过大奖啦~<br>把机会留给其他朋友吧"}) );
-          //     break;
-          //   case 6:
-          //     modal = show( template(tpl_raffle_tips)({"tip": "可以抽奖"}) );
-          //     break;
-          //   case 7:
-          //     modal = show( template(tpl_raffle_tips)({"tip": "活动时间结束~<br>感谢您的关注"}) );
-          //     break;
-          //   case 8:
-          //     modal = show( template(tpl_raffle_tips)({"tip": "还未到活动时间~<br>明等等吧"}) );
-          //     break;
-          //   default:
-          //     break;
-          // }
         }
       });
-    })
+    });
   },
+
   /**
    * 宝箱摇晃的效果
    * @return {[type]} [description]
    */
   shake: function(fn){
-      var that = this;
-
+      var that = $(this);
       // 给容器加上摇晃的效果
-      $(this).addClass("shake");
+      this.addClass("shake");
       // 监听动画结束时的webkitAnimationEnd事件
-      this.addEventListener("webkitAnimationEnd", function(){
-
-        $(that).closest(".open-has").addClass("opened");
-
-        // setTimeout(function(){
-          // 隐藏开宝箱前的图片
-          $(that).removeClass("show");
-          // 展示开宝箱后的图片
-          $(that).closest(".mod-chest").find(".chest-open").addClass("show");
-          if( fn )
-            fn();
-        //   setTimeout(function(){
-        //     $(".chest-open").addClass("blur");
-        //   },200);
-
-        // },200);
-
-      }, false);
+      $(this).on("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function( e ){
+        that.closest(".open-has").addClass("opened");
+        // 隐藏开宝箱前的图片
+        that.removeClass("show");
+        // 展示开宝箱后的图片
+        that.closest(".mod-chest").find(".chest-open").addClass("show");
+        if( fn )
+          fn();
+      });
   },
 };
 

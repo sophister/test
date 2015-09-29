@@ -1,11 +1,10 @@
 {
-  "resultMap": {
-    "errorCode": 0,
-    "msg": "成功",
-    "data": {
-      "lotteryId": 37,
-      "lotteryName": "银宝箱",
-      "boxCode": "silverbox"
-    }
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "lotteryId": 37,
+    "lotteryName": "五周年定制版自拍杆",
+    "boxCode": "silverbox",
+    "address": ""
   }
 }

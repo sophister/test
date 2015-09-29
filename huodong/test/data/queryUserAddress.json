@@ -1,17 +1,16 @@
 {
-  "resultMap": {
-    "errorCode": 0,
-    "msg": "成功",
-    "data": {
-      "id": 1,
-      "userId": 123123,
-      "userName": "test",
-      "mobile": "12000",
-      "province": "北京",
-      "city": "北京",
-      "zipCode": "100091",
-      "detailedAddress": "北京海淀",
-      "memo": ""
-    }
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "id": 1,
+    "userId": 123123,
+    "userName": "test",
+    "mobile": "12000",
+    "province": "北京",
+    "city": "北京",
+    "zipCode": "100091",
+    "detailedAddress": "北京海淀",
+    "memo": ""
   }
 }
+

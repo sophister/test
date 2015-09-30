@@ -40,27 +40,27 @@ function initModal () {
 var award = {
   init: function(){
     this.DOMRender();
+    this.eventHandle();
   },
+
   tpls: function(){
     return '<% for (var i = 0; i < data.length; i++) { %>' +
              '<li><span><%= data[i].nickName %></span><i><%= data[i].lotteryName %></span></i></li>' +
           '<% } %>';
   },
+
   DOMRender: function(){
     var tpls = this.tpls();
     var _this = this;
 
     ajax.get('/event/eventLottery!queryPrizeList.action', { "type": "card"}, function(res){
-
       $('.award_card_list').append(template(tpls)({"data": res.data}));
-      _this.eventHandle();
-
+      // 轮播
+      $('#FontScroll').FontScroll({time: 2000});
     });
   },
-  eventHandle: function(){
-    // 轮播
-    $('#FontScroll').FontScroll({time: 2000});
 
+  eventHandle: function(){
     // 查看我的奖品
     $('#goAward').on('click', function( e ){
       ajax.get('/event/eventLottery!queryUserCardPrize.action', {}, function(res){

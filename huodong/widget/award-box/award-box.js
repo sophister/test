@@ -41,11 +41,13 @@ var box = {
     this.DOMRender();
     this.eventHandle();
   },
+
   tpls: function(){
     return '<% for (var i = 0; i < data.length; i++) { %>' +
              '<li><span><%= data[i].nickName %></span><i><%= data[i].lotteryName %></span></i></li>' +
           '<% } %>';
   },
+
   DOMRender: function(){
     var tpls = this.tpls();
     var _this = this;
@@ -58,9 +60,11 @@ var box = {
 
     });
   },
+
   eventHandle: function(){
     this.viewGift();
   },
+
   viewGift: function(){
     var _this = this;
 
@@ -118,6 +122,7 @@ var box = {
       });
     });
   },
+  
   checkForm: function(){
     $('#confirm').on('click', function(e){
       var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;

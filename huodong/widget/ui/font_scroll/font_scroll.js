@@ -7,8 +7,8 @@ var jQuery = require('jquery');
         var o = $.extend(d,options);
 
         this.children('ul').addClass('line');
-        var _con = $('.line').eq(0);
-        console.log(_con)
+        var _con = this.children('ul');
+        console.log(_con);
         var _conH = _con.height() || 430; //滚动总高度
         var _conChildH = _con.children().eq(0).height() || 43;//一次滚动高度
         var _temp = _conChildH;  //临时变量
@@ -16,7 +16,7 @@ var jQuery = require('jquery');
         var _s = d.s;  //滚动间隔
 
         _con.clone().insertAfter(_con);//初始化克隆
-
+        // debugger;
         //样式控制
         var num = d.num;
         var _p = this.find('li');
@@ -40,7 +40,7 @@ var jQuery = require('jquery');
             num += 1;
             _p.eq(num).addClass(_s);
 
-            console.log(_conH,_conChildH);
+            // console.log(_conH,_conChildH);
 
             if(_conH == _conChildH){
                 _con.animate({marginTop: '-'+_conChildH},"normal",over);

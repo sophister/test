@@ -55,8 +55,11 @@ var award = {
 
     ajax.get('/event/eventLottery!queryPrizeList.action', { "type": "card"}, function(res){
       $('.award_card_list').append(template(tpls)({"data": res.data}));
-      // 轮播
-      $('#FontScroll').FontScroll({time: 2000});
+      // 中奖数量超过6条轮播
+      var acount = res.data.length || 0;
+      if( acount > 6 ) 
+        $('#FontScroll').FontScroll({time: 2000});
+
     });
   },
 
@@ -75,9 +78,9 @@ var award = {
           case 3000:
             modal = show( template(tpl_check_verify)() );
             break;
-          // 无记录，没有奖品
+          // 无记录，没有奖品（如果接口变，王程修改这里）
           case 1002:
-            modal = show( template(tpl_check_none)() );
+            modal = show( template(tpl_check_none)({"tips": "暂无奖品<br>快来投资参加我们的活动吧"}) );
             break;
           // 有奖品
           case 0:

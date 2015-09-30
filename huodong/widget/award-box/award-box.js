@@ -12,6 +12,7 @@ var tpl_box_login = require('./tpls/box-login.js')();
 var tpl_box_verify= require('./tpls/box-verify.js')();
 var tpl_box_reward_change = require('./tpls/box-reward-change.js')();
 var tpl_box_reward = require('./tpls/box-reward.js')();
+var tpl_box_tips = require('./tpls/box-tips.js')();
 
 function initModal () {
   return function (txt){
@@ -56,7 +57,9 @@ var box = {
 
       $('.award_box_list').append(template(tpls)({"data": res.data}));
       
-      $('#boxScroll').FontScroll({time: 2000});
+      var acount = res.data.length || 0;
+      if( acount > 6 ) 
+        $('#boxScroll').FontScroll({time: 2000});
 
     });
   },
@@ -81,6 +84,12 @@ var box = {
         // 未认证
         else if(code == 3000){
           modal = show( template(tpl_box_verify)() );
+        }
+        // 暂无获奖
+        // 有：展示对应的奖品
+        // 无：展示提示弹框告诉用户暂无奖品
+        else if(code == 1002){
+          modal = show( template(tpl_box_tips)({"tip": "暂无奖品<br>快投资参加我们的活动吧"}));
         }
         // 返回成功后，继续判断lotteryResult字段情况
         else if(code == 0){
@@ -117,6 +126,7 @@ var box = {
 
             });
           });
+          
         }
       
       });
@@ -131,7 +141,7 @@ var box = {
         alert("收货人姓名不能为空");
         return false;
        }
-       if( reg.test($('.mobile').val()) ){
+       if( !reg.test($('.mobile').val()) ){
         alert("收货人电话格式不正确");
         return false;
        }
@@ -152,8 +162,6 @@ var box = {
          modal.hide();
          return false;
        });
-       
-
     });
   }
 };

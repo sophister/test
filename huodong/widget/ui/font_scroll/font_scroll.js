@@ -8,7 +8,7 @@ var jQuery = require('jquery');
 
         this.children('ul').addClass('line');
         var _con = this.children('ul');
-        console.log(_con);
+        // console.log(_con);
         var _conH = _con.height() || 430; //滚动总高度
         var _conChildH = _con.children().eq(0).height() || 43;//一次滚动高度
         var _temp = _conChildH;  //临时变量

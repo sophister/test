@@ -34,7 +34,7 @@
         <div class="section_common section_05">
           <div class="main tips">
             <h3>理财开宝箱&nbsp;&nbsp;好礼拿不停</h3>
-            <p>您已累计投资<strong>15,000</strong>元</p>
+            <p>您已累计投资<strong id="cash">0</strong>元</p>
           </div>
           <div class="main raffle_wrap">
             <fis:widget name="huodong:widget/raffle/raffle.jsp" />

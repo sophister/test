@@ -45,26 +45,35 @@ var raffle = {
   },
 
   DOMRender: function(){
+
     ajax.get('/event/eventLottery!showBox.action', {}, function(res){
       // boxCode字段含义：
       // silverbox:银宝箱; goldbox:金宝箱; diamondbox:钻石宝箱
+      
+      var el = $('.widget-raffle .gift');
+      var title = $('.widget-raffle .title-close');
+
       if(res && res.data && res.errorCode == 0) {
         var boxCode = res.data.boxCode;
-        var el = $('.widget-raffle .gift');
-        var title = $('.widget-raffle .title-close');
+        $('#cash').text(res.data.amount);
 
-        if(boxCode == 'silverbox') {
-          title.text('银宝箱');
-          el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_01.png)"});
-        }else if(boxCode == 'goldbox'){
+        if(boxCode == 'goldbox'){
           title.text('金宝箱');
           el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_03.png)"});
         }else if(boxCode == 'diamondbox'){
           title.text('钻石宝箱');
           el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_05.png)"});
+        }else {
+          title.text('银宝箱');
+          el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_01.png)"});
         }
+      }else {
+        title.text('银宝箱');
+        el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_01.png)"});
       }
     });
+
+
   },
 
   eventHandle: function (){
@@ -77,8 +86,7 @@ var raffle = {
    */
   clickBaoxiang: function (){
     var _this = this;
-    // 0为未登录 1为未达到开宝箱条件 2为当天已经开过 3为未中奖 4为中奖 5为中奖后填写地址等收获信息
-    
+
     // 点击宝箱容器
     $(".chest-close").click(function(){
       var el = $(this);
@@ -88,8 +96,13 @@ var raffle = {
         if(code == 9999) {
           modal = show( template(tpl_raffle_login)() );
         }
+        // 未认证
         else if(3000 == code ){
           modal = show( template(tpl_raffle_verify)() );
+        }
+        // 投资金额不足
+        else if(2000 == code){
+          modal = show( template(tpl_raffle_tips)({"tip": "您的投资金额不足<br>快投资参加我们的活动吧"}) );
         }
         // 返回成功后，继续判断lotteryResult字段情况
         else if(code == 0){

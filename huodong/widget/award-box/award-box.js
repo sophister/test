@@ -121,7 +121,8 @@ var box = {
                 data = $.extend(data, res.data);
 
               $('.raffle_big_wrap').html(" ").append(template(tpl_box_reward_change)({"data": data}));
-              
+              console.log($('#confirm'));
+              debugger;
               _this.checkForm();
 
             });

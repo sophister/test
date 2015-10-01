@@ -4,7 +4,7 @@ var ajax = require('huodong:widget/ui/ajax/ajax.js');
 
 var tpls = '<% for (var i = 0; i < data.length; i++) { %>' +
   '<li>' + 
-    '<span class="rank_0<%= data[i].rank %>">NO.<%= data[i].rank %></span>' + 
+    '<span class="rank_<%= data[i].rank < 10 ? "0" + data[i].rank : data[i].rank %>">NO.<%= data[i].rank %></span>' + 
     '<i><%= data[i].nickName %></i>' + 
     '<strong><%= data[i].amount %>元</strong>' + 
   '</li>' +
@@ -14,7 +14,7 @@ var $myrank = $('#myrank');
 var $left = $('#left');
 var $right = $('#right');
 
-ajax.get('/event/eventLottery!queryRewardList.action', {}, function(res){
+ajax.get('/event/eventLottery!rank.action', {}, function(res){
   
   var data = res.data;
 

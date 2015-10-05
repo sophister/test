@@ -37,7 +37,7 @@
   /*margin-top: -70px;*/
   /*margin-bottom: 30px;*/
   margin-top: -30px;
-  margin-bottom: 20px;
+  margin-bottom: 0.2rem;
 }
 .ui-modal .main .content .word_wrap {
   display: inline-block;
@@ -129,26 +129,28 @@
   overflow-x: hidden;
 }
 .ui-modal .raffle_wrap {
-  width: 500px;
-  height: 318px;
+  width: 100%;
+  height: 2.05rem;
   background: url(./assets/bx_dialog_bg.png) no-repeat;
   background-size: 100%;
-  margin-top: 70px;
+  /* margin-top: 70px; */
+  padding-top: 1px;
 }
 .ui-modal .raffle_big_wrap {
-  width: 500px;
-  height: 538px;
-  background: url(./assets/bx_dialog_bg_big.png) no-repeat;
-  background-size: 100%;
-  margin-top: 70px;
+      width: 100%;
+    height: 4.3rem;
+    background: url(./assets/bx_dialog_bg_big.png) no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1px;
 }
 .ui-modal .main .raffle_big_wrap h3 {
   line-height: 5;
-  font-size: 26px;
+    font-size: 0.24rem;
 }
 .ui-modal .main .raffle_big_wrap h4 {
   color: #fff;
-  margin: 20px;
+    margin: 0.2rem;
+    font-size: 0.16rem;
 }
 .ui-modal .main .raffle_big_wrap span {
   display: inline-block;
@@ -185,12 +187,13 @@
 }
 .ui-modal .raffle_big_wrap h6 {
   color: #fff;
-  font-size: 18px;
-  margin-top: -56px;
-  margin-bottom: 20px;
+    font-size: 0.14rem;
+    margin-top: -0.5rem;
+    margin-bottom: 20px;
+    padding: 0 2%;
 }
 .ui-modal .raffle_big_wrap .province,.ui-modal .raffle_big_wrap .city {
-  width: 33%;
+  width: 31%;
   display: inline-block;
   color: #fff;
   margin: 5px 10px;
@@ -205,7 +208,7 @@
   line-height: 40px;
 }
 .ui-modal .raffle_big_wrap img {
-  width: 280px;
+  width: 2.2rem;
 }
 .ui-modal .main .raffle_wrap h3{
   padding: 100px 0 50px;
@@ -244,8 +247,8 @@
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 77px;
-  height: 74px;
+  width: 0.4rem;
+  height: 0.4rem;
   /* 用于调试的背景色 */
   /*background-color: red;*/
 }

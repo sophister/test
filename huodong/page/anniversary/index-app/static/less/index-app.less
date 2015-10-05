@@ -8,7 +8,7 @@ section {
   padding: 0;
 }
 .sec_common {
-  height: 3.08rem;
+  height: 3.09rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .huodong_info_wrap {
@@ -18,27 +18,56 @@ section {
     }
   }
 }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+  .sec_common {
+        margin-top: -0.01rem;
+  }
+}
 .sec_01 {
   background-image: url(../img/index/app_02.png);
 }
 .sec_02 {
   background-image: url(../img/index/app_03.png);
+  position: relative;
 }
 .sec_03 {
   background-image: url(../img/index/app_04.png);
 }
 .sec_04 {
   background-image: url(../img/index/app_05.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   min-height: 3.08rem;
   position: relative;
+  margin-bottom: -0.01rem;
 }
 .sec_05 {
   background-image: url(../img/index/app_06.png);
+  position: relative;
+  .tips {
+      text-align: center;
+      color: #fff;
+      padding-top: 1.5rem;
+    }
+    h3 {
+      font-size: 0.22rem;
+      font-weight: bold;
+      line-height: 2;
+    }
+    p {
+      font-size: 0.13rem;
+    }
+    strong {
+      font-size: 0.19rem;
+    }
+    .title-close {
+      font-size: 0.21rem;
+      line-height: 0;
+      font-weight: normal;
+      color: #fff;
+    }
 }
 .sec_06 {
   background-image: url(../img/index/app_07.png);
+  height: 2.9rem;
 }
 .sec_07 {
   background-image: url(../img/index/app_08.png);
@@ -68,6 +97,7 @@ section {
 }
 .sec_041 {
   background-color: #4bb8e5;
+      min-height: 0.27rem;
   .widget-info {
     // padding-top: 152px;
     color: #fff;
@@ -86,6 +116,7 @@ section {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 1.32rem;
+      margin-top: -0.01rem;
 }
 .sec_09 {
   height: 3.3rem;

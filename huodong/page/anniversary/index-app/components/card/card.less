@@ -2,6 +2,8 @@
 .widget-card {
   text-align: center;
   width: 100%;
+  position: absolute;
+  top: -0.5rem;
   h3 {
     text-align: center;
     color: #fff;
@@ -17,24 +19,25 @@
       color: #fff;
     }
   }
-  .card-container {
+  .top_wrap,.bottom_wrap {
     display: inline-block;
-    margin-top: 0.25rem;
+    overflow: hidden;
     text-align: center;
-    width: 100%;
+  }
+  .card-container {
+    margin-top: 0.4rem;
+    position: relative;
+    left: 1.1%;
     .brand span{
       display: inline-block;
-      margin: 0 0.05rem 0.1rem 0;
-      width: 96px;
+      margin: 0 0.08rem 0.08rem 0;
+      width: 0.96rem;
       height: 1.1rem;
       text-align: center;
       position: relative;
-      // -webkit-box-shadow: 0px 5px 8px #999;
-      // -o-box-shadow: 0px 5px 8px #999;
-      // -moz-box-shadow: 0px 5px 8px #999;
     }
     .brand .front{
-      width: 96px;
+      width: 0.96rem;
       height: 1.1rem;
       background: url(/static/img/icon-pai.png) center center no-repeat;
       position: relative;
@@ -49,7 +52,7 @@
     }
     .brand .info{
       display: none;
-      width: 96px;
+      width: 0.96rem;
       height: 1.1rem;
       background-color: #188ac0;
       color: #fff;

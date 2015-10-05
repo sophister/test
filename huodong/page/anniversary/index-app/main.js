@@ -16,10 +16,14 @@ require.config({
     tpl_card_tips: "components/dialogs/card-tips",
     tpl_card_gift: "components/dialogs/card-gift",
     tpl_card_libao: "components/dialogs/card-libao",
+    tpl_check_list: "components/dialogs/check-list",
     // box relative dialog templates
     tpl_box_login: "components/dialogs/box-login",
     tpl_box_verify: "components/dialogs/box-verify",
     tpl_box_tips: "components/dialogs/box-tips",
+    tpl_box_reward: "components/dialogs/box-reward",
+    tpl_box_reward_info: "components/dialogs/box-reward-info",
+    tpl_box_reward_change: "components/dialogs/box-reward-change",
   },
   shim: {
 
@@ -33,8 +37,8 @@ require([
   './components/award-box/award-box.js',
   './components/award-card/award-card.js',
   './components/word/word.js', 
+  './components/raffle/raffle.js', 
   './index.js'
-], function($) {
-  
-
+], function($) { 
+  // DO SOMETHING.
 });

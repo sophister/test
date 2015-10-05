@@ -83,9 +83,9 @@ define([
               modal = show( template(tpl_exchange_success)({"data": res.data}) );
 
               // 用来模拟滚动条
-              $("#suc_wrap").mCustomScrollbar({
-                  theme:"minimal"
-              });
+              // $("#suc_wrap").mCustomScrollbar({
+              //     theme:"minimal"
+              // });
 
               break;
             default:

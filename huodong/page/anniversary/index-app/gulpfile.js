@@ -6,6 +6,7 @@ var paths = {
     "less": ["components/**/*.less", "static/less/*.less"],
 };
 
+// 暂时想不到合适的正则，先手工一一对应解析.
 gulp.task('less', function () {
     gulp.src('static/less/*.less')
     .pipe(less())
@@ -34,6 +35,10 @@ gulp.task('less', function () {
     gulp.src('components/word/word.less')
     .pipe(less())
     .pipe(gulp.dest('./components/word'));
+
+    gulp.src('components/raffle/raffle.less')
+    .pipe(less())
+    .pipe(gulp.dest('./components/raffle'));
     
 });
 

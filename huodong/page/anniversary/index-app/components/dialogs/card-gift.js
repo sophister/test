@@ -5,7 +5,7 @@ define(function (require, exports, module){
     '<h3>恭喜您！<br>抽中<%= data.ticketName %></h3>',
     '<div class="gift_wrap">',
         '<h3><%= data.ticketName %></h3>',
-        '<div class="ptag_wrap"><span>兑换码：<strong><%= data.ticketCode  %></strong></span><br></div>',
+        '<div class="ptag_wrap"><span>兑换码：<br><strong><%= data.ticketCode  %></strong></span><br></div>',
     '</div>',
     '<div class="modal_footer"></div>'
   ];

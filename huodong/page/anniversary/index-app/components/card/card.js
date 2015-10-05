@@ -140,39 +140,56 @@ define([
               modal = show( template(tpl_card_verify)() );
             }
             // 请求成功，继续判断活动情况
-            // lotteryResult字段含义：
-            // 1:投资额不足; 2:未中奖; 3:中奖; 4:今天抽过奖;
-            // 5:已经中过奖; 6.可以抽奖; 7:抽奖时间已过期; 8:未到抽奖时间
-            // else if(code == 0) {
-            //   switch(lotteryResult) {
-            //     case 4:
-            //       modal = show( template(tpl_card_tips)({"word": "活动已经结束"}) );
-            //       break;
-            //     case 3:
-            //       // 还需要根据lotteryIndex字段判断
-            //       // 继续判断获取的是红包、优惠券、幸运文字三种情况
-            //       // lotteryIndex字段含义：
-            //       // 0:心意礼包; 1:兑换券; 2:红包; 3:"心"字; 4:其它文字
-            //       if ( lotteryIndex == 3 || lotteryIndex == 4 ) {
-            //         modal = show( template(tpl_card_tips)({"word": lotteryName}) );
-            //         target.find('.info').html(' ').append('<h3 class="word"><i>' + lotteryName + '</i></h3>');
-            //       } else if( lotteryIndex == 1 ) {
-            //         modal = show( template(tpl_card_gift)({"data": data}) );
-            //         target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
-            //       } 
-            //       // TODO: 0和2两种情况待定
-            //       else if( lotteryIndex == 0 || lotteryIndex == 2 ) {
-            //         modal = show( template(tpl_card_libao)(data) );
-            //         target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
-            //       }
+            else if(code == 0) {
+              // lotteryResult字段含义：
+              // 1:投资额不足; 2:未中奖; 3:中奖; 4:今天抽过奖;
+              // 5:已经中过奖; 6.可以抽奖; 7:抽奖时间已过期; 8:未到抽奖时间
+              switch(lotteryResult) {
+                case 8:
+                  modal = show( template(tpl_card_tips)({"tips": "未到抽奖时间<br>感谢您的关注"}) );
+                  break;
+                case 7:
+                  modal = show( template(tpl_card_tips)({"tips": "抽奖时间已过期<br>感谢您的关注"}) );
+                  break;
+                case 6:
+                  modal = show( template(tpl_card_tips)({"tips": "可以抽奖"}) );
+                  break;
+                case 5:
+                  modal = show( template(tpl_card_tips)({"tips": "您已经中过奖<br>感谢您的关注"}) );
+                  break;
+                case 4:
+                  modal = show( template(tpl_card_tips)({"tips": "您今天抽过奖<br>明天再来吧"}) );
+                  break;
+                case 3:
+                  // 还需要根据lotteryIndex字段判断
+                  // 继续判断获取的是红包、优惠券、幸运文字三种情况
+                  // lotteryIndex字段含义：
+                  // 0:心意礼包; 1:兑换券; 2:红包; 3:"心"字; 4:其它文字
+                  if ( lotteryIndex == 3 || lotteryIndex == 4 ) {
+                    modal = show( template(tpl_card_tips)({"tips": lotteryName}) );
+                    target.find('.info').html(' ').append('<h3 class="word"><i>' + lotteryName + '</i></h3>');
+                  } else if( lotteryIndex == 1 ) {
+                    modal = show( template(tpl_card_gift)({"data": data}) );
+                    target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
+                  } 
+                  // TODO: 0和2两种情况待定
+                  else if( lotteryIndex == 0 || lotteryIndex == 2 ) {
+                    modal = show( template(tpl_card_libao)(data) );
+                    target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
+                  }
 
-            //       _this.turnHandle(target,100);
-
-            //       break;
-            //     default:
-            //       break;
-            //   }
-            // }
+                  _this.turnHandle(target,100);
+                  break;
+                case 2:
+                  modal = show( template(tpl_card_tips)({"tips": "您与奖品擦肩而过<br>明天再来吧"}) );
+                  break;
+                case 1:
+                  modal = show( template(tpl_card_tips)({"tips": "您的投资额不足<br>快去投资参加我们的活动吧"}) );
+                  break;
+                default:
+                  break;
+              }
+            }
         });
       });
     },
@@ -209,7 +226,7 @@ define([
 
         _this.changeStatus();
 
-        var verticalOpts = [{'width':0},{'width':'96px'}];
+        var verticalOpts = [{'width':0},{'width':'0.96rem'}];
         _this.hoverEffect($('#vertical'), 100, verticalOpts);
 
       });
@@ -228,38 +245,32 @@ define([
 
         if(status) {
           el.find('.front').css({"width": 0, "display": "none"});
-          el.find('.info').css({"width": 96, "display": "inline-block"});
+          el.find('.info').css({"width": "0.96rem", "display": "inline-block"});
         }
       }
     },
 
     tpls: function(){
       // lotteryIndex字段含义：
-      // 0:心意礼包;
-      // 1:兑换券;
-      // 2:红包;
-      // 3:"心"字;
-      // 4:其它文字
-      // var displayBlock = "width:96px;display:block";
-      // var displayNone = "width:0;display:none";
-
+      // 0:心意礼包; 1:兑换券; 2:红包; 3:"心"字; 4:其它文字
       return '<% for (var i = 0; i < data.length; i++) { %>' +
-
-              '<span data-position="<%= data[i].position %>" data-status="<%= data[i].status %>">' +
-                '<div class="front" id="bgcolor_0<%= data[i].position %>">' +
-                  '<h3>0<%= data[i].position %></h3>' +
-                  '<p>只为成就更好的你</p>' +
-                '</div>' +
-                '<div class="info" >' +
-                  '<% if( data[i].lotteryIndex == 3 || data[i].lotteryIndex == 4 ){ %>' + 
-                    '<h3 class="word"><i><%= data[i].lotteryName %></i></h3>' +
-                  '<% } else { %>' +
-                    '<h3><%= data[i].lotteryName %></h3>' +
-                  '<% } %>' +
-                '</div>' +
-              '</span>' +
-              '<% if(data[i].position == 2){ %>' +
-                '<br>' +
+              '<div class="<%= data[i].position < 3 ? "top_wrap" : "bottom_wrap" %>">' +
+                '<span data-position="<%= data[i].position %>" data-status="<%= data[i].status %>">' +
+                  '<div class="front" id="bgcolor_0<%= data[i].position %>">' +
+                    '<h3>0<%= data[i].position %></h3>' +
+                    '<p>成就更好的你</p>' +
+                  '</div>' +
+                  '<div class="info" >' +
+                    '<% if( data[i].lotteryIndex == 3 || data[i].lotteryIndex == 4 ){ %>' + 
+                      '<h3 class="word"><i><%= data[i].lotteryName %></i></h3>' +
+                    '<% } else { %>' +
+                      '<h3><%= data[i].lotteryName %></h3>' +
+                    '<% } %>' +
+                  '</div>' +
+                '</span>' +
+              '</div>' + 
+              '<% if(data[i].position == 2) { %>' +
+                '<br style="clear:both;">' + 
               '<% } %>' +
             '<% } %>';
     }

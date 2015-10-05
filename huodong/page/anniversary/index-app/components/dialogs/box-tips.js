@@ -2,7 +2,7 @@ define(function (require, exports, module){
   var tpl = [
     '<span class="btn-close btn-close-pos"></span>',
     '<div class="raffle_wrap">',
-        '<h3><%= tip %></h3>',
+        '<h3><%= tips %></h3>',
     '</div>'
   ];
 

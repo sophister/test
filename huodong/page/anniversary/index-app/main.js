@@ -1,22 +1,40 @@
 require.config({
   baseUrl: './',
   paths: {
-    jquery: "static/lib/jquery/jquery-1.11.2",
-    upload: "static/lib/upload/ajaxfileupload",
-    text: "static/lib/requirejs/text",
-    css: "static/lib/requirejs/css",
+    jquery: "static/libs/jquery/1.11.2/jquery",
+    text: "static/libs/requirejs/text",
+    css: "static/libs/requirejs/css",
+    ajax: "static/libs/ajax/ajax",
+    modal: "static/libs/modal/modal",
+    scrollbar: "static/libs/scrollbar/scrollbar",
+    template: "static/libs/template/template",
+    font_scroll: "static/libs/font_scroll/font_scroll",
+    // card relative dialog templates
+    tpl_card_login: "components/dialogs/card-login",
+    tpl_card_verify: "components/dialogs/card-verify",
+    tpl_exchange_success: "components/dialogs/exchange-success",
+    tpl_card_tips: "components/dialogs/card-tips",
+    tpl_card_gift: "components/dialogs/card-gift",
+    tpl_card_libao: "components/dialogs/card-libao",
+    // box relative dialog templates
+    tpl_box_login: "components/dialogs/box-login",
+    tpl_box_verify: "components/dialogs/box-verify",
+    tpl_box_tips: "components/dialogs/box-tips",
   },
   shim: {
-    'uui':{
-      deps: ["jquery"]
-    },
+
   }
 });
 
 require([
-  '../../static/lib/jquery/jquery-1.11.2', 
-  '../../static/lib/knockout/knockout-3.2.0.debug',
-], function($, ko) {
+  'jquery',
+  './components/card/card.js', 
+  './components/rank/rank.js', 
+  './components/award-box/award-box.js',
+  './components/award-card/award-card.js',
+  './components/word/word.js', 
+  './index.js'
+], function($) {
   
 
 });

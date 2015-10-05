@@ -1,0 +1,23 @@
+.widget-info .huodong_info {
+  text-align: center;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+}
+.widget-info .rules {
+  margin-top: 50px;
+}
+.widget-info .rules ul {
+  margin-left: 28px;
+}
+.widget-info .rules h3 {
+  color: #000000;
+  font-size: 20px;
+  line-height: 32px;
+}
+.widget-info .rules li {
+  list-style-type: disc;
+  font-size: 14px;
+  line-height: 40px;
+  color: #747474;
+}

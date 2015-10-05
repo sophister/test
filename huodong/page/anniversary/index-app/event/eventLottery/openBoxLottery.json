@@ -1,0 +1,11 @@
+{
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "lotteryId": 37,
+    "lotteryIndex": 2,
+    "lotteryResult": 3,
+    "boxCode": "silverbox",
+    "lotteryName": "五周年定制版自拍杆"
+  }
+}

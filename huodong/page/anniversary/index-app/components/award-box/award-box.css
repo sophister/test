@@ -1,0 +1,35 @@
+.widget-award-box {
+  padding: 0 5%;
+  padding-top: 1.9rem;
+}
+.widget-award-box span {
+  color: #73f0ff;
+}
+.widget-award-box h3 {
+  color: #fff;
+  font-size: 0.14rem;
+  margin-bottom: 0.3rem;
+}
+.widget-award-box h3 span {
+  float: right;
+  cursor: pointer;
+}
+.widget-award-box ul {
+  margin-left: 30px;
+}
+.widget-award-box li {
+  list-style-type: disc;
+  line-height: 0.32rem;
+  color: #fff;
+  font-size: 0.13rem;
+}
+.widget-award-box i {
+  font-style: normal;
+  float: right;
+  color: #73f0ff;
+}
+.widget-award-box #boxScroll {
+  height: 1.6rem;
+  line-height: 30px;
+  overflow: hidden;
+}

@@ -1,0 +1,94 @@
+/* card */
+.widget-card {
+  text-align: center;
+  width: 100%;
+}
+.widget-card h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 0.19rem;
+  font-weight: bold;
+  line-height: 2;
+}
+.widget-card h4 {
+  font-size: 0.13rem;
+  color: #fff;
+}
+.widget-card h4 strong {
+  font-size: 0.2rem;
+  color: #fff;
+}
+.widget-card .card-container {
+  display: inline-block;
+  margin-top: 0.25rem;
+  text-align: center;
+  width: 100%;
+}
+.widget-card .card-container .brand span {
+  display: inline-block;
+  margin: 0 0.05rem 0.1rem 0;
+  width: 96px;
+  height: 1.1rem;
+  text-align: center;
+  position: relative;
+}
+.widget-card .card-container .brand .front {
+  width: 96px;
+  height: 1.1rem;
+  background: url(/static/img/icon-pai.png) center center no-repeat;
+  position: relative;
+  background-size: 40%;
+}
+.widget-card .card-container .brand .front p {
+  position: absolute;
+  bottom: 0.08rem;
+  left: 0.16rem;
+  color: #f8fcf4;
+  font-size: 0.08rem;
+}
+.widget-card .card-container .brand .info {
+  display: none;
+  width: 96px;
+  height: 1.1rem;
+  background-color: #188ac0;
+  color: #fff;
+}
+.widget-card .card-container .brand .info h3 {
+  font-size: 0.13rem;
+  padding: 25px 10px;
+}
+.widget-card .card-container .brand .info .word {
+  width: 0.55rem;
+  padding: 0;
+  height: 0.55rem;
+  border-radius: 50%;
+  background-color: #2896c7;
+  position: absolute;
+  top: 0.28rem;
+  left: 0.18rem;
+}
+.widget-card .card-container .brand .info i {
+  font-style: normal;
+  text-align: center;
+  font-size: 0.26rem;
+}
+.widget-card #bgcolor_01 {
+  background-color: #79c908;
+}
+.widget-card #bgcolor_02 {
+  background-color: #16be65;
+}
+.widget-card #bgcolor_03 {
+  background-color: #0098e1;
+}
+.widget-card #bgcolor_04 {
+  background-color: #4b71de;
+}
+.widget-card #bgcolor_05 {
+  background-color: #ff962e;
+}
+.scale-hover {
+  -webkit-transform: scale(1.06);
+  -moz-transform: scale(1.06);
+  -o-transform: scale(1.06);
+}

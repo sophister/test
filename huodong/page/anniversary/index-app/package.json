@@ -1,0 +1,17 @@
+{
+  "name": "index-app",
+  "version": "1.0.0",
+  "description": "renrendai 5 anniversary",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GuoYongfeng",
+  "license": "ISC"
+}

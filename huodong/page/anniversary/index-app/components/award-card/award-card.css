@@ -1,0 +1,40 @@
+.widget-award-card {
+  margin: 0 5%;
+  padding: 0.1rem 0.1rem 0 0.1rem;
+  border: 2px solid #8bddff;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 83%;
+  top: 0.3rem;
+}
+.widget-award-card span {
+  color: #73f0ff;
+}
+.widget-award-card h3 {
+  color: #fff;
+  font-size: 0.14rem;
+  margin-bottom: 0.3rem;
+}
+.widget-award-card h3 span {
+  float: right;
+  cursor: pointer;
+}
+.widget-award-card ul {
+  margin-left: 30px;
+}
+.widget-award-card li {
+  list-style-type: disc;
+  line-height: 0.32rem;
+  color: #fff;
+  font-size: 0.13rem;
+}
+.widget-award-card i {
+  font-style: normal;
+  float: right;
+  color: #73f0ff;
+}
+.widget-award-card #FontScroll {
+  height: 1.6rem;
+  line-height: 30px;
+  overflow: hidden;
+}

@@ -1,0 +1,14 @@
+{
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "position": 1,
+    "lotteryId": 37,
+    "lotteryIndex": 1,
+    "lotteryResult": 3,
+    "lotteryName": "心",
+    "ticketId": "1",
+    "ticketName": "格劳克斯代金券",
+    "ticketCode": "SDFADF2SDFAAD"
+  }
+}

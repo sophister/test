@@ -1,0 +1,54 @@
+{
+  "errorCode": 1002,
+  "msg": "成功",
+  "data": [
+    {
+      "ticketId": "1",
+      "ticketName": "5元红包",
+      "ticketCode": ""
+    },
+    {
+      "ticketId": "1",
+      "ticketName": "糯米电影代金券*2",
+      "ticketCode": "SDFADF2SDFAAD"
+    },
+    {
+      "ticketId": "1",
+      "ticketName": "格劳克斯代金券",
+      "ticketCode": "SDFADF2SDFAAD"
+    },
+    {
+      "ticketId": "1",
+      "ticketName": "乐普普博士血糖仪兑换券",
+      "ticketCode": "SDFADF2SDFAAD"
+    },
+    {
+      "luckPackage": {
+        "lotteryId": "12",
+        "lotteryName": "心意礼包",
+        "value": [
+          {
+            "ticketId": "1",
+            "ticketName": "5元红包",
+            "ticketCode": ""
+          },
+          {
+            "ticketId": "1",
+            "ticketName": "糯米电影代金券*2",
+            "ticketCode": "SDFADF2SDFAAD"
+          },
+          {
+            "ticketId": "1",
+            "ticketName": "格劳克斯代金券",
+            "ticketCode": "SDFADF2SDFAAD"
+          },
+          {
+            "ticketId": "1",
+            "ticketName": "乐普普博士血糖仪兑换券",
+            "ticketCode": "SDFADF2SDFAAD"
+          }
+        ]
+      }
+    }
+  ]
+}

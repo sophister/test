@@ -1,0 +1,66 @@
+{
+  "errorCode": 0,
+  "msg": "成功",
+  "data": [
+    {
+      "lotteryId": 37,
+      "lotteryName": "格劳克斯代金券",
+      "userId": "123132",
+      "nickName": "我叫开头"
+    },
+    {
+      "lotteryId": 38,
+      "lotteryName": "乐普普博士血糖仪兑换券",
+      "userId": "231212",
+      "nickName": "小企鹅"
+    },
+    {
+      "lotteryId": 37,
+      "lotteryName": "格劳克斯代金券",
+      "userId": "123132",
+      "nickName": "丹妮"
+    },
+    {
+      "lotteryId": 38,
+      "lotteryName": "乐普普博士血糖仪兑换券",
+      "userId": "231212",
+      "nickName": "小企鹅"
+    },
+    {
+      "lotteryId": 37,
+      "lotteryName": "格劳克斯代金券",
+      "userId": "123132",
+      "nickName": "丹妮"
+    },
+    {
+      "lotteryId": 38,
+      "lotteryName": "乐普普博士血糖仪兑换券",
+      "userId": "231212",
+      "nickName": "小企鹅"
+    },
+    {
+      "lotteryId": 37,
+      "lotteryName": "格劳克斯代金券",
+      "userId": "123132",
+      "nickName": "丹妮"
+    },
+    {
+      "lotteryId": 38,
+      "lotteryName": "乐普普博士血糖仪兑换券",
+      "userId": "231212",
+      "nickName": "小企鹅"
+    },
+    {
+      "lotteryId": 37,
+      "lotteryName": "格劳克斯代金券",
+      "userId": "123132",
+      "nickName": "丹妮"
+    },
+    {
+      "lotteryId": 38,
+      "lotteryName": "乐普普博士血糖仪兑换券",
+      "userId": "231212",
+      "nickName": "我叫结尾"
+    }
+  ]
+}

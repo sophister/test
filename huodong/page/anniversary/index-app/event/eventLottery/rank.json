@@ -1,0 +1,59 @@
+{
+  "errorCode": 0,
+  "msg": "成功",
+  "data": {
+    "myrank": "10",
+    "rankList": [
+      {
+        "rank": 1,
+        "nickName": "丹妮",
+        "amount": "10000"
+      },
+      {
+        "rank": 2,
+        "nickName": "小企鹅",
+        "amount": "5000"
+      },
+      {
+        "rank": 3,
+        "nickName": "企鹅",
+        "amount": "3000"
+      },
+      {
+        "rank": 4,
+        "nickName": "企鹅",
+        "amount": "3000"
+      },
+      {
+        "rank": 5,
+        "nickName": "企鹅",
+        "amount": "3000"
+      },
+      {
+        "rank": 6,
+        "nickName": "企鹅",
+        "amount": "3000"
+      },
+      {
+        "rank": 7,
+        "nickName": "企鹅",
+        "amount": "300.54"
+      },
+      {
+        "rank": 8,
+        "nickName": "企鹅",
+        "amount": "3000000"
+      },
+      {
+        "rank": 9,
+        "nickName": "企鹅",
+        "amount": "100"
+      },
+      {
+        "rank": 10,
+        "nickName": "企鹅",
+        "amount": "300000"
+      }
+    ]
+  }
+}

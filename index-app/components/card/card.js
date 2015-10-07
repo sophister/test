@@ -9,8 +9,9 @@ define([
   'tpl_card_verify',
   'tpl_card_tips',
   'tpl_card_gift',
-  'tpl_card_libao'
-], function ($, tpl, css, ajax, template, Modal, tpl_card_login, tpl_card_verify, tpl_card_tips, tpl_card_gift, tpl_card_libao){
+  'tpl_card_libao',
+  'tpl_card_word'
+], function ($, tpl, css, ajax, template, Modal, tpl_card_login, tpl_card_verify, tpl_card_tips, tpl_card_gift, tpl_card_libao, tpl_card_word){
 
   var show = initModal();
   var modal;
@@ -122,10 +123,10 @@ define([
         var target = $(this);
         var position = $(this).data('position');
 
-        // ajax.get('/event/eventLottery!turnCardLottery.action?position=' + position, {}, function(res){
-        ajax.get('/event/eventLottery/turnCardLottery.json', {}, function(res){
+        // ajax.get('/five_annual/lottery_card.json', {"version": "", "position": position}, function(res){
+        ajax.get('/five_annual/lottery_card.json', {"version": "", "position": position}, function(res){
             var data = res.data;
-            var code = res.errorCode;
+            var code = res.status;
             var lotteryResult = res.data.lotteryResult;
             var lotteryIndex = res.data.lotteryIndex;
             var lotteryName = res.data.lotteryName;
@@ -166,7 +167,7 @@ define([
                   // lotteryIndex字段含义：
                   // 0:心意礼包; 1:兑换券; 2:红包; 3:"心"字; 4:其它文字
                   if ( lotteryIndex == 3 || lotteryIndex == 4 ) {
-                    modal = show( template(tpl_card_tips)({"tips": lotteryName}) );
+                    modal = show( template(tpl_card_word)({"word": lotteryName}) );
                     target.find('.info').html(' ').append('<h3 class="word"><i>' + lotteryName + '</i></h3>');
                   } else if( lotteryIndex == 1 ) {
                     modal = show( template(tpl_card_gift)({"data": data}) );
@@ -174,6 +175,7 @@ define([
                   } 
                   // TODO: 0和2两种情况待定
                   else if( lotteryIndex == 0 || lotteryIndex == 2 ) {
+                    
                     modal = show( template(tpl_card_libao)(data) );
                     target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
                   }
@@ -214,12 +216,12 @@ define([
       // 模板异步插入
       $('#sec_02').append(tpl);
 
-      // ajax.get('/event/eventLottery!queryUserCardList.action', {}, function(res){
-      ajax.get('/event/eventLottery/queryUserCardList.json', {}, function(res){
-        var code = res.errorCode;
+      // ajax.get('/five_annual/lottery_today_info', {}, function(res){
+      ajax.get('/five_annual/lottery_today_info.json', {}, function(res){
+        var code = res.status;
 
         if(code == 0) {
-          $('#vertical').append(template(tpls)({"data": res.data}));
+          $('#vertical').append(template(tpls)({"data": res.data.info_list}));
         } else {
           $('#vertical').append(template(tpls)({"data": defaultData}));
         }

@@ -17,6 +17,7 @@ require.config({
     tpl_card_gift: "components/dialogs/card-gift",
     tpl_card_libao: "components/dialogs/card-libao",
     tpl_check_list: "components/dialogs/check-list",
+    tpl_card_word: "components/dialogs/card-word",
     // box relative dialog templates
     tpl_box_login: "components/dialogs/box-login",
     tpl_box_verify: "components/dialogs/box-verify",

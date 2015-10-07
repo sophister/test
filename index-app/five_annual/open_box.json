@@ -1,0 +1,11 @@
+{
+  "data":{
+    "lotteryId": 37,
+    "lotteryIndex": 2,
+    "boxCode": "silverbox",
+    "lotteryName": "银宝箱",
+    "lotteryResult": 3
+  },
+  "message": "",               
+  "status": 0                 
+}

@@ -52,7 +52,7 @@ define([
       // ajax.get('/event/eventLottery!queryUserLuckyWords.action', {}, function(res){
       ajax.get('/event/eventLottery/queryUserLuckyWords.json', {}, function(res){
         if( res.errorCode == 0 ) {
-          var userLuckyWords = res.data;
+          var userLuckyWords = res.data || [];
           for(var i=0,len=list.length; i<len; i++){
             var word = $(list[i]).text();
 
@@ -69,9 +69,9 @@ define([
     eventHandle: function(){
       var target = $('.widget-word button');
       target.on('click', function( e ){
-
-        ajax.get('/event/eventLottery/exchangePackage.json', {}, function(res){
-          var code = res.errorCode;
+        // ajax.get('/five_annual/exchange_package', {}, function(res){
+        ajax.get('/five_annual/exchange_package.json', {}, function(res){
+          var code = res.status;
           switch(code) {
             case 9999:
               modal = show( template(tpl_card_login)() );
@@ -80,7 +80,7 @@ define([
               modal = show( template(tpl_card_verify)() );
               break;
             case 0:
-              modal = show( template(tpl_exchange_success)({"data": res.data}) );
+              modal = show( template(tpl_exchange_success)({"data": res.data.package_list}) );
 
               // 用来模拟滚动条
               // $("#suc_wrap").mCustomScrollbar({

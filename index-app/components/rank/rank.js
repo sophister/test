@@ -23,17 +23,18 @@ define([
       var $rank_list = $('#rank_list');
       var tpls = this.getTemplate();
 
-      // ajax.get('/event/eventLottery!rank.action', {}, function(res){
-      ajax.get('/event/eventLottery/rank.json', {}, function(res){
-        
-        var data = res.data;
+      // ajax.get('/five_annual/leader_board', {}, function(res){
+      ajax.get('/five_annual/leader_board.json', {}, function(res){
+        var status = res.status;
 
-        var myrank = data.myrank;
-        var rankList = data.rankList;
+        if( 0 == status ) {
+          var data = res.data;
+          var myrank = data.myrank;
+          var rankList = data.board_list;
 
-        $myrank.html(myrank);
-        $rank_list.append(template( tpls)({"data": rankList}) );
-        
+          $myrank.html(myrank);
+          $rank_list.append(template( tpls)({"data": rankList}) );
+        }
       });
     },
 

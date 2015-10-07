@@ -1,0 +1,43 @@
+{
+  "data":{
+    "info_list":[    
+      {
+        "position": 1,
+        "lotteryId": 31,
+        "lotteryIndex": 3,
+        "lotteryName": "心",
+        "status": false
+      },
+      {
+        "position": 2,
+        "lotteryId": 33,
+        "lotteryIndex": 4,
+        "lotteryName": "始",
+        "status": true
+      },
+      {
+        "position": 3,
+        "lotteryId": 37,
+        "lotteryIndex": 4,
+        "lotteryName": "见",
+        "status": false
+      },
+      {
+        "position": 4,
+        "lotteryId": 36,
+        "lotteryIndex": 4,
+        "lotteryName": "从",
+        "status": false
+      },
+      {
+        "position": 5,
+        "lotteryId": 37,
+        "lotteryIndex": 4,
+        "lotteryName": "来",
+        "status": false
+      }
+    ]
+  },
+  "message": "",               
+  "status": 0                  
+}

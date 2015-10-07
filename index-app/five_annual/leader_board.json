@@ -1,0 +1,24 @@
+{
+    "data":{
+        "myrank": 10,
+        "board_list":  [
+            {
+                "amount": 2395247.37,
+                "rank": 1,
+                "nickName": "宦***k"
+            },
+            {
+                "amount": 1929950.00,
+                "rank": 2,
+                "nickName": "太***k"
+            },
+            {
+                "amount": 1668950.00,
+                "rank": 3,
+                "nickName": "尚***k"
+            }
+        ]
+    },
+    "message": "",              
+    "status": 0                  
+}

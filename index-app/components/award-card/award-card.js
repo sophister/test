@@ -67,10 +67,10 @@ define([
       // 查看我的奖品
       $('#goAward').on('click', function( e ){
 
-        // ajax.get('/event/eventLottery!queryUserCardPrize.action', {}, function(res){
-        ajax.get('/event/eventLottery/queryUserCardPrize.json', {}, function(res){
+        // ajax.get('/five_annual/card_prize', {}, function(res){
+        ajax.get('/five_annual/card_prize.json', {}, function(res){
           // 未登录 未验证 暂时没有奖品 有奖品
-          var status = res.errorCode;
+          var status = res.status;
           switch (status) {
             // 未登录
             case 9999:
@@ -86,7 +86,7 @@ define([
               break;
             // 有奖品
             case 0:
-              modal = show( template(tpl_check_list)({"data": res.data}) );
+              modal = show( template(tpl_check_list)({"data": res.data.prize_list}) );
               // 用来模拟滚动条
               // $("#suc_wrap").mCustomScrollbar({
               //     theme:"minimal"

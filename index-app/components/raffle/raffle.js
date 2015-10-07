@@ -47,15 +47,15 @@ define([
 
       $('#sec_06').append(tpl);
 
-      // ajax.get('/event/eventLottery!showBox.action', {}, function(res){
-      ajax.get('/event/eventLottery/showBox.json', {}, function(res){
+      // ajax.get('/five_annual/show_box', {}, function(res){
+      ajax.get('/five_annual/show_box.json', {}, function(res){
         // boxCode字段含义：
         // silverbox:银宝箱; goldbox:金宝箱; diamondbox:钻石宝箱
         var el = $('.widget-raffle .gift');
         var title = $('.widget-raffle .title-close');
 
-        if(res && res.data && res.errorCode == 0) {
-          var boxCode = res.data.boxCode;
+        if(res && res.data && res.status == 0) {
+          var boxCode = res.data.box;
           $('#cash').text(res.data.amount);
 
           if(boxCode == 'goldbox'){
@@ -89,9 +89,9 @@ define([
       // 点击宝箱容器
       $(".chest-close").click(function(){
         var el = $(this);
-        // ajax.get('/event/eventLottery!openBoxLottery.action', {}, function(res){
-        ajax.get('/event/eventLottery/openBoxLottery.json', {}, function(res){
-          var code = res.errorCode;
+        // ajax.get('/five_annual/open_box', {}, function(res){
+        ajax.get('/five_annual/open_box.json', {}, function(res){
+          var code = res.status;
           // 未登录
           if(code == 9999) {
             modal = show( template(tpl_box_login)() );
@@ -143,7 +143,7 @@ define([
                      }
 
                      // 表单提交
-                     ajax.post('/event/eventLottery!addUserAddress.action', {
+                     ajax.post('/five_annual/create_addressee', {
                       "userName": $("#addr .userName").val(),
                       "mobile": $("#addr .mobile").val(),
                       "province": $("#addr .province").val(),

@@ -79,10 +79,10 @@ define([
       var _this = this;
       // 点击查看我的奖品
       $('#myGift').on('click', function( e ){
-        // ajax.get('/event/eventLottery!queryUserBoxPrize.action', {}, function(res){
-        ajax.get('/event/eventLottery/queryUserBoxPrize.json', {}, function(res){
+        // ajax.get('/five_annual/box_info', {}, function(res){
+        ajax.get('/five_annual/box_info.json', {}, function(res){
           // 未登录 未验证 暂时没有奖品 有奖品(点击后会跳转到修改地址处)
-          var code = res.errorCode;
+          var code = res.status;
           // 未登录
           if(code == 9999) {
             modal = show(template(tpl_box_login)());
@@ -122,14 +122,12 @@ define([
             $('.raffle_big_wrap').on('click', 'span', function (e){
               var data = { "lotteryName": lotteryName };
               
-              // ajax.get('/event/eventLottery!queryUserAddress.action', {}, function(res){
-              ajax.get('/event/eventLottery/queryUserAddress.json', {}, function(res){
+              ajax.get('/event/eventLottery!queryUserAddress.action', {}, function(res){
                 if( res.errorCode == 0 )
                   data = $.extend(data, res.data);
 
                 $('.raffle_big_wrap').html(" ").append(template(tpl_box_reward_change)({"data": data}));
-                console.log($('#confirm'));
-                debugger;
+   
                 _this.checkForm();
 
               });
@@ -158,8 +156,7 @@ define([
           return false;
          }
 
-         // 表单提交
-         ajax.post('/event/eventLottery!updateUserAddress.action', {
+        ajax.get('/five_annual/update_addressee', {
           "userName": $("#addrChange .userName").val(),
           "mobile": $("#addrChange .mobile").val(),
           "province": $("#addrChange .province").val(),

@@ -49,7 +49,7 @@ var word = {
 
     ajax.get('/event/eventLottery!queryUserLuckyWords.action', {}, function(res){
       if( res.errorCode == 0 ) {
-        var userLuckyWords = res.data;
+        var userLuckyWords = res.data || [];
         for(var i=0,len=list.length; i<len; i++){
           var word = $(list[i]).text();
 

@@ -41,7 +41,7 @@ section {
   margin-bottom: -0.01rem;
 }
 .sec_05 {
-  background-image: url(../img/index/app_06.png);
+  background-image: url(../img/index/app_new_06.png);
   position: relative;
 }
 .sec_05 .tips {
@@ -67,8 +67,9 @@ section {
   color: #fff;
 }
 .sec_06 {
-  background-image: url(../img/index/app_07.png);
+  background-image: url(../img/index/app_new_07.png);
   height: 2.9rem;
+  position: relative;
 }
 .sec_07 {
   background-image: url(../img/index/app_08.png);

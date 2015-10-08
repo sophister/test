@@ -24,15 +24,7 @@ function initModal () {
         content : txt,
       });
       modal._create();
-      //原show方法会引起定位问题，重写
-      modal.hide = function() {
-        modal.dom.instance.css({'display':'none'});
-      };
-      modal.show = function(){
-        modal.dom.instance.css({'display':'block'});
-      };
     }
-
     return modal;
   }
 }
@@ -91,6 +83,9 @@ var box = {
         else if(code == 1002){
           modal = show( template(tpl_box_tips)({"tip": "暂无奖品<br>快投资参加我们的活动吧"}));
         }
+        else if(code == 1){
+          modal = show( template(tpl_box_tips)({"tip": res.msg}));
+        }
         // 返回成功后，继续判断lotteryResult字段情况
         else if(code == 0){
           var boxCode = res.data.boxCode;
@@ -121,8 +116,7 @@ var box = {
                 data = $.extend(data, res.data);
 
               $('.raffle_big_wrap').html(" ").append(template(tpl_box_reward_change)({"data": data}));
-              console.log($('#confirm'));
-              debugger;
+             
               _this.checkForm();
 
             });

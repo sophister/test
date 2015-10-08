@@ -11,10 +11,11 @@ var modal;
 
 var scrollbar = require('huodong:widget/ui/scrollbar/scrollbar.js');
 
-// 兑换部分的弹框：三种情况
+// 兑换部分的弹框
 var tpl_exchange_login = require('./tpls/exchange-login.js')();
 var tpl_exchange_verify = require('./tpls/exchange-verify.js')();
 var tpl_exchange_success = require('./tpls/exchange-success.js')();
+var tpl_exchange_tips = require('./tpls/exchange-tips.js')();
 
 function initModal () {
   return function (txt){
@@ -26,13 +27,6 @@ function initModal () {
         content : txt,
       });
       modal._create();
-      //原show方法会引起定位问题，重写
-      modal.hide = function() {
-        modal.dom.instance.css({'display':'none'});
-      };
-      modal.show = function(){
-        modal.dom.instance.css({'display':'block'});
-      };
     }
 
     return modal;
@@ -62,12 +56,14 @@ var word = {
       }
     });
   },
+  
   eventHandle: function(){
     var target = $('.widget-word button');
     target.on('click', function( e ){
 
       ajax.get('/event/eventLottery!exchangePackage.action', {}, function(res){
         var code = res.errorCode;
+
         switch(code) {
           case 9999:
             modal = show( template(tpl_exchange_login)() );
@@ -83,6 +79,9 @@ var word = {
                 theme:"minimal"
             });
 
+            break;
+          case 1:
+            modal = show( template(tpl_exchange_tips)({"tip": res.msg}) );
             break;
           default:
             break;

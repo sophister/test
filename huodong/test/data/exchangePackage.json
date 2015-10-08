@@ -1,7 +1,7 @@
 {
   
-  "errorCode": 3000,
-  "msg": "成功",
+  "errorCode": 0,
+  "msg": "还未集齐幸运数字",
   "data": [
     {
       "ticketId": "1",

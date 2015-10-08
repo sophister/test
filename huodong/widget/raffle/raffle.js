@@ -25,13 +25,6 @@ function initModal () {
         content : txt,
       });
       modal._create();
-      //原show方法会引起定位问题，重写
-      modal.hide = function() {
-        modal.dom.instance.css({'display':'none'});
-      };
-      modal.show = function(){
-        modal.dom.instance.css({'display':'block'});
-      };
     }
 
     return modal;

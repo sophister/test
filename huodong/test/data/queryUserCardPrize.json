@@ -1,6 +1,6 @@
 {
-  "errorCode": 1002,
-  "msg": "成功",
+  "errorCode": 1,
+  "msg": "出错啦",
   "data": [
     {
       "ticketId": "1",

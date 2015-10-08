@@ -10,7 +10,12 @@ module.exports = function (){
     '<% for (var i = 0; i < data.length; i++) { %>' +
       '<div class="gift_wrap">'+
       '<h3><%= data[i].ticketName || "" %></h3>'+
-      '<div class="ptag_wrap"><span>兑换码：<strong><%= data[i].ticketCode || "" %></strong></span>'+
+      '<div class="ptag_wrap">' +
+        '<% if(data[i].ticketCode){ %>' +
+          '<span>兑换码：<strong><%= data[i].ticketCode || "" %></strong></span>'+
+        '<% } else { %>' +
+            '<span><strong><%= data[i].ticketName %>(已发到个人账户)</strong></span>' +
+        '<% } %>' +
       '</div></div>'+
     '<% } %>'+
     '</div>'+

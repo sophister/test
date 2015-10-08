@@ -86,8 +86,6 @@ Modal.prototype = {
 		var _this = this;
 
 		if(this.status.has_instance){
-			// modal.conf.content = txt;
-			// this.dom.wrap.html(txt);
 			this.dom.instance.show();
 		}else{
 
@@ -95,7 +93,9 @@ Modal.prototype = {
 		}
 	},
 	hide: function(){
-		this.dom.instance.hide();
+		// this.dom.instance.hide();
+		this.dom.instance.remove();
+
 	}
 };
 

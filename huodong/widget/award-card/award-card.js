@@ -24,13 +24,6 @@ function initModal () {
         content : txt,
       });
       modal._create();
-      //原show方法会引起定位问题，重写
-      modal.hide = function() {
-        modal.dom.instance.css({'display':'none'});
-      };
-      modal.show = function(){
-        modal.dom.instance.css({'display':'block'});
-      };
     }
 
     return modal;
@@ -78,7 +71,6 @@ var award = {
           case 3000:
             modal = show( template(tpl_check_verify)() );
             break;
-          // 无记录，没有奖品（如果接口变，王程修改这里）
           case 1002:
             modal = show( template(tpl_check_none)({"tips": "暂无奖品<br>快来投资参加我们的活动吧"}) );
             break;
@@ -89,6 +81,10 @@ var award = {
             $("#suc_wrap").mCustomScrollbar({
                 theme:"minimal"
             });
+            break;
+          // 出错
+          case 1:
+            modal = show( template(tpl_check_none)({"tips": res.msg}) );
             break;
           default:
             break;

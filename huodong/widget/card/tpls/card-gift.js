@@ -9,7 +9,13 @@ module.exports = function (){
     '<h3>恭喜您！<br>抽中<%= data.ticketName %></h3>',
     '<div class="gift_wrap">',
         '<h3><%= data.ticketName %></h3>',
-        '<div class="ptag_wrap"><span>兑换码：<strong><%= data.ticketCode  %></strong></span><br></div>',
+        '<div class="ptag_wrap">',
+          '<% if(data.ticketCode){ %>',
+            '<span>兑换码：<br><strong><%= data.ticketCode  %></strong></span>',
+          '<% } else { %>',
+              '<span><strong><%= data.ticketName %>(已发到个人账户)</strong></span>',
+          '<% } %>',
+        '</div>',
     '</div>',
     '<div class="modal_footer"></div>'
   ];

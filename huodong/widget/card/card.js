@@ -16,6 +16,7 @@ var tpl_card_gift = require('./tpls/card-gift.js')();
 var tpl_card_word = require('./tpls/card-word.js')();
 var tpl_card_gameover = require('./tpls/card-gameover.js')();
 var tpl_card_libao = require('./tpls/card-libao.js')();
+var tpl_card_tips = require('./tpls/card-tips.js')();
 
 function initModal () {
   return function (txt){
@@ -27,13 +28,6 @@ function initModal () {
         content : txt,
       });
       modal._create();
-      //原show方法会引起定位问题，重写
-      modal.hide = function() {
-        modal.dom.instance.css({'display':'none'});
-      };
-      modal.show = function(){
-        modal.dom.instance.css({'display':'block'});
-      };
     }
 
     return modal;
@@ -137,7 +131,7 @@ var card = {
           } 
           // 未验证
           else if(code == 3000) {
-
+            modal = show( template(tpl_card_verify)() );
           }
           // 请求成功，继续判断活动情况
           // lotteryResult字段含义：
@@ -156,25 +150,46 @@ var card = {
                 if ( lotteryIndex == 3 || lotteryIndex == 4 ) {
                   modal = show( template(tpl_card_word)({"word": lotteryName}) );
                   target.find('.info').html(' ').append('<h3 class="word"><i>' + lotteryName + '</i></h3>');
-                } else if( lotteryIndex == 1 ) {
+                  
+                  // 这里需要同步更新集齐幸运文字部分
+                  _this.wordAsync(lotteryName);
+
+                } 
+                // 抽到红包和代金券
+                else if( lotteryIndex == 1 || lotteryIndex == 2 ) {
                   modal = show( template(tpl_card_gift)({"data": data}) );
                   target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
                 } 
-                // TODO: 0和2两种情况待定
-                else if( lotteryIndex == 0 || lotteryIndex == 2 ) {
-                  modal = show( template(tpl_card_libao)(data) );
-                  target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
-                }
-
                 _this.turnHandle(target,100);
 
                 break;
               default:
                 break;
             }
+          } 
+          // 出错
+          else if(code == 1){
+            modal = show( template(tpl_card_tips)({"tips": res.msg}) );
           }
       });
     });
+  },
+
+  /**
+   * 同步幸运文字展示
+   * @return {[type]} [description]
+   */
+  wordAsync: function(word){
+    var list = $('.widget-word li').find('.word');
+    var word = word || "";
+
+    for(var i=0,len=list.length; i<len; i++){
+      var originWord = $(list[i]).text();
+
+      if(word == originWord) {
+        $(list[i]).parent().addClass('selected');
+      }
+    }
   },
 
   /**

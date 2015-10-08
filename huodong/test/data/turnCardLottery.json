@@ -1,14 +1,14 @@
 {
-  "errorCode": 0,
-  "msg": "成功",
+  "errorCode": 1,
+  "msg": "接口错误",
   "data": {
     "position": 1,
     "lotteryId": 37,
     "lotteryIndex": 1,
     "lotteryResult": 3,
-    "lotteryName": "心",
+    "lotteryName": "从",
     "ticketId": "1",
-    "ticketName": "格劳克斯代金券",
-    "ticketCode": "SDFADF2SDFAAD"
+    "ticketName": "代金券",
+    "ticketCode": "423423424"
   }
 }

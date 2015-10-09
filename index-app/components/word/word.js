@@ -7,8 +7,9 @@ define([
   'modal',
   'tpl_card_login',
   'tpl_card_verify',
-  'tpl_exchange_success'
-], function ($, tpl, css, ajax, template, Modal, tpl_card_login, tpl_card_verify, tpl_exchange_success){
+  'tpl_exchange_success',
+  'tpl_card_tips'
+], function ($, tpl, css, ajax, template, Modal, tpl_card_login, tpl_card_verify, tpl_exchange_success, tpl_card_tips){
   
   var show = initModal();
   var modal;

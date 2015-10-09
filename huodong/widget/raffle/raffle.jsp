@@ -1,16 +1,17 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ taglib uri="/fis" prefix="fis"%>
 
-<div class="widget-raffle">
-  <div class="open-has">
-    <h4 class="title-close"></h4>
-    <!-- <h4 class="title-open">恭喜您</h4> -->
-    <div class="mod-chest">
-      <!-- 宝箱容器 -->
-      <div class="chest-close show ">
-        <div class="gift"></div>
+<div class="raffle-circle">
+  <div class="widget-raffle">
+    <div class="open-has">
+      <h4 class="title-close"></h4>
+      <div class="mod-chest">
+        <!-- 宝箱容器 -->
+        <div class="chest-close show ">
+          <div class="gift"></div>
+        </div>
+        <div class="chest-open"></div>
       </div>
-      <div class="chest-open"></div>
     </div>
   </div>
 </div>

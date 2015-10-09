@@ -116,6 +116,16 @@ var card = {
     $('#vertical').on('click', 'span', function( e ){
       var target = $(this);
       var position = $(this).data('position');
+      var cardStatus = $(this).data('status');
+
+      // 如果卡牌被翻过就弹框提示
+      // 如果卡牌第一次翻，前端记录下翻过的状态
+      if( cardStatus ) {
+        modal = show( template(tpl_card_tips)({"tips": "这张卡牌已被您翻过<br>去翻其他的卡牌吧"}) );
+        return;
+      }else {
+        $(this).data('status', 'true');
+      }
 
       ajax.get('/event/eventLottery!turnCardLottery.action?position=' + position, {}, function(res){
           var data = res.data;
@@ -146,7 +156,7 @@ var card = {
                 // 还需要根据lotteryIndex字段判断
                 // 继续判断获取的是红包、优惠券、幸运文字三种情况
                 // lotteryIndex字段含义：
-                // 0:心意礼包; 1:兑换券; 2:红包; 3:"心"字; 4:其它文字
+                // 1:兑换券; 2:红包; 3:"心"字; 4:其它文字
                 if ( lotteryIndex == 3 || lotteryIndex == 4 ) {
                   modal = show( template(tpl_card_word)({"word": lotteryName}) );
                   target.find('.info').html(' ').append('<h3 class="word"><i>' + lotteryName + '</i></h3>');

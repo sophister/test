@@ -72,7 +72,7 @@
   font-size: 15px;
   line-height: 36px;
 }
-.ui-modal .gift_wrap .ptag_wrap span strong {
+.ui-modal .gift_wrap .ptag_wrap span a,.ui-modal .gift_wrap .ptag_wrap span strong {
   color: #fff;
 }
 .ui-modal .word_wrap span{

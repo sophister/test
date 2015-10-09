@@ -122,8 +122,17 @@ define([
       $('#vertical').on('click', 'span', function( e ){
         var target = $(this);
         var position = $(this).data('position');
+        var cardStatus = $(this).data('status');
 
-        // ajax.get('/five_annual/lottery_card.json', {"version": "", "position": position}, function(res){
+        // 如果卡牌被翻过就弹框提示
+        // 如果卡牌第一次翻，前端记录下翻过的状态
+        if( cardStatus ) {
+          modal = show( template(tpl_card_tips)({"tips": "这张卡牌已被您翻过<br>去翻其他的卡牌吧"}) );
+          return;
+        }else {
+          $(this).data('status', 'true');
+        }
+      
         ajax.get('/five_annual/lottery_card.json', {"version": "", "position": position}, function(res){
             var data = res.data;
             var code = res.status;
@@ -159,7 +168,7 @@ define([
                   modal = show( template(tpl_card_tips)({"tips": "您已经中过奖<br>感谢您的关注"}) );
                   break;
                 case 4:
-                  modal = show( template(tpl_card_tips)({"tips": "您今天抽过奖<br>明天再来吧"}) );
+                  modal = show( template(tpl_card_tips)({"tips": "您今天牌翻的次数已用尽!<br>明天再来试试"}) );
                   break;
                 case 3:
                   // 还需要根据lotteryIndex字段判断

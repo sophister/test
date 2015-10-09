@@ -46,27 +46,31 @@ var raffle = {
       var el = $('.widget-raffle .gift');
       var title = $('.widget-raffle .title-close');
 
+      var goldImage = __uri("./assets/baoxiang_03.png"),
+          diamondImage = __uri("./assets/baoxiang_05.png"),
+          otherImage = __uri("./assets/baoxiang_01.png");
+
+      // update image url
       if(res && res.data && res.errorCode == 0) {
         var boxCode = res.data.boxCode;
         $('#cash').text(res.data.amount);
 
         if(boxCode == 'goldbox'){
           title.text('金宝箱');
-          el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_03.png)"});
+          el.css({"background-image": "url("  + goldImage + ")"});
         }else if(boxCode == 'diamondbox'){
           title.text('钻石宝箱');
-          el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_05.png)"});
+          el.css({"background-image": "url(" + diamondImage +  ")"});
         }else {
           title.text('银宝箱');
-          el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_01.png)"});
+          el.css({"background-image": "url(" + otherImage + ")"});
         }
       }else {
         title.text('银宝箱');
-        el.css({"background-image": "url(/static/huodong/widget/raffle/assets/baoxiang_01.png)"});
+        el.css({"background-image": "url(" + otherImage + ")"});
       }
+
     });
-
-
   },
 
   eventHandle: function (){
@@ -151,10 +155,10 @@ var raffle = {
               });
               break;
             case 4:
-              modal = show( template(tpl_raffle_tips)({"tip": "您今天打开过宝箱~<br>明天再来吧"}) );
+              modal = show( template(tpl_raffle_tips)({"tip": "您已经打开过宝箱~<br>明天再来吧"}) );
               break;
             case 5:
-              modal = show( template(tpl_raffle_tips)({"tip": "您今天已经中过大奖啦~<br>把机会留给其他朋友吧"}) );
+              modal = show( template(tpl_raffle_tips)({"tip": "您已经中过大奖啦~<br>把机会留给其他朋友吧"}) );
               break;
             case 6:
               modal = show( template(tpl_raffle_tips)({"tip": "可以抽奖"}) );

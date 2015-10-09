@@ -15,7 +15,6 @@ require.config({
     tpl_exchange_success: "components/dialogs/exchange-success",
     tpl_card_tips: "components/dialogs/card-tips",
     tpl_card_gift: "components/dialogs/card-gift",
-    tpl_card_libao: "components/dialogs/card-libao",
     tpl_check_list: "components/dialogs/check-list",
     tpl_card_word: "components/dialogs/card-word",
     // box relative dialog templates

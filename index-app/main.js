@@ -9,6 +9,7 @@ require.config({
     scrollbar: "static/libs/scrollbar/scrollbar",
     template: "static/libs/template/template",
     font_scroll: "static/libs/font_scroll/font_scroll",
+    bridge: "static/libs/bridge/bridge",
     // card relative dialog templates
     tpl_card_login: "components/dialogs/card-login",
     tpl_card_verify: "components/dialogs/card-verify",

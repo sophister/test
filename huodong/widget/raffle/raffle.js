@@ -89,6 +89,8 @@ var raffle = {
       var el = $(this);
       ajax.get('/event/eventLottery!openBoxLottery.action', {}, function(res){
         var code = res.errorCode;
+        var boxCode = res.data ? res.data.boxCode : "";
+
         // 未登录
         if(code == 9999) {
           modal = show( template(tpl_raffle_login)() );
@@ -114,12 +116,12 @@ var raffle = {
               modal = show( template(tpl_raffle_tips)({"tip": "非常抱歉<br>您还没达到开宝箱条件"}) );
               break;
             case 2:
-              _this.shake.call(el, function (e){
+              _this.shake.call(el, boxCode, function (e){
                 modal = show( template(tpl_raffle_tips)({"tip": "差一点点，奖品与你擦肩而过~<br>明天再来试试吧"}) );
               });
               break;
             case 3:
-              _this.shake.call(el, function (e){
+              _this.shake.call(el, boxCode, function (e){
                 // 点击宝箱后弹出的中奖信息弹框
                 modal = show( template(tpl_raffle_reward_info)({"data": {"lotteryDetail": lotteryName}}));
 
@@ -181,8 +183,18 @@ var raffle = {
    * 宝箱摇晃的效果
    * @return {[type]} [description]
    */
-  shake: function(fn){
-      var that = $(this);
+  shake: function(boxCode, fn){
+      var that = $(this),
+          chestOpen = that.closest(".mod-chest").find(".chest-open"),
+          goldImage = __uri("./assets/baoxiang_04.png"),
+          diamondImage = __uri("./assets/baoxiang_06.png");
+
+      if(boxCode == 'goldbox'){
+        chestOpen.css({"background-image": "url("  + goldImage + ")"});
+      }else if(boxCode == 'diamondbox'){
+        chestOpen.css({"background-image": "url(" + diamondImage +  ")"});
+      }
+
       // 给容器加上摇晃的效果
       this.addClass("shake");
       // 监听动画结束时的webkitAnimationEnd事件

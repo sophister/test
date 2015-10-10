@@ -17,6 +17,7 @@ var tpl_card_word = require('./tpls/card-word.js')();
 var tpl_card_gameover = require('./tpls/card-gameover.js')();
 var tpl_card_libao = require('./tpls/card-libao.js')();
 var tpl_card_tips = require('./tpls/card-tips.js')();
+var tpl_card_verify = require('./tpls/card-verify.js')();
 
 function initModal () {
   return function (txt){
@@ -123,8 +124,6 @@ var card = {
       if( cardStatus ) {
         modal = show( template(tpl_card_tips)({"tips": "这张卡牌已被您翻过<br>去翻其他的卡牌吧"}) );
         return;
-      }else {
-        $(this).data('status', 'true');
       }
 
       ajax.get('/event/eventLottery!turnCardLottery.action?position=' + position, {}, function(res){
@@ -170,8 +169,9 @@ var card = {
                   modal = show( template(tpl_card_gift)({"data": data}) );
                   target.find('.info').html(' ').append('<h3>' + ticketName + '</h3>');
                 } 
-                _this.turnHandle(target,100);
 
+                _this.turnHandle(target,100);
+                target.data('status', 'true');
                 break;
               default:
                 break;

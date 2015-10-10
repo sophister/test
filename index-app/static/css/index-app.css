@@ -75,6 +75,7 @@ section {
   background-image: url(../img/index/app_08.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: relative;
 }
 .sec_081 {
   background-image: url(../img/index/app_09.png);

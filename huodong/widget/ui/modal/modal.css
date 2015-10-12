@@ -267,3 +267,55 @@
   background-color: #fff;
   letter-spacing: 0.1rem;
 }
+.ui-modal .signup_login_wrap {
+  width: 400px;
+    height: 266px;
+  background: url(./assets/birth_bg.png) no-repeat;
+  background-size: 100%;
+  margin-top: 70px;
+}
+.ui-modal .main .signup_login_wrap h3 {
+  font-size: 24px;
+    padding-top: 80px;
+}
+.ui-modal .main .signup_login_wrap a {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #eef3fd;
+  background-color: #679af2;
+  padding: 10px 40px;
+    margin: 0 10px;
+}
+.ui-modal .signup_wrap {
+  width: 400px;
+  height: 446px;
+  background: url(./assets/signup_bg.png) no-repeat;
+  background-size: 100%;
+  margin-top: 70px;
+}
+.ui-modal .main .signup_wrap h3 {
+  font-size: 24px;
+    padding-top: 40px;
+}
+.ui-modal .signup_wrap input {
+  width: 75%;
+  background-color: rgba(255,255,255,.1);
+  color: #fff;
+  margin: 5px 0;
+  border: none;
+  border: 1px solid #abc7f8;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.ui-modal .signup_wrap .province,.ui-modal .signup_wrap .city {
+  width: 33%;
+  display: inline-block;
+  color: #fff;
+  margin: 5px 10px;
+}
+.ui-modal .signup_wrap .submit {
+  width: 80%;
+  border: none;
+  background-color: #abc7f8;
+  color: #6598f2；
+}

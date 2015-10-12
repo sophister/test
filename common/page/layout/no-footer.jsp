@@ -48,14 +48,13 @@
         <![endif]-->
 
         <fis:block name="block_header">
-            这里是公共头部<br>这里是公共头部<br>这里是公共头部<br>
+            <div style="position:fixed;top:0;left:0;right:0;z-index:10;background-color:#0d3c6e;height:100px;">
+                这里是公共头部这里是公共头部这里是公共头部<br>这里是公共头部这里是公共头部这里是公共头部<br>这里是公共头部<br>
+            </div>
         </fis:block>
      
         <fis:block name="block_body">
             
-        </fis:block>
-        <fis:block name="block_footer">
-            这里是公共底部<br>这里是公共底部<br>这里是公共底部<br>这里是公共底部<br>这里是公共底部<br>这里是公共底部<br>这里是公共底部<br>这里是公共底部<br>
         </fis:block>
 
         <!--body里面的js-->

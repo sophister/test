@@ -43,7 +43,7 @@ body {
 }
 #tips {
   position: fixed;
-  left: 36%;
+  left: 20%;
   background-color: rgba(0, 0, 0, 0.8);
   display: inline-block;
   padding: 10px 30px;

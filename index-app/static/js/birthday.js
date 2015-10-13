@@ -38,10 +38,10 @@ define([
 
     DOMRender: function(){
       ajax.get('/five_annual/query_registration.json', {"version": "2.0"}, function( res ){
-        var data = res.data || {};
+        var status = res.data.status;
 
         // 如果已经报名，则初始化为报名成功
-        if(!$.isEmptyObject(data)){
+        if(status){
           $('.want').text('报名成功');
         }
       });
@@ -52,16 +52,16 @@ define([
       
       $('.want').on('click', function( e ){
         ajax.get('/five_annual/query_registration.json', {"version": "2.0"}, function( res ){
-          var status = res.status;
-          var data = res.data || {};
+          var code = res.errorCode;
+          var status = res.data.status;
 
           // 未登录
-          if(9999 == status){
+          if(9999 == code){
             modal = show( template(tpl_birth_login)() );
           }
 
           // 去报名的条件: 返回的参数正确，data无参数表示之前没有填写过
-          if(0 == status && $.isEmptyObject(data)){
+          if(!status){
             window.open('/pages/birthday/signup.html', '_self');
           }
 

@@ -54,9 +54,9 @@ var birth = {
 
   DOMRender: function(){
     ajax.get('/event/eventLottery!queryRegistration.action', {}, function( res ){
-      var data = res.data || {};
+      var status = res.data.status;
       // 如果已经报名，则初始化为报名成功
-      if(!$.isEmptyObject(data)){
+      if(status){
         $('.want').text('报名成功');
       }
     })
@@ -68,19 +68,14 @@ var birth = {
     $('.want').on('click', function( e ){
       ajax.get('/event/eventLottery!queryRegistration.action', {}, function( res ){
         var code = res.errorCode;
-        var data = res.data;
+        var status = res.data.status;
 
         if(9999 == code){
           modal = show( template(tpl_login)() );
         }else if(0 == code){
-          // 如果返回的接口有数据，则是修改
-          if(data && data.length){
-            // DO SOMETHING.
-          }
-          // 返回的接口无数据，则是新增
-          else {
-            modal = show( template(tpl_signup)() );
-
+          // 未报名
+          if(!status){
+            modal = show( template(tpl_signup)({"data": res.data.registration}) );
             // 点击新增提交按钮
             _this.checkForm();
           }
@@ -90,23 +85,25 @@ var birth = {
   },
 
   checkForm: function(){
+    var _this = this;
+
     $('#signup').on('click', function(e){
       var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
 
       if($('.userName').val() == ""  ){
-        alert("收货人姓名不能为空");
+        _this.commonTips("收货人姓名不能为空");
         return false;
        }
        if( !reg.test($('.mobile').val()) ){
-        alert("收货人电话格式不正确");
+        _this.commonTips("收货人电话格式不正确");
         return false;
        }
        if( $('.province').val() == "" || $('.city').val() == "" || $('.detailedAddress').val() == "" ){
-        alert("请完善收货地址信息");
+        _this.commonTips("请完善收货地址信息");
         return false;
        }
        if( $('.reason').val() == "" ){
-        alert("请填写您的申请理由");
+        _this.commonTips("请填写您的申请理由");
         return false;
        }
 
@@ -121,10 +118,18 @@ var birth = {
        }, function(res){
          modal.hide();
          $('.want').text('报名成功');
-         $('body').append('<span id="tips">报名成功！</span>')
-         $('#tips').fadeOut(2000);
+         _this.commonTips("报名成功");
          return false;
        });
+    });
+  },
+
+  commonTips: function ( tip , cb){
+    $('body').append('<span id="tips">' + tip + '！</span>')
+    $('#tips').fadeOut(2000, function(){
+      $('#tips').remove();
+      if(cb)
+        cb();
     });
   }
 };

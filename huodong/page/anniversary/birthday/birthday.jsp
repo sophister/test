@@ -3,6 +3,8 @@
 
 <fis:extends name="common:page/layout/no-footer.jsp">
     <fis:require id="/static/js/html5media/html5media.min.js" />
+    <!-- 单独一个生日趴弹框的css文件 -->
+    <fis:require id="/widget/ui/modal/modal.birth.css" />
     <fis:block name="block_body">
       <div class="swiper-container swiper-container-vertical">
         <div class="swiper-wrapper">

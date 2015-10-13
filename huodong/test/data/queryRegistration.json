@@ -1,5 +1,17 @@
 {
   "data": {
+    "status": false,
+    "registration": {
+      "id": 1,
+      "userId": 123123,
+      "userName": "test",
+      "mobile": "15815033265",
+      "province": "北京",
+      "city": "北京",
+      "detailedAddress": "北京海淀",
+      "reason": "申请测试",
+      "memo": ""
+    }
   },
   "errorCode": 0,
   "msg": "成功"

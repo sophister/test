@@ -10,8 +10,7 @@ require.config({
     template: "static/libs/template/template",
     font_scroll: "static/libs/font_scroll/font_scroll",
     bridge: "static/libs/bridge/bridge",
-    tpl_birth_login: "components/dialogs/birth-login",
-    tpl_birth_signup: "components/dialogs/birth-signup",
+    tpl_birth_login: "components/dialogs/birth-login"
   },
   shim: {
 

@@ -41,3 +41,16 @@ body {
   line-height: 0.4rem;
   border-radius: 0.05rem;
 }
+#tips {
+  position: fixed;
+  left: 36%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  padding: 10px 30px;
+  top: 300px;
+  z-index: 9999;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}

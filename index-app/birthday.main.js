@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: './',
+  baseUrl: '/',
   paths: {
     jquery: "static/libs/jquery/1.11.2/jquery",
     text: "static/libs/requirejs/text",
@@ -10,9 +10,8 @@ require.config({
     template: "static/libs/template/template",
     font_scroll: "static/libs/font_scroll/font_scroll",
     bridge: "static/libs/bridge/bridge",
-    // card relative dialog templates
-    tpl_card_login: "components/dialogs/card-login",
-    tpl_card_verify: "components/dialogs/card-verify",
+    tpl_birth_login: "components/dialogs/birth-login",
+    tpl_birth_signup: "components/dialogs/birth-signup",
   },
   shim: {
 
@@ -21,7 +20,7 @@ require.config({
 
 require([
   'jquery',
-  './static/js/birthday.js'
+  '/static/js/birthday.js'
 ], function($) { 
   // DO SOMETHING.
 });

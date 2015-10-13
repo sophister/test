@@ -56,7 +56,7 @@ var birth = {
     ajax.get('/event/eventLottery!queryRegistration.action', {}, function( res ){
       var data = res.data || {};
       // 如果已经报名，则初始化为报名成功
-      if(data && data.length){
+      if(!$.isEmptyObject(data)){
         $('.want').text('报名成功');
       }
     })

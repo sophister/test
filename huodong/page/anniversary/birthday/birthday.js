@@ -3,7 +3,7 @@
  * @type {[type]}
  */
 var $ = require('jquery');
-var Swiper = require('huodong:widget/ui/swiper/swiper.3.1.2.min.js');
+var Swiper = require('huodong:widget/ui/swiper/2.7.0/swiper.js');
 var template = require('huodong:widget/ui/template/template.js');
 var ajax = require('huodong:widget/ui/ajax/ajax.js');
 var Modal = require('huodong:widget/ui/modal/modal.js');
@@ -32,8 +32,11 @@ function initModal () {
 // init swiper
 $(document).ready(function () {
   var swiper = new Swiper('.swiper-container', {
-    pagination: '.swiper-pagination',
-    direction: 'vertical',
+    // pagination: '.swiper-pagination',
+    // direction: 'vertical',
+    pagination : '.pagination',
+    paginationClickable :true,
+    mode: 'vertical',
     slidesPerView: 1,
     paginationClickable: true,
     spaceBetween: 0,

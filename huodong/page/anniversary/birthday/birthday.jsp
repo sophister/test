@@ -2,9 +2,12 @@
 <%@ taglib uri="/fis" prefix="fis"%>
 
 <fis:extends name="common:page/layout/no-footer.jsp">
-    <fis:require id="/static/js/html5media/html5media.min.js" />
+    <fis:require id="/widget/ui//html5media/html5media.min.js" />
     <!-- 单独一个生日趴弹框的css文件 -->
     <fis:require id="/widget/ui/modal/modal.birth.css" />
+    <!-- video.js -->
+    <fis:require id="/widget/ui/video/video.css" />
+    <fis:require id="/widget/ui/video/video.js" />
     <fis:block name="block_body">
       <div class="swiper-container swiper-container-vertical">
         <div class="swiper-wrapper">
@@ -12,7 +15,13 @@
             </div>
             <div class="swiper-slide slide2">
               <div class="video_container">
-                <video id="video" src="http://www.zhangxinxu.com/study/media/cat.mp4" width="400" controls autobuffer></video>
+               <!--  <video id="video" src="http://www.zhangxinxu.com/study/media/cat.mp4" width="400" controls autobuffer></video> -->
+               <video id="really-cool-video" class="video-js vjs-default-skin" controls
+               preload="auto" width="400" poster=""
+               data-setup='{}'>
+                <source src="http://www.zhangxinxu.com/study/media/cat.mp4" type='video/mp4'>
+              </video>
+
               </div>
             </div>
             <div class="swiper-slide slide3">
@@ -21,10 +30,8 @@
               </div>
             </div>
         </div>
-        <!-- 分页器 -->
-        <div class="swiper-pagination"></div>
+        <div class="pagination"></div>
       </div>
-
     </fis:block>
     <fis:script>
       require(["./birthday"], function(birthday){

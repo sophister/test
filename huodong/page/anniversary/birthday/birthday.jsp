@@ -12,10 +12,12 @@
       <div class="swiper-container swiper-container-vertical">
         <div class="swiper-wrapper">
             <div class="swiper-slide slide1">
+              <img src="./assets/birth_01_word.png" class="birth_01_img" alt="">
             </div>
             <div class="swiper-slide slide2">
               <div class="video_container">
-               <!--  <video id="video" src="http://www.zhangxinxu.com/study/media/cat.mp4" width="400" controls autobuffer></video> -->
+                <h3>五年，从未改变</h3>
+                <p>只为成就更好的你</p>
                <video id="really-cool-video" class="video-js vjs-default-skin" controls
                preload="auto" width="400" poster=""
                data-setup='{}'>
@@ -25,6 +27,7 @@
               </div>
             </div>
             <div class="swiper-slide slide3">
+            <img src="./assets/birth_03_word.png" class="birth_03_img" alt="">
               <div class="btn_wrap">
                 <span class="want">接受邀请</span>
               </div>
